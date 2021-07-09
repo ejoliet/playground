@@ -1,0 +1,1352 @@
+<?xml version="1.0" encoding="utf-8"?>
+<VOTABLE version="1.3" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.ivoa.net/xml/VOTable/v1.3" xmlns:stc="http://www.ivoa.net/xml/STC/v1.30">
+  <DESCRIPTION>                                                                              
+source_id
+___ unique source ID (coadd ID and source number)
+coadd_id
+___ coadd ID
+src
+___ source number in coadd
+ra (deg) 
+___ right ascension (J2000)
+dec (deg) 
+___ declination (J2000)
+sigra (arcsec) 
+___ uncertainty in RA
+sigdec (arcsec) 
+___ uncertainty in DEC
+sigradec (arcsec) 
+___ cross-term of RA and Dec uncertainties
+glon (deg) 
+___ galactic longitude
+glat (deg) 
+___ galactic latitude
+elon (deg) 
+___ ecliptic longitude
+elat (deg) 
+___ ecliptic latitude
+wx (pix) 
+___ x-pixel coordinate, all bands
+wy (pix) 
+___ y-pixel coordinate, all bands
+w1sky (dn) 
+___ sky background value, band 1
+w1sigsk (dn) 
+___ sky background value uncertainty, band 1
+w1conf (dn) 
+___ sky confusion based on the uncertainty images, band 1
+w2sky (dn) 
+___ sky background value, band 2
+w2sigsk (dn) 
+___ sky background value uncertainty, band 2
+w2conf (dn) 
+___ sky confusion based on the uncertainty images, band 2
+w3sky (dn) 
+___ sky background value, band 3
+w3sigsk (dn) 
+___ sky background value uncertainty, band 3
+w3conf (dn) 
+___ sky confusion based on the uncertainty images, band 3
+w4sky (dn) 
+___ sky background value, band 4
+w4sigsk (dn) 
+___ sky background value uncertainty, band 4
+w4conf (dn) 
+___ sky confusion based on the uncertainty images, band 4
+w1snr
+___ instrumental profile-fit photometry S/N ratio, band 1
+w2snr
+___ instrumental profile-fit photometry S/N ratio, band 2
+w3snr
+___ instrumental profile-fit photometry S/N ratio, band 3
+w4snr
+___ instrumental profile-fit photometry S/N ratio, band 4
+w1flux (dn) 
+___ profile-fit photometry raw flux, band 1
+w1sigflux (dn) 
+___ profile-fit photometry raw flux uncertainty, band 1
+w2flux (dn) 
+___ profile-fit photometry raw flux, band 2
+w2sigflux (dn) 
+___ profile-fit photometry raw flux uncertainty, band 2
+w3flux (dn) 
+___ profile-fit photometry raw flux, band 3
+w3sigflux (dn) 
+___ profile-fit photometry raw flux uncertainty, band 3
+w4flux (dn) 
+___ profile-fit photometry raw flux, band 4
+w4sigflux (dn) 
+___ profile-fit photometry raw flux uncertainty, band 4
+w1mpro (mag) 
+___ instrumental profile-fit photometry magnitude, band 1
+w1sigmpro (mag) 
+___ instrumental profile-fit photometry flux uncertainty in mag units, band 1
+w1rchi2
+___ instrumental profile-fit photometry reduced chi^2, band 1
+w2mpro (mag) 
+___ instrumental profile-fit photometry magnitude, band 2
+w2sigmpro (mag) 
+___ instrumental profile-fit photometry flux uncertainty in mag units, band 2
+w2rchi2
+___ instrumental profile-fit photometry reduced chi^2, band 2
+w3mpro (mag) 
+___ instrumental profile-fit photometry magnitude, band 3
+w3sigmpro (mag) 
+___ instrumental profile-fit photometry flux uncertainty in mag units, band 3
+w3rchi2
+___ instrumental profile-fit photometry reduced chi^2, band 3
+w4mpro (mag) 
+___ instrumental profile-fit photometry magnitude, band 4
+w4sigmpro (mag) 
+___ instrumental profile-fit photometry flux uncertainty in mag units, band 4
+w4rchi2
+___ instrumental profile-fit photometry reduced chi^2, band 4
+rchi2
+___ instrumental profile-fit photometry reduced chi squared, total
+nb
+___ number of blend components used in each fit
+na
+___ active deblend flag (=1 if actively deblended)
+w1frtr
+___ fraction of pixels classified as transient, band 1
+w2frtr
+___ fraction of pixels classified as transient, band 2
+w3frtr
+___ fraction of pixels classified as transient, band 3
+w4frtr
+___ fraction of pixels classified as transient, band 4
+w1sat
+___ fraction of pixels affected by saturation, band 1
+w2sat
+___ fraction of pixels affected by saturation, band 2
+w3sat
+___ fraction of pixels affected by saturation, band 3
+w4sat
+___ fraction of pixels affected by saturation, band 4
+satnum
+___ minimum sample at which saturation occurs in frame stack, 1 char per band
+w1mag (mag) 
+___ instrumental standard aperture mag w/ aperture correction applied, band 1
+w1sigm (mag) 
+___ instrumental standard aperture mag uncertainty, band 1
+w1flg
+___ instrumental standard aperture flag, band 1
+w1cov
+___ mean coverage depth, band 1
+w1mcor (mag) 
+___ instrumental aperture correction, band 1, standard aperture
+w2mag (mag) 
+___ instrumental standard aperture mag w/ aperture correction applied, band 2
+w2sigm (mag) 
+___ instrumental standard aperture mag uncertainty, band 2
+w2flg
+___ instrumental standard aperture flag, band 2
+w2cov
+___ mean coverage depth, band 2
+w2mcor (mag) 
+___ instrumental aperture correction, band 2, standard aperture
+w3mag (mag) 
+___ instrumental standard aperture mag w/ aperture correction applied, band 3
+w3sigm (mag) 
+___ instrumental standard aperture mag uncertainty, band 3
+w3flg
+___ instrumental standard aperture flag, band 3
+w3cov
+___ mean coverage depth, band 3
+w3mcor (mag) 
+___ instrumental aperture correction, band 3, standard aperture
+w4mag (mag) 
+___ instrumental standard aperture mag w/ aperture correction applied, band 4
+w4sigm (mag) 
+___ instrumental standard aperture mag uncertainty, band 4
+w4flg
+___ instrumental standard aperture flag, band 4
+w4cov
+___ mean coverage depth, band 4
+w4mcor (mag) 
+___ instrumental aperture correction, band 4, standard aperture
+w1mag_1 (mag) 
+___ aperture 1 instrumental aperture mag, band 1
+w1sigm_1 (mag) 
+___ aperture 1 instrumental aperture mag uncertainty, band 1
+w1flg_1
+___ aperture 1 instrumental aperture flag, band 1
+w2mag_1 (mag) 
+___ aperture 1 instrumental aperture mag, band 2
+w2sigm_1 (mag) 
+___ aperture 1 instrumental aperture mag uncertainty, band 2
+w2flg_1
+___ aperture 1 instrumental aperture flag, band 2
+w3mag_1 (mag) 
+___ aperture 1 instrumental aperture mag, band 3
+w3sigm_1 (mag) 
+___ aperture 1 instrumental aperture mag uncertainty, band 3
+w3flg_1
+___ aperture 1 instrumental aperture flag, band 3
+w4mag_1 (mag) 
+___ aperture 1 instrumental aperture mag, band 4
+w4sigm_1 (mag) 
+___ aperture 1 instrumental aperture mag uncertainty, band 4
+w4flg_1
+___ aperture 1 instrumental aperture flag, band 4
+w1mag_2 (mag) 
+___ aperture 2 instrumental aperture mag, band 1
+w1sigm_2 (mag) 
+___ aperture 2 instrumental aperture mag uncertainty, band 1
+w1flg_2
+___ aperture 2 instrumental aperture flag, band 1
+w2mag_2 (mag) 
+___ aperture 2 instrumental aperture mag, band 2
+w2sigm_2 (mag) 
+___ aperture 2 instrumental aperture mag uncertainty, band 2
+w2flg_2
+___ aperture 2 instrumental aperture flag, band 2
+w3mag_2 (mag) 
+___ aperture 2 instrumental aperture mag, band 3
+w3sigm_2 (mag) 
+___ aperture 2 instrumental aperture mag uncertainty, band 3
+w3flg_2
+___ aperture 2 instrumental aperture flag, band 3
+w4mag_2 (mag) 
+___ aperture 2 instrumental aperture mag, band 4
+w4sigm_2 (mag) 
+___ aperture 2 instrumental aperture mag uncertainty, band 4
+w4flg_2
+___ aperture 2 instrumental aperture flag, band 4
+w1mag_3 (mag) 
+___ aperture 3 instrumental aperture mag, band 1
+w1sigm_3 (mag) 
+___ aperture 3 instrumental aperture mag uncertainty, band 1
+w1flg_3
+___ aperture 3 instrumental aperture flag, band 1
+w2mag_3 (mag) 
+___ aperture 3 instrumental aperture mag, band 2
+w2sigm_3 (mag) 
+___ aperture 3 instrumental aperture mag uncertainty, band 2
+w2flg_3
+___ aperture 3 instrumental aperture flag, band 2
+w3mag_3 (mag) 
+___ aperture 3 instrumental aperture mag, band 3
+w3sigm_3 (mag) 
+___ aperture 3 instrumental aperture mag uncertainty, band 3
+w3flg_3
+___ aperture 3 instrumental aperture flag, band 3
+w4mag_3 (mag) 
+___ aperture 3 instrumental aperture mag, band 4
+w4sigm_3 (mag) 
+___ aperture 3 instrumental aperture mag uncertainty, band 4
+w4flg_3
+___ aperture 3 instrumental aperture flag, band 4
+w1mag_4 (mag) 
+___ aperture 4 instrumental aperture mag, band 1
+w1sigm_4 (mag) 
+___ aperture 4 instrumental aperture mag uncertainty, band 1
+w1flg_4
+___ aperture 4 instrumental aperture flag, band 1
+w2mag_4 (mag) 
+___ aperture 4 instrumental aperture mag, band 2
+w2sigm_4 (mag) 
+___ aperture 4 instrumental aperture mag uncertainty, band 2
+w2flg_4
+___ aperture 4 instrumental aperture flag, band 2
+w3mag_4 (mag) 
+___ aperture 4 instrumental aperture mag, band 3
+w3sigm_4 (mag) 
+___ aperture 4 instrumental aperture mag uncertainty, band 3
+w3flg_4
+___ aperture 4 instrumental aperture flag, band 3
+w4mag_4 (mag) 
+___ aperture 4 instrumental aperture mag, band 4
+w4sigm_4 (mag) 
+___ aperture 4 instrumental aperture mag uncertainty, band 4
+w4flg_4
+___ aperture 4 instrumental aperture flag, band 4
+w1mag_5 (mag) 
+___ aperture 5 instrumental aperture mag, band 1
+w1sigm_5 (mag) 
+___ aperture 5 instrumental aperture mag uncertainty, band 1
+w1flg_5
+___ aperture 5 instrumental aperture flag, band 1
+w2mag_5 (mag) 
+___ aperture 5 instrumental aperture mag, band 2
+w2sigm_5 (mag) 
+___ aperture 5 instrumental aperture mag uncertainty, band 2
+w2flg_5
+___ aperture 5 instrumental aperture flag, band 2
+w3mag_5 (mag) 
+___ aperture 5 instrumental aperture mag, band 3
+w3sigm_5 (mag) 
+___ aperture 5 instrumental aperture mag uncertainty, band 3
+w3flg_5
+___ aperture 5 instrumental aperture flag, band 3
+w4mag_5 (mag) 
+___ aperture 5 instrumental aperture mag, band 4
+w4sigm_5 (mag) 
+___ aperture 5 instrumental aperture mag uncertainty, band 4
+w4flg_5
+___ aperture 5 instrumental aperture flag, band 4
+w1mag_6 (mag) 
+___ aperture 6 instrumental aperture mag, band 1
+w1sigm_6 (mag) 
+___ aperture 6 instrumental aperture mag uncertainty, band 1
+w1flg_6
+___ aperture 6 instrumental aperture flag, band 1
+w2mag_6 (mag) 
+___ aperture 6 instrumental aperture mag, band 2
+w2sigm_6 (mag) 
+___ aperture 6 instrumental aperture mag uncertainty, band 2
+w2flg_6
+___ aperture 6 instrumental aperture flag, band 2
+w3mag_6 (mag) 
+___ aperture 6 instrumental aperture mag, band 3
+w3sigm_6 (mag) 
+___ aperture 6 instrumental aperture mag uncertainty, band 3
+w3flg_6
+___ aperture 6 instrumental aperture flag, band 3
+w4mag_6 (mag) 
+___ aperture 6 instrumental aperture mag, band 4
+w4sigm_6 (mag) 
+___ aperture 6 instrumental aperture mag uncertainty, band 4
+w4flg_6
+___ aperture 6 instrumental aperture flag, band 4
+w1mag_7 (mag) 
+___ aperture 7 instrumental aperture mag, band 1
+w1sigm_7 (mag) 
+___ aperture 7 instrumental aperture mag uncertainty, band 1
+w1flg_7
+___ aperture 7 instrumental aperture flag, band 1
+w2mag_7 (mag) 
+___ aperture 7 instrumental aperture mag, band 2
+w2sigm_7 (mag) 
+___ aperture 7 instrumental aperture mag uncertainty, band 2
+w2flg_7
+___ aperture 7 instrumental aperture flag, band 2
+w3mag_7 (mag) 
+___ aperture 7 instrumental aperture mag, band 3
+w3sigm_7 (mag) 
+___ aperture 7 instrumental aperture mag uncertainty, band 3
+w3flg_7
+___ aperture 7 instrumental aperture flag, band 3
+w4mag_7 (mag) 
+___ aperture 7 instrumental aperture mag, band 4
+w4sigm_7 (mag) 
+___ aperture 7 instrumental aperture mag uncertainty, band 4
+w4flg_7
+___ aperture 7 instrumental aperture flag, band 4
+w1mag_8 (mag) 
+___ aperture 8 instrumental aperture mag, band 1
+w1sigm_8 (mag) 
+___ aperture 8 instrumental aperture mag uncertainty, band 1
+w1flg_8
+___ aperture 8 instrumental aperture flag, band 1
+w2mag_8 (mag) 
+___ aperture 8 instrumental aperture mag, band 2
+w2sigm_8 (mag) 
+___ aperture 8 instrumental aperture mag uncertainty, band 2
+w2flg_8
+___ aperture 8 instrumental aperture flag, band 2
+w3mag_8 (mag) 
+___ aperture 8 instrumental aperture mag, band 3
+w3sigm_8 (mag) 
+___ aperture 8 instrumental aperture mag uncertainty, band 3
+w3flg_8
+___ aperture 8 instrumental aperture flag, band 3
+w4mag_8 (mag) 
+___ aperture 8 instrumental aperture mag, band 4
+w4sigm_8 (mag) 
+___ aperture 8 instrumental aperture mag uncertainty, band 4
+w4flg_8
+___ aperture 8 instrumental aperture flag, band 4
+w1nm
+___ number of profile-fit flux measurements for source with SNR &gt;= 3, band 1
+w1m
+___ number of profile-fit flux measurements for source, band 1
+w1magp (mag) 
+___ profile-fit repeatability mag -- inverse-variance weighted mean mag, band 1
+w1sigp1 (mag) 
+___ standard deviation of population of profile-fit repeatability mag, band 1
+w1sigp2 (mag) 
+___ standard deviation of the mean of profile-fit repeatability mag, band 1
+w1k
+___ Stetson K variability index, band 1
+w1ndf
+___ number degrees of freedom in variability chi^2, band 1
+w1mlq
+___ -ln(Q), where Q = 1 - P(chi^2), band 1
+w1mjdmin
+___ minimum modified Julian Date of frame extractions, band 1
+w1mjdmax
+___ maximum modified Julian Date of frame extractions, band 1
+w1mjdmean
+___ mean modified Julian Date of frame extractions, band 1
+w2nm
+___ number of profile-fit flux measurements for source with SNR &gt;= 3, band 2
+w2m
+___ number of profile-fit flux measurements for source, band 2
+w2magp (mag) 
+___ profile-fit repeatability mag -- inverse-variance weighted mean mag, band 2
+w2sigp1 (mag) 
+___ standard deviation of the population of profile-fit repeatability mag, band 2
+w2sigp2 (mag) 
+___ standard deviation of the mean of profile-fit repeatability mag, band 2
+w2k
+___ Stetson K variability index, band 2
+w2ndf
+___ number degrees of freedom in variability chi^2, band 2
+w2mlq
+___ -ln(Q), where Q = 1 - P(chi^2), band 2
+w2mjdmin
+___ minimum modified Julian Date of frame extractions, band 2
+w2mjdmax
+___ maximum modified Julian Date of frame extractions, band 2
+w2mjdmean
+___ mean modified Julian Date of frame extractions, band 2
+w3nm
+___ number of profile-fit flux measurements for source with SNR &gt;= 3, band 3
+w3m
+___ number of profile-fit flux measurements for source, band 3
+w3magp (mag) 
+___ profile-fit repeatability mag -- inverse-variance weighted mean mag, band 3
+w3sigp1 (mag) 
+___ standard deviation of the population of profile-fit repeatability mag, band 3
+w3sigp2 (mag) 
+___ standard deviation of the mean of profile-fit repeatability mag, band 3
+w3k
+___ Stetson K variability index, band 3
+w3ndf
+___ number degrees of freedom in variability chi^2, band 3
+w3mlq
+___ -ln(Q), where Q = 1 - P(chi^2), band 3
+w3mjdmin
+___ minimum modified Julian Date of frame extractions, band 3
+w3mjdmax
+___ maximum modified Julian Date of frame extractions, band 3
+w3mjdmean
+___ mean modified Julian Date of frame extractions, band 3
+w4nm
+___ number of profile-fit flux measurements for source with SNR &gt;= 3, band 4
+w4m
+___ number of profile-fit flux measurements for source, band 4
+w4magp (mag) 
+___ profile-fit repeatability mag -- inverse-variance weighted mean mag, band 4
+w4sigp1 (mag) 
+___ standard deviation of the population of profile-fit repeatability mag, band 4
+w4sigp2 (mag) 
+___ standard deviation of the mean of profile-fit repeatability mag, band 4
+w4k
+___ Stetson K variability index, band 4
+w4ndf
+___ number degrees of freedom in variability chi^2, band 4
+w4mlq
+___ -ln(Q), where Q = 1 - P(chi^2), band 4
+w4mjdmin
+___ minimum modified Julian Date of frame extractions, band 4
+w4mjdmax
+___ maximum modified Julian Date of frame extractions, band 4
+w4mjdmean
+___ mean modified Julian Date of frame extractions, band 4
+rho12 (percent) 
+___ band 1 - band 2 correlation coefficient
+rho23 (percent) 
+___ band 2 - band 3 correlation coefficient
+rho34 (percent) 
+___ band 3 - band 4 correlation coefficient
+q12
+___ -log10(1 - P(rho12)), given no real correlation
+q23
+___ -log10(1 - P(rho23)), given no real correlation
+q34
+___ -log10(1 - P(rho34)), given no real correlation
+xscprox (arcsec) 
+___ distance between source center and XSC galaxy
+w1rsemi (arcsec) 
+___ semi-major axis of galaxy from XSC, band 1
+w1ba
+___ axis ratio of galaxy from XSC, band 1
+w1pa (deg) 
+___ position angle (E of N) of galaxy from XSC, band 1
+w1gmag (mag) 
+___ elliptical aperture mag of extracted galaxy, band 1
+w1gerr (mag) 
+___ elliptical aperture mag uncertainty of extracted galaxy, band 1
+w1gflg
+___ elliptical aperture flag of extracted galaxy, band 1
+w2rsemi (arcsec) 
+___ semi-major axis of galaxy from XSC, band 2
+w2ba
+___ axis ratio of galaxy from XSC, band 2
+w2pa (deg) 
+___ position angle (E of N) of galaxy from XSC, band 2
+w2gmag (mag) 
+___ elliptical aperture mag of extracted galaxy, band 2
+w2gerr (mag) 
+___ elliptical aperture mag uncertainty of extracted galaxy, band 2
+w2gflg
+___ elliptical aperture flag of extracted galaxy, band 2
+w3rsemi (arcsec) 
+___ semi-major axis of galaxy from XSC, band 3
+w3ba
+___ axis ratio of galaxy from XSC, band 3
+w3pa (deg) 
+___ position angle (E of N) of galaxy from XSC, band 3
+w3gmag (mag) 
+___ elliptical aperture mag of extracted galaxy, band 3
+w3gerr (mag) 
+___ elliptical aperture mag uncertainty of extracted galaxy, band 3
+w3gflg
+___ elliptical aperture flag of extracted galaxy, band 3
+w4rsemi (arcsec) 
+___ semi-major axis of galaxy from XSC, band 4
+w4ba
+___ axis ratio of galaxy from XSC, band 4
+w4pa (deg) 
+___ position angle (E of N) of galaxy from XSC, band 4
+w4gmag (mag) 
+___ elliptical aperture mag of extracted galaxy, band 4
+w4gerr (mag) 
+___ elliptical aperture mag uncertainty of extracted galaxy, band 4
+w4gflg
+___ elliptical aperture flag of extracted galaxy, band 4
+niters
+___ outer loop counter in the chi-square minimization for the non_motion solution
+nsteps
+___ inner loop counter in the chi-square minimization for the non_motion solution
+mjdmean (mjd) 
+___ mean observation epoch
+ra_pm (deg) 
+___ Right ascension at epoch MJD=55400.0 (2010.5589) from pff model incl. motion
+dec_pm (deg) 
+___ Declination at epoch MJD=55400.0 (2010.5589) from pff model incl. motion
+sigra_pm (arcsec) 
+___ One-sigma uncertainty in RA from pff model incl. motion
+sigdec_pm (arcsec) 
+___ One-sigma uncertainty in DEC  from pff model incl. motion
+sigradec_pm (arcsec) 
+___ The co-sigma of the equatorial position uncertainties from ppf model incl motion
+pmra (maspyr) 
+___ Apparent motion in RA
+pmdec (maspyr) 
+___ Apparent motion in Dec
+sigpmra (maspyr) 
+___ Uncertainty in the RA motion estimate
+sigpmdec (maspyr) 
+___ Uncertainty in the Dec  motion estimate
+w1snr_pm
+___ S/N ratio of the W1 profile-fit photometry including motion
+w2snr_pm
+___ S/N ratio of the W2 profile-fit photometry including motion
+w3snr_pm
+___ S/N ratio of the W3 profile-fit photometry including motion
+w4snr_pm
+___ S/N ratio of the W4 profile-fit photometry including motion
+w1flux_pm (dn) 
+___ Raw flux W1 profile-fit photometry including motion
+w1sigflux_pm (dn) 
+___ Raw flux uncertainty W1 profile-fit photometry including motion
+w2flux_pm (dn) 
+___ Raw flux W2 profile-fit photometry including motion
+w2sigflux_pm (dn) 
+___ Raw flux uncertainty W2 profile-fit photometry including motion
+w3flux_pm (dn) 
+___ Raw flux W3 profile-fit photometry including motion
+w3sigflux_pm (dn) 
+___ Raw flux uncertainty W3 profile-fit photometry including motion
+w4flux_pm (dn) 
+___ Raw flux W4 profile-fit photometry including motion
+w4sigflux_pm (dn) 
+___ Raw flux uncertainty W4 profile-fit photometry including motion
+w1mpro_pm (mag) 
+___ W1 magnitude from profile-fit photometry including motion
+w1sigmpro_pm (mag) 
+___ W1 flux uncertainty in mag units from  profile-fit photometry including motion
+w1rchi2_pm
+___ Reduced chi^2 of the W1 profile-fit photometry measurement including motion est
+w2mpro_pm (mag) 
+___ W2 magnitude from profile-fit photometry including motion
+w2sigmpro_pm (mag) 
+___ W2 flux uncertainty in mag units from  profile-fit photometry including motion
+w2rchi2_pm
+___ Reduced chi^2 of the W2 profile-fit photometry measurement including motion est
+w3mpro_pm (mag) 
+___ W3 magnitude from profile-fit photometry including motion
+w3sigmpro_pm (mag) 
+___ W3 flux uncertainty in mag units from  profile-fit photometry including motion
+w3rchi2_pm
+___ Reduced chi^2 of the W3 profile-fit photometry measurement including motion est
+w4mpro_pm (mag) 
+___ W4 magnitude from profile-fit photometry including motion
+w4sigmpro_pm (mag) 
+___ W4 flux uncertainty in mag units from  profile-fit photometry including motion
+w4rchi2_pm
+___ Reduced chi^2 of the W4 profile-fit photometry measurement including motion est
+rchi2_pm
+___ Combined Reduced chi^2 in all bands for the pff photometry includes src motion
+pmcode
+___ Motion estimate quality code
+niters_pm
+___ outer loop cntr in the chi-square minimization for the motion solution
+nsteps_pm
+___ inner loop cntr in the chi-square minimization for the motion solution
+w1cc_map
+___ contamination and confusion bit array for the source in band 1
+w1cc_map_str
+___ contamination and confusion character array for the source in band 1
+w2cc_map
+___ contamination and confusion bit array for the source in band 2
+w2cc_map_str
+___ contamination and confusion character array for the source in band 2
+w3cc_map
+___ contamination and confusion bit array for the source in band 3
+w3cc_map_str
+___ contamination and confusion character array for the source in band 3
+w4cc_map
+___ contamination and confusion bit array for the source in band 4
+w4cc_map_str
+___ contamination and confusion character array for the source in band 4
+cc_flags
+___ prioritized artifacts affecting the source in each band
+det_bit
+___ bit-encoded integer indicating detection for each band
+ph_qual
+___ photometric quality of each band (A=highest, U=upper limit)
+rel
+___ Small separation multiple detection flag
+spos
+___ number of coadds in which src position falls inside coverage area
+sdet
+___ number of coadds in which src was detected in &gt;= 1 band
+napp
+___ number of apparitions of src in group
+best_use_cntr
+___ &apos;cntr&apos; of source to use from &apos;best&apos; duplicate resolution group for this source
+ngrp
+___ number of additional duplicate resolution groups in which this source resides
+use_src
+___ use source flag -- preferred source among potential duplicates
+ext_flg
+___ probability that source morphology is not consistent with single PSF
+var_flg
+___ probability that flux varied in any band greater than amount expected from unc.s
+moon_lev
+___ level of moon contamination in coadd (ceiling(#frmmoon/#frames*10)), 1 per band
+pm_qual
+___ Quality flag from the motion fit
+designation
+___ unique WISE source designation
+cat
+___ flag indicating whether source will be in catalog
+tmass_key
+___ closest associated 2MASS All-Sky Release PSC key
+r_2mass (arcsec) 
+___ radial offset between WISE src and associated 2MASS src
+pa_2mass (deg) 
+___ position angle (E of N) of vector from WISE src to associated 2MASS src
+n_2mass
+___ number of 2MASS All-Sky PSC entries found within search radius of WISE src
+j_m_2mass (mag) 
+___ J magnitude entry of the associated 2MASS All-Sky PSC source
+j_msig_2mass (mag) 
+___ J photometric uncertainty of the associated 2MASS All-Sky PSC source
+h_m_2mass (mag) 
+___ H magnitude entry of the associated 2MASS All-Sky PSC source
+h_msig_2mass (mag) 
+___ H photometric uncertainty of the associated 2MASS All-Sky PSC source
+k_m_2mass (mag) 
+___ Ks magnitude entry of the associated 2MASS All-Sky PSC source
+k_msig_2mass (mag) 
+___ Ks photometric uncertainty of the associated 2MASS All-Sky PSC source
+load_id
+___ unique load ID number
+cntr
+___ unique entry counter (key) number
+x
+___ unit sphere (x,y,z) position x value
+y
+___ unit sphere (x,y,z) position y value
+z
+___ unit sphere (x,y,z) position z value
+spt_ind
+___ spatial (x,y,z) index key
+htm20
+___ HTM20 spatial index key</DESCRIPTION>
+  <RESOURCE type="results">
+    <INFO name="QueryTime" value="00:00:00.01550"/>
+    <INFO name="QUERY_STATUS" value="OK"/>
+    <TABLE>
+      <FIELD name="source_id" datatype="char" arraysize="*"/>
+      <FIELD name="coadd_id" datatype="char" arraysize="*"/>
+      <FIELD name="src" datatype="int"/>
+      <FIELD name="ra" datatype="double" unit="deg"/>
+      <FIELD name="dec" datatype="double" unit="deg"/>
+      <FIELD name="sigra" datatype="double" unit="arcsec"/>
+      <FIELD name="sigdec" datatype="double" unit="arcsec"/>
+      <FIELD name="sigradec" datatype="double" unit="arcsec"/>
+      <FIELD name="glon" datatype="double" unit="deg"/>
+      <FIELD name="glat" datatype="double" unit="deg"/>
+      <FIELD name="elon" datatype="double" unit="deg"/>
+      <FIELD name="elat" datatype="double" unit="deg"/>
+      <FIELD name="wx" datatype="double" unit="pix"/>
+      <FIELD name="wy" datatype="double" unit="pix"/>
+      <FIELD name="w1sky" datatype="double" unit="dn"/>
+      <FIELD name="w1sigsk" datatype="double" unit="dn"/>
+      <FIELD name="w1conf" datatype="double" unit="dn"/>
+      <FIELD name="w2sky" datatype="double" unit="dn"/>
+      <FIELD name="w2sigsk" datatype="double" unit="dn"/>
+      <FIELD name="w2conf" datatype="double" unit="dn"/>
+      <FIELD name="w3sky" datatype="double" unit="dn"/>
+      <FIELD name="w3sigsk" datatype="double" unit="dn"/>
+      <FIELD name="w3conf" datatype="double" unit="dn"/>
+      <FIELD name="w4sky" datatype="double" unit="dn"/>
+      <FIELD name="w4sigsk" datatype="double" unit="dn"/>
+      <FIELD name="w4conf" datatype="double" unit="dn"/>
+      <FIELD name="w1snr" datatype="double"/>
+      <FIELD name="w2snr" datatype="double"/>
+      <FIELD name="w3snr" datatype="double"/>
+      <FIELD name="w4snr" datatype="double"/>
+      <FIELD name="w1flux" datatype="double" unit="dn"/>
+      <FIELD name="w1sigflux" datatype="double" unit="dn"/>
+      <FIELD name="w2flux" datatype="double" unit="dn"/>
+      <FIELD name="w2sigflux" datatype="double" unit="dn"/>
+      <FIELD name="w3flux" datatype="double" unit="dn"/>
+      <FIELD name="w3sigflux" datatype="double" unit="dn"/>
+      <FIELD name="w4flux" datatype="double" unit="dn"/>
+      <FIELD name="w4sigflux" datatype="double" unit="dn"/>
+      <FIELD name="w1mpro" datatype="double" unit="mag"/>
+      <FIELD name="w1sigmpro" datatype="double" unit="mag"/>
+      <FIELD name="w1rchi2" datatype="double"/>
+      <FIELD name="w2mpro" datatype="double" unit="mag"/>
+      <FIELD name="w2sigmpro" datatype="double" unit="mag"/>
+      <FIELD name="w2rchi2" datatype="double"/>
+      <FIELD name="w3mpro" datatype="double" unit="mag"/>
+      <FIELD name="w3sigmpro" datatype="double" unit="mag"/>
+      <FIELD name="w3rchi2" datatype="double"/>
+      <FIELD name="w4mpro" datatype="double" unit="mag"/>
+      <FIELD name="w4sigmpro" datatype="double" unit="mag"/>
+      <FIELD name="w4rchi2" datatype="double"/>
+      <FIELD name="rchi2" datatype="double"/>
+      <FIELD name="nb" datatype="int"/>
+      <FIELD name="na" datatype="int"/>
+      <FIELD name="w1frtr" datatype="double"/>
+      <FIELD name="w2frtr" datatype="double"/>
+      <FIELD name="w3frtr" datatype="double"/>
+      <FIELD name="w4frtr" datatype="double"/>
+      <FIELD name="w1sat" datatype="double"/>
+      <FIELD name="w2sat" datatype="double"/>
+      <FIELD name="w3sat" datatype="double"/>
+      <FIELD name="w4sat" datatype="double"/>
+      <FIELD name="satnum" datatype="char" arraysize="*"/>
+      <FIELD name="w1mag" datatype="double" unit="mag"/>
+      <FIELD name="w1sigm" datatype="double" unit="mag"/>
+      <FIELD name="w1flg" datatype="int"/>
+      <FIELD name="w1cov" datatype="double"/>
+      <FIELD name="w1mcor" datatype="double" unit="mag"/>
+      <FIELD name="w2mag" datatype="double" unit="mag"/>
+      <FIELD name="w2sigm" datatype="double" unit="mag"/>
+      <FIELD name="w2flg" datatype="int"/>
+      <FIELD name="w2cov" datatype="double"/>
+      <FIELD name="w2mcor" datatype="double" unit="mag"/>
+      <FIELD name="w3mag" datatype="double" unit="mag"/>
+      <FIELD name="w3sigm" datatype="double" unit="mag"/>
+      <FIELD name="w3flg" datatype="int"/>
+      <FIELD name="w3cov" datatype="double"/>
+      <FIELD name="w3mcor" datatype="double" unit="mag"/>
+      <FIELD name="w4mag" datatype="double" unit="mag"/>
+      <FIELD name="w4sigm" datatype="double" unit="mag"/>
+      <FIELD name="w4flg" datatype="int"/>
+      <FIELD name="w4cov" datatype="double"/>
+      <FIELD name="w4mcor" datatype="double" unit="mag"/>
+      <FIELD name="w1mag_1" datatype="double" unit="mag"/>
+      <FIELD name="w1sigm_1" datatype="double" unit="mag"/>
+      <FIELD name="w1flg_1" datatype="int"/>
+      <FIELD name="w2mag_1" datatype="double" unit="mag"/>
+      <FIELD name="w2sigm_1" datatype="double" unit="mag"/>
+      <FIELD name="w2flg_1" datatype="int"/>
+      <FIELD name="w3mag_1" datatype="double" unit="mag"/>
+      <FIELD name="w3sigm_1" datatype="double" unit="mag"/>
+      <FIELD name="w3flg_1" datatype="int"/>
+      <FIELD name="w4mag_1" datatype="double" unit="mag"/>
+      <FIELD name="w4sigm_1" datatype="double" unit="mag"/>
+      <FIELD name="w4flg_1" datatype="int"/>
+      <FIELD name="w1mag_2" datatype="double" unit="mag"/>
+      <FIELD name="w1sigm_2" datatype="double" unit="mag"/>
+      <FIELD name="w1flg_2" datatype="int"/>
+      <FIELD name="w2mag_2" datatype="double" unit="mag"/>
+      <FIELD name="w2sigm_2" datatype="double" unit="mag"/>
+      <FIELD name="w2flg_2" datatype="int"/>
+      <FIELD name="w3mag_2" datatype="double" unit="mag"/>
+      <FIELD name="w3sigm_2" datatype="double" unit="mag"/>
+      <FIELD name="w3flg_2" datatype="int"/>
+      <FIELD name="w4mag_2" datatype="double" unit="mag"/>
+      <FIELD name="w4sigm_2" datatype="double" unit="mag"/>
+      <FIELD name="w4flg_2" datatype="int"/>
+      <FIELD name="w1mag_3" datatype="double" unit="mag"/>
+      <FIELD name="w1sigm_3" datatype="double" unit="mag"/>
+      <FIELD name="w1flg_3" datatype="int"/>
+      <FIELD name="w2mag_3" datatype="double" unit="mag"/>
+      <FIELD name="w2sigm_3" datatype="double" unit="mag"/>
+      <FIELD name="w2flg_3" datatype="int"/>
+      <FIELD name="w3mag_3" datatype="double" unit="mag"/>
+      <FIELD name="w3sigm_3" datatype="double" unit="mag"/>
+      <FIELD name="w3flg_3" datatype="int"/>
+      <FIELD name="w4mag_3" datatype="double" unit="mag"/>
+      <FIELD name="w4sigm_3" datatype="double" unit="mag"/>
+      <FIELD name="w4flg_3" datatype="int"/>
+      <FIELD name="w1mag_4" datatype="double" unit="mag"/>
+      <FIELD name="w1sigm_4" datatype="double" unit="mag"/>
+      <FIELD name="w1flg_4" datatype="int"/>
+      <FIELD name="w2mag_4" datatype="double" unit="mag"/>
+      <FIELD name="w2sigm_4" datatype="double" unit="mag"/>
+      <FIELD name="w2flg_4" datatype="int"/>
+      <FIELD name="w3mag_4" datatype="double" unit="mag"/>
+      <FIELD name="w3sigm_4" datatype="double" unit="mag"/>
+      <FIELD name="w3flg_4" datatype="int"/>
+      <FIELD name="w4mag_4" datatype="double" unit="mag"/>
+      <FIELD name="w4sigm_4" datatype="double" unit="mag"/>
+      <FIELD name="w4flg_4" datatype="int"/>
+      <FIELD name="w1mag_5" datatype="double" unit="mag"/>
+      <FIELD name="w1sigm_5" datatype="double" unit="mag"/>
+      <FIELD name="w1flg_5" datatype="int"/>
+      <FIELD name="w2mag_5" datatype="double" unit="mag"/>
+      <FIELD name="w2sigm_5" datatype="double" unit="mag"/>
+      <FIELD name="w2flg_5" datatype="int"/>
+      <FIELD name="w3mag_5" datatype="double" unit="mag"/>
+      <FIELD name="w3sigm_5" datatype="double" unit="mag"/>
+      <FIELD name="w3flg_5" datatype="int"/>
+      <FIELD name="w4mag_5" datatype="double" unit="mag"/>
+      <FIELD name="w4sigm_5" datatype="double" unit="mag"/>
+      <FIELD name="w4flg_5" datatype="int"/>
+      <FIELD name="w1mag_6" datatype="double" unit="mag"/>
+      <FIELD name="w1sigm_6" datatype="double" unit="mag"/>
+      <FIELD name="w1flg_6" datatype="int"/>
+      <FIELD name="w2mag_6" datatype="double" unit="mag"/>
+      <FIELD name="w2sigm_6" datatype="double" unit="mag"/>
+      <FIELD name="w2flg_6" datatype="int"/>
+      <FIELD name="w3mag_6" datatype="double" unit="mag"/>
+      <FIELD name="w3sigm_6" datatype="double" unit="mag"/>
+      <FIELD name="w3flg_6" datatype="int"/>
+      <FIELD name="w4mag_6" datatype="double" unit="mag"/>
+      <FIELD name="w4sigm_6" datatype="double" unit="mag"/>
+      <FIELD name="w4flg_6" datatype="int"/>
+      <FIELD name="w1mag_7" datatype="double" unit="mag"/>
+      <FIELD name="w1sigm_7" datatype="double" unit="mag"/>
+      <FIELD name="w1flg_7" datatype="int"/>
+      <FIELD name="w2mag_7" datatype="double" unit="mag"/>
+      <FIELD name="w2sigm_7" datatype="double" unit="mag"/>
+      <FIELD name="w2flg_7" datatype="int"/>
+      <FIELD name="w3mag_7" datatype="double" unit="mag"/>
+      <FIELD name="w3sigm_7" datatype="double" unit="mag"/>
+      <FIELD name="w3flg_7" datatype="int"/>
+      <FIELD name="w4mag_7" datatype="double" unit="mag"/>
+      <FIELD name="w4sigm_7" datatype="double" unit="mag"/>
+      <FIELD name="w4flg_7" datatype="int"/>
+      <FIELD name="w1mag_8" datatype="double" unit="mag"/>
+      <FIELD name="w1sigm_8" datatype="double" unit="mag"/>
+      <FIELD name="w1flg_8" datatype="int"/>
+      <FIELD name="w2mag_8" datatype="double" unit="mag"/>
+      <FIELD name="w2sigm_8" datatype="double" unit="mag"/>
+      <FIELD name="w2flg_8" datatype="int"/>
+      <FIELD name="w3mag_8" datatype="double" unit="mag"/>
+      <FIELD name="w3sigm_8" datatype="double" unit="mag"/>
+      <FIELD name="w3flg_8" datatype="int"/>
+      <FIELD name="w4mag_8" datatype="double" unit="mag"/>
+      <FIELD name="w4sigm_8" datatype="double" unit="mag"/>
+      <FIELD name="w4flg_8" datatype="int"/>
+      <FIELD name="w1nm" datatype="int"/>
+      <FIELD name="w1m" datatype="int"/>
+      <FIELD name="w1magp" datatype="double" unit="mag"/>
+      <FIELD name="w1sigp1" datatype="double" unit="mag"/>
+      <FIELD name="w1sigp2" datatype="double" unit="mag"/>
+      <FIELD name="w1k" datatype="double"/>
+      <FIELD name="w1ndf" datatype="int"/>
+      <FIELD name="w1mlq" datatype="double"/>
+      <FIELD name="w1mjdmin" datatype="double"/>
+      <FIELD name="w1mjdmax" datatype="double"/>
+      <FIELD name="w1mjdmean" datatype="double"/>
+      <FIELD name="w2nm" datatype="int"/>
+      <FIELD name="w2m" datatype="int"/>
+      <FIELD name="w2magp" datatype="double" unit="mag"/>
+      <FIELD name="w2sigp1" datatype="double" unit="mag"/>
+      <FIELD name="w2sigp2" datatype="double" unit="mag"/>
+      <FIELD name="w2k" datatype="double"/>
+      <FIELD name="w2ndf" datatype="int"/>
+      <FIELD name="w2mlq" datatype="double"/>
+      <FIELD name="w2mjdmin" datatype="double"/>
+      <FIELD name="w2mjdmax" datatype="double"/>
+      <FIELD name="w2mjdmean" datatype="double"/>
+      <FIELD name="w3nm" datatype="int"/>
+      <FIELD name="w3m" datatype="int"/>
+      <FIELD name="w3magp" datatype="double" unit="mag"/>
+      <FIELD name="w3sigp1" datatype="double" unit="mag"/>
+      <FIELD name="w3sigp2" datatype="double" unit="mag"/>
+      <FIELD name="w3k" datatype="double"/>
+      <FIELD name="w3ndf" datatype="int"/>
+      <FIELD name="w3mlq" datatype="double"/>
+      <FIELD name="w3mjdmin" datatype="double"/>
+      <FIELD name="w3mjdmax" datatype="double"/>
+      <FIELD name="w3mjdmean" datatype="double"/>
+      <FIELD name="w4nm" datatype="int"/>
+      <FIELD name="w4m" datatype="int"/>
+      <FIELD name="w4magp" datatype="double" unit="mag"/>
+      <FIELD name="w4sigp1" datatype="double" unit="mag"/>
+      <FIELD name="w4sigp2" datatype="double" unit="mag"/>
+      <FIELD name="w4k" datatype="double"/>
+      <FIELD name="w4ndf" datatype="int"/>
+      <FIELD name="w4mlq" datatype="double"/>
+      <FIELD name="w4mjdmin" datatype="double"/>
+      <FIELD name="w4mjdmax" datatype="double"/>
+      <FIELD name="w4mjdmean" datatype="double"/>
+      <FIELD name="rho12" datatype="int" unit="percent"/>
+      <FIELD name="rho23" datatype="int" unit="percent"/>
+      <FIELD name="rho34" datatype="int" unit="percent"/>
+      <FIELD name="q12" datatype="int"/>
+      <FIELD name="q23" datatype="int"/>
+      <FIELD name="q34" datatype="int"/>
+      <FIELD name="xscprox" datatype="double" unit="arcsec"/>
+      <FIELD name="w1rsemi" datatype="double" unit="arcsec"/>
+      <FIELD name="w1ba" datatype="double"/>
+      <FIELD name="w1pa" datatype="double" unit="deg"/>
+      <FIELD name="w1gmag" datatype="double" unit="mag"/>
+      <FIELD name="w1gerr" datatype="double" unit="mag"/>
+      <FIELD name="w1gflg" datatype="int"/>
+      <FIELD name="w2rsemi" datatype="double" unit="arcsec"/>
+      <FIELD name="w2ba" datatype="double"/>
+      <FIELD name="w2pa" datatype="double" unit="deg"/>
+      <FIELD name="w2gmag" datatype="double" unit="mag"/>
+      <FIELD name="w2gerr" datatype="double" unit="mag"/>
+      <FIELD name="w2gflg" datatype="int"/>
+      <FIELD name="w3rsemi" datatype="double" unit="arcsec"/>
+      <FIELD name="w3ba" datatype="double"/>
+      <FIELD name="w3pa" datatype="double" unit="deg"/>
+      <FIELD name="w3gmag" datatype="double" unit="mag"/>
+      <FIELD name="w3gerr" datatype="double" unit="mag"/>
+      <FIELD name="w3gflg" datatype="int"/>
+      <FIELD name="w4rsemi" datatype="double" unit="arcsec"/>
+      <FIELD name="w4ba" datatype="double"/>
+      <FIELD name="w4pa" datatype="double" unit="deg"/>
+      <FIELD name="w4gmag" datatype="double" unit="mag"/>
+      <FIELD name="w4gerr" datatype="double" unit="mag"/>
+      <FIELD name="w4gflg" datatype="int"/>
+      <FIELD name="niters" datatype="int"/>
+      <FIELD name="nsteps" datatype="int"/>
+      <FIELD name="mjdmean" datatype="double" unit="mjd"/>
+      <FIELD name="ra_pm" datatype="double" unit="deg"/>
+      <FIELD name="dec_pm" datatype="double" unit="deg"/>
+      <FIELD name="sigra_pm" datatype="double" unit="arcsec"/>
+      <FIELD name="sigdec_pm" datatype="double" unit="arcsec"/>
+      <FIELD name="sigradec_pm" datatype="double" unit="arcsec"/>
+      <FIELD name="pmra" datatype="int" unit="maspyr"/>
+      <FIELD name="pmdec" datatype="int" unit="maspyr"/>
+      <FIELD name="sigpmra" datatype="int" unit="maspyr"/>
+      <FIELD name="sigpmdec" datatype="int" unit="maspyr"/>
+      <FIELD name="w1snr_pm" datatype="double"/>
+      <FIELD name="w2snr_pm" datatype="double"/>
+      <FIELD name="w3snr_pm" datatype="double"/>
+      <FIELD name="w4snr_pm" datatype="double"/>
+      <FIELD name="w1flux_pm" datatype="double" unit="dn"/>
+      <FIELD name="w1sigflux_pm" datatype="double" unit="dn"/>
+      <FIELD name="w2flux_pm" datatype="double" unit="dn"/>
+      <FIELD name="w2sigflux_pm" datatype="double" unit="dn"/>
+      <FIELD name="w3flux_pm" datatype="double" unit="dn"/>
+      <FIELD name="w3sigflux_pm" datatype="double" unit="dn"/>
+      <FIELD name="w4flux_pm" datatype="double" unit="dn"/>
+      <FIELD name="w4sigflux_pm" datatype="double" unit="dn"/>
+      <FIELD name="w1mpro_pm" datatype="double" unit="mag"/>
+      <FIELD name="w1sigmpro_pm" datatype="double" unit="mag"/>
+      <FIELD name="w1rchi2_pm" datatype="double"/>
+      <FIELD name="w2mpro_pm" datatype="double" unit="mag"/>
+      <FIELD name="w2sigmpro_pm" datatype="double" unit="mag"/>
+      <FIELD name="w2rchi2_pm" datatype="double"/>
+      <FIELD name="w3mpro_pm" datatype="double" unit="mag"/>
+      <FIELD name="w3sigmpro_pm" datatype="double" unit="mag"/>
+      <FIELD name="w3rchi2_pm" datatype="double"/>
+      <FIELD name="w4mpro_pm" datatype="double" unit="mag"/>
+      <FIELD name="w4sigmpro_pm" datatype="double" unit="mag"/>
+      <FIELD name="w4rchi2_pm" datatype="double"/>
+      <FIELD name="rchi2_pm" datatype="double"/>
+      <FIELD name="pmcode" datatype="char" arraysize="*"/>
+      <FIELD name="niters_pm" datatype="int"/>
+      <FIELD name="nsteps_pm" datatype="int"/>
+      <FIELD name="w1cc_map" datatype="int"/>
+      <FIELD name="w1cc_map_str" datatype="char" arraysize="*"/>
+      <FIELD name="w2cc_map" datatype="int"/>
+      <FIELD name="w2cc_map_str" datatype="char" arraysize="*"/>
+      <FIELD name="w3cc_map" datatype="int"/>
+      <FIELD name="w3cc_map_str" datatype="char" arraysize="*"/>
+      <FIELD name="w4cc_map" datatype="int"/>
+      <FIELD name="w4cc_map_str" datatype="char" arraysize="*"/>
+      <FIELD name="cc_flags" datatype="char" arraysize="*"/>
+      <FIELD name="det_bit" datatype="int"/>
+      <FIELD name="ph_qual" datatype="char" arraysize="*"/>
+      <FIELD name="rel" datatype="char" arraysize="*"/>
+      <FIELD name="spos" datatype="int"/>
+      <FIELD name="sdet" datatype="int"/>
+      <FIELD name="napp" datatype="int"/>
+      <FIELD name="best_use_cntr" datatype="long"/>
+      <FIELD name="ngrp" datatype="int"/>
+      <FIELD name="use_src" datatype="int"/>
+      <FIELD name="ext_flg" datatype="int"/>
+      <FIELD name="var_flg" datatype="char" arraysize="*"/>
+      <FIELD name="moon_lev" datatype="char" arraysize="*"/>
+      <FIELD name="pm_qual" datatype="char" arraysize="*"/>
+      <FIELD name="designation" datatype="char" arraysize="*"/>
+      <FIELD name="cat" datatype="int"/>
+      <FIELD name="tmass_key" datatype="int"/>
+      <FIELD name="r_2mass" datatype="double" unit="arcsec"/>
+      <FIELD name="pa_2mass" datatype="double" unit="deg"/>
+      <FIELD name="n_2mass" datatype="int"/>
+      <FIELD name="j_m_2mass" datatype="double" unit="mag"/>
+      <FIELD name="j_msig_2mass" datatype="double" unit="mag"/>
+      <FIELD name="h_m_2mass" datatype="double" unit="mag"/>
+      <FIELD name="h_msig_2mass" datatype="double" unit="mag"/>
+      <FIELD name="k_m_2mass" datatype="double" unit="mag"/>
+      <FIELD name="k_msig_2mass" datatype="double" unit="mag"/>
+      <FIELD name="load_id" datatype="int"/>
+      <FIELD name="cntr" datatype="long"/>
+      <FIELD name="x" datatype="double"/>
+      <FIELD name="y" datatype="double"/>
+      <FIELD name="z" datatype="double"/>
+      <FIELD name="spt_ind" datatype="int"/>
+      <FIELD name="htm20" datatype="long"/>
+      <DATA>
+        <TABLEDATA>
+          <TR>
+            <TD>0098p408_ac51-043708</TD>
+            <TD>0098p408_ac51</TD>
+            <TD>43708</TD>
+            <TD>10.6846947</TD>
+            <TD>41.268939199999998</TD>
+            <TD>0.025000000000000001</TD>
+            <TD>0.024899999999999999</TD>
+            <TD>0.0051999999999999998</TD>
+            <TD>121.1743161</TD>
+            <TD>-21.5730641</TD>
+            <TD>27.849240300000002</TD>
+            <TD>33.348779</TD>
+            <TD>484.49099999999999</TD>
+            <TD>3047.221</TD>
+            <TD>2892.1709999999998</TD>
+            <TD>344.375</TD>
+            <TD>342.113</TD>
+            <TD>1151.4349999999999</TD>
+            <TD>139.89500000000001</TD>
+            <TD>138.511</TD>
+            <TD>2290.058</TD>
+            <TD>65.394000000000005</TD>
+            <TD>57.585999999999999</TD>
+            <TD>570.76400000000001</TD>
+            <TD>13.419</TD>
+            <TD>7.7000000000000002</TD>
+            <TD>23.899999999999999</TD>
+            <TD>56</TD>
+            <TD>72</TD>
+            <TD>36.399999999999999</TD>
+            <TD>745100</TD>
+            <TD>31118</TD>
+            <TD>139940</TD>
+            <TD>2497.1999999999998</TD>
+            <TD>72341</TD>
+            <TD>1004.5</TD>
+            <TD>2940.6999999999998</TD>
+            <TD>80.75</TD>
+            <TD>5.819</TD>
+            <TD>0.044999999999999998</TD>
+            <TD>77.340000000000003</TD>
+            <TD>6.6349999999999998</TD>
+            <TD>0.019</TD>
+            <TD>157.5</TD>
+            <TD>5.8520000000000003</TD>
+            <TD>0.014999999999999999</TD>
+            <TD>80.25</TD>
+            <TD>4.3289999999999997</TD>
+            <TD>0.029999999999999999</TD>
+            <TD>19.91</TD>
+            <TD>86.700000000000003</TD>
+            <TD>1</TD>
+            <TD>0</TD>
+            <TD>0</TD>
+            <TD>0</TD>
+            <TD>0</TD>
+            <TD>0</TD>
+            <TD>0.108</TD>
+            <TD>0.034000000000000002</TD>
+            <TD>0</TD>
+            <TD>0</TD>
+            <TD>6900</TD>
+            <TD>6.6580000000000004</TD>
+            <TD>0.027</TD>
+            <TD>16</TD>
+            <TD>28.285</TD>
+            <TD>0.26100000000000001</TD>
+            <TD>6.6120000000000001</TD>
+            <TD>0.021999999999999999</TD>
+            <TD>16</TD>
+            <TD>45.402000000000001</TD>
+            <TD>0.31900000000000001</TD>
+            <TD>5.6349999999999998</TD>
+            <TD>0.033000000000000002</TD>
+            <TD>0</TD>
+            <TD>24.001999999999999</TD>
+            <TD>0.82499999999999996</TD>
+            <TD>3.7650000000000001</TD>
+            <TD>0.053999999999999999</TD>
+            <TD>0</TD>
+            <TD>24.388000000000002</TD>
+            <TD>0.57599999999999996</TD>
+            <TD>7.6790000000000003</TD>
+            <TD>0.039</TD>
+            <TD>16</TD>
+            <TD>7.681</TD>
+            <TD>0.029999999999999999</TD>
+            <TD>0</TD>
+            <TD>7.2569999999999997</TD>
+            <TD>0.049000000000000002</TD>
+            <TD>0</TD>
+            <TD>5.109</TD>
+            <TD>0.072999999999999995</TD>
+            <TD>0</TD>
+            <TD>6.9189999999999996</TD>
+            <TD>0.027</TD>
+            <TD>16</TD>
+            <TD>6.931</TD>
+            <TD>0.021999999999999999</TD>
+            <TD>16</TD>
+            <TD>6.46</TD>
+            <TD>0.033000000000000002</TD>
+            <TD>0</TD>
+            <TD>4.3410000000000002</TD>
+            <TD>0.053999999999999999</TD>
+            <TD>0</TD>
+            <TD>6.4219999999999997</TD>
+            <TD>0.023</TD>
+            <TD>16</TD>
+            <TD>6.4400000000000004</TD>
+            <TD>0.017999999999999999</TD>
+            <TD>16</TD>
+            <TD>5.9269999999999996</TD>
+            <TD>0.027</TD>
+            <TD>0</TD>
+            <TD>3.839</TD>
+            <TD>0.047</TD>
+            <TD>0</TD>
+            <TD>6.0579999999999998</TD>
+            <TD>0.02</TD>
+            <TD>16</TD>
+            <TD>6.0810000000000004</TD>
+            <TD>0.016</TD>
+            <TD>16</TD>
+            <TD>5.5389999999999997</TD>
+            <TD>0.023</TD>
+            <TD>0</TD>
+            <TD>3.4849999999999999</TD>
+            <TD>0.043999999999999997</TD>
+            <TD>0</TD>
+            <TD>5.7750000000000004</TD>
+            <TD>0.019</TD>
+            <TD>16</TD>
+            <TD>5.8010000000000002</TD>
+            <TD>0.014999999999999999</TD>
+            <TD>16</TD>
+            <TD>5.2380000000000004</TD>
+            <TD>0.021000000000000001</TD>
+            <TD>0</TD>
+            <TD>3.2309999999999999</TD>
+            <TD>0.043999999999999997</TD>
+            <TD>0</TD>
+            <TD>5.5449999999999999</TD>
+            <TD>0.017999999999999999</TD>
+            <TD>16</TD>
+            <TD>5.5739999999999998</TD>
+            <TD>0.014999999999999999</TD>
+            <TD>16</TD>
+            <TD>4.9950000000000001</TD>
+            <TD>0.02</TD>
+            <TD>0</TD>
+            <TD>3.0489999999999999</TD>
+            <TD>0.047</TD>
+            <TD>0</TD>
+            <TD>5.3559999999999999</TD>
+            <TD>0.017999999999999999</TD>
+            <TD>16</TD>
+            <TD>5.3860000000000001</TD>
+            <TD>0.014999999999999999</TD>
+            <TD>16</TD>
+            <TD>4.7939999999999996</TD>
+            <TD>0.02</TD>
+            <TD>0</TD>
+            <TD>2.9209999999999998</TD>
+            <TD>0.050999999999999997</TD>
+            <TD>0</TD>
+            <TD>5.1970000000000001</TD>
+            <TD>0.017999999999999999</TD>
+            <TD>16</TD>
+            <TD>5.2279999999999998</TD>
+            <TD>0.014</TD>
+            <TD>16</TD>
+            <TD>4.6230000000000002</TD>
+            <TD>0.019</TD>
+            <TD>0</TD>
+            <TD>2.8370000000000002</TD>
+            <TD>0.056000000000000001</TD>
+            <TD>0</TD>
+            <TD>45</TD>
+            <TD>45</TD>
+            <TD>5.907</TD>
+            <TD>0.21099999999999999</TD>
+            <TD>0.042000000000000003</TD>
+            <TD>0.68600000000000005</TD>
+            <TD>24</TD>
+            <TD>99.989999999999995</TD>
+            <TD>55210.207255130001</TD>
+            <TD>55398.246087250001</TD>
+            <TD>55307.900228220002</TD>
+            <TD>45</TD>
+            <TD>45</TD>
+            <TD>6.5739999999999998</TD>
+            <TD>0.085999999999999993</TD>
+            <TD>0.017000000000000001</TD>
+            <TD>0.77900000000000003</TD>
+            <TD>25</TD>
+            <TD>99.989999999999995</TD>
+            <TD>55210.207255130001</TD>
+            <TD>55572.959126460002</TD>
+            <TD>55318.09480123</TD>
+            <TD>24</TD>
+            <TD>24</TD>
+            <TD>5.859</TD>
+            <TD>0.072999999999999995</TD>
+            <TD>0.014999999999999999</TD>
+            <TD>0.82599999999999996</TD>
+            <TD>23</TD>
+            <TD>99.989999999999995</TD>
+            <TD>55210.207255130001</TD>
+            <TD>55398.246087250001</TD>
+            <TD>55304.163380710001</TD>
+            <TD>24</TD>
+            <TD>24</TD>
+            <TD>4.3280000000000003</TD>
+            <TD>0.14099999999999999</TD>
+            <TD>0.029000000000000001</TD>
+            <TD>0.874</TD>
+            <TD>23</TD>
+            <TD>99.989999999999995</TD>
+            <TD>55210.207255130001</TD>
+            <TD>55398.246087250001</TD>
+            <TD>55304.163380710001</TD>
+            <TD>-2</TD>
+            <TD>-10</TD>
+            <TD>-21</TD>
+            <TD>0</TD>
+            <TD>0</TD>
+            <TD>0</TD>
+            <TD>0.68999999999999995</TD>
+            <TD>180</TD>
+            <TD>0.73999999999999999</TD>
+            <TD>45</TD>
+            <TD>2.5750000000000002</TD>
+            <TD>0.01</TD>
+            <TD>17</TD>
+            <TD>180</TD>
+            <TD>0.73999999999999999</TD>
+            <TD>45</TD>
+            <TD>2.7629999999999999</TD>
+            <TD>0.0089999999999999993</TD>
+            <TD>17</TD>
+            <TD>180</TD>
+            <TD>0.73999999999999999</TD>
+            <TD>45</TD>
+            <TD>2.0960000000000001</TD>
+            <TD>0.021000000000000001</TD>
+            <TD>17</TD>
+            <TD>180</TD>
+            <TD>0.91000000000000003</TD>
+            <TD>45</TD>
+            <TD>1.026</TD>
+            <TD>0.045999999999999999</TD>
+            <TD>17</TD>
+            <TD>4</TD>
+            <TD>137</TD>
+            <TD>55527.169311999998</TD>
+            <TD>10.6846677</TD>
+            <TD>41.268921200000001</TD>
+            <TD>0.025999999999999999</TD>
+            <TD>0.0258</TD>
+            <TD>-0.0011000000000000001</TD>
+            <TD>203</TD>
+            <TD>187</TD>
+            <TD>21</TD>
+            <TD>21</TD>
+            <TD>23.800000000000001</TD>
+            <TD>56.5</TD>
+            <TD>73.299999999999997</TD>
+            <TD>36.5</TD>
+            <TD>735650</TD>
+            <TD>30851</TD>
+            <TD>140770</TD>
+            <TD>2493.3000000000002</TD>
+            <TD>72155</TD>
+            <TD>984.00999999999999</TD>
+            <TD>2945.4000000000001</TD>
+            <TD>80.721999999999994</TD>
+            <TD>5.8330000000000002</TD>
+            <TD>0.045999999999999999</TD>
+            <TD>77.489999999999995</TD>
+            <TD>6.6289999999999996</TD>
+            <TD>0.019</TD>
+            <TD>156.80000000000001</TD>
+            <TD>5.8540000000000001</TD>
+            <TD>0.014999999999999999</TD>
+            <TD>78.109999999999999</TD>
+            <TD>4.327</TD>
+            <TD>0.029999999999999999</TD>
+            <TD>19.949999999999999</TD>
+            <TD>86.609999999999999</TD>
+            <TD>1N000</TD>
+            <TD>3</TD>
+            <TD>12</TD>
+            <TD>0</TD>
+            <TD></TD>
+            <TD>0</TD>
+            <TD></TD>
+            <TD>0</TD>
+            <TD></TD>
+            <TD>0</TD>
+            <TD></TD>
+            <TD>0000</TD>
+            <TD>15</TD>
+            <TD>AAAA</TD>
+            <TD></TD>
+            <TD>1</TD>
+            <TD>1</TD>
+            <TD>1</TD>
+            <TD>98140801351043708</TD>
+            <TD>0</TD>
+            <TD>1</TD>
+            <TD>5</TD>
+            <TD>3n33</TD>
+            <TD>0000</TD>
+            <TD></TD>
+            <TD>J004244.32+411608.1</TD>
+            <TD>1</TD>
+            <TD>1287659830</TD>
+            <TD>0.36299999999999999</TD>
+            <TD>18.399999999999999</TD>
+            <TD>1</TD>
+            <TD>9.4529999999999994</TD>
+            <TD>0.051999999999999998</TD>
+            <TD>8.6679999999999993</TD>
+            <TD>0.050999999999999997</TD>
+            <TD>8.4749999999999996</TD>
+            <TD>0.050999999999999997</TD>
+            <TD>1049</TD>
+            <TD>98140801351043708</TD>
+            <TD>0.73859046887574598</TD>
+            <TD>0.13935378600274201</TD>
+            <TD>0.65959430077329195</TD>
+            <TD>233001221</TD>
+            <TD>17324365653292</TD>
+          </TR>
+        </TABLEDATA>
+      </DATA>
+    </TABLE>
+  </RESOURCE>
+</VOTABLE>
