@@ -1,0 +1,8 @@
+{
+  "serializer_type": "db",
+  "db": {
+    "db_path": "gaia_obj.db",
+    "table_name": "gaia_objects"
+  }
+}
+
