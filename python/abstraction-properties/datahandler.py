@@ -18,7 +18,7 @@ class FileSerializer(Serializer):
 
     def serialize(self, obj):
         with open(self.file_path, 'w') as f:
-            json.dump(obj.__dict__, f)
+            json.dump(obj, f)
 
     def deserialize(self):
         with open(self.file_path, 'r') as f:
@@ -55,10 +55,31 @@ class SerializerFactory:
         else:
             raise ValueError(f"Unsupported serializer type: {serializer_type}")
 
+# another getter can be externalized and shared accross pipeline
+# this is scalable and properties can be passed as argument or message
+def get_serializer():
+    # Read serializer type from external property file
+    with open('config.properties', 'r') as f:
+        serializer_type = f.read().strip()
+
+    # Return appropriate serializer
+    if serializer_type == 'file':
+        return FileSerializer('data.json')
+    elif serializer_type == 'db':
+        return DBSerializer('data.db')
+
+
 class GaiaObject:
     def __init__(self, ra: float, dec: float):
         self.ra = ra
         self.dec = dec
+
+    def to_dict(self):
+        return {'ra': self.ra, 'dec': self.dec}
+
+    @classmethod
+    def from_dict(cls, data):
+        return cls(data['ra'], data['dec'])
 
 if __name__ == '__main__':
     with open('config.json', 'r') as f:
@@ -69,9 +90,8 @@ if __name__ == '__main__':
 
     serializer = SerializerFactory.create_serializer(serializer_type, serializer_config)
 
-    gaia_obj = GaiaObject(86.5, 32.2)
+    gaia_obj = GaiaObject(86.5, -10)
     serializer.serialize(gaia_obj)
 
     deserialized_obj = serializer.deserialize()
     print(deserialized_obj)
-
