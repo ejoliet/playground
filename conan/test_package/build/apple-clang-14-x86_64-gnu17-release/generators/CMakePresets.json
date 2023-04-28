@@ -1,0 +1,37 @@
+{
+    "version": 3,
+    "vendor": {
+        "conan": {}
+    },
+    "cmakeMinimumRequired": {
+        "major": 3,
+        "minor": 15,
+        "patch": 0
+    },
+    "configurePresets": [
+        {
+            "name": "conan-apple-clang-14-x86_64-gnu17-release",
+            "displayName": "'conan-apple-clang-14-x86_64-gnu17-release' config",
+            "description": "'conan-apple-clang-14-x86_64-gnu17-release' configure using 'Unix Makefiles' generator",
+            "generator": "Unix Makefiles",
+            "cacheVariables": {
+                "CMAKE_POLICY_DEFAULT_CMP0091": "NEW",
+                "CMAKE_BUILD_TYPE": "Release"
+            },
+            "toolchainFile": "/Users/ejoliet/devspace/playground/conan/test_package/build/apple-clang-14-x86_64-gnu17-release/generators/conan_toolchain.cmake",
+            "binaryDir": "/Users/ejoliet/devspace/playground/conan/test_package/build/apple-clang-14-x86_64-gnu17-release"
+        }
+    ],
+    "buildPresets": [
+        {
+            "name": "conan-apple-clang-14-x86_64-gnu17-release",
+            "configurePreset": "conan-apple-clang-14-x86_64-gnu17-release"
+        }
+    ],
+    "testPresets": [
+        {
+            "name": "conan-apple-clang-14-x86_64-gnu17-release",
+            "configurePreset": "conan-apple-clang-14-x86_64-gnu17-release"
+        }
+    ]
+}
