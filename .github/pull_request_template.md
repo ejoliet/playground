@@ -19,6 +19,7 @@
 ### Other information:
 
 Did you test on different browsers?
+Put an `x` in all the items that apply
 
 - [ ] Chrome
 - [ ] Safari
