@@ -19,6 +19,7 @@
 ### Other information:
 
 Did you test on different browsers?
+
 - [ ] Chrome
 - [ ] Safari
 - [ ] Firefox
