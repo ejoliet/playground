@@ -4,7 +4,7 @@ pipeline {
         stage('Stage 1') {
             steps {                
                 cleanWs()
-                echo 'Hello Romans from github!' 
+                echo 'Hello Romans from ngrok!' 
             }
         }
     }
