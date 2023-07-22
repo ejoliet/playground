@@ -1,9 +1,9 @@
 pipeline {
     agent any 
     stages {
-        cleanWs()
         stage('Stage 1') {
             steps {                
+                cleanWs()
                 echo 'Hello Romans from github!' 
             }
         }
