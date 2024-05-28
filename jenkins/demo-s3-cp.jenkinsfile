@@ -1,0 +1,60 @@
+pipeline {
+    agent any
+    environment {
+        S3_SOURCE = 's3://ejoliet-dummy/hello.html'
+        LOCAL_FILE = 'hello.html'
+    }
+    stages {
+        stage('Clean Workspace Before') {
+            steps {
+                script {
+                    // Clean up workspace before starting
+                    deleteDir()
+                }
+            }
+        }
+        stage('Check File Not Present') {
+            steps {
+                script {
+                    if (fileExists(LOCAL_FILE)) {
+                        error "File ${LOCAL_FILE} already exists in the workspace."
+                    } else {
+                        echo "File ${LOCAL_FILE} is not present in the workspace. Proceeding with download."
+                    }
+                }
+            }
+        }
+        stage('Copy File from S3') {
+            steps {
+                script {
+                    sh '''
+                    # Copy file from S3 bucket to Jenkins workspace
+                    aws s3 cp ${S3_SOURCE} .
+                    '''
+                }
+            }
+        }
+        stage('Log File Details') {
+            steps {
+                script {
+                    if (fileExists(LOCAL_FILE)) {
+                        def fileSize = sh(script: "stat -c%s ${LOCAL_FILE}", returnStdout: true).trim()
+                        echo "File ${LOCAL_FILE} copied successfully."
+                        echo "File Size: ${fileSize} bytes"
+                    } else {
+                        error "File ${LOCAL_FILE} was not found in the workspace after download."
+                    }
+                }
+            }
+        }
+    }
+    post {
+        always {
+            script {
+                // Clean up workspace after job completion
+                deleteDir()
+                echo "Workspace cleaned up after job completion."
+            }
+        }
+    }
+}
