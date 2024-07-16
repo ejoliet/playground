@@ -1,3 +1,3 @@
 # playground
-Playground for dev purposes and jenkins
+Playground for dev purposes and jenkins with gh extension to forward message
 
