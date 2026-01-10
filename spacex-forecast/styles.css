@@ -12,21 +12,20 @@
 }
 
 body {
-  background: linear-gradient(140deg, #070910 0%, #0d1220 40%, #0b1630 100%);
+  background: linear-gradient(150deg, #070910 0%, #0b1326 55%, #0a1a36 100%);
   min-height: 100vh;
 }
 
 .page {
-  max-width: 1200px;
+  max-width: 1000px;
   margin: 0 auto;
   padding: 32px 24px 64px;
 }
 
 .hero {
-  background: radial-gradient(circle at top left, rgba(79, 104, 255, 0.35), transparent 55%),
-    rgba(9, 11, 22, 0.85);
+  background: rgba(10, 14, 28, 0.9);
   border-radius: 24px;
-  padding: 32px 32px 40px;
+  padding: 32px;
   border: 1px solid rgba(255, 255, 255, 0.08);
   box-shadow: 0 24px 50px rgba(0, 0, 0, 0.45);
 }
@@ -35,11 +34,11 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 32px;
+  margin-bottom: 24px;
 }
 
 .logo {
-  font-size: 1.25rem;
+  font-size: 1.2rem;
   font-weight: 700;
   letter-spacing: 0.04em;
 }
@@ -54,141 +53,63 @@ body {
   cursor: pointer;
 }
 
+.nav-button:disabled {
+  opacity: 0.6;
+  cursor: default;
+}
+
 .hero-content {
   display: grid;
-  grid-template-columns: minmax(0, 1.4fr) minmax(0, 0.6fr);
-  gap: 32px;
+  gap: 16px;
 }
 
 .eyebrow {
   text-transform: uppercase;
   letter-spacing: 0.2em;
-  font-size: 0.75rem;
+  font-size: 0.7rem;
   color: rgba(255, 255, 255, 0.6);
-  margin-bottom: 12px;
 }
 
 h1 {
-  font-size: clamp(2rem, 4vw, 3.5rem);
-  margin-bottom: 16px;
+  font-size: clamp(2rem, 4vw, 3rem);
 }
 
 .subhead {
   font-size: 1.05rem;
   line-height: 1.6;
   color: rgba(255, 255, 255, 0.75);
-  margin-bottom: 24px;
+  max-width: 560px;
 }
 
-.plan-card {
-  background: rgba(15, 21, 40, 0.8);
-  border-radius: 18px;
-  padding: 20px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 16px;
-  border: 1px solid rgba(255, 255, 255, 0.08);
-  margin-bottom: 24px;
-}
-
-.plan-card h2 {
-  font-size: 1.2rem;
-  margin-bottom: 6px;
-}
-
-.plan-card p {
-  color: rgba(255, 255, 255, 0.6);
-  font-size: 0.95rem;
-}
-
-.badges {
-  display: grid;
-  gap: 8px;
-}
-
-.badges span {
-  background: rgba(79, 104, 255, 0.18);
-  border: 1px solid rgba(79, 104, 255, 0.35);
-  padding: 6px 12px;
-  border-radius: 999px;
-  font-size: 0.8rem;
-  text-align: center;
-}
-
-.subscribe {
-  display: grid;
-  gap: 12px;
-  margin-bottom: 8px;
-}
-
-.subscribe label {
+.hero-footer {
   display: grid;
   gap: 6px;
-  font-size: 0.85rem;
-  color: rgba(255, 255, 255, 0.7);
-}
-
-.subscribe input {
-  padding: 12px 14px;
-  border-radius: 10px;
-  border: 1px solid rgba(255, 255, 255, 0.15);
-  background: rgba(7, 10, 18, 0.8);
-  color: inherit;
-}
-
-.subscribe button {
-  background: #4f68ff;
-  border: none;
-  color: #fff;
-  padding: 12px 18px;
-  border-radius: 12px;
-  font-weight: 600;
-  cursor: pointer;
-  transition: transform 0.2s ease;
-}
-
-.subscribe button:hover {
-  transform: translateY(-1px);
-}
-
-.fine-print {
-  font-size: 0.75rem;
-  color: rgba(255, 255, 255, 0.55);
+  margin-top: 8px;
 }
 
 .status {
-  min-height: 22px;
-  font-size: 0.9rem;
+  font-size: 0.95rem;
   color: #7fffd4;
 }
 
-.stats {
-  display: grid;
-  gap: 16px;
-  background: rgba(8, 12, 24, 0.7);
-  border-radius: 20px;
-  padding: 24px;
-  border: 1px solid rgba(255, 255, 255, 0.08);
-}
-
-.stats h3 {
-  font-size: 1.75rem;
-}
-
-.stats p {
-  color: rgba(255, 255, 255, 0.65);
-  font-size: 0.9rem;
+.hint {
+  font-size: 0.85rem;
+  color: rgba(255, 255, 255, 0.55);
 }
 
 .content {
-  margin-top: 48px;
+  margin-top: 40px;
   display: grid;
-  gap: 48px;
+  gap: 40px;
 }
 
 .feed-header {
-  margin-bottom: 24px;
+  margin-bottom: 20px;
+}
+
+.feed-header p {
+  color: rgba(255, 255, 255, 0.65);
+  margin-top: 8px;
 }
 
 .feed-grid {
@@ -214,7 +135,7 @@ h1 {
 }
 
 .launch-card h3 {
-  font-size: 1.1rem;
+  font-size: 1.05rem;
 }
 
 .launch-card p {
@@ -227,7 +148,6 @@ h1 {
   margin-top: 8px;
   display: inline-flex;
   align-items: center;
-  gap: 6px;
   padding: 4px 10px;
   border-radius: 999px;
   background: rgba(124, 196, 255, 0.15);
@@ -236,34 +156,9 @@ h1 {
   color: #b5d6ff;
 }
 
-.benefits {
-  background: rgba(8, 12, 24, 0.8);
-  border-radius: 22px;
-  padding: 28px;
-  border: 1px solid rgba(255, 255, 255, 0.08);
-}
-
-.benefit-grid {
-  display: grid;
-  gap: 20px;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-  margin-top: 20px;
-}
-
 .footer {
   margin-top: 48px;
   text-align: center;
   color: rgba(255, 255, 255, 0.5);
   font-size: 0.85rem;
-}
-
-@media (max-width: 900px) {
-  .hero-content {
-    grid-template-columns: 1fr;
-  }
-
-  .plan-card {
-    flex-direction: column;
-    align-items: flex-start;
-  }
 }
