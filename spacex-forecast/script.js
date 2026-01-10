@@ -1,4 +1,6 @@
-const API_BASE = "https://api.spacexdata.com/v4/launches";
+const API_HOST = "https://lldev.thespacedevs.com";
+const PROD_API_HOST = "https://ll.thespacedevs.com";
+const API_BASE = `${API_HOST}/2.2.0/launch`;
 const feedGrid = document.getElementById("feed-grid");
 const feedTitle = document.getElementById("feed-title");
 const feedSummary = document.getElementById("feed-summary");
@@ -39,11 +41,14 @@ const renderLaunches = (launches) => {
   launches.forEach((launch) => {
     const card = document.createElement("article");
     card.className = "launch-card";
-    const details = launch.details || "Mission details will post after recovery analysis.";
-    const statusLabel = getStatusLabel(launch);
+    const details =
+      launch.mission?.description ||
+      launch.mission?.name ||
+      "Mission details will post after recovery analysis.";
+    const statusLabel = launch.status?.name || getStatusLabel(launch);
 
     card.innerHTML = `
-      <span>${formatDate(launch.date_utc)}</span>
+      <span>${formatDate(launch.net)}</span>
       <h3>${launch.name}</h3>
       <p>${details}</p>
       <div class="status-pill">${statusLabel}</div>
@@ -56,19 +61,20 @@ const renderLaunches = (launches) => {
 const sortByDateDesc = (launches) =>
   launches
     .slice()
-    .sort((a, b) => new Date(b.date_utc) - new Date(a.date_utc));
+    .sort((a, b) => new Date(b.net) - new Date(a.net));
 
 const sortByDateAsc = (launches) =>
   launches
     .slice()
-    .sort((a, b) => new Date(a.date_utc) - new Date(b.date_utc));
+    .sort((a, b) => new Date(a.net) - new Date(b.net));
 
-const fetchLaunches = async (type) => {
-  const response = await fetch(`${API_BASE}/${type}`);
+const fetchLaunches = async (type, limit = 12) => {
+  const response = await fetch(`${API_BASE}/${type}/?limit=${limit}`);
   if (!response.ok) {
     throw new Error("Unable to load launch data.");
   }
-  return response.json();
+  const payload = await response.json();
+  return payload.results || [];
 };
 
 const loadPastLaunches = async () => {
@@ -77,7 +83,7 @@ const loadPastLaunches = async () => {
   loginStatus.textContent = "Loading past launches...";
 
   try {
-    const pastLaunches = await fetchLaunches("past");
+    const pastLaunches = await fetchLaunches("previous");
     const recentPast = sortByDateDesc(pastLaunches).slice(0, 6);
     renderLaunches(recentPast);
     loginStatus.textContent = "Viewing recent past launches.";
@@ -93,7 +99,7 @@ const loadCombinedLaunches = async () => {
 
   try {
     const [pastLaunches, upcomingLaunches] = await Promise.all([
-      fetchLaunches("past"),
+      fetchLaunches("previous"),
       fetchLaunches("upcoming"),
     ]);
 
