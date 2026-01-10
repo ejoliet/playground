@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Launchpad+ | SpaceX Launch Feed</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="page">
+      <header class="hero">
+        <nav class="nav">
+          <div class="logo">Launchpad+</div>
+          <button class="nav-button" type="button">Log in</button>
+        </nav>
+        <div class="hero-content">
+          <div>
+            <p class="eyebrow">SpaceX launch intelligence</p>
+            <h1>Follow every upcoming SpaceX launch in one curated feed.</h1>
+            <p class="subhead">
+              Start with a 1-month free trial. Continue for just $5/month to keep your launch calendar,
+              mission breakdowns, and live update alerts.
+            </p>
+            <div class="plan-card">
+              <div>
+                <h2>Launchpad+ Monthly</h2>
+                <p>$0 today • 1-month trial • then $5/month</p>
+              </div>
+              <div class="badges">
+                <span>Cancel anytime</span>
+                <span>Early access missions</span>
+              </div>
+            </div>
+            <form class="subscribe" id="subscribe-form">
+              <label>
+                Work email
+                <input type="email" name="email" placeholder="you@email.com" required />
+              </label>
+              <button type="submit">Start free trial</button>
+              <p class="fine-print">
+                By subscribing you agree to be charged $5/month after your 1-month trial ends.
+              </p>
+            </form>
+            <p class="status" id="status-message" aria-live="polite"></p>
+          </div>
+          <div class="stats">
+            <div>
+              <h3>12</h3>
+              <p>Upcoming launches tracked</p>
+            </div>
+            <div>
+              <h3>24/7</h3>
+              <p>Mission readiness updates</p>
+            </div>
+            <div>
+              <h3>98%</h3>
+              <p>Launch success insights</p>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <main class="content">
+        <section class="feed">
+          <div class="feed-header">
+            <h2>Upcoming SpaceX launches</h2>
+            <p>Stay ahead with target windows, payloads, and status updates.</p>
+          </div>
+          <div class="feed-grid" id="feed-grid"></div>
+        </section>
+
+        <section class="benefits">
+          <h2>Everything you need to track missions</h2>
+          <div class="benefit-grid">
+            <div>
+              <h3>Launch alerts</h3>
+              <p>Receive SMS and email alerts 48 hours, 3 hours, and 15 minutes before liftoff.</p>
+            </div>
+            <div>
+              <h3>Mission briefs</h3>
+              <p>Concise summaries on payloads, boosters, landing zones, and recovery plans.</p>
+            </div>
+            <div>
+              <h3>Tracking map</h3>
+              <p>Watch live trajectories with stage separation and landing confirmations.</p>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <footer class="footer">
+        <p>Launchpad+ is an independent launch tracking service. SpaceX is a trademark of Space Exploration Technologies Corp.</p>
+      </footer>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
