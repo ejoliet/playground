@@ -1,0 +1,31 @@
+services:
+
+  # ── MCP Server (HTTP transport) ─────────────────────────────────────────────
+  mcp-server:
+    build: .
+    command: python server.py --transport http
+    ports:
+      - "8000:8000"
+    environment:
+      MCP_HOST: "0.0.0.0"
+      MCP_PORT: "8000"
+    healthcheck:
+      test: ["CMD", "python", "-c",
+             "import urllib.request; urllib.request.urlopen('http://localhost:8000/mcp')"]
+      interval: 5s
+      timeout: 3s
+      retries: 5
+
+  # ── Web Chatbot ─────────────────────────────────────────────────────────────
+  chatbot:
+    build: .
+    command: python webapp.py
+    ports:
+      - "5000:5000"
+    environment:
+      MCP_SERVER_URL: "http://mcp-server:8000/mcp"
+      WEBAPP_PORT: "5000"
+      ANTHROPIC_API_KEY: "${ANTHROPIC_API_KEY}"
+    depends_on:
+      mcp-server:
+        condition: service_healthy
