@@ -1,0 +1,50 @@
+# Local LLM stack — uses Ollama running natively on macOS (host machine).
+#
+# WHY not run Ollama in Docker on macOS?
+#   Docker Desktop containers can't access the Mac's Metal GPU, so inference
+#   would be CPU-only and very slow. Running Ollama natively uses Metal GPU
+#   acceleration, then pointing Docker containers at host.docker.internal
+#   lets them talk to it without any speed penalty.
+#
+# Setup (one-time):
+#   brew install ollama
+#   ollama pull qwen2.5:7b          # ~4 GB, runs well on 8 GB RAM M-series Macs
+#   ollama serve                    # starts on http://localhost:11434
+#
+# Then:
+#   docker compose -f docker-compose.local.yml up --build
+#   open http://localhost:5000
+
+services:
+
+  # ── MCP Server (same as the Anthropic stack) ───────────────────────────────
+  mcp-server:
+    build: .
+    command: python server.py --transport http
+    ports:
+      - "8000:8000"
+    environment:
+      MCP_HOST: "0.0.0.0"
+      MCP_PORT: "8000"
+    healthcheck:
+      test: ["CMD", "python", "-c",
+             "import urllib.request; urllib.request.urlopen('http://localhost:8000/mcp')"]
+      interval: 5s
+      timeout: 3s
+      retries: 5
+
+  # ── Web Chatbot (local LLM) ────────────────────────────────────────────────
+  chatbot:
+    build: .
+    command: python webapp_local.py
+    ports:
+      - "5000:5000"
+    environment:
+      MCP_SERVER_URL: "http://mcp-server:8000/mcp"
+      # host.docker.internal resolves to your Mac — Ollama runs there with Metal GPU
+      OLLAMA_HOST: "http://host.docker.internal:11434"
+      OLLAMA_MODEL: "qwen2.5:7b"   # change to llama3.1:8b, mistral:7b-instruct, etc.
+      WEBAPP_PORT: "5000"
+    depends_on:
+      mcp-server:
+        condition: service_healthy
