@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Launchpad+ | SpaceX Launch Feed</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="page">
+      <header class="hero">
+        <nav class="nav">
+          <div class="logo">Launchpad+</div>
+          <button class="nav-button" id="login-button" type="button">Log in</button>
+        </nav>
+        <div class="hero-content">
+          <p class="eyebrow">SpaceX launch intelligence</p>
+          <h1>Past launches at a glance, with upcoming windows after you log in.</h1>
+          <p class="subhead">
+            Launchpad+ keeps your mission history and future schedule in one streamlined feed.
+          </p>
+          <div class="hero-footer">
+            <p class="status" id="login-status">Viewing recent past launches.</p>
+            <p class="hint">Log in to unlock upcoming launch windows and combined feeds.</p>
+          </div>
+        </div>
+      </header>
+
+      <main class="content">
+        <section class="feed">
+          <div class="feed-header">
+            <h2 id="feed-title">Recent SpaceX launches</h2>
+            <p id="feed-summary">A quick look at the latest completed missions.</p>
+          </div>
+          <div class="feed-grid" id="feed-grid"></div>
+        </section>
+      </main>
+
+      <footer class="footer">
+        <p>
+          Launchpad+ is an independent launch tracking service. SpaceX is a trademark of Space Exploration Technologies Corp.
+        </p>
+      </footer>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
