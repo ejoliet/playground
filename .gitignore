@@ -1,1 +1,29 @@
+# Environment variables
+.env
+
+# Data directories
+papyrus-data/
+papyrus-uploads/
+papyrus-config/
+
+# Nginx logs
+nginx/logs/
+
+# SSL certificates (should be managed separately)
+nginx/ssl/*.key
+nginx/ssl/*.crt
+nginx/ssl/*.pem
+
+# Docker volumes
+*.db
+
+# Backup files
+*.tar.gz
+*.sql
+
+# macOS
 .DS_Store
+
+# IDE
+.vscode/
+.idea/
