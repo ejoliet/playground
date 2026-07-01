@@ -1,0 +1,8 @@
+description: "Tutorial pipeline: mission-specific simple calibration."
+
+tasks:
+  simpleCalibration:
+    class: lsst.my_mission.tasks.simple_calibration.SimpleCalibrationTask
+    config:
+      bias_level: 10.0
+      flat_scale: 1.02
