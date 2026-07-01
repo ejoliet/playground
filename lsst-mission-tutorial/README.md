@@ -223,8 +223,8 @@ Expected: at least one `calexp` dataset.
 File: `src/read_image_stats.py`
 
 ```python
-from lsst.daf.butler import Butler
 import numpy as np
+from lsst.daf.butler import Butler
 
 
 def main() -> None:
@@ -471,8 +471,9 @@ def main() -> None:
 
     for ref in refs:
         exposure = butler.get(ref)
+        image_shape = exposure.getImage().array.shape
         print("Data ID:", dict(ref.dataId))
-        print("Dimensions:", exposure.getDimensions())
+        print("Image shape:", image_shape)
 
 
 if __name__ == "__main__":
@@ -628,7 +629,7 @@ These are cited inline above and collected here:
 4. `lsst.pipe.base` / `PipelineTask`: https://pipelines.lsst.io/modules/lsst.pipe.base/index.html
 5. `lsst.ctrl.mpexec` / `pipetask`: https://pipelines.lsst.io/modules/lsst.ctrl.mpexec/index.html
 6. Rubin Data Butler paper (Jenness et al.): https://ui.adsabs.harvard.edu/abs/2022SPIE12189E..11J/abstract
-7. Hyper Suprime-Cam pipeline and LSST software reuse context: https://arxiv.org/abs/1705.00067
+7. Hyper-Suprime-Cam pipeline and LSST software reuse context: https://arxiv.org/abs/1705.00067
 
 ---
 

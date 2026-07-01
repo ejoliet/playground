@@ -15,8 +15,9 @@ def main() -> None:
 
     for ref in refs:
         exposure = butler.get(ref)
+        image_shape = exposure.getImage().array.shape
         print("Data ID:", dict(ref.dataId))
-        print("Dimensions:", exposure.getDimensions())
+        print("Image shape:", image_shape)
 
 
 if __name__ == "__main__":

@@ -1,6 +1,7 @@
 import lsst.pex.config as pexConfig
 import lsst.pipe.base as pipeBase
 import lsst.pipe.base.connectionTypes as cT
+from lsst.afw.image import ExposureF
 
 
 class SimpleCalibrationConnections(
@@ -50,7 +51,21 @@ class SimpleCalibrationTask(pipeBase.PipelineTask):
     ConfigClass = SimpleCalibrationConfig
     _DefaultName = "simpleCalibration"
 
-    def run(self, input_exposure):
+    def run(self, input_exposure: ExposureF) -> pipeBase.Struct:
+        """Apply scalar bias subtraction and flat scaling.
+
+        Parameters
+        ----------
+        input_exposure : `lsst.afw.image.ExposureF`
+            Input exposure read from Butler.
+
+        Returns
+        -------
+        result : `lsst.pipe.base.Struct`
+            Struct with one field, `output_exposure`, containing the
+            calibrated exposure. The field name must match the output
+            connection name.
+        """
         if self.config.flat_scale == 0.0:
             raise ValueError("flat_scale must be non-zero")
 
