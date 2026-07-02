@@ -9,7 +9,28 @@ log = logging.getLogger(__name__)
 
 # asdf.open resolves s3:// URIs via fsspec + s3fs automatically.
 # Set anon=True globally for public buckets (no AWS credentials needed).
-fsspec.config.conf["s3"] = {"anon": True}
+# default_fill_cache=False + cache_type "none" are critical: with the default
+# readahead cache, every small seek+read (asdf walks each block header) pulls
+# a full 5 MB block, ballooning the fetch to ~50% of the file.
+fsspec.config.conf["s3"] = {
+    "anon": True,
+    "default_fill_cache": False,
+    "default_cache_type": "none",
+}
+
+# Patch s3fs at the network-fetch layer (not read()) so the counter reflects
+# actual S3 Range GET bytes, regardless of how asdf/fsspec buffer or cache reads.
+_bytes_fetched = {"total": 0}
+_orig_fetch_range = s3fs.S3File._fetch_range
+
+
+def _counting_fetch_range(self, start, end):
+    data = _orig_fetch_range(self, start, end)
+    _bytes_fetched["total"] += len(data)
+    return data
+
+
+s3fs.S3File._fetch_range = _counting_fetch_range
 
 asdf_uri = (
     "s3://stpubdata/roman/nexus/soc_simulations/r00342/l2/"
@@ -49,5 +70,6 @@ with asdf.open(
 
     # Accessing data_node[:] here would trigger a full array fetch — skipped intentionally.
 
-print("\nNote: bytes fetched not tracked here (asdf owns the file handle).")
-print("Use s3example.py or s3fsexample.py for precise bytes-fetched accounting.")
+fetched = _bytes_fetched["total"]
+pct = 100 * fetched / file_size
+print(f"\nbytes fetched: {fetched:,} / {file_size:,} ({pct:.2f}%) — metadata only, no array data downloaded")
