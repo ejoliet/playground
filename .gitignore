@@ -1,1 +1,5 @@
 .DS_Store
+
+# Roman Sky Swarm — never commit signing keypairs (declared before any keygen)
+*.pem
+*.key

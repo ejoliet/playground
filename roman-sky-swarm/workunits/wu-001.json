@@ -1,0 +1,34 @@
+{
+  "wu_id": "wu-001",
+  "wu_version": 1,
+  "description": "Reference work unit: redshift-binned galaxy statistics on one OpenUniverse2024 HEALPix tile. Predicate selects ~rg0 only (redshift zone maps prune rg1-rg3); kernel touches 3 of 18 columns.",
+  "dataset": {
+    "url": "https://nasa-irsa-simulations.s3.amazonaws.com/openuniverse2024/roman/preview/roman_rubin_cats_v1.1.2_faint/galaxy_10307.parquet",
+    "format": "parquet",
+    "size_bytes": 373399168,
+    "sha256_manifest": {
+      "kind": "footer",
+      "byte_range": [373388355, 373399167],
+      "sha256": "9559a4045bf263a99cf76c1245ccbf1da519b704b7f3e0a85d6cd659b424722b"
+    }
+  },
+  "kernel": {
+    "type": "duckdb-sql",
+    "engine_version": "duckdb-wasm@1.28.0",
+    "sql": "SELECT CAST(FLOOR(redshift / 0.05) AS INTEGER) AS z_bin, COUNT(*) AS n_gal, MIN(ra) AS ra_min, MAX(ra) AS ra_max, MIN(dec) AS dec_min, MAX(dec) AS dec_max, SUM(redshift) AS z_sum, AVG(redshift) AS z_mean FROM read_parquet('$RSS_DATASET_URL') WHERE redshift < 0.5 GROUP BY z_bin ORDER BY z_bin"
+  },
+  "slice": {
+    "predicate": "redshift < 0.5",
+    "columns_touched": ["redshift", "ra", "dec"],
+    "expected_row_groups": "1 of 4 (rg0; rg1-rg3 pruned by redshift column statistics)",
+    "expected_bytes_approx": 25000000
+  },
+  "output": {
+    "canonicalization": "rss-canon-v0 (rows sorted by canonical serialization; sorted JSON keys; no whitespace; doubles as fixed 6-decimal strings, -0 normalized, NaN/Infinity as strings; int64 as JSON number when |v| <= 2^53-1 else decimal string)",
+    "hash": "sha256"
+  },
+  "limits": {
+    "max_dataset_bytes": 104857600,
+    "max_result_rows": 100000
+  }
+}
