@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Roman Sky Swarm — Spike 0</title>
+<style>
+  :root { color-scheme: light dark; }
+  body { font-family: system-ui, sans-serif; max-width: 60rem; margin: 2rem auto; padding: 0 1rem; line-height: 1.45; }
+  h1 { font-size: 1.3rem; } h2 { font-size: 1.05rem; margin-top: 1.6rem; }
+  code, pre, .hash { font-family: ui-monospace, monospace; }
+  pre { background: rgba(127,127,127,.12); padding: .7rem; border-radius: 6px; overflow-x: auto; font-size: .8rem; }
+  .hash { font-size: 1.05rem; font-weight: 700; word-break: break-all; }
+  button, select { font: inherit; padding: .4rem .9rem; }
+  button { cursor: pointer; }
+  #log { max-height: 14rem; overflow-y: auto; }
+  table { border-collapse: collapse; font-size: .85rem; }
+  td, th { border: 1px solid rgba(127,127,127,.4); padding: .25rem .55rem; text-align: left; vertical-align: top; }
+  .ok { color: #1a7f37; } .bad { color: #c0392b; }
+  .muted { opacity: .7; font-size: .85rem; }
+</style>
+</head>
+<body>
+<h1>Roman Sky Swarm — Spike 0: partial-read + determinism probe</h1>
+<p class="muted">
+  Fetches only the needed bytes of a 356&nbsp;MB OpenUniverse2024 Parquet catalog via HTTP Range,
+  runs a fixed DuckDB-Wasm kernel in a Web Worker, and emits a canonical sha256.
+  Run the same work unit in Chrome and Firefox on two machines — the hashes must match.
+</p>
+
+<p>
+  <label>Work unit:
+    <select id="wu-select">
+      <option value="workunits/wu-001.json" selected>wu-001 (reference — GO gate)</option>
+      <option value="workunits/wu-002-stress.json">wu-002-stress (Step 3 memory/time probe)</option>
+    </select>
+  </label>
+  <button id="run">Run work unit</button>
+</p>
+
+<h2>Status</h2>
+<pre id="log">idle</pre>
+
+<h2>Result</h2>
+<table>
+  <tr><th>sha256(canonical result)</th><td><span id="hash" class="hash">—</span></td></tr>
+  <tr><th>dataset bytes fetched</th><td id="bytes">—</td></tr>
+  <tr><th>wall time</th><td id="wall">—</td></tr>
+  <tr><th>engine</th><td id="engine">—</td></tr>
+  <tr><th>environment</th><td id="env">—</td></tr>
+</table>
+
+<h2>Canonical result JSON</h2>
+<pre id="result">—</pre>
+
+<h2>Range request log (dataset host only)</h2>
+<pre id="netlog">—</pre>
+
+<h2>Run history <span class="muted">(localStorage <code>rss.spike0.runs</code>; compare hashes across browsers/machines)</span></h2>
+<p><button id="copy-report">Copy last run report (JSON)</button> <button id="clear-history">Clear history</button></p>
+<div id="history">—</div>
+
+<script type="module">
+// AIDEV-NOTE: config seam — everything overridable via window.RSS_OPTIONS
+// (inject before this script or via console + re-run). Config, not code change.
+const OPTIONS = Object.assign({
+  workunitUrl: null,        // override manifest path entirely
+  datasetUrl: null,         // override dataset URL inside the manifest
+  engineVersion: null,      // override duckdb-wasm version pin
+  maxDatasetBytes: null,
+  allowedDatasetHosts: null,
+}, window.RSS_OPTIONS || {});
+
+// localStorage namespaced rss.*, with in-memory fallback (private mode etc.).
+const store = (() => {
+  const mem = new Map();
+  const wrap = (fn, fb) => (...a) => { try { return fn(...a); } catch (_) { return fb(...a); } };
+  return {
+    get: wrap((k) => localStorage.getItem(k), (k) => mem.get(k) ?? null),
+    set: wrap((k, v) => localStorage.setItem(k, v), (k, v) => { mem.set(k, v); }),
+    del: wrap((k) => localStorage.removeItem(k), (k) => { mem.delete(k); }),
+  };
+})();
+const RUNS_KEY = 'rss.spike0.runs';
+
+const $ = (id) => document.getElementById(id);
+const logEl = $('log');
+let logLines = [];
+function log(line) {
+  logLines.push(`[${new Date().toISOString().slice(11, 23)}] ${line}`);
+  logEl.textContent = logLines.join('\n');   // textContent only — no innerHTML
+  logEl.scrollTop = logEl.scrollHeight;
+}
+
+// Step 3 suspension probe: record visibility flips during a run so the log
+// shows whether a backgrounded tab kept computing.
+document.addEventListener('visibilitychange', () => {
+  log(`visibilitychange -> ${document.visibilityState}`);
+});
+
+let worker = null;
+let lastReport = null;
+
+function loadRuns() {
+  try { return JSON.parse(store.get(RUNS_KEY) || '[]'); } catch (_) { return []; }
+}
+function renderHistory() {
+  const runs = loadRuns();
+  const div = $('history');
+  div.textContent = '';
+  if (!runs.length) { div.textContent = '—'; return; }
+  const table = document.createElement('table');
+  const head = table.insertRow();
+  for (const h of ['when', 'wu', 'hash', 'dataset bytes', 'wall ms', 'browser']) {
+    const th = document.createElement('th'); th.textContent = h; head.appendChild(th);
+  }
+  for (const r of runs.slice().reverse()) {
+    const tr = table.insertRow();
+    for (const v of [r.when, r.wu_id, r.hash, String(r.dataset_bytes), String(r.wall_ms), r.browser]) {
+      tr.insertCell().textContent = v; // textContent only
+    }
+  }
+  div.appendChild(table);
+}
+
+function browserTag(ua) {
+  if (/firefox/i.test(ua)) return 'Firefox ' + (/firefox\/([\d.]+)/i.exec(ua)?.[1] || '');
+  if (/edg\//i.test(ua)) return 'Edge ' + (/edg\/([\d.]+)/i.exec(ua)?.[1] || '');
+  if (/chrome/i.test(ua)) return 'Chrome ' + (/chrome\/([\d.]+)/i.exec(ua)?.[1] || '');
+  if (/safari/i.test(ua)) return 'Safari';
+  return ua.slice(0, 40);
+}
+
+async function run() {
+  $('run').disabled = true;
+  logLines = []; log('starting');
+  for (const id of ['hash', 'bytes', 'wall', 'engine', 'env', 'result', 'netlog']) $(id).textContent = '—';
+  try {
+    const wuUrl = OPTIONS.workunitUrl || $('wu-select').value;
+    log(`fetching manifest ${wuUrl}`);
+    const manifest = await (await fetch(wuUrl, { cache: 'no-cache' })).json();
+
+    if (worker) worker.terminate();
+    worker = new Worker('./worker.js', { type: 'module' });
+    const t0 = performance.now();
+
+    worker.onmessage = (e) => {
+      const msg = e.data;
+      if (msg.type === 'status') { log(`${msg.stage}: ${msg.detail}`); return; }
+      if (msg.type === 'error') {
+        log(`ERROR: ${msg.message}`);
+        $('hash').textContent = 'FAILED — ' + msg.message;
+        $('hash').className = 'hash bad';
+        $('run').disabled = false;
+        return;
+      }
+      if (msg.type !== 'done') return;
+      const p = msg.payload, t = p.telemetry, n = t.net;
+      log(`done in ${t.wall_ms} ms`);
+      $('hash').textContent = p.hash;
+      $('hash').className = 'hash ok';
+      const frac = n.dataset_fraction_of_file;
+      $('bytes').textContent =
+        `${n.dataset_bytes.toLocaleString()} bytes in ${n.dataset_requests} requests` +
+        (frac != null ? ` = ${(frac * 100).toFixed(2)}% of file (GO gate: < 20%)` : '') +
+        ` — engine CDN: ${(t.net.engine_cdn_bytes / 1e6).toFixed(1)} MB`;
+      $('wall').textContent = `${t.wall_ms} ms total, ${t.query_ms} ms query (GO gate: < 60 s)`;
+      $('engine').textContent =
+        `${t.engine_pinned} (reports: ${t.engine_reported}), bundle=${t.wasm_bundle}, ` +
+        `crossOriginIsolated=${t.cross_origin_isolated}, memory_limit_applied=${t.memory_limit_applied}`;
+      $('env').textContent = t.user_agent +
+        (t.js_heap ? ` — JS heap ${(t.js_heap.usedJSHeapSize / 1e6).toFixed(0)} MB used` : ' — (no performance.memory: not Chrome)');
+      $('result').textContent = p.canonical;
+      $('netlog').textContent = n.dataset_request_log
+        .map((r) => `${r.method} ${r.range || '(no range)'} -> ${r.status} ${String(r.bytes).padStart(9)} B`)
+        .join('\n') || '(none)';
+
+      lastReport = {
+        when: new Date().toISOString(),
+        wu_id: p.wu_id,
+        hash: p.hash,
+        dataset_bytes: n.dataset_bytes,
+        dataset_requests: n.dataset_requests,
+        fraction_of_file: frac,
+        wall_ms: t.wall_ms,
+        query_ms: t.query_ms,
+        engine: t.engine_pinned,
+        engine_reported: t.engine_reported,
+        wasm_bundle: t.wasm_bundle,
+        cross_origin_isolated: t.cross_origin_isolated,
+        js_heap_used: t.js_heap ? t.js_heap.usedJSHeapSize : null,
+        browser: browserTag(navigator.userAgent),
+        user_agent: t.user_agent,
+      };
+      const runs = loadRuns(); runs.push(lastReport);
+      store.set(RUNS_KEY, JSON.stringify(runs.slice(-50)));
+      renderHistory();
+      $('run').disabled = false;
+    };
+    worker.onerror = (e) => {
+      log(`worker error: ${e.message}`);
+      $('run').disabled = false;
+    };
+    worker.postMessage({ type: 'run', manifest, options: OPTIONS });
+    log(`worker started (${Math.round(performance.now() - t0)} ms to spawn)`);
+  } catch (err) {
+    log('ERROR: ' + err.message);
+    $('run').disabled = false;
+  }
+}
+
+$('run').addEventListener('click', run);
+$('copy-report').addEventListener('click', async () => {
+  if (!lastReport) { log('no run to report yet'); return; }
+  const text = JSON.stringify(lastReport, null, 2);
+  try { await navigator.clipboard.writeText(text); log('report copied to clipboard'); }
+  catch (_) { log('clipboard unavailable — report follows:'); log(text); }
+});
+$('clear-history').addEventListener('click', () => { store.del(RUNS_KEY); renderHistory(); });
+renderHistory();
+</script>
+</body>
+</html>

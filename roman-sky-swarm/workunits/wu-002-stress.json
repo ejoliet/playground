@@ -1,0 +1,34 @@
+{
+  "wu_id": "wu-002-stress",
+  "wu_version": 1,
+  "description": "Step 3 constraint probe (NOT a GO-gate work unit): full-tile scan, all 4 row groups, 5 columns, ~3.56M rows. Used to find the memory ceiling and time ceiling.",
+  "dataset": {
+    "url": "https://nasa-irsa-simulations.s3.amazonaws.com/openuniverse2024/roman/preview/roman_rubin_cats_v1.1.2_faint/galaxy_10307.parquet",
+    "format": "parquet",
+    "size_bytes": 373399168,
+    "sha256_manifest": {
+      "kind": "footer",
+      "byte_range": [373388355, 373399167],
+      "sha256": "9559a4045bf263a99cf76c1245ccbf1da519b704b7f3e0a85d6cd659b424722b"
+    }
+  },
+  "kernel": {
+    "type": "duckdb-sql",
+    "engine_version": "duckdb-wasm@1.28.0",
+    "sql": "SELECT CAST(FLOOR(redshift / 0.1) AS INTEGER) AS z_bin, COUNT(*) AS n_gal, SUM(redshift) AS z_sum, AVG(shear1) AS shear1_mean, AVG(shear2) AS shear2_mean, MIN(convergence) AS kappa_min, MAX(convergence) AS kappa_max FROM read_parquet('$RSS_DATASET_URL') WHERE redshift < 99.0 GROUP BY z_bin ORDER BY z_bin"
+  },
+  "slice": {
+    "predicate": "redshift < 99.0 (matches everything - deliberate full scan)",
+    "columns_touched": ["redshift", "shear1", "shear2", "convergence"],
+    "expected_row_groups": "4 of 4 (no pruning possible)",
+    "expected_bytes_approx": 99000000
+  },
+  "output": {
+    "canonicalization": "rss-canon-v0 (rows sorted by canonical serialization; sorted JSON keys; no whitespace; doubles as fixed 6-decimal strings, -0 normalized, NaN/Infinity as strings; int64 as JSON number when |v| <= 2^53-1 else decimal string)",
+    "hash": "sha256"
+  },
+  "limits": {
+    "max_dataset_bytes": 335544320,
+    "max_result_rows": 100000
+  }
+}
