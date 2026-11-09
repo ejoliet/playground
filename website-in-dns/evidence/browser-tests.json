@@ -1,0 +1,148 @@
+{
+  "mode": "intercepted DoH fixture; not live DNS",
+  "checks": [
+    "all document bytes fetched through fixture TXT records; exact query count",
+    "five routes work without further network requests",
+    "resolver inspector submits and displays fixture TXT answer",
+    "search and empty state",
+    "keyboard Enter reveals a focused game tile",
+    "complete game and restart",
+    "390px mobile has no horizontal overflow",
+    "sandbox denies parent DOM access",
+    "http failure is visible; no fallback document",
+    "missing failure is visible; no fallback document",
+    "corrupt failure is visible; no fallback document",
+    "duplicate failure is visible; no fallback document",
+    "no uncaught JavaScript errors"
+  ],
+  "requests": [
+    {
+      "name": "_site.website-in-dns.626733.xyz",
+      "type": "TXT"
+    },
+    {
+      "name": "c0.v2c422acdecf9b9639e68.website-in-dns.626733.xyz",
+      "type": "TXT"
+    },
+    {
+      "name": "c1.v2c422acdecf9b9639e68.website-in-dns.626733.xyz",
+      "type": "TXT"
+    },
+    {
+      "name": "c2.v2c422acdecf9b9639e68.website-in-dns.626733.xyz",
+      "type": "TXT"
+    },
+    {
+      "name": "c3.v2c422acdecf9b9639e68.website-in-dns.626733.xyz",
+      "type": "TXT"
+    },
+    {
+      "name": "c4.v2c422acdecf9b9639e68.website-in-dns.626733.xyz",
+      "type": "TXT"
+    },
+    {
+      "name": "c5.v2c422acdecf9b9639e68.website-in-dns.626733.xyz",
+      "type": "TXT"
+    },
+    {
+      "name": "c6.v2c422acdecf9b9639e68.website-in-dns.626733.xyz",
+      "type": "TXT"
+    },
+    {
+      "name": "c7.v2c422acdecf9b9639e68.website-in-dns.626733.xyz",
+      "type": "TXT"
+    },
+    {
+      "name": "c8.v2c422acdecf9b9639e68.website-in-dns.626733.xyz",
+      "type": "TXT"
+    },
+    {
+      "name": "c9.v2c422acdecf9b9639e68.website-in-dns.626733.xyz",
+      "type": "TXT"
+    },
+    {
+      "name": "c10.v2c422acdecf9b9639e68.website-in-dns.626733.xyz",
+      "type": "TXT"
+    },
+    {
+      "name": "example.com",
+      "type": "TXT"
+    },
+    {
+      "name": "_site.website-in-dns.626733.xyz",
+      "type": "TXT"
+    },
+    {
+      "name": "_site.website-in-dns.626733.xyz",
+      "type": "TXT"
+    },
+    {
+      "name": "c0.v2c422acdecf9b9639e68.website-in-dns.626733.xyz",
+      "type": "TXT"
+    },
+    {
+      "name": "c1.v2c422acdecf9b9639e68.website-in-dns.626733.xyz",
+      "type": "TXT"
+    },
+    {
+      "name": "c2.v2c422acdecf9b9639e68.website-in-dns.626733.xyz",
+      "type": "TXT"
+    },
+    {
+      "name": "c3.v2c422acdecf9b9639e68.website-in-dns.626733.xyz",
+      "type": "TXT"
+    },
+    {
+      "name": "_site.website-in-dns.626733.xyz",
+      "type": "TXT"
+    },
+    {
+      "name": "c0.v2c422acdecf9b9639e68.website-in-dns.626733.xyz",
+      "type": "TXT"
+    },
+    {
+      "name": "c1.v2c422acdecf9b9639e68.website-in-dns.626733.xyz",
+      "type": "TXT"
+    },
+    {
+      "name": "c2.v2c422acdecf9b9639e68.website-in-dns.626733.xyz",
+      "type": "TXT"
+    },
+    {
+      "name": "c3.v2c422acdecf9b9639e68.website-in-dns.626733.xyz",
+      "type": "TXT"
+    },
+    {
+      "name": "c4.v2c422acdecf9b9639e68.website-in-dns.626733.xyz",
+      "type": "TXT"
+    },
+    {
+      "name": "c5.v2c422acdecf9b9639e68.website-in-dns.626733.xyz",
+      "type": "TXT"
+    },
+    {
+      "name": "c6.v2c422acdecf9b9639e68.website-in-dns.626733.xyz",
+      "type": "TXT"
+    },
+    {
+      "name": "c7.v2c422acdecf9b9639e68.website-in-dns.626733.xyz",
+      "type": "TXT"
+    },
+    {
+      "name": "c8.v2c422acdecf9b9639e68.website-in-dns.626733.xyz",
+      "type": "TXT"
+    },
+    {
+      "name": "c9.v2c422acdecf9b9639e68.website-in-dns.626733.xyz",
+      "type": "TXT"
+    },
+    {
+      "name": "c10.v2c422acdecf9b9639e68.website-in-dns.626733.xyz",
+      "type": "TXT"
+    },
+    {
+      "name": "_site.website-in-dns.626733.xyz",
+      "type": "TXT"
+    }
+  ]
+}

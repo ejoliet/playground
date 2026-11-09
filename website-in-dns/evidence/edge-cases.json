@@ -1,0 +1,961 @@
+{
+  "method": "Bounded public edge cases and 2-second-spaced repeats; no control of authoritative zone or cache instance",
+  "rows": [
+    {
+      "at": "2026-11-09T07:38:52.133446+00:00",
+      "resolver": "google",
+      "name": "nonexistent-website-in-dns.invalid",
+      "phase": "edge-case",
+      "format": "json",
+      "http": 200,
+      "responseBytes": 268,
+      "cacheControl": "private, max-age=86362",
+      "age": null,
+      "cors": "*",
+      "dnsStatus": 3,
+      "truncated": false,
+      "authenticated": true,
+      "answerCount": 0,
+      "ttls": [],
+      "txtBytes": 0,
+      "answerSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "strings": [],
+      "answer": {
+        "Status": 3,
+        "TC": false,
+        "RD": true,
+        "RA": true,
+        "AD": true,
+        "CD": false,
+        "Question": [
+          {
+            "name": "nonexistent-website-in-dns.invalid.",
+            "type": 16
+          }
+        ],
+        "Authority": [
+          {
+            "name": ".",
+            "type": 6,
+            "TTL": 86362,
+            "data": "a.root-servers.net. nstld.verisign-grs.com. 2026110900 1800 900 604800 86400"
+          }
+        ]
+      },
+      "ms": 182.26
+    },
+    {
+      "at": "2026-11-09T07:38:52.315721+00:00",
+      "resolver": "google",
+      "name": "dnssec-failed.org",
+      "phase": "edge-case",
+      "format": "json",
+      "http": 200,
+      "responseBytes": 383,
+      "cacheControl": "private, max-age=0",
+      "age": null,
+      "cors": "*",
+      "dnsStatus": 2,
+      "truncated": false,
+      "authenticated": false,
+      "answerCount": 0,
+      "ttls": [],
+      "txtBytes": 0,
+      "answerSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "strings": [],
+      "answer": {
+        "Status": 2,
+        "TC": false,
+        "RD": true,
+        "RA": true,
+        "AD": false,
+        "CD": false,
+        "Question": [
+          {
+            "name": "dnssec-failed.org.",
+            "type": 16
+          }
+        ],
+        "Comment": "DNSSEC validation failure. Check http://dnsviz.net/d/dnssec-failed.org/dnssec/ and http://dnssec-debugger.verisignlabs.com/dnssec-failed.org for errors",
+        "extended_dns_errors": [
+          {
+            "info_code": 9,
+            "extra_text": "No DNSKEY matches DS RRs of dnssec-failed.org"
+          }
+        ]
+      },
+      "ms": 145.04
+    },
+    {
+      "at": "2026-11-09T07:38:52.460772+00:00",
+      "resolver": "google",
+      "name": "rs.dns-oarc.net",
+      "phase": "edge-case",
+      "format": "json",
+      "http": 200,
+      "responseBytes": 296,
+      "cacheControl": "private, max-age=1800",
+      "age": null,
+      "cors": "*",
+      "dnsStatus": 3,
+      "truncated": false,
+      "authenticated": true,
+      "answerCount": 0,
+      "ttls": [],
+      "txtBytes": 0,
+      "answerSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "strings": [],
+      "answer": {
+        "Status": 3,
+        "TC": false,
+        "RD": true,
+        "RA": true,
+        "AD": true,
+        "CD": false,
+        "Question": [
+          {
+            "name": "rs.dns-oarc.net.",
+            "type": 16
+          }
+        ],
+        "Authority": [
+          {
+            "name": "dns-oarc.net.",
+            "type": 6,
+            "TTL": 1800,
+            "data": "ns1.dns-oarc.net. hostmaster.dns-oarc.net. 2026110801 300 60 604800 3600"
+          }
+        ],
+        "Comment": "Response from 204.74.101.1."
+      },
+      "ms": 148.2
+    },
+    {
+      "at": "2026-11-09T07:38:52.608986+00:00",
+      "resolver": "google",
+      "name": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa.example.com",
+      "phase": "edge-case",
+      "format": "json",
+      "http": 200,
+      "responseBytes": 366,
+      "cacheControl": "private, max-age=1800",
+      "age": null,
+      "cors": "*",
+      "dnsStatus": 0,
+      "truncated": false,
+      "authenticated": true,
+      "answerCount": 0,
+      "ttls": [],
+      "txtBytes": 0,
+      "answerSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "strings": [],
+      "answer": {
+        "Status": 0,
+        "TC": false,
+        "RD": true,
+        "RA": true,
+        "AD": true,
+        "CD": false,
+        "Question": [
+          {
+            "name": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa.example.com.",
+            "type": 16
+          }
+        ],
+        "Authority": [
+          {
+            "name": "example.com.",
+            "type": 6,
+            "TTL": 1800,
+            "data": "elliott.ns.cloudflare.com. dns.cloudflare.com. 2418004112 10000 2400 604800 1800"
+          }
+        ],
+        "Comment": "Response from 108.162.192.162."
+      },
+      "ms": 110.74
+    },
+    {
+      "at": "2026-11-09T07:38:52.719738+00:00",
+      "resolver": "google",
+      "name": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa.example.com",
+      "phase": "edge-case",
+      "format": "json",
+      "error": "HTTP Error 400: Bad Request",
+      "http": 400,
+      "errorBody": "<!DOCTYPE html>\n<html lang=en>\n  <meta charset=utf-8>\n  <meta name=viewport content=\"initial-scale=1, minimum-scale=1, width=device-width\">\n  <title>Error 400 (Bad Request)!!1</title>\n  <style>\n    *{margin:0;padding:0}html,code{font:15px/22px arial,sans-serif}html{background:#fff;color:#222;padding:15px}body{margin:7% auto 0;max-width:390px;min-height:180px;padding:30px 0 15px}* > body{background:url(//www.google.com/images/errors/robot.png) 100% 5px no-repeat;padding-right:205px}p{margin:11px 0 22px;overflow:hidden}ins{color:#777;text-decoration:none}a img{border:0}@media screen and (max-width:772px){body{background:none;margin-top:0;max-width:none;padding-right:0}}#logo{background:url(//www.google.com/images/branding/googlelogo/1x/googlelogo_color_150x54dp.png) no-repeat;margin-left:-5px}@media only screen and (min-resolution:192dpi){#logo{background:url(//www.google.com/images/branding/googlelogo/2x/googlelogo_color_150x54dp.png) no-repeat 0% 0%/100% 100%;-moz-border-image:url(//ww",
+      "ms": 283.41
+    },
+    {
+      "at": "2026-11-09T07:38:53.003163+00:00",
+      "resolver": "cloudflare",
+      "name": "nonexistent-website-in-dns.invalid",
+      "phase": "edge-case",
+      "format": "json",
+      "http": 200,
+      "responseBytes": 266,
+      "cacheControl": null,
+      "age": null,
+      "cors": "*",
+      "dnsStatus": 3,
+      "truncated": false,
+      "authenticated": true,
+      "answerCount": 0,
+      "ttls": [],
+      "txtBytes": 0,
+      "answerSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "strings": [],
+      "answer": {
+        "Status": 3,
+        "TC": false,
+        "RD": true,
+        "RA": true,
+        "AD": true,
+        "CD": false,
+        "Question": [
+          {
+            "name": "nonexistent-website-in-dns.invalid",
+            "type": 16
+          }
+        ],
+        "Authority": [
+          {
+            "name": "",
+            "type": 6,
+            "TTL": 86400,
+            "data": "a.root-servers.net. nstld.verisign-grs.com. 2026110900 1800 900 604800 86400"
+          }
+        ]
+      },
+      "ms": 287.07
+    },
+    {
+      "at": "2026-11-09T07:38:53.290250+00:00",
+      "resolver": "cloudflare",
+      "name": "dnssec-failed.org",
+      "phase": "edge-case",
+      "format": "json",
+      "http": 200,
+      "responseBytes": 206,
+      "cacheControl": null,
+      "age": null,
+      "cors": "*",
+      "dnsStatus": 2,
+      "truncated": false,
+      "authenticated": false,
+      "answerCount": 0,
+      "ttls": [],
+      "txtBytes": 0,
+      "answerSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "strings": [],
+      "answer": {
+        "Status": 2,
+        "TC": false,
+        "RD": true,
+        "RA": true,
+        "AD": false,
+        "CD": false,
+        "Question": [
+          {
+            "name": "dnssec-failed.org",
+            "type": 16
+          }
+        ],
+        "Comment": [
+          "EDE(9): DNSKEY Missing no SEP matching the DS found for dnssec-failed.org."
+        ]
+      },
+      "ms": 270.9
+    },
+    {
+      "at": "2026-11-09T07:38:53.561206+00:00",
+      "resolver": "cloudflare",
+      "name": "rs.dns-oarc.net",
+      "phase": "edge-case",
+      "format": "json",
+      "http": 200,
+      "responseBytes": 254,
+      "cacheControl": null,
+      "age": null,
+      "cors": "*",
+      "dnsStatus": 3,
+      "truncated": false,
+      "authenticated": true,
+      "answerCount": 0,
+      "ttls": [],
+      "txtBytes": 0,
+      "answerSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "strings": [],
+      "answer": {
+        "Status": 3,
+        "TC": false,
+        "RD": true,
+        "RA": true,
+        "AD": true,
+        "CD": false,
+        "Question": [
+          {
+            "name": "rs.dns-oarc.net",
+            "type": 16
+          }
+        ],
+        "Authority": [
+          {
+            "name": "dns-oarc.net",
+            "type": 6,
+            "TTL": 3600,
+            "data": "ns1.dns-oarc.net. hostmaster.dns-oarc.net. 2026110801 300 60 604800 3600"
+          }
+        ]
+      },
+      "ms": 66.11
+    },
+    {
+      "at": "2026-11-09T07:38:53.627391+00:00",
+      "resolver": "cloudflare",
+      "name": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa.example.com",
+      "phase": "edge-case",
+      "format": "json",
+      "http": 200,
+      "responseBytes": 321,
+      "cacheControl": null,
+      "age": null,
+      "cors": "*",
+      "dnsStatus": 0,
+      "truncated": false,
+      "authenticated": true,
+      "answerCount": 0,
+      "ttls": [],
+      "txtBytes": 0,
+      "answerSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "strings": [],
+      "answer": {
+        "Status": 0,
+        "TC": false,
+        "RD": true,
+        "RA": true,
+        "AD": true,
+        "CD": false,
+        "Question": [
+          {
+            "name": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa.example.com",
+            "type": 16
+          }
+        ],
+        "Authority": [
+          {
+            "name": "example.com",
+            "type": 6,
+            "TTL": 1800,
+            "data": "elliott.ns.cloudflare.com. dns.cloudflare.com. 2418004112 10000 2400 604800 1800"
+          }
+        ]
+      },
+      "ms": 136.22
+    },
+    {
+      "at": "2026-11-09T07:38:53.763627+00:00",
+      "resolver": "cloudflare",
+      "name": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa.example.com",
+      "phase": "edge-case",
+      "format": "json",
+      "error": "HTTP Error 400: Bad Request",
+      "http": 400,
+      "errorBody": "{\"error\":\"Invalid query name `aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa.example.com`.\"}",
+      "ms": 64.05
+    },
+    {
+      "at": "2026-11-09T07:38:53.827688+00:00",
+      "resolver": "quad9",
+      "name": "nonexistent-website-in-dns.invalid",
+      "phase": "edge-case",
+      "format": "wire",
+      "http": 200,
+      "responseBytes": 104,
+      "cacheControl": "max-age=10800",
+      "age": null,
+      "cors": "*",
+      "dnsStatus": 3,
+      "truncated": false,
+      "authenticated": false,
+      "answerCount": 0,
+      "ttls": [],
+      "txtBytes": 0,
+      "answerSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "strings": [],
+      "answer": {
+        "Status": 3,
+        "TC": false,
+        "AD": false,
+        "Answer": [],
+        "authorityRecords": 1
+      },
+      "ms": 364.59
+    },
+    {
+      "at": "2026-11-09T07:38:54.192294+00:00",
+      "resolver": "quad9",
+      "name": "dnssec-failed.org",
+      "phase": "edge-case",
+      "format": "wire",
+      "http": 200,
+      "responseBytes": 35,
+      "cacheControl": null,
+      "age": null,
+      "cors": "*",
+      "dnsStatus": 2,
+      "truncated": false,
+      "authenticated": false,
+      "answerCount": 0,
+      "ttls": [],
+      "txtBytes": 0,
+      "answerSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "strings": [],
+      "answer": {
+        "Status": 2,
+        "TC": false,
+        "AD": false,
+        "Answer": [],
+        "authorityRecords": 0
+      },
+      "ms": 320.15
+    },
+    {
+      "at": "2026-11-09T07:38:54.512461+00:00",
+      "resolver": "quad9",
+      "name": "rs.dns-oarc.net",
+      "phase": "edge-case",
+      "format": "wire",
+      "http": 200,
+      "responseBytes": 84,
+      "cacheControl": "max-age=3600",
+      "age": null,
+      "cors": "*",
+      "dnsStatus": 3,
+      "truncated": false,
+      "authenticated": false,
+      "answerCount": 0,
+      "ttls": [],
+      "txtBytes": 0,
+      "answerSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "strings": [],
+      "answer": {
+        "Status": 3,
+        "TC": false,
+        "AD": false,
+        "Answer": [],
+        "authorityRecords": 1
+      },
+      "ms": 534.65
+    },
+    {
+      "at": "2026-11-09T07:38:55.047127+00:00",
+      "resolver": "quad9",
+      "name": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa.example.com",
+      "phase": "edge-case",
+      "format": "wire",
+      "http": 200,
+      "responseBytes": 155,
+      "cacheControl": "max-age=1800",
+      "age": null,
+      "cors": "*",
+      "dnsStatus": 0,
+      "truncated": false,
+      "authenticated": false,
+      "answerCount": 0,
+      "ttls": [],
+      "txtBytes": 0,
+      "answerSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "strings": [],
+      "answer": {
+        "Status": 0,
+        "TC": false,
+        "AD": false,
+        "Answer": [],
+        "authorityRecords": 1
+      },
+      "ms": 349.15
+    },
+    {
+      "at": "2026-11-09T07:38:55.396291+00:00",
+      "resolver": "quad9",
+      "name": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa.example.com",
+      "phase": "edge-case",
+      "format": "wire",
+      "error": "Invalid DNS name",
+      "ms": 0.05
+    },
+    {
+      "at": "2026-11-09T07:38:55.396346+00:00",
+      "resolver": "google",
+      "name": "example.com",
+      "phase": "spaced-cache-repeat",
+      "format": "json",
+      "http": 200,
+      "responseBytes": 314,
+      "cacheControl": "private, max-age=300",
+      "age": null,
+      "cors": "*",
+      "dnsStatus": 0,
+      "truncated": false,
+      "authenticated": true,
+      "answerCount": 2,
+      "ttls": [
+        300,
+        300
+      ],
+      "txtBytes": 43,
+      "answerSha256": "4af30eb8c4b394b4c7a7e8a414ffb8cd68ee520970c507745fe451bf61f20013",
+      "strings": [
+        null,
+        null
+      ],
+      "answer": {
+        "Status": 0,
+        "TC": false,
+        "RD": true,
+        "RA": true,
+        "AD": true,
+        "CD": false,
+        "Question": [
+          {
+            "name": "example.com.",
+            "type": 16
+          }
+        ],
+        "Answer": [
+          {
+            "name": "example.com.",
+            "type": 16,
+            "TTL": 300,
+            "data": "_k2n1y4vw3qtb4skdx9e7dxt97qrmmq9"
+          },
+          {
+            "name": "example.com.",
+            "type": 16,
+            "TTL": 300,
+            "data": "v=spf1 -all"
+          }
+        ],
+        "Comment": "Response from 172.64.32.162."
+      },
+      "ms": 120.02
+    },
+    {
+      "at": "2026-11-09T07:38:57.516524+00:00",
+      "resolver": "google",
+      "name": "example.com",
+      "phase": "spaced-cache-repeat",
+      "format": "json",
+      "http": 200,
+      "responseBytes": 314,
+      "cacheControl": "private, max-age=300",
+      "age": null,
+      "cors": "*",
+      "dnsStatus": 0,
+      "truncated": false,
+      "authenticated": true,
+      "answerCount": 2,
+      "ttls": [
+        300,
+        300
+      ],
+      "txtBytes": 43,
+      "answerSha256": "4af30eb8c4b394b4c7a7e8a414ffb8cd68ee520970c507745fe451bf61f20013",
+      "strings": [
+        null,
+        null
+      ],
+      "answer": {
+        "Status": 0,
+        "TC": false,
+        "RD": true,
+        "RA": true,
+        "AD": true,
+        "CD": false,
+        "Question": [
+          {
+            "name": "example.com.",
+            "type": 16
+          }
+        ],
+        "Answer": [
+          {
+            "name": "example.com.",
+            "type": 16,
+            "TTL": 300,
+            "data": "_k2n1y4vw3qtb4skdx9e7dxt97qrmmq9"
+          },
+          {
+            "name": "example.com.",
+            "type": 16,
+            "TTL": 300,
+            "data": "v=spf1 -all"
+          }
+        ],
+        "Comment": "Response from 172.64.32.162."
+      },
+      "ms": 125.51
+    },
+    {
+      "at": "2026-11-09T07:38:59.642162+00:00",
+      "resolver": "google",
+      "name": "example.com",
+      "phase": "spaced-cache-repeat",
+      "format": "json",
+      "http": 200,
+      "responseBytes": 273,
+      "cacheControl": "private, max-age=298",
+      "age": null,
+      "cors": "*",
+      "dnsStatus": 0,
+      "truncated": false,
+      "authenticated": true,
+      "answerCount": 2,
+      "ttls": [
+        298,
+        298
+      ],
+      "txtBytes": 43,
+      "answerSha256": "4af30eb8c4b394b4c7a7e8a414ffb8cd68ee520970c507745fe451bf61f20013",
+      "strings": [
+        null,
+        null
+      ],
+      "answer": {
+        "Status": 0,
+        "TC": false,
+        "RD": true,
+        "RA": true,
+        "AD": true,
+        "CD": false,
+        "Question": [
+          {
+            "name": "example.com.",
+            "type": 16
+          }
+        ],
+        "Answer": [
+          {
+            "name": "example.com.",
+            "type": 16,
+            "TTL": 298,
+            "data": "_k2n1y4vw3qtb4skdx9e7dxt97qrmmq9"
+          },
+          {
+            "name": "example.com.",
+            "type": 16,
+            "TTL": 298,
+            "data": "v=spf1 -all"
+          }
+        ]
+      },
+      "ms": 99.9
+    },
+    {
+      "at": "2026-11-09T07:39:01.742189+00:00",
+      "resolver": "cloudflare",
+      "name": "example.com",
+      "phase": "spaced-cache-repeat",
+      "format": "json",
+      "http": 200,
+      "responseBytes": 278,
+      "cacheControl": null,
+      "age": null,
+      "cors": "*",
+      "dnsStatus": 0,
+      "truncated": false,
+      "authenticated": true,
+      "answerCount": 2,
+      "ttls": [
+        300,
+        300
+      ],
+      "txtBytes": 43,
+      "answerSha256": "4af30eb8c4b394b4c7a7e8a414ffb8cd68ee520970c507745fe451bf61f20013",
+      "strings": [
+        null,
+        null
+      ],
+      "answer": {
+        "Status": 0,
+        "TC": false,
+        "RD": true,
+        "RA": true,
+        "AD": true,
+        "CD": false,
+        "Question": [
+          {
+            "name": "example.com",
+            "type": 16
+          }
+        ],
+        "Answer": [
+          {
+            "name": "example.com",
+            "type": 16,
+            "TTL": 300,
+            "data": "\"v=spf1 -all\""
+          },
+          {
+            "name": "example.com",
+            "type": 16,
+            "TTL": 300,
+            "data": "\"_k2n1y4vw3qtb4skdx9e7dxt97qrmmq9\""
+          }
+        ]
+      },
+      "ms": 94.46
+    },
+    {
+      "at": "2026-11-09T07:39:03.836789+00:00",
+      "resolver": "cloudflare",
+      "name": "example.com",
+      "phase": "spaced-cache-repeat",
+      "format": "json",
+      "http": 200,
+      "responseBytes": 276,
+      "cacheControl": null,
+      "age": null,
+      "cors": "*",
+      "dnsStatus": 0,
+      "truncated": false,
+      "authenticated": true,
+      "answerCount": 2,
+      "ttls": [
+        52,
+        52
+      ],
+      "txtBytes": 43,
+      "answerSha256": "4af30eb8c4b394b4c7a7e8a414ffb8cd68ee520970c507745fe451bf61f20013",
+      "strings": [
+        null,
+        null
+      ],
+      "answer": {
+        "Status": 0,
+        "TC": false,
+        "RD": true,
+        "RA": true,
+        "AD": true,
+        "CD": false,
+        "Question": [
+          {
+            "name": "example.com",
+            "type": 16
+          }
+        ],
+        "Answer": [
+          {
+            "name": "example.com",
+            "type": 16,
+            "TTL": 52,
+            "data": "\"v=spf1 -all\""
+          },
+          {
+            "name": "example.com",
+            "type": 16,
+            "TTL": 52,
+            "data": "\"_k2n1y4vw3qtb4skdx9e7dxt97qrmmq9\""
+          }
+        ]
+      },
+      "ms": 202.36
+    },
+    {
+      "at": "2026-11-09T07:39:06.039280+00:00",
+      "resolver": "cloudflare",
+      "name": "example.com",
+      "phase": "spaced-cache-repeat",
+      "format": "json",
+      "http": 200,
+      "responseBytes": 278,
+      "cacheControl": null,
+      "age": null,
+      "cors": "*",
+      "dnsStatus": 0,
+      "truncated": false,
+      "authenticated": true,
+      "answerCount": 2,
+      "ttls": [
+        300,
+        300
+      ],
+      "txtBytes": 43,
+      "answerSha256": "4af30eb8c4b394b4c7a7e8a414ffb8cd68ee520970c507745fe451bf61f20013",
+      "strings": [
+        null,
+        null
+      ],
+      "answer": {
+        "Status": 0,
+        "TC": false,
+        "RD": true,
+        "RA": true,
+        "AD": true,
+        "CD": false,
+        "Question": [
+          {
+            "name": "example.com",
+            "type": 16
+          }
+        ],
+        "Answer": [
+          {
+            "name": "example.com",
+            "type": 16,
+            "TTL": 300,
+            "data": "\"v=spf1 -all\""
+          },
+          {
+            "name": "example.com",
+            "type": 16,
+            "TTL": 300,
+            "data": "\"_k2n1y4vw3qtb4skdx9e7dxt97qrmmq9\""
+          }
+        ]
+      },
+      "ms": 46.26
+    },
+    {
+      "at": "2026-11-09T07:39:08.085684+00:00",
+      "resolver": "quad9",
+      "name": "example.com",
+      "phase": "spaced-cache-repeat",
+      "format": "wire",
+      "http": 200,
+      "responseBytes": 98,
+      "cacheControl": "max-age=300",
+      "age": null,
+      "cors": "*",
+      "dnsStatus": 0,
+      "truncated": false,
+      "authenticated": false,
+      "answerCount": 2,
+      "ttls": [
+        300,
+        300
+      ],
+      "txtBytes": 43,
+      "answerSha256": "4af30eb8c4b394b4c7a7e8a414ffb8cd68ee520970c507745fe451bf61f20013",
+      "strings": [
+        1,
+        1
+      ],
+      "answer": {
+        "Status": 0,
+        "TC": false,
+        "AD": false,
+        "Answer": [
+          {
+            "TTL": 300,
+            "type": 16,
+            "data": "v=spf1 -all",
+            "strings": 1
+          },
+          {
+            "TTL": 300,
+            "type": 16,
+            "data": "_k2n1y4vw3qtb4skdx9e7dxt97qrmmq9",
+            "strings": 1
+          }
+        ],
+        "authorityRecords": 0
+      },
+      "ms": 271.21
+    },
+    {
+      "at": "2026-11-09T07:39:10.357139+00:00",
+      "resolver": "quad9",
+      "name": "example.com",
+      "phase": "spaced-cache-repeat",
+      "format": "wire",
+      "http": 200,
+      "responseBytes": 98,
+      "cacheControl": "max-age=46",
+      "age": null,
+      "cors": "*",
+      "dnsStatus": 0,
+      "truncated": false,
+      "authenticated": false,
+      "answerCount": 2,
+      "ttls": [
+        46,
+        46
+      ],
+      "txtBytes": 43,
+      "answerSha256": "4af30eb8c4b394b4c7a7e8a414ffb8cd68ee520970c507745fe451bf61f20013",
+      "strings": [
+        1,
+        1
+      ],
+      "answer": {
+        "Status": 0,
+        "TC": false,
+        "AD": false,
+        "Answer": [
+          {
+            "TTL": 46,
+            "type": 16,
+            "data": "v=spf1 -all",
+            "strings": 1
+          },
+          {
+            "TTL": 46,
+            "type": 16,
+            "data": "_k2n1y4vw3qtb4skdx9e7dxt97qrmmq9",
+            "strings": 1
+          }
+        ],
+        "authorityRecords": 0
+      },
+      "ms": 114.15
+    },
+    {
+      "at": "2026-11-09T07:39:12.471445+00:00",
+      "resolver": "quad9",
+      "name": "example.com",
+      "phase": "spaced-cache-repeat",
+      "format": "wire",
+      "http": 200,
+      "responseBytes": 98,
+      "cacheControl": "max-age=44",
+      "age": null,
+      "cors": "*",
+      "dnsStatus": 0,
+      "truncated": false,
+      "authenticated": false,
+      "answerCount": 2,
+      "ttls": [
+        44,
+        44
+      ],
+      "txtBytes": 43,
+      "answerSha256": "4af30eb8c4b394b4c7a7e8a414ffb8cd68ee520970c507745fe451bf61f20013",
+      "strings": [
+        1,
+        1
+      ],
+      "answer": {
+        "Status": 0,
+        "TC": false,
+        "AD": false,
+        "Answer": [
+          {
+            "TTL": 44,
+            "type": 16,
+            "data": "v=spf1 -all",
+            "strings": 1
+          },
+          {
+            "TTL": 44,
+            "type": 16,
+            "data": "_k2n1y4vw3qtb4skdx9e7dxt97qrmmq9",
+            "strings": 1
+          }
+        ],
+        "authorityRecords": 0
+      },
+      "ms": 223.28
+    }
+  ]
+}

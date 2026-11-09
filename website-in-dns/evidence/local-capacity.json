@@ -1,0 +1,99 @@
+{
+  "kind": "local arithmetic, not DNS measurements",
+  "build": {
+    "domain": "website-in-dns.626733.xyz",
+    "htmlBytes": 33357,
+    "pngBytes": 4539,
+    "gzipBytes": 14310,
+    "base64Bytes": 19080,
+    "chunkSize": 1800,
+    "chunkCount": 11,
+    "recordCount": 12,
+    "manifestSha256": "8758ca3cdb992396913fa8196b165836dc9121551dbe0a640ebd97904eab85e2",
+    "manifest": {
+      "v": 1,
+      "encoding": "gzip+base64",
+      "release": "v2c422acdecf9b9639e68",
+      "chunks": 11,
+      "bytes": 14310,
+      "decodedBytes": 33357,
+      "sha256": "2c422acdecf9b9639e68308020c91f554107edea60928d50847b35a15047c7a2"
+    }
+  },
+  "chunkSweep": [
+    {
+      "base64CharactersPerChunk": 255,
+      "chunks": 75,
+      "queriesIncludingManifest": 76,
+      "dependencyWavesAtConcurrency4": 20,
+      "estimatedPayloadPerFullChunk": 191
+    },
+    {
+      "base64CharactersPerChunk": 512,
+      "chunks": 38,
+      "queriesIncludingManifest": 39,
+      "dependencyWavesAtConcurrency4": 11,
+      "estimatedPayloadPerFullChunk": 384
+    },
+    {
+      "base64CharactersPerChunk": 1024,
+      "chunks": 19,
+      "queriesIncludingManifest": 20,
+      "dependencyWavesAtConcurrency4": 6,
+      "estimatedPayloadPerFullChunk": 768
+    },
+    {
+      "base64CharactersPerChunk": 1800,
+      "chunks": 11,
+      "queriesIncludingManifest": 12,
+      "dependencyWavesAtConcurrency4": 4,
+      "estimatedPayloadPerFullChunk": 1350
+    },
+    {
+      "base64CharactersPerChunk": 2048,
+      "chunks": 10,
+      "queriesIncludingManifest": 11,
+      "dependencyWavesAtConcurrency4": 4,
+      "estimatedPayloadPerFullChunk": 1536
+    },
+    {
+      "base64CharactersPerChunk": 4096,
+      "chunks": 5,
+      "queriesIncludingManifest": 6,
+      "dependencyWavesAtConcurrency4": 3,
+      "estimatedPayloadPerFullChunk": 3072
+    },
+    {
+      "base64CharactersPerChunk": 8192,
+      "chunks": 3,
+      "queriesIncludingManifest": 4,
+      "dependencyWavesAtConcurrency4": 2,
+      "estimatedPayloadPerFullChunk": 6144
+    },
+    {
+      "base64CharactersPerChunk": 16384,
+      "chunks": 2,
+      "queriesIncludingManifest": 3,
+      "dependencyWavesAtConcurrency4": 2,
+      "estimatedPayloadPerFullChunk": 12288
+    }
+  ],
+  "hypotheticalBudgets": [
+    {
+      "recordBudget": 200,
+      "compressedBytesAt1800Characters": 268650
+    },
+    {
+      "recordBudget": 1000,
+      "compressedBytesAt1800Characters": 1348650
+    },
+    {
+      "recordBudget": 3500,
+      "compressedBytesAt1800Characters": 4723650
+    },
+    {
+      "recordBudget": 10000,
+      "compressedBytesAt1800Characters": 13498650
+    }
+  ]
+}

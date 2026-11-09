@@ -1,0 +1,14 @@
+✔ TXT strings concatenate within an RR, including DNS escapes (1.087864ms)
+✔ strict base64 rejects corruption (0.305081ms)
+✔ manifest bounds reject excessive resource requests (4.996109ms)
+✔ parallel fetching preserves ordering and caps concurrency (18.294641ms)
+✔ real build round-trips; truncated, corrupted, oversized gzip fails (19.632071ms)
+✔ a failed parallel batch drains pending requests before allowing a retry (19.666823ms)
+ℹ tests 6
+ℹ suites 0
+ℹ pass 6
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 68.524732

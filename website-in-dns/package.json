@@ -1,0 +1,10 @@
+{
+  "name": "website-in-dns-research",
+  "private": true,
+  "scripts": {
+    "build": "python3 scripts/build.py",
+    "test": "node tests/protocol.test.cjs && python3 tests/wire_test.py",
+    "test:browser": "node tests/browser.cjs"
+  },
+  "devDependencies": { "playwright": "1.62.1" }
+}

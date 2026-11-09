@@ -1,0 +1,426 @@
+{
+  "startedAt": "2026-11-09T07:36:45.410046+00:00",
+  "mode": "app",
+  "method": "urllib fresh HTTPS connections; no HTTP cache; proxy may participate; repeat is not guaranteed warm or cold",
+  "rows": [
+    {
+      "verified": false,
+      "error": "Manifest DNS failure",
+      "resolver": "google",
+      "parallel": 1,
+      "ms": 232.04,
+      "queries": [
+        {
+          "at": "2026-11-09T07:36:45.410168+00:00",
+          "resolver": "google",
+          "name": "_site.website-in-dns.626733.xyz",
+          "phase": "app-manifest",
+          "format": "json",
+          "http": 200,
+          "responseBytes": 318,
+          "cacheControl": "private, max-age=1800",
+          "age": null,
+          "cors": "*",
+          "dnsStatus": 3,
+          "truncated": false,
+          "authenticated": false,
+          "answerCount": 0,
+          "ttls": [],
+          "txtBytes": 0,
+          "answerSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "strings": [],
+          "answer": {
+            "Status": 3,
+            "TC": false,
+            "RD": true,
+            "RA": true,
+            "AD": false,
+            "CD": false,
+            "Question": [
+              {
+                "name": "_site.website-in-dns.626733.xyz.",
+                "type": 16
+              }
+            ],
+            "Authority": [
+              {
+                "name": "626733.xyz.",
+                "type": 6,
+                "TTL": 1800,
+                "data": "andy.ns.cloudflare.com. dns.cloudflare.com. 2417375859 10000 2400 604800 1800"
+              }
+            ],
+            "Comment": "Response from 173.245.59.101."
+          },
+          "ms": 232.02
+        }
+      ]
+    },
+    {
+      "verified": false,
+      "error": "Manifest DNS failure",
+      "resolver": "google",
+      "parallel": 2,
+      "ms": 247.5,
+      "queries": [
+        {
+          "at": "2026-11-09T07:36:45.643485+00:00",
+          "resolver": "google",
+          "name": "_site.website-in-dns.626733.xyz",
+          "phase": "app-manifest",
+          "format": "json",
+          "http": 200,
+          "responseBytes": 319,
+          "cacheControl": "private, max-age=1800",
+          "age": null,
+          "cors": "*",
+          "dnsStatus": 3,
+          "truncated": false,
+          "authenticated": false,
+          "answerCount": 0,
+          "ttls": [],
+          "txtBytes": 0,
+          "answerSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "strings": [],
+          "answer": {
+            "Status": 3,
+            "TC": false,
+            "RD": true,
+            "RA": true,
+            "AD": false,
+            "CD": false,
+            "Question": [
+              {
+                "name": "_site.website-in-dns.626733.xyz.",
+                "type": 16
+              }
+            ],
+            "Authority": [
+              {
+                "name": "626733.xyz.",
+                "type": 6,
+                "TTL": 1800,
+                "data": "andy.ns.cloudflare.com. dns.cloudflare.com. 2417375859 10000 2400 604800 1800"
+              }
+            ],
+            "Comment": "Response from 108.162.194.177."
+          },
+          "ms": 247.48
+        }
+      ]
+    },
+    {
+      "verified": false,
+      "error": "Manifest DNS failure",
+      "resolver": "google",
+      "parallel": 4,
+      "ms": 201.35,
+      "queries": [
+        {
+          "at": "2026-11-09T07:36:45.891108+00:00",
+          "resolver": "google",
+          "name": "_site.website-in-dns.626733.xyz",
+          "phase": "app-manifest",
+          "format": "json",
+          "http": 200,
+          "responseBytes": 317,
+          "cacheControl": "private, max-age=1800",
+          "age": null,
+          "cors": "*",
+          "dnsStatus": 3,
+          "truncated": false,
+          "authenticated": false,
+          "answerCount": 0,
+          "ttls": [],
+          "txtBytes": 0,
+          "answerSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "strings": [],
+          "answer": {
+            "Status": 3,
+            "TC": false,
+            "RD": true,
+            "RA": true,
+            "AD": false,
+            "CD": false,
+            "Question": [
+              {
+                "name": "_site.website-in-dns.626733.xyz.",
+                "type": 16
+              }
+            ],
+            "Authority": [
+              {
+                "name": "626733.xyz.",
+                "type": 6,
+                "TTL": 1800,
+                "data": "andy.ns.cloudflare.com. dns.cloudflare.com. 2417375859 10000 2400 604800 1800"
+              }
+            ],
+            "Comment": "Response from 172.64.33.101."
+          },
+          "ms": 201.33
+        }
+      ]
+    },
+    {
+      "verified": false,
+      "error": "Manifest DNS failure",
+      "resolver": "google",
+      "parallel": 8,
+      "ms": 66.11,
+      "queries": [
+        {
+          "at": "2026-11-09T07:36:46.092584+00:00",
+          "resolver": "google",
+          "name": "_site.website-in-dns.626733.xyz",
+          "phase": "app-manifest",
+          "format": "json",
+          "http": 200,
+          "responseBytes": 276,
+          "cacheControl": "private, max-age=1800",
+          "age": null,
+          "cors": "*",
+          "dnsStatus": 3,
+          "truncated": false,
+          "authenticated": false,
+          "answerCount": 0,
+          "ttls": [],
+          "txtBytes": 0,
+          "answerSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "strings": [],
+          "answer": {
+            "Status": 3,
+            "TC": false,
+            "RD": true,
+            "RA": true,
+            "AD": false,
+            "CD": false,
+            "Question": [
+              {
+                "name": "_site.website-in-dns.626733.xyz.",
+                "type": 16
+              }
+            ],
+            "Authority": [
+              {
+                "name": "626733.xyz.",
+                "type": 6,
+                "TTL": 1800,
+                "data": "andy.ns.cloudflare.com. dns.cloudflare.com. 2417375859 10000 2400 604800 1800"
+              }
+            ]
+          },
+          "ms": 66.07
+        }
+      ]
+    },
+    {
+      "verified": false,
+      "error": "Manifest DNS failure",
+      "resolver": "cloudflare",
+      "parallel": 1,
+      "ms": 94.89,
+      "queries": [
+        {
+          "at": "2026-11-09T07:36:46.158877+00:00",
+          "resolver": "cloudflare",
+          "name": "_site.website-in-dns.626733.xyz",
+          "phase": "app-manifest",
+          "format": "json",
+          "http": 200,
+          "responseBytes": 274,
+          "cacheControl": null,
+          "age": null,
+          "cors": "*",
+          "dnsStatus": 3,
+          "truncated": false,
+          "authenticated": false,
+          "answerCount": 0,
+          "ttls": [],
+          "txtBytes": 0,
+          "answerSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "strings": [],
+          "answer": {
+            "Status": 3,
+            "TC": false,
+            "RD": true,
+            "RA": true,
+            "AD": false,
+            "CD": false,
+            "Question": [
+              {
+                "name": "_site.website-in-dns.626733.xyz",
+                "type": 16
+              }
+            ],
+            "Authority": [
+              {
+                "name": "626733.xyz",
+                "type": 6,
+                "TTL": 1800,
+                "data": "andy.ns.cloudflare.com. dns.cloudflare.com. 2417375859 10000 2400 604800 1800"
+              }
+            ]
+          },
+          "ms": 94.84
+        }
+      ]
+    },
+    {
+      "verified": false,
+      "error": "Manifest DNS failure",
+      "resolver": "cloudflare",
+      "parallel": 2,
+      "ms": 115.77,
+      "queries": [
+        {
+          "at": "2026-11-09T07:36:46.253885+00:00",
+          "resolver": "cloudflare",
+          "name": "_site.website-in-dns.626733.xyz",
+          "phase": "app-manifest",
+          "format": "json",
+          "http": 200,
+          "responseBytes": 274,
+          "cacheControl": null,
+          "age": null,
+          "cors": "*",
+          "dnsStatus": 3,
+          "truncated": false,
+          "authenticated": false,
+          "answerCount": 0,
+          "ttls": [],
+          "txtBytes": 0,
+          "answerSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "strings": [],
+          "answer": {
+            "Status": 3,
+            "TC": false,
+            "RD": true,
+            "RA": true,
+            "AD": false,
+            "CD": false,
+            "Question": [
+              {
+                "name": "_site.website-in-dns.626733.xyz",
+                "type": 16
+              }
+            ],
+            "Authority": [
+              {
+                "name": "626733.xyz",
+                "type": 6,
+                "TTL": 1800,
+                "data": "andy.ns.cloudflare.com. dns.cloudflare.com. 2417375859 10000 2400 604800 1800"
+              }
+            ]
+          },
+          "ms": 115.76
+        }
+      ]
+    },
+    {
+      "verified": false,
+      "error": "Manifest DNS failure",
+      "resolver": "cloudflare",
+      "parallel": 4,
+      "ms": 70.97,
+      "queries": [
+        {
+          "at": "2026-11-09T07:36:46.369795+00:00",
+          "resolver": "cloudflare",
+          "name": "_site.website-in-dns.626733.xyz",
+          "phase": "app-manifest",
+          "format": "json",
+          "http": 200,
+          "responseBytes": 274,
+          "cacheControl": null,
+          "age": null,
+          "cors": "*",
+          "dnsStatus": 3,
+          "truncated": false,
+          "authenticated": false,
+          "answerCount": 0,
+          "ttls": [],
+          "txtBytes": 0,
+          "answerSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "strings": [],
+          "answer": {
+            "Status": 3,
+            "TC": false,
+            "RD": true,
+            "RA": true,
+            "AD": false,
+            "CD": false,
+            "Question": [
+              {
+                "name": "_site.website-in-dns.626733.xyz",
+                "type": 16
+              }
+            ],
+            "Authority": [
+              {
+                "name": "626733.xyz",
+                "type": 6,
+                "TTL": 1800,
+                "data": "andy.ns.cloudflare.com. dns.cloudflare.com. 2417375859 10000 2400 604800 1800"
+              }
+            ]
+          },
+          "ms": 70.86
+        }
+      ]
+    },
+    {
+      "verified": false,
+      "error": "Manifest DNS failure",
+      "resolver": "cloudflare",
+      "parallel": 8,
+      "ms": 37.63,
+      "queries": [
+        {
+          "at": "2026-11-09T07:36:46.440892+00:00",
+          "resolver": "cloudflare",
+          "name": "_site.website-in-dns.626733.xyz",
+          "phase": "app-manifest",
+          "format": "json",
+          "http": 200,
+          "responseBytes": 274,
+          "cacheControl": null,
+          "age": null,
+          "cors": "*",
+          "dnsStatus": 3,
+          "truncated": false,
+          "authenticated": false,
+          "answerCount": 0,
+          "ttls": [],
+          "txtBytes": 0,
+          "answerSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "strings": [],
+          "answer": {
+            "Status": 3,
+            "TC": false,
+            "RD": true,
+            "RA": true,
+            "AD": false,
+            "CD": false,
+            "Question": [
+              {
+                "name": "_site.website-in-dns.626733.xyz",
+                "type": 16
+              }
+            ],
+            "Authority": [
+              {
+                "name": "626733.xyz",
+                "type": 6,
+                "TTL": 1800,
+                "data": "andy.ns.cloudflare.com. dns.cloudflare.com. 2417375859 10000 2400 604800 1800"
+              }
+            ]
+          },
+          "ms": 37.61
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "name": "DNS Field Station",
+  "approach": "code-led",
+  "sources": ["src/app.html", "src/loader.html"],
+  "tokens": {
+    "colors": {
+      "paper": "#f5f2e9",
+      "ink": "#193d35",
+      "muted": "#53685e",
+      "action": "#a53622",
+      "line": "#b9c4b8",
+      "notice": "#e5e9df",
+      "revealed": "#e0e7d7",
+      "matched": "#d2ddaa"
+    },
+    "fonts": {"body": "system-ui, sans-serif", "heading": "Georgia, serif", "data": "ui-monospace, monospace"},
+    "layout": {"appMaxWidth": "1180px", "columnGap": "48px", "mobileBreakpoint": "700px", "mobileGap": "20px", "controlRadius": "4px"},
+    "focus": {"width": "3px", "appOffset": "4px", "loaderOffset": "3px"},
+    "loader": {"bodySize": "15px", "headerPadding": "18px 25px", "controlGap": "12px", "progressHeight": "5px", "frameHeight": "85vh"}
+  },
+  "evidence": {
+    "screenshots": ["evidence/desktop.png", "evidence/mobile.png"],
+    "mode": "fixture",
+    "liveDnsDeployment": "blocked"
+  }
+}

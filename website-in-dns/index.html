@@ -1,0 +1,88 @@
+<!doctype html><html lang="en"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'unsafe-inline'; style-src 'unsafe-inline'; connect-src https://dns.google https://cloudflare-dns.com; frame-src 'self' about:; img-src data:; base-uri 'none'; form-action 'none'">
+<title>Website in DNS · loader</title>
+<style>*{box-sizing:border-box}body{margin:0;background:#f5f2e9;color:#193d35;font:15px/1.5 system-ui,sans-serif}header{padding:18px 25px;border-bottom:1px solid #b9c4b8}h1{font:28px Georgia,serif;margin:0 0 8px}form{display:flex;flex-wrap:wrap;gap:12px;align-items:end}label{display:grid;font-size:12px;gap:4px}input,select,button{font:inherit;padding:8px;border:1px solid #53685e;border-radius:4px;background:transparent;color:inherit}input{width:290px;max-width:80vw}button{cursor:pointer;background:#193d35;color:#fff}button:disabled{opacity:.5}a{color:inherit}#status{margin:12px 0}details{margin-top:8px}pre{white-space:pre-wrap;overflow-wrap:anywhere;max-height:220px;overflow:auto}iframe{display:block;width:100%;height:85vh;border:0}progress{width:100%;height:5px;accent-color:#a53622}summary{cursor:pointer}input:focus-visible,button:focus-visible,select:focus-visible,summary:focus-visible{outline:3px solid #a53622;outline-offset:3px}</style>
+<header><h1>Website in DNS</h1><form id="load"><label>DNS content namespace<input id="domain" value="website-in-dns.626733.xyz" required></label><label>DoH resolver<select id="resolver"><option value="https://dns.google/resolve">Google</option><option value="https://cloudflare-dns.com/dns-query">Cloudflare</option></select></label><label>Parallel queries<select id="parallel"><option>1</option><option>2</option><option selected>4</option><option>8</option></select></label><button id="go">Load from DNS</button><button id="export" type="button">Export trace</button></form><p id="status" role="status" aria-live="polite">Ready. Content is fetched only from DNS. No local fallback.</p><progress id="progress" value="0" max="1" aria-label="DNS chunks loaded"></progress><details><summary>Transport details and integrity pin</summary><p>This file is the bootstrap, not the content server. Save it and open locally in a modern browser. The document runs in an isolated iframe. A resolver sees the names you query.</p><label>Expected manifest SHA-256 (clear only to trust a different publisher)<input id="pin" value="8758ca3cdb992396913fa8196b165836dc9121551dbe0a640ebd97904eab85e2" style="width:620px"></label><pre id="trace">No queries yet.</pre></details></header>
+<iframe id="app" title="App reconstructed from DNS TXT records" sandbox="allow-scripts allow-popups" referrerpolicy="no-referrer"></iframe>
+<script>
+// The loader only accepts the ASCII protocol below. DNS presentation escapes
+// are decoded per character-string; separate RRs are never implicitly joined.
+function txt(data) {
+  if (typeof data !== 'string') throw Error('TXT data is not text');
+  if (!data.startsWith('"')) return data; // Google JSON uses bare TXT data.
+  let out = '', i = 0;
+  while (i < data.length) {
+    while (/\s/.test(data[i] || '') && i < data.length) i++;
+    if (i === data.length) break;
+    if (data[i++] !== '"') throw Error('Invalid TXT string');
+    let closed = false;
+    while (i < data.length) {
+      let c = data[i++];
+      if (c === '"') { closed = true; break; }
+      if (c === '\\') {
+        if (/^\d{3}/.test(data.slice(i))) {
+          const n = Number(data.slice(i, i + 3));
+          if (n > 255) throw Error('Invalid TXT escape');
+          c = String.fromCharCode(n); i += 3;
+        } else {
+          if (i >= data.length) throw Error('Incomplete TXT escape');
+          c = data[i++];
+        }
+      }
+      out += c;
+    }
+    if (!closed) throw Error('Unclosed TXT string');
+  }
+  return out;
+}
+function decode64(s) {
+  if (!/^(?:[A-Za-z0-9+/]{4})*(?:[A-Za-z0-9+/]{2}==|[A-Za-z0-9+/]{3}=)?$/.test(s)) throw Error('Invalid base64');
+  return Uint8Array.from(atob(s), c => c.charCodeAt(0));
+}
+async function digest(bytes) {
+  return Array.from(new Uint8Array(await crypto.subtle.digest('SHA-256', bytes)), n => n.toString(16).padStart(2, '0')).join('');
+}
+function parseManifest(s) {
+  if (!s.startsWith('wd1:m:')) throw Error('Missing manifest prefix');
+  const bytes = decode64(s.slice(6));
+  const m = JSON.parse(new TextDecoder('utf-8', {fatal:true}).decode(bytes));
+  if (m.v !== 1 || m.encoding !== 'gzip+base64' || !/^v[a-f0-9]{20}$/.test(m.release) ||
+      !Number.isInteger(m.chunks) || m.chunks < 1 || m.chunks > 1024 ||
+      !Number.isInteger(m.bytes) || m.bytes < 1 || m.bytes > 2*1024*1024 ||
+      !Number.isInteger(m.decodedBytes) || m.decodedBytes < 1 || m.decodedBytes > 8*1024*1024 ||
+      !/^[a-f0-9]{64}$/.test(m.sha256)) throw Error('Unsupported or oversized manifest');
+  return {m, bytes};
+}
+async function mapLimit(items, limit, fn) {
+  const out = new Array(items.length); let next = 0, failure;
+  await Promise.all(Array.from({length:Math.min(limit, items.length)}, async () => {
+    while (next < items.length && !failure) {
+      const i = next++;
+      try { out[i] = await fn(items[i], i); }
+      catch (error) { failure = error; }
+    }
+  }));
+  // Drain in-flight requests before the caller displays its final error or retries.
+  if (failure) throw failure;
+  return out;
+}
+async function inflateBounded(bytes, expected) {
+  const reader = new Blob([bytes]).stream().pipeThrough(new DecompressionStream('gzip')).getReader();
+  const pieces = []; let size = 0;
+  try {
+    while (true) {
+      const {done, value} = await reader.read(); if (done) break;
+      size += value.byteLength;
+      if (size > expected) throw Error('Decompressed document exceeds manifest');
+      pieces.push(value);
+    }
+  } finally { await reader.cancel(); }
+  if (size !== expected) throw Error('Decompressed length mismatch');
+  return new TextDecoder('utf-8', {fatal:true}).decode(await new Blob(pieces).arrayBuffer());
+}
+
+const $=s=>document.querySelector(s);let trace=[],busy=false;
+async function lookup(name,endpoint){let t=performance.now(),row={name,startedAt:new Date().toISOString()};trace.push(row);try{const u=new URL(endpoint);u.search=new URLSearchParams({name,type:'TXT'});const r=await fetch(u,{headers:{Accept:'application/dns-json'},cache:'no-store',signal:AbortSignal.timeout(15000)});row.http=r.status;row.cacheControl=r.headers.get('cache-control');if(!r.ok)throw Error('HTTP '+r.status);const body=await r.text();row.responseBytes=new TextEncoder().encode(body).length;const d=JSON.parse(body);row.dnsStatus=d.Status;row.truncated=!!d.TC;if(d.Status!==0||d.TC)throw Error('DNS status '+d.Status+(d.TC?' (truncated)':''));const answers=(d.Answer||[]).filter(a=>a.type===16&&a.name.toLowerCase().replace(/\.$/,'')===name.toLowerCase());row.ttls=answers.map(a=>a.TTL);const records=answers.map(a=>txt(a.data)).filter(s=>s.startsWith('wd1:'));if(records.length!==1)throw Error('Expected one protocol TXT record, received '+records.length);return records[0]}catch(e){row.error=e.message;throw e}finally{row.ms=+(performance.now()-t).toFixed(2);$('#trace').textContent=JSON.stringify(trace,null,2)}}
+$('#load').onsubmit=async e=>{e.preventDefault();if(busy)return;busy=true;$('#go').disabled=true;$('#app').removeAttribute('srcdoc');trace=[];$('#progress').value=0;let start=performance.now();const domain=$('#domain').value.trim().toLowerCase().replace(/\.$/,'');try{if(domain.length>180||!domain.split('.').every(p=>/^[a-z0-9](?:[a-z0-9-]{0,61}[a-z0-9])?$/.test(p)))throw Error('Enter a valid DNS namespace (maximum 180 characters)');const endpoint=$('#resolver').value;$('#status').textContent='Fetching manifest…';const {m,bytes}=parseManifest(await lookup('_site.'+domain,endpoint));const pin=$('#pin').value.trim().toLowerCase();if(pin&&!/^[a-f0-9]{64}$/.test(pin))throw Error('Integrity pin must be 64 hexadecimal characters');if(pin&&await digest(bytes)!==pin)throw Error('Manifest integrity pin mismatch');$('#progress').max=m.chunks;let complete=0;const chunks=await mapLimit(Array.from({length:m.chunks},(_,i)=>i),Number($('#parallel').value),async i=>{const record=await lookup('c'+i+'.'+m.release+'.'+domain,endpoint);const prefix='wd1:'+i+':';if(!record.startsWith(prefix))throw Error('Chunk sequence mismatch');const part=record.slice(prefix.length);if(part.length>60000)throw Error('Oversized chunk');$('#progress').value=++complete;$('#status').textContent='Retrieved '+complete+' / '+m.chunks+' chunks';return part});const packed=decode64(chunks.join(''));if(packed.length!==m.bytes||await digest(packed)!==m.sha256)throw Error('Content length or SHA-256 mismatch');const html=await inflateBounded(packed,m.decodedBytes);$('#app').srcdoc=html;$('#status').textContent='Verified '+m.decodedBytes.toLocaleString()+' document bytes from '+(m.chunks+1)+' DNS queries in '+Math.round(performance.now()-start)+' ms. No content origin used.'}catch(err){$('#status').textContent='Load failed: '+err.message+'. Check publication and namespace, or try the other resolver.'}finally{busy=false;$('#go').disabled=false}};
+$('#export').onclick=()=>{const blob=new Blob([JSON.stringify({capturedAt:new Date().toISOString(),resolver:$('#resolver').value,queries:trace},null,2)],{type:'application/json'});const url=URL.createObjectURL(blob),a=document.createElement('a');a.href=url;a.download='dns-trace.json';a.click();setTimeout(()=>URL.revokeObjectURL(url),1000)};
+</script></html>

@@ -1,0 +1,13 @@
+{
+  "observedDate": "2026-11-09",
+  "zone": "626733.xyz",
+  "namespace": "website-in-dns.626733.xyz",
+  "readSucceeded": true,
+  "probeRecord": "probe.website-in-dns.626733.xyz",
+  "writeAttempts": 3,
+  "tool": "Cloudflare execute POST /zones/{zone_id}/dns_records",
+  "writeResult": "Authentication for Cloudflare was requested and accepted. Retry this tool call now.",
+  "followupReadRecords": [],
+  "conclusion": "No successful publication observed; authentication flow did not produce a write result. This is not a measured provider size refusal.",
+  "alternativeVercelDomains": 0
+}

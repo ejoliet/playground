@@ -1,0 +1,20 @@
+{
+  "domain": "website-in-dns.626733.xyz",
+  "htmlBytes": 33357,
+  "pngBytes": 4539,
+  "gzipBytes": 14310,
+  "base64Bytes": 19080,
+  "chunkSize": 1800,
+  "chunkCount": 11,
+  "recordCount": 12,
+  "manifestSha256": "8758ca3cdb992396913fa8196b165836dc9121551dbe0a640ebd97904eab85e2",
+  "manifest": {
+    "v": 1,
+    "encoding": "gzip+base64",
+    "release": "v2c422acdecf9b9639e68",
+    "chunks": 11,
+    "bytes": 14310,
+    "decodedBytes": 33357,
+    "sha256": "2c422acdecf9b9639e68308020c91f554107edea60928d50847b35a15047c7a2"
+  }
+}
