@@ -1,0 +1,30 @@
+{
+  "tested_at": "2026-11-09",
+  "pyodide": "0.27.7",
+  "protocol": "2026-07-28",
+  "chromium": "156.0.8078.79",
+  "in_page": [
+    "discovery",
+    "three tools",
+    "insert",
+    "query",
+    "aggregate"
+  ],
+  "separate_tab": [
+    "discovery",
+    "three tools",
+    "insert",
+    "query",
+    "aggregate"
+  ],
+  "external_http_post": 501,
+  "fresh_context_post": 501,
+  "second_host_count": 2,
+  "automation_call": {
+    "count": 5,
+    "characters": 188
+  },
+  "reload_count": 2,
+  "old_endpoint_after_reload": 503,
+  "closed_host": 503
+}

@@ -1,0 +1,12 @@
+<!doctype html><html lang="en"><meta charset="utf-8"><title>Separate MCP client</title>
+<h1>Separate client tab</h1><p>This page has no Pyodide worker. It uses the hosting tab’s SQLite tools.</p>
+<button id="run">Run tests (adds a note)</button><pre id="output"></pre>
+<script type="module">
+import {selfTest} from './client.js';
+window.endpoint = new URL(location.href).searchParams.get('endpoint');
+window.run = () => selfTest(window.endpoint);
+document.querySelector('#run').onclick = async () => {
+  try { document.querySelector('#output').textContent = JSON.stringify(await window.run(), null, 2); }
+  catch (error) { document.querySelector('#output').textContent = String(error); }
+};
+</script></html>

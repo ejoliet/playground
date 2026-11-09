@@ -1,0 +1,15 @@
+<!doctype html>
+<html lang="en"><meta charset="utf-8"><meta name="viewport" content="width=device-width">
+<title>MCP in a browser tab</title>
+<style>body{font:17px system-ui;max-width:850px;margin:40px auto;padding:0 20px}button,input{font:inherit;padding:8px}pre{white-space:pre-wrap;overflow-wrap:anywhere;background:#f1f3f5;padding:16px}code{overflow-wrap:anywhere}</style>
+<h1>MCP in a browser tab</h1>
+<p>Python + SQLite, served through a service worker. MCP 2026-07-28.</p>
+<p>Status: <strong id="status">starting</strong></p>
+<p>Tools: <code>add_note</code>, <code>list_notes</code>, <code>note_stats</code>. Data is lost when this tab reloads or closes.</p>
+<p>Endpoint (only within this browser’s controlled pages): <code id="endpoint"></code></p>
+<button id="test" disabled>Run in-page tests (adds a note)</button>
+<button id="list" disabled>List notes</button>
+<form id="add"><p><label>Note <input id="text" required maxlength="1000" value="Hello from the page"></label> <button disabled>Add note</button></p></form>
+<p><a id="external" target="_blank" rel="noopener">Open separate client tab</a></p>
+<pre id="output" aria-live="polite">Waiting for Python…</pre>
+<script type="module" src="bootstrap.js"></script></html>

@@ -1,0 +1,5 @@
+vendor/
+vendor-source/
+spec/
+__pycache__/
+.cache/

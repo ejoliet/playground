@@ -1,0 +1,51 @@
+test_bad_messages (test_protocol.ProtocolTests.test_bad_messages) ... ok
+test_bridge_buffers_sse_and_synthesizes_disconnect (test_protocol.ProtocolTests.test_bridge_buffers_sse_and_synthesizes_disconnect) ... ok
+test_discovery_and_direct_call (test_protocol.ProtocolTests.test_discovery_and_direct_call) ... ok
+test_headers_versions_metadata (test_protocol.ProtocolTests.test_headers_versions_metadata) ... ok
+test_name_encoding (test_protocol.ProtocolTests.test_name_encoding) ... ok
+test_origin_and_http_methods (test_protocol.ProtocolTests.test_origin_and_http_methods) ... ok
+test_parameterized_sql_unicode (test_protocol.ProtocolTests.test_parameterized_sql_unicode) ... ok
+test_tool_errors (test_protocol.ProtocolTests.test_tool_errors) ... ok
+test_experiment (test_browser.BrowserExperiment.test_experiment) ... 127.0.0.1 - - [09/Nov/2026 06:26:12] "GET /browser-mcp-server/ HTTP/1.1" 200 -
+127.0.0.1 - - [09/Nov/2026 06:26:12] "GET /browser-mcp-server/bootstrap.js HTTP/1.1" 200 -
+127.0.0.1 - - [09/Nov/2026 06:26:12] "GET /browser-mcp-server/client.js HTTP/1.1" 200 -
+127.0.0.1 - - [09/Nov/2026 06:26:12] code 404, message File not found
+127.0.0.1 - - [09/Nov/2026 06:26:12] "GET /favicon.ico HTTP/1.1" 404 -
+127.0.0.1 - - [09/Nov/2026 06:26:12] "GET /browser-mcp-server/sw.js HTTP/1.1" 200 -
+127.0.0.1 - - [09/Nov/2026 06:26:12] "GET /browser-mcp-server/worker.js HTTP/1.1" 200 -
+127.0.0.1 - - [09/Nov/2026 06:26:12] "GET /browser-mcp-server/vendor-source/bridge-python.js HTTP/1.1" 200 -
+127.0.0.1 - - [09/Nov/2026 06:26:12] "GET /browser-mcp-server/vendor-source/worker-runtime.js HTTP/1.1" 200 -
+127.0.0.1 - - [09/Nov/2026 06:26:12] "GET /browser-mcp-server/app.py HTTP/1.1" 200 -
+127.0.0.1 - - [09/Nov/2026 06:26:12] "GET /browser-mcp-server/vendor/pyodide.js HTTP/1.1" 200 -
+127.0.0.1 - - [09/Nov/2026 06:26:12] "GET /browser-mcp-server/vendor/python_stdlib.zip HTTP/1.1" 200 -
+127.0.0.1 - - [09/Nov/2026 06:26:12] "GET /browser-mcp-server/vendor/pyodide.asm.js HTTP/1.1" 200 -
+127.0.0.1 - - [09/Nov/2026 06:26:12] "GET /browser-mcp-server/vendor/pyodide.asm.wasm HTTP/1.1" 200 -
+127.0.0.1 - - [09/Nov/2026 06:26:12] "GET /browser-mcp-server/vendor/pyodide-lock.json HTTP/1.1" 200 -
+127.0.0.1 - - [09/Nov/2026 06:26:15] "GET /browser-mcp-server/vendor/packaging-24.2-py3-none-any.whl HTTP/1.1" 200 -
+127.0.0.1 - - [09/Nov/2026 06:26:15] "GET /browser-mcp-server/vendor/sqlite3-1.0.0-cp312-cp312-pyodide_2024_0_wasm32.whl HTTP/1.1" 200 -
+127.0.0.1 - - [09/Nov/2026 06:26:15] "GET /browser-mcp-server/vendor/micropip-0.9.0-py3-none-any.whl HTTP/1.1" 200 -
+127.0.0.1 - - [09/Nov/2026 06:26:15] "GET /browser-mcp-server/vendor/install.json HTTP/1.1" 200 -
+127.0.0.1 - - [09/Nov/2026 06:26:16] "GET /browser-mcp-server/client.html?endpoint=http://127.0.0.1:37797/browser-mcp-server/app/2e8572d1-6c94-4c6e-a1df-fb18b83d2174/mcp HTTP/1.1" 200 -
+127.0.0.1 - - [09/Nov/2026 06:26:16] code 501, message Unsupported method ('POST')
+127.0.0.1 - - [09/Nov/2026 06:26:16] "POST /browser-mcp-server/app/2e8572d1-6c94-4c6e-a1df-fb18b83d2174/mcp HTTP/1.1" 501 -
+127.0.0.1 - - [09/Nov/2026 06:26:16] "GET /browser-mcp-server/client.html?endpoint=http://127.0.0.1:37797/browser-mcp-server/app/2e8572d1-6c94-4c6e-a1df-fb18b83d2174/mcp HTTP/1.1" 200 -
+127.0.0.1 - - [09/Nov/2026 06:26:16] "GET /browser-mcp-server/client.js HTTP/1.1" 200 -
+127.0.0.1 - - [09/Nov/2026 06:26:16] code 501, message Unsupported method ('POST')
+127.0.0.1 - - [09/Nov/2026 06:26:16] "POST /browser-mcp-server/app/2e8572d1-6c94-4c6e-a1df-fb18b83d2174/mcp HTTP/1.1" 501 -
+127.0.0.1 - - [09/Nov/2026 06:26:17] "GET /browser-mcp-server/vendor/pyodide.asm.wasm HTTP/1.1" 200 -
+127.0.0.1 - - [09/Nov/2026 06:26:18] "GET /browser-mcp-server/sw.js HTTP/1.1" 304 -
+127.0.0.1 - - [09/Nov/2026 06:26:20] "GET /browser-mcp-server/ HTTP/1.1" 304 -
+127.0.0.1 - - [09/Nov/2026 06:26:20] "GET /browser-mcp-server/app.py HTTP/1.1" 304 -
+127.0.0.1 - - [09/Nov/2026 06:26:20] "GET /browser-mcp-server/vendor/pyodide.asm.wasm HTTP/1.1" 200 -
+127.0.0.1 - - [09/Nov/2026 06:26:21] "GET /browser-mcp-server/sw.js HTTP/1.1" 304 -
+ok
+
+----------------------------------------------------------------------
+Ran 9 tests in 13.124s
+
+OK
+BROWSER: Failed to load resource: the server responded with a status of 404 (File not found)
+BROWSER: Loading micropip, packaging, sqlite3
+BROWSER: Loaded micropip, packaging, sqlite3
+BROWSER: Loading micropip, packaging, sqlite3
+BROWSER: Loaded micropip, packaging, sqlite3
