@@ -1,0 +1,18 @@
+[
+  {
+    "merged": false,
+    "wall_seconds": 3.2330845010000075,
+    "requests": 32,
+    "bytes": 393216,
+    "max_batch_bytes": 49152,
+    "budget": 262144
+  },
+  {
+    "merged": true,
+    "wall_seconds": 0.8125703910000084,
+    "requests": 8,
+    "bytes": 294912,
+    "max_batch_bytes": 49152,
+    "budget": 262144
+  }
+]

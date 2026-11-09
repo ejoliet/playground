@@ -1,0 +1,15 @@
+fsspec 0 sequential
+fsspec 0 random
+fsspec 0 fits_rows
+fsspec 0 zip_cluster
+fsspec 0 sqlite_random
+fsspec 1 sequential
+fsspec 1 random
+fsspec 1 fits_rows
+fsspec 1 zip_cluster
+fsspec 1 sqlite_random
+fsspec 2 sequential
+fsspec 2 random
+fsspec 2 fits_rows
+fsspec 2 zip_cluster
+fsspec 2 sqlite_random

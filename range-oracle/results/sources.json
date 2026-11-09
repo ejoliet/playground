@@ -1,0 +1,45 @@
+[
+  {
+    "name": "http",
+    "url": "https://www.rfc-editor.org/rfc/rfc9111.html",
+    "status": "retrieved",
+    "length": 232111
+  },
+  {
+    "name": "nginx",
+    "url": "https://nginx.org/en/docs/http/ngx_http_slice_module.html",
+    "status": "retrieved",
+    "length": 5730
+  },
+  {
+    "name": "fsspec",
+    "url": "https://filesystem-spec.readthedocs.io/en/latest/_modules/fsspec/caching.html",
+    "error": "HTTP Error 403: Forbidden",
+    "fallback": "installed fsspec.caching source",
+    "version": "2026.9.0"
+  },
+  {
+    "name": "arrow",
+    "url": "https://arrow.apache.org/docs/python/generated/pyarrow.parquet.ParquetFile.html",
+    "status": "retrieved",
+    "length": 227030
+  },
+  {
+    "name": "duckdb",
+    "url": "https://raw.githubusercontent.com/duckdb/duckdb-web/main/docs/2.0/guides/performance/how_to_tune_workloads.md",
+    "status": "retrieved",
+    "length": 15367
+  },
+  {
+    "name": "duckdb-http",
+    "url": "https://raw.githubusercontent.com/duckdb/duckdb-web/main/docs/2.0/core_extensions/httpfs/https.md",
+    "status": "retrieved",
+    "length": 4223
+  },
+  {
+    "name": "linux",
+    "url": "https://raw.githubusercontent.com/torvalds/linux/master/mm/readahead.c",
+    "status": "retrieved",
+    "length": 28014
+  }
+]

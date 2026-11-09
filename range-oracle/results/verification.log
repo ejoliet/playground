@@ -1,0 +1,1 @@
+Verified 585 HTTP trials, 1209 model rows, 60 fsspec trials, 85 full-reader runs, equal outputs and bounded caches.

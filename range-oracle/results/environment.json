@@ -1,0 +1,31 @@
+{
+  "python": "3.12.14",
+  "platform": "Linux-6.18.57-x86_64-with-glibc2.41",
+  "versions": {
+    "numpy": "2.5.4",
+    "pyarrow": "26.0.1",
+    "astropy": "8.0.2",
+    "apsw": "3.54.1.0",
+    "fsspec": "2026.9.0",
+    "duckdb": "2.0.0"
+  },
+  "files": {
+    "parquet": {
+      "bytes": 16823955,
+      "sha256": "000d6b2ce817786919bceabdd3ffd723e1efe3a51059bb4b16760c7ca5821d32"
+    },
+    "sqlite": {
+      "bytes": 16822272,
+      "sha256": "a36a3ff0afa11b873ef01c18280a6a0491fd0add7e3cb0463a0f1857090dbbef"
+    },
+    "fits": {
+      "bytes": 16781760,
+      "sha256": "aca40dcc3d4b25bc43af922a2b203f3d5548d24eeb68dfa4a5bdcd5e228d5a7f"
+    },
+    "zip": {
+      "bytes": 8402490,
+      "sha256": "67d084bc7f1a0a5a2ca5bc13241b477b3ccc8e5abf26ea33abc7f974328eaa41"
+    }
+  },
+  "seed": 20261109
+}

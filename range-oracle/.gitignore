@@ -1,0 +1,9 @@
+.venv/
+.repo/
+.cache/
+.pytest_cache/
+__pycache__/
+data/
+tmp/
+results/source-*
+results/duckdb-tree.json

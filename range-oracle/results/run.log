@@ -1,0 +1,23 @@
+captured parquet_columns 9
+captured parquet_prebuffer 5
+captured zip_cluster 27
+captured zip_random 27
+captured zip_metadata 24
+captured fits_rows 18
+captured fits_random 18
+captured sqlite_random 32
+captured sqlite_scan 20
+captured sequential 32
+captured random 32
+captured phase_change 32
+captured stride 32
+HTTP completed 0 0.02
+HTTP completed 0 0.1
+HTTP completed 0 0.2
+HTTP completed 1 0.02
+HTTP completed 1 0.1
+HTTP completed 1 0.2
+HTTP completed 2 0.02
+HTTP completed 2 0.1
+HTTP completed 2 0.2
+HTTP rows 585
