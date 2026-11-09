@@ -1,0 +1,222 @@
+[
+  {
+    "stage": "float",
+    "step": 250,
+    "validation_bpc": 2.861939095114854
+  },
+  {
+    "stage": "float",
+    "step": 500,
+    "validation_bpc": 2.5693348986867175
+  },
+  {
+    "stage": "float",
+    "step": 750,
+    "validation_bpc": 2.461062848011534
+  },
+  {
+    "stage": "float",
+    "step": 1000,
+    "validation_bpc": 2.4048930946900184
+  },
+  {
+    "stage": "float",
+    "step": 1250,
+    "validation_bpc": 2.370858731618671
+  },
+  {
+    "stage": "float",
+    "step": 1500,
+    "validation_bpc": 2.365256106797842
+  },
+  {
+    "stage": "float",
+    "step": 1750,
+    "validation_bpc": 2.3336992048846694
+  },
+  {
+    "stage": "float",
+    "step": 2000,
+    "validation_bpc": 2.33970902349861
+  },
+  {
+    "stage": "float",
+    "step": 2250,
+    "validation_bpc": 2.313549971162119
+  },
+  {
+    "stage": "float",
+    "step": 2500,
+    "validation_bpc": 2.3061626670118667
+  },
+  {
+    "stage": "float",
+    "step": 2750,
+    "validation_bpc": 2.3169087815160716
+  },
+  {
+    "stage": "float",
+    "step": 3000,
+    "validation_bpc": 2.3100880397536585
+  },
+  {
+    "stage": "float",
+    "step": 3250,
+    "validation_bpc": 2.307382923491377
+  },
+  {
+    "stage": "float",
+    "step": 3500,
+    "validation_bpc": 2.308958642467538
+  },
+  {
+    "stage": "float",
+    "step": 3750,
+    "validation_bpc": 2.301235794026991
+  },
+  {
+    "stage": "float",
+    "step": 4000,
+    "validation_bpc": 2.2996546002003218
+  },
+  {
+    "stage": "float",
+    "step": 4250,
+    "validation_bpc": 2.298121731372039
+  },
+  {
+    "stage": "float",
+    "step": 4500,
+    "validation_bpc": 2.2941098607443715
+  },
+  {
+    "stage": "float",
+    "step": 4750,
+    "validation_bpc": 2.294717828058043
+  },
+  {
+    "stage": "float",
+    "step": 5000,
+    "validation_bpc": 2.2908026724468487
+  },
+  {
+    "stage": "float",
+    "step": 5250,
+    "validation_bpc": 2.2986467933353616
+  },
+  {
+    "stage": "float",
+    "step": 5500,
+    "validation_bpc": 2.2887975427588585
+  },
+  {
+    "stage": "float",
+    "step": 5750,
+    "validation_bpc": 2.2863504081020594
+  },
+  {
+    "stage": "float",
+    "step": 6000,
+    "validation_bpc": 2.2852234424543854
+  },
+  {
+    "stage": "float",
+    "step": 6250,
+    "validation_bpc": 2.287954378779901
+  },
+  {
+    "stage": "float",
+    "step": 6500,
+    "validation_bpc": 2.288290291495301
+  },
+  {
+    "stage": "float",
+    "step": 6750,
+    "validation_bpc": 2.2853084247860664
+  },
+  {
+    "stage": "float",
+    "step": 7000,
+    "validation_bpc": 2.2820383421533594
+  },
+  {
+    "stage": "float",
+    "step": 7250,
+    "validation_bpc": 2.2898061756805417
+  },
+  {
+    "stage": "float",
+    "step": 7500,
+    "validation_bpc": 2.2778445072473605
+  },
+  {
+    "stage": "float",
+    "step": 7750,
+    "validation_bpc": 2.290844176364572
+  },
+  {
+    "stage": "float",
+    "step": 8000,
+    "validation_bpc": 2.2754090332240025
+  },
+  {
+    "stage": "qat",
+    "step": 250,
+    "validation_bpc": 2.887559463327755
+  },
+  {
+    "stage": "qat",
+    "step": 500,
+    "validation_bpc": 2.843582983689532
+  },
+  {
+    "stage": "qat",
+    "step": 750,
+    "validation_bpc": 2.849307434166382
+  },
+  {
+    "stage": "qat",
+    "step": 1000,
+    "validation_bpc": 2.8820915334282367
+  },
+  {
+    "stage": "qat",
+    "step": 1250,
+    "validation_bpc": 2.7989777403100664
+  },
+  {
+    "stage": "qat",
+    "step": 1500,
+    "validation_bpc": 2.9053485644146098
+  },
+  {
+    "stage": "qat",
+    "step": 1750,
+    "validation_bpc": 2.807461639171758
+  },
+  {
+    "stage": "qat",
+    "step": 2000,
+    "validation_bpc": 2.8925439440480742
+  },
+  {
+    "stage": "qat",
+    "step": 2250,
+    "validation_bpc": 2.818520578255828
+  },
+  {
+    "stage": "qat",
+    "step": 2500,
+    "validation_bpc": 2.801114057075289
+  },
+  {
+    "stage": "qat",
+    "step": 2750,
+    "validation_bpc": 2.870306382052847
+  },
+  {
+    "stage": "qat",
+    "step": 3000,
+    "validation_bpc": 2.788737511127273
+  }
+]

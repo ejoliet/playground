@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <link rel="icon" href="data:,">
+  <meta name="theme-color" content="#163e38">
+  <title>A language model, on paper</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="vendor/jsQR.js" defer></script><script src="model.js" defer></script><script src="app.js" defer></script>
+</head>
+<body>
+<header><a href="./" class="wordmark">PAPER / MODEL</a><span id="offline" role="status">Preparing offline reader…</span></header>
+<main>
+  <section class="intro"><p class="eyebrow">EXPERIMENT 001 · CHARACTER-LEVEL NEURAL NETWORK</p>
+    <h1>A language model,<br><em>on paper.</em></h1>
+    <p class="lede">One QR code holds every learned weight of a tiny recurrent neural network. Scan it, give it a few letters, and let it write — entirely on your device.</p>
+    <div class="facts"><span><strong>2,953</strong> byte ceiling</span><span><strong>0</strong> inference requests</span><span><strong>1</strong> printed model</span></div>
+  </section>
+  <div class="workspace">
+    <section class="panel"><p class="eyebrow">01 / LOAD FROM PAPER</p><h2>Scan the model</h2>
+      <p>Use the QR embedded in the <a href="README.md">research report</a>, or <a href="artifacts/model-qr.png" target="_blank" rel="noopener">open the print-ready image</a>. This reader starts with no model weights.</p>
+      <div class="viewfinder"><video id="video" autoplay muted playsinline hidden></video><div id="cameraHint">The printed code is the model.<br><small>Use bright light and keep all four edges visible.</small></div></div>
+      <div class="actions"><button id="start">Start camera</button><button id="stop" class="secondary" disabled>Stop camera</button></div>
+      <label class="upload">Or choose a QR image<input id="image" type="file" accept="image/*"></label>
+      <p id="scanStatus" role="status" aria-live="polite">Waiting for a model. Camera images stay on this device.</p>
+      <details><summary>Scanning tips</summary><p>Print the PNG at least 15 cm wide without cropping its white border. This is a dense QR: use the rear camera, fill most of the frame, and hold steady. If scanning fails, try a full-resolution photo with “choose a QR image”. Camera access needs HTTPS or localhost.</p></details>
+    </section>
+    <section class="panel"><p class="eyebrow">02 / GENERATE LOCALLY</p><h2>Give it a beginning</h2>
+      <p id="modelInfo">Scan a code to unlock generation.</p>
+      <form id="generateForm"><label for="prompt">Starting text</label><input id="prompt" value="alice " maxlength="1000" autocomplete="off">
+      <div class="settings"><label for="temperature">Temperature <output id="tempValue">0.8</output><input id="temperature" type="range" min="0.1" max="1.5" step="0.1" value="0.8"></label><label for="seed">Random seed<input id="seed" type="number" min="0" max="4294967295" value="123" required></label></div>
+      <button id="generate" disabled>Generate 400 characters <span aria-hidden="true">→</span></button></form>
+      <pre id="output" aria-label="Generated text" aria-live="polite">A very small imagination lives here.</pre>
+      <p class="note">Trained on normalized <cite>Alice’s Adventures in Wonderland</cite>. Expect fragments of spelling and rhythm, not coherent answers. “Tiny neural language model” is the accurate description; this is not an LLM.</p>
+    </section>
+  </div>
+  <section class="about"><p class="eyebrow">WHAT FITS IN THE SQUARE?</p><h2>Learned weights. No lookup table.</h2><p>A character embedding, a gated recurrent unit, and an output layer predict the next character. The code also carries the alphabet, dimensions, weight scales, and a checksum. The reader supplies only the generic math and QR decoder.</p><p>Load this page once and wait for “Reader saved for offline use”. Then disconnect, reload, scan, and generate. Your browser must retain this site’s cached files. Scanned weights are kept only in memory; reload to clear them.</p></section>
+</main><footer>Small enough to print. Real enough to measure. <a href="README.md">Read the experiment →</a></footer>
+<canvas id="canvas" hidden></canvas>
+</body></html>

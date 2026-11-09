@@ -1,0 +1,537 @@
+{
+  "source": "https://www.gutenberg.org/files/11/11-0.txt",
+  "source_sha256": "a3a27f8edbf7fcd9b8ba8435494440e24952deaa3e2f2d65192d4cb7ca403754",
+  "normalized_sha256": "8426879a993c19565d2ce377ac3a6cf83c57416a385ba26c540edf5c64371529",
+  "vocabulary": "\n ',.abcdefghijklmnopqrstuvwxyz",
+  "split_characters": [
+    114061,
+    14258,
+    14258
+  ],
+  "steps": 8000,
+  "qat_steps": 3000,
+  "batch_size": 32,
+  "sequence_length": 64,
+  "seed": 1729,
+  "torch_version": "2.15.0+cpu",
+  "results": [
+    {
+      "name": "h8-float-32bit",
+      "hidden": 8,
+      "bits": 32,
+      "stage": "float",
+      "parameters": 959,
+      "bytes": 3879,
+      "validation_bpc": 3.009331228219753,
+      "test_bpc": 2.9912436208281736,
+      "test_ci95": [
+        2.9441639816475624,
+        3.0448434206598813
+      ],
+      "perplexity": 7.9515913794106545,
+      "sample": "alice in. 'mouticon.'\n\nyou ad feleren ung i wade you at what rerle ancem is ong dand she the saay it the wat one i verithed\nthe have gruste dacer ke, a opkout tuy yown larelf wof rlat the in.'\n\n'i the ging to the\ni wank wbulh she bet bosh the whese the mrioder had the her hers she\nstay inthas sithing the thoughboust he to of"
+    },
+    {
+      "name": "h8-float-8bit",
+      "hidden": 8,
+      "bits": 8,
+      "stage": "float",
+      "parameters": 959,
+      "bytes": 1030,
+      "validation_bpc": 3.017000324962985,
+      "test_bpc": 2.9988924131793446,
+      "test_ci95": [
+        2.9523139936288847,
+        3.0513611464308843
+      ],
+      "perplexity": 7.993860591521276,
+      "sample": "alice in. 'moutich koall\nfondefe ate oun, 'in. it\na quely. sore round eing to it and she the saay it the wat one i verithed\nthe have gruste dacer ke, and to the you ge looolse of rlat the in.'\n\n'i the ging to the\ni ann't bulk she bet bosh the whese the me of turd wheld the she she\nstay inthas sithing the thoughboust as the w"
+    },
+    {
+      "name": "h8-float-4bit",
+      "hidden": 8,
+      "bits": 4,
+      "stage": "float",
+      "parameters": 959,
+      "bytes": 551,
+      "validation_bpc": 4.047644465445256,
+      "test_bpc": 3.9880401214434857,
+      "test_ci95": [
+        3.9463218796561836,
+        4.035482800195267
+      ],
+      "perplexity": 15.867908973263447,
+      "sample": "alice goere dloice ko lyer nkt be ther qusindy quye nere fle rer guer nin goer th ne she ne libaldry so wlalre they ali be.\n''ne larle goce dallr lee dye to th al nge mlicels wlaarlser,. 'in thince sale 'th them sernin't be wne cor th \nis therlses th bint on th 'dere das ne 'sos quet geserarlds the theeldre gese ne cor vi of"
+    },
+    {
+      "name": "h8-qat-4bit",
+      "hidden": 8,
+      "bits": 4,
+      "stage": "qat",
+      "parameters": 959,
+      "bytes": 551,
+      "validation_bpc": 3.3411400061323606,
+      "test_bpc": 3.319042584810299,
+      "test_ci95": [
+        3.2724252272831746,
+        3.375157688083608
+      ],
+      "perplexity": 9.980019156591252,
+      "sample": "alice ind the tic non ilid ad felellgl ind iny ity i alle. sare roungreinge ous taid she the ind mith to was oung yuc ith fingn have grus sad, trh he ad paid fhe the sillrelf wof rlad the ind sink thacelle to the if. no wbulk sway so bous the whe a the mer alre ad thad the she said\nthe ind rursrelr i'lell 'ofelf. say so chor"
+    },
+    {
+      "name": "h12-float-32bit",
+      "hidden": 12,
+      "bits": 32,
+      "stage": "float",
+      "parameters": 1443,
+      "bytes": 5815,
+      "validation_bpc": 2.8521199178922902,
+      "test_bpc": 2.8401881257795747,
+      "test_ci95": [
+        2.785906062632925,
+        2.902649644095134
+      ],
+      "perplexity": 7.161134310248228,
+      "sample": "alice in.'\n\n'thice killy\nthat fele the qus in. it a quell she nared. ceing to it and she erled amm the own, no to you it sfi'ded it me gote.\n\n'the he a optiou turned she to follo hater, youn thinced\nthe went, 'mares.'n wabol. and be aboued was seen the mer aet had shad the she she stall yonrersing\nthe eent of sfouech sh it w"
+    },
+    {
+      "name": "h12-float-8bit",
+      "hidden": 12,
+      "bits": 8,
+      "stage": "float",
+      "parameters": 1443,
+      "bytes": 1514,
+      "validation_bpc": 2.8534301609546104,
+      "test_bpc": 2.8448740475832426,
+      "test_ci95": [
+        2.790495487802001,
+        2.9079193693409504
+      ],
+      "perplexity": 7.184431729206194,
+      "sample": "alice hout mourice killy\nthat fele the quer to it a quell she nares. ceing to it and she her in most the was out it a sors.\n'\nno it me gote.\n\n'the he was to to my, it ill the was hater, youn thinced\nthe went, 'mares.'n wabol. and be aboued was seen the mer aet had shad the she she stall yonrersing\nthe eent of sfouech sh it w"
+    },
+    {
+      "name": "h12-float-4bit",
+      "hidden": 12,
+      "bits": 4,
+      "stage": "float",
+      "parameters": 1443,
+      "bytes": 793,
+      "validation_bpc": 3.8677601745072434,
+      "test_bpc": 3.838739713975577,
+      "test_ci95": [
+        3.786136740957264,
+        3.906578307522297
+      ],
+      "perplexity": 14.307896814637202,
+      "sample": "alice to the thit thid you a fup sit tuit i thou you at wfou rep to haemene out tas the mer like mithe ord thou the sor be it hae. it thou it the he' a to of fnushent it to so pory thit you the is thit the to to sor to the he swou to bou. \ni' w is to bat to quer out the ha s'it thatt thit to as the it ext to gf she her to of"
+    },
+    {
+      "name": "h12-qat-4bit",
+      "hidden": 12,
+      "bits": 4,
+      "stage": "qat",
+      "parameters": 1443,
+      "bytes": 793,
+      "validation_bpc": 3.238105174979476,
+      "test_bpc": 3.189454832232842,
+      "test_ci95": [
+        3.141828053393993,
+        3.2437062641957364
+      ],
+      "perplexity": 9.12266179040462,
+      "sample": "alice i'd the i't yoully hindefe at it it i the it i at why man mough em ie it thand the hery bay it the was out i vers blee your.\n\n'culiid dader her a tot her my yit ill the was i't i my in in ie, 'it i't togh it cann'\nwas was,' be aby her calees her i tabser hed ther i i sos sthert ceirdtrers the i'teed to goun ice a vithe"
+    },
+    {
+      "name": "h16-float-32bit",
+      "hidden": 16,
+      "bits": 32,
+      "stage": "float",
+      "parameters": 2023,
+      "bytes": 8135,
+      "validation_bpc": 2.6991554509899047,
+      "test_bpc": 2.6878548413995875,
+      "test_ci95": [
+        2.6324335466230124,
+        2.7493258044730067
+      ],
+      "perplexity": 6.443545970182058,
+      "sample": "alice had the\ntice killy\nthat felerens its in didy a at wuller the doching to say alice meesed all the of the\nchlim to they\nthe hat me goie.\n\n'troked a wot out under silly ling a rlate, youn and it it glythe gome it.'' ''but. swhe do bose the when, fabut a dern a world the she seessthe it treattelf it eent of sured cous it w"
+    },
+    {
+      "name": "h16-float-8bit",
+      "hidden": 16,
+      "bits": 8,
+      "stage": "float",
+      "parameters": 2023,
+      "bytes": 2094,
+      "validation_bpc": 2.7021953240010834,
+      "test_bpc": 2.6880670945325558,
+      "test_ci95": [
+        2.6332167054703466,
+        2.7493376272338077
+      ],
+      "perplexity": 6.444494031548363,
+      "sample": "alice had the\ntice knowl\nthat felerens it i to it a queelf said read, and a cutter,' said the bame the of the\nchlim to they\nthe have grouse.\n\n'troked a wot out lying silly ling of lat like the mice,\n'the with the\nit.'' ''but. swhe do bose the when, fabut a dern woush do wors she quetly it treattelf theelga of sured cor the w"
+    },
+    {
+      "name": "h16-float-4bit",
+      "hidden": 16,
+      "bits": 4,
+      "stage": "float",
+      "parameters": 2023,
+      "bytes": 1083,
+      "validation_bpc": 3.8205758779297736,
+      "test_bpc": 3.7613778183784263,
+      "test_ci95": [
+        3.715563615188958,
+        3.8110362761312535
+      ],
+      "perplexity": 13.56086986552443,
+      "sample": "alice ind orre if a if youn ofoetsiegly oriest it'r a row of remessed if in ouhey in the forest of in to fan\nout if a if seed ofe.\n\n'saglid.\n\n'urrked a dorarlf if oug illy ley of illed forinowe if the glled outiry fann if if the orie bouhe worle sa fany the hadhusessarle of 'sarles\nthe if trearr, '\nif eeet ofese. '''wa wit f"
+    },
+    {
+      "name": "h16-qat-4bit",
+      "hidden": 16,
+      "bits": 4,
+      "stage": "qat",
+      "parameters": 2023,
+      "bytes": 1083,
+      "validation_bpc": 3.0590765084529137,
+      "test_bpc": 3.02546089108684,
+      "test_ci95": [
+        2.9757483549898094,
+        3.077051050021928
+      ],
+      "perplexity": 8.142438348341747,
+      "sample": "alice had the tice kol youf doon aind un, 'in't in a aid borere a doure bime the and the her unded the the heore in a it soin had.\n\n'she surd, urh hers opre bon.' yige lookere a ail eice sin and ind\nthe went alice cann lobul. and be abouse alice said bime of the dureld alice's she\nstre interers the hatelny of sore a dertir w"
+    },
+    {
+      "name": "h20-float-32bit",
+      "hidden": 20,
+      "bits": 32,
+      "stage": "float",
+      "parameters": 2699,
+      "bytes": 10839,
+      "validation_bpc": 2.579947983395203,
+      "test_bpc": 2.5900826866583615,
+      "test_ci95": [
+        2.535049407942034,
+        2.648536473819716
+      ],
+      "perplexity": 6.02133208652713,
+      "sample": "alice houter thice willy\nthat felsily\nthe miny it\na queen.\n\n'rere farsem in out tand the rears, whither what out it could fin of it me going and had the past found it ill, and pory ters. 'if thinked\nthe went go as can't wboo. she belab\nshe waise say any too. the dush down of sos it\nthe sattald it get tell to gon all her caok"
+    },
+    {
+      "name": "h20-float-8bit",
+      "hidden": 20,
+      "bits": 8,
+      "stage": "float",
+      "parameters": 2699,
+      "bytes": 2770,
+      "validation_bpc": 2.58473252602475,
+      "test_bpc": 2.5947551701660525,
+      "test_ci95": [
+        2.541097603694291,
+        2.6524918752836486
+      ],
+      "perplexity": 6.040865101670992,
+      "sample": "alice houter thing kit you a for at goungs in shing warse.\n\n'rere saice heare it and the rears, whiine of thio had very blyinged it me going and had the past four, i's little wofurly in youldeed it she the fout as can't wboo. she belab\nshe waise say and thought douse down of she wastage yon was the eateen to gon. 'chear it w"
+    },
+    {
+      "name": "h20-float-4bit",
+      "hidden": 20,
+      "bits": 4,
+      "stage": "float",
+      "parameters": 2699,
+      "bytes": 1421,
+      "validation_bpc": 3.471481007468505,
+      "test_bpc": 3.45590886019302,
+      "test_ci95": [
+        3.4137714445194645,
+        3.50127502350967
+      ],
+      "perplexity": 10.973173075270763,
+      "sample": "alice of youll ity killy\nqualink at gry cprind quy.' and fow rear of cemen ser a a leruld the bakl yok of muck to yok ity dink a a a a loin.\n\n'qur neake oton fould ignilly leg of klaern. 'illink ite the 'tnaid.'\n''''''''''mo. swok st bok.\n\n''quces of no taldl.' 'and lea ques st, and a a yotrirs.' 'and elgc of st.'\n'''''''''w"
+    },
+    {
+      "name": "h20-qat-4bit",
+      "hidden": 20,
+      "bits": 4,
+      "stage": "qat",
+      "parameters": 2699,
+      "bytes": 1421,
+      "validation_bpc": 3.0088900278163075,
+      "test_bpc": 2.9679637019924034,
+      "test_ci95": [
+        2.9159705767832853,
+        3.025988429638528
+      ],
+      "perplexity": 7.824310926522001,
+      "sample": "alice ind the\nof to it you a for at gou have you you at why sat ald.' said to it and sory it down it the down chery come soing i kere. ''it down had the past fame dit it caly wor it\ndink sit\nand it it gine fort it catnen buck sory down\nshe wor sest fan fraod to dout lohe of 'she it\nthe sattap sit gastter, 'of say say so caok"
+    },
+    {
+      "name": "h24-float-32bit",
+      "hidden": 24,
+      "bits": 32,
+      "stage": "float",
+      "parameters": 3471,
+      "bytes": 13927,
+      "validation_bpc": 2.5051374667293227,
+      "test_bpc": 2.513743227467307,
+      "test_ci95": [
+        2.450683110014451,
+        2.581379906075461
+      ],
+      "perplexity": 5.710999378003004,
+      "sample": "alice had the hings.'\n\nyou a for at goushs in digy a at what remelf. and in on that it fine with, it the dudn't like it befiny all it the did, triled. \n'ot out the great to folpors tell. 'in this it\nwemed not to seen now but. she come one the lieterf buttioners a\nlook herself is it\ntaled thre surly.'\nthe cat gobupeay as it w"
+    },
+    {
+      "name": "h24-float-8bit",
+      "hidden": 24,
+      "bits": 8,
+      "stage": "float",
+      "parameters": 3471,
+      "bytes": 3542,
+      "validation_bpc": 2.513050442195432,
+      "test_bpc": 2.520726989558619,
+      "test_ci95": [
+        2.458084669900574,
+        2.588991504546216
+      ],
+      "perplexity": 5.7387120623545504,
+      "sample": "alice had the mich knowy\nthat feleing un, i was it a at whouse, and had hear.' and began the daamming to was out it to they\nthe hatter gotuided that' she to the fings. 'whel to makeser, you doring, 'ing went it as canning in. she was boch the wensalelely.\n\n'ears.\n'\n'lide of 'said alt come triry the patelly of sure chake it w"
+    },
+    {
+      "name": "h24-float-4bit",
+      "hidden": 24,
+      "bits": 4,
+      "stage": "float",
+      "parameters": 3471,
+      "bytes": 1807,
+      "validation_bpc": 3.5794843160931094,
+      "test_bpc": 3.503525612373936,
+      "test_ci95": [
+        3.4498261773468046,
+        3.560602600620842
+      ],
+      "perplexity": 11.341390391195523,
+      "sample": "alice indllirtiftinkidines, '''bkeight it ittoreing anill.\n\nthe pisticed it it ange. she diching, ither willione it its buting it.\n\nthiodinglan. 'neamd\nhors if it yighilly livintirly intisinutif, 'g it, 'into thiochenninabing into it buch if it is, and araoned had she diching is iket if your anigh\nhirthed\nhored angey alice w"
+    },
+    {
+      "name": "h24-qat-4bit",
+      "hidden": 24,
+      "bits": 4,
+      "stage": "qat",
+      "parameters": 3471,
+      "bytes": 1807,
+      "validation_bpc": 2.89656585050586,
+      "test_bpc": 2.8656065662552117,
+      "test_ci95": [
+        2.8091756054939747,
+        2.927705324115674
+      ],
+      "perplexity": 7.288422366678277,
+      "sample": "alice houre, thinge. and\nthat fo site unds it'se\noff and sat rert, and mong of that there then ald the theld of like it here you aliex little, trhoud a\nsat to the cige littlen of hlad the littling, it ge the glo seeanning the said to to her like sa the mo of the dudgl hers she said the sat rerting the elg to got all has it w"
+    },
+    {
+      "name": "h33-float-32bit",
+      "hidden": 33,
+      "bits": 32,
+      "stage": "float",
+      "parameters": 5559,
+      "bytes": 22279,
+      "validation_bpc": 2.398091960993336,
+      "test_bpc": 2.429648986684322,
+      "test_ci95": [
+        2.3644668066933856,
+        2.502305193607984
+      ],
+      "perplexity": 5.387623318273108,
+      "sample": "alice had to thing will\n\n'i don't it out, 'it's to knire.\n\n'i haven. and it on ana,' said the back the openenoun it mistilled of theme going a low herself, 'i surned silly, for markse of the elgle, 'when them to see.' 'as in. she come of the queen, and me of the duches in herself,\nat gether was the patelgant gone said thing "
+    },
+    {
+      "name": "h33-float-8bit",
+      "hidden": 33,
+      "bits": 8,
+      "stage": "float",
+      "parameters": 5559,
+      "bytes": 5630,
+      "validation_bpc": 2.4052517996194123,
+      "test_bpc": 2.435542210988185,
+      "test_ci95": [
+        2.370627275196263,
+        2.5085064606010805
+      ],
+      "perplexity": 5.409676079579034,
+      "sample": "alice had to think shall\nthat felt to she went it a queen.\n\n'remply. and in a say no sure the back the owly no to you know.\n'you know. 'it was looked a look to the gred when the share of singed in the gryphong.' sere no was wonce began\nshe was seemed by the queen ushly surters.'\n\nalice she reasite as the catersfing come it w"
+    },
+    {
+      "name": "h33-float-4bit",
+      "hidden": 33,
+      "bits": 4,
+      "stage": "float",
+      "parameters": 5559,
+      "bytes": 2853,
+      "validation_bpc": 3.839942135079488,
+      "test_bpc": 3.780557475383215,
+      "test_ci95": [
+        3.710508559455399,
+        3.857940448698011
+      ],
+      "perplexity": 13.742356175238514,
+      "sample": "alice and alichict on aliched fellittle her wyout\nalice, upe and and cring and and lend yout ulaidit and and onen yoened. fittenent, ever little hard. and onen. yoenen lobeled of hacting hitten little grutchigled\nverthe withed warlen vose tona. and fand tarded and ohed and and herthe clittarlttittreentened onen andche tvitta"
+    },
+    {
+      "name": "h33-qat-4bit",
+      "hidden": 33,
+      "bits": 4,
+      "stage": "qat",
+      "parameters": 5559,
+      "bytes": 2853,
+      "validation_bpc": 2.933363355290213,
+      "test_bpc": 2.8920225714612093,
+      "test_ci95": [
+        2.83885171374698,
+        2.9491064362920922
+      ],
+      "perplexity": 7.423103947881761,
+      "sample": "alice in the roice in it hind able\nthe quiters it a quisess she mustand in to its she ching in as it the dukno in you ithes i his and which day roked a\nsook in as in sill\nalice,\nand\ndid i\nin anioing\nin i's and\nmad\nthing with. said that\nshe with is his i\nthout muwouself i she said a\nthe droor as the queeed it gonder i sain of"
+    },
+    {
+      "name": "h48-float-32bit",
+      "hidden": 48,
+      "bits": 32,
+      "stage": "float",
+      "parameters": 10119,
+      "bytes": 40519,
+      "validation_bpc": 2.2754090332240025,
+      "test_bpc": 2.3435012660636216,
+      "test_ci95": [
+        2.274627410877008,
+        2.4203085381112377
+      ],
+      "perplexity": 5.075328719830787,
+      "sample": "alice sody all it. she mouse for at of has in. it a queen.\n\n'remped.' said the cat, i ching like, it she was out it some she could nex lowply, the door,' thought the silly like outly in a little caterpillar. and she could not swalk this herself find about of the only down of some astily, and as they was greaces and change of"
+    },
+    {
+      "name": "h48-float-8bit",
+      "hidden": 48,
+      "bits": 8,
+      "stage": "float",
+      "parameters": 10119,
+      "bytes": 10190,
+      "validation_bpc": 2.2787785472519744,
+      "test_bpc": 2.3446566511301885,
+      "test_ci95": [
+        2.2772101665785356,
+        2.4199808368144375
+      ],
+      "perplexity": 5.079394934486592,
+      "sample": "alice sody all it. she mouse for all turns in such a little\nsant of harm in out the such entliling in to herse had very before i .' he look. 'it was the past only out in the way arland my in this everyed the glad if the was song the right haling say about of the only down of said and get threasieng it elg\nsought all her chow"
+    },
+    {
+      "name": "h48-float-4bit",
+      "hidden": 48,
+      "bits": 4,
+      "stage": "float",
+      "parameters": 10119,
+      "bytes": 5131,
+      "validation_bpc": 3.987399444031669,
+      "test_bpc": 3.9303241599975265,
+      "test_ci95": [
+        3.8474413802918295,
+        4.014140800589215
+      ],
+      "perplexity": 15.245633134165834,
+      "sample": "alice oud toof i wonv ly\nmindof toollen as i seed a dissing\nwryou wasn't geper wasn't semerton as so wo kelld chery oved see wenvlall washer wash on, wond of who met selldol wash head legging seaket wond to ovl wash onllaby wash of wabl as wash on, 'was roon as wo mand alk seem to ot get at wash of come bryougss wash wo king"
+    },
+    {
+      "name": "h48-qat-4bit",
+      "hidden": 48,
+      "bits": 4,
+      "stage": "qat",
+      "parameters": 10119,
+      "bytes": 5131,
+      "validation_bpc": 2.788737511127273,
+      "test_bpc": 2.832802116475393,
+      "test_ci95": [
+        2.771393535941479,
+        2.9019950656950457
+      ],
+      "perplexity": 7.124565915220374,
+      "sample": "alice endalily it wondiled a for at of you woudey a larst where one.' said the cat bes for a lamy some ownly one i do swilling a lagey lookidy quile any paord not you mout lit of wlad crownideringidy.\n\n'well at as catn't bouse was down\nor offily.\n\n'of you of to doung down os so thatter sultrect was eatelf 'one fret came cat "
+    },
+    {
+      "name": "e10-h20-float-32bit",
+      "hidden": 20,
+      "embedding": 10,
+      "bits": 32,
+      "stage": "float",
+      "parameters": 2881,
+      "bytes": 11567,
+      "validation_bpc": 2.5660253053559403,
+      "test_bpc": 2.590366789718185,
+      "test_ci95": [
+        2.5254499095269622,
+        2.667566020690489
+      ],
+      "perplexity": 6.022517955522644,
+      "sample": "alice to the toice willy\nthat fettied up, 'it.'\n\n'a queen.\n\nare a farcemy, and that the meased amm the eyeveron, i very befing it.' he look.\n\n'urr he can to to long getle the was hlady, you meed it she march, 'more wan't burk swing to when whall say any thought do that the sas stead age your as the earely to gon. 'che said w"
+    },
+    {
+      "name": "e10-h20-float-8bit",
+      "hidden": 20,
+      "embedding": 10,
+      "bits": 8,
+      "stage": "float",
+      "parameters": 2881,
+      "bytes": 2952,
+      "validation_bpc": 2.572153741702792,
+      "test_bpc": 2.5950605064484704,
+      "test_ci95": [
+        2.5314829629004154,
+        2.6706325859136952
+      ],
+      "perplexity": 6.042143743685737,
+      "sample": "alice indy mouting kid you coof the gryn, 'it.'\n\n'and the little wo.' said the to she che groubold the eyever the much they the eart groick.\n\n'urr he can the fally it it, all woor,'\n\n'smeshere it it\nthe went go it can't was when the fool.\n\n'likees, and me of the dushld the she stiuster it treasing\nthe elgr of say say a vowon"
+    },
+    {
+      "name": "e10-h20-float-4bit",
+      "hidden": 20,
+      "embedding": 10,
+      "bits": 4,
+      "stage": "float",
+      "parameters": 2881,
+      "bytes": 1512,
+      "validation_bpc": 3.54463420749821,
+      "test_bpc": 3.536062870030787,
+      "test_ci95": [
+        3.4705879391766508,
+        3.607826893767141
+      ],
+      "perplexity": 11.60008016245084,
+      "sample": "alice ondle, thin noway\nonverece of olzelo knosely in thas topers on, om cat olem alit tonhally on the owel it taid cat been yoge.' he gown doturret, alow onut low it mat olvout arl tind sinzerat it' the was gom ole nown' olvout of of on.\n\nalice say and taoke of out low tonh's seeatt cat tha as they, tell of tonhes.' said of"
+    },
+    {
+      "name": "e10-h20-qat-4bit",
+      "hidden": 20,
+      "embedding": 10,
+      "bits": 4,
+      "stage": "qat",
+      "parameters": 2881,
+      "bytes": 1512,
+      "validation_bpc": 2.8968189231982913,
+      "test_bpc": 2.8929007435373624,
+      "test_ci95": [
+        2.835069970617386,
+        2.960153644065907
+      ],
+      "perplexity": 7.427623785281043,
+      "sample": "alice i'd the tindenel you coofe at it its it.'\n\nyou at what deam, and in as the and the frall amm the to and\nthe muche.'s.\n''ro it me look dader and a of of frure its larelf and i's in. 'inted ited the wentt to see.'n' said. swink the\nshe waildes, and at of the dushle the s'shere\ndould your as the paleld to to and.' said of"
+    }
+  ],
+  "unigram_test_bpc": 4.327932754193772,
+  "winner": "e10-h20-float-8bit"
+}

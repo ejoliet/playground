@@ -1,0 +1,25 @@
+{
+  "passed": true,
+  "seconds": 2.03,
+  "model_sha256": "36bb1cdef519421b32d8e632e2b36066c19935a6ba59aa275852582550138324",
+  "parity": {
+    "passed": true,
+    "bytes": 2952,
+    "parameters": 2881,
+    "maxParityError": 1.359024804248321e-06
+  },
+  "checks": [
+    "Reader starts without model weights",
+    "PNG decoded from raw QR binary; generation matches original model",
+    "Non-model QR rejected; loaded valid model preserved",
+    "Camera API decoded final QR from video; camera stopped after success",
+    "Offline reload, rescan, and deterministic generation passed",
+    "Camera scanning works with network disabled",
+    "390-pixel mobile layout has no horizontal overflow",
+    "No model fetch, external request, or JavaScript page error"
+  ],
+  "limitations": [
+    "Digital video camera fixture; no physical print or real camera tested",
+    "Chromium only; Safari and Firefox not tested"
+  ]
+}
