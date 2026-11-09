@@ -1,0 +1,8 @@
+Observed 2026-11-09 in the managed workspace.
+kind v0.30.0; requested node image kindest/node:v1.34.0.
+Command: kind create cluster --name agent-firewall --image kindest/node:v1.34.0 --kubeconfig .local/admin.kubeconfig --wait 90s
+Exit status: 1
+ERROR: failed to create cluster: running kind with rootless provider requires setting systemd property "Delegate=yes", see https://kind.sigs.k8s.io/docs/user/rootless/
+Docker: 29.9.2, rootless, CgroupVersion=2
+MemoryLimit=false PidsLimit=false CPUShares=false
+No cluster was created. No live Kubernetes/LLM attack results are claimed.

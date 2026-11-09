@@ -1,0 +1,16 @@
+test_agent_cannot_use_review_credentials_or_bypass_proxy (test_firewall.HTTPTests.test_agent_cannot_use_review_credentials_or_bypass_proxy) ... ok
+test_alternate_paths_and_agent_approval_denied (test_firewall.Tests.test_alternate_paths_and_agent_approval_denied) ... ok
+test_approval_materializes_patch_and_is_single_use (test_firewall.Tests.test_approval_materializes_patch_and_is_single_use) ... ok
+test_benign_scale_up_is_false_positive (test_firewall.Tests.test_benign_scale_up_is_false_positive) ... ok
+test_client_dry_run_never_commits (test_firewall.Tests.test_client_dry_run_never_commits) ... ok
+test_configmap_semantic_harm_is_known_miss (test_firewall.Tests.test_configmap_semantic_harm_is_known_miss) ... ok
+test_expired_approval (test_firewall.Tests.test_expired_approval) ... ok
+test_invalid_dry_run_fails_closed (test_firewall.Tests.test_invalid_dry_run_fails_closed) ... ok
+test_pending_survives_restart_and_denial_is_final (test_firewall.Tests.test_pending_survives_restart_and_denial_is_final) ... ok
+test_stale_approval_and_delete_cannot_clobber_new_state (test_firewall.Tests.test_stale_approval_and_delete_cannot_clobber_new_state) ... ok
+test_three_attacks_are_dry_run_but_not_applied (test_firewall.Tests.test_three_attacks_are_dry_run_but_not_applied) ... ok
+
+----------------------------------------------------------------------
+Ran 11 tests in 0.727s
+
+OK
