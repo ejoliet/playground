@@ -1,0 +1,26 @@
+[
+  {
+    "item": "HisGirlFriday",
+    "filename": "MoviePowderPresentsHisGirlFriday_512kb.mp4",
+    "url": "https://archive.org/download/HisGirlFriday/MoviePowderPresentsHisGirlFriday_512kb.mp4",
+    "rights": "Internet Archive item carries a public-domain dedication.",
+    "metadata_url": "https://archive.org/metadata/HisGirlFriday",
+    "license_url": "http://creativecommons.org/licenses/publicdomain/",
+    "sha256": "78d45753dac2771e765e608d9894219a3532f24cac3ab1438aa8b06dcf0f0f27",
+    "md5": "9dc6106cd852888c6de1abfeac9b2913",
+    "bytes": 384258272,
+    "fetch_verify_seconds": 1.161357020999958
+  },
+  {
+    "item": "NightOfTheLivingDead-MPEG",
+    "filename": "NightOfTheLivingDead_512kb.mp4",
+    "url": "https://archive.org/download/NightOfTheLivingDead-MPEG/NightOfTheLivingDead_512kb.mp4",
+    "rights": "Original 1968 US film entered public domain on release without required copyright notice; not a later restoration.",
+    "metadata_url": "https://archive.org/metadata/NightOfTheLivingDead-MPEG",
+    "license_url": null,
+    "sha256": "3a118fccece772aa2471403ee195809747e5bc853bacc105a68e75327b44e22f",
+    "md5": "9180d6ec7cec982ef89e5adaca090a4c",
+    "bytes": 417489001,
+    "fetch_verify_seconds": 1.2727583420000315
+  }
+]

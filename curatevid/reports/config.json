@@ -1,0 +1,21 @@
+{
+  "inputs": [
+    "/workspace/curatevid/data/MoviePowderPresentsHisGirlFriday_512kb.mp4",
+    "/workspace/curatevid/data/NightOfTheLivingDead_512kb.mp4"
+  ],
+  "output": "runs/benchmark-v2",
+  "model": "tiny.en",
+  "model_cache": ".cache/models",
+  "offline": true,
+  "no_transcribe": false,
+  "language": "en",
+  "threads": 4,
+  "analysis_fps": 8,
+  "scene_threshold": 18,
+  "min_seconds": 1,
+  "max_seconds": 60,
+  "black_fraction": 0.8,
+  "blur_threshold": 35,
+  "hash_distance": 6,
+  "crf": 23
+}

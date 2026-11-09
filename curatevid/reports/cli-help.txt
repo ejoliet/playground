@@ -1,0 +1,33 @@
+usage: curatevid [-h] -o OUTPUT [--model MODEL] [--model-cache MODEL_CACHE]
+                 [--offline] [--no-transcribe] [--language LANGUAGE]
+                 [--threads THREADS] [--analysis-fps ANALYSIS_FPS]
+                 [--scene-threshold SCENE_THRESHOLD]
+                 [--min-seconds MIN_SECONDS] [--max-seconds MAX_SECONDS]
+                 [--black-fraction BLACK_FRACTION]
+                 [--blur-threshold BLUR_THRESHOLD]
+                 [--hash-distance HASH_DISTANCE] [--crf CRF]
+                 inputs [inputs ...]
+
+Local video curation. All timestamps are seconds on the source timeline.
+
+positional arguments:
+  inputs
+
+options:
+  -h, --help            show this help message and exit
+  -o OUTPUT, --output OUTPUT
+                        New output directory; existing paths refused
+  --model MODEL         Whisper model name or local model directory
+  --model-cache MODEL_CACHE
+  --offline             Require a pre-downloaded model
+  --no-transcribe
+  --language LANGUAGE
+  --threads THREADS
+  --analysis-fps ANALYSIS_FPS
+  --scene-threshold SCENE_THRESHOLD
+  --min-seconds MIN_SECONDS
+  --max-seconds MAX_SECONDS
+  --black-fraction BLACK_FRACTION
+  --blur-threshold BLUR_THRESHOLD
+  --hash-distance HASH_DISTANCE
+  --crf CRF

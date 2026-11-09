@@ -1,0 +1,17 @@
+MoviePowderPresentsHisGirlFriday_512kb.mp4: 92 candidates, analysis 61.5s
+Traceback (most recent call last):
+  File "/workspace/curatevid/curatevid.py", line 315, in <module>
+    main()
+  File "/workspace/curatevid/curatevid.py", line 309, in main
+    run(args)
+  File "/workspace/curatevid/curatevid.py", line 206, in run
+    iterator, _ = model.transcribe(str(audio), beam_size=1, vad_filter=True,
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/curatevid/.venv/lib/python3.12/site-packages/faster_whisper/transcribe.py", line 876, in transcribe
+    audio = decode_audio(audio, sampling_rate=sampling_rate)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/curatevid/.venv/lib/python3.12/site-packages/faster_whisper/audio.py", line 46, in decode_audio
+    with av.open(input_file, mode="r", metadata_errors="ignore") as container:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "av/container/core.py", line 479, in av.container.core.open
+TypeError: open() got an unexpected keyword argument 'metadata_errors'

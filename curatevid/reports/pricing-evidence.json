@@ -1,0 +1,125 @@
+{
+  "retrieved_date": "2026-11-09",
+  "currency": "USD",
+  "aws_region": "us-east-1",
+  "sources": [
+    {
+      "url": "https://pricing.us-east-1.amazonaws.com/offers/v1.0/aws/AmazonRekognition/current/us-east-1/index.json",
+      "publicationDate": "2026-09-11T12:45:04Z",
+      "sku": "35Z54DJ2RCCKXYT8",
+      "attributes": {
+        "servicecode": "AmazonRekognition",
+        "location": "US East (N. Virginia)",
+        "locationType": "AWS Region",
+        "group": "Rekognition Video API Requests - Archived Content",
+        "groupDescription": "Number of minutes of Archived Video processed using Technical Cues detection",
+        "usagetype": "USE1-MinsOfArchVideoProcessed:TechCue",
+        "operation": "",
+        "regionCode": "us-east-1",
+        "servicename": "Amazon Rekognition"
+      },
+      "terms": {
+        "35Z54DJ2RCCKXYT8.JRTCKXETXF": {
+          "offerTermCode": "JRTCKXETXF",
+          "sku": "35Z54DJ2RCCKXYT8",
+          "effectiveDate": "2026-06-01T00:00:00Z",
+          "priceDimensions": {
+            "35Z54DJ2RCCKXYT8.JRTCKXETXF.6YS6EN2CT7": {
+              "rateCode": "35Z54DJ2RCCKXYT8.JRTCKXETXF.6YS6EN2CT7",
+              "description": "$0.05 per Minutes Processed for MinsOfArchVideoProcessed:TechCue in US East (N. Virginia)",
+              "beginRange": "0",
+              "endRange": "Inf",
+              "unit": "Minutes Processed",
+              "pricePerUnit": {
+                "USD": "0.0500000000"
+              },
+              "appliesTo": []
+            }
+          },
+          "termAttributes": {}
+        }
+      }
+    },
+    {
+      "url": "https://pricing.us-east-1.amazonaws.com/offers/v1.0/aws/AmazonRekognition/current/us-east-1/index.json",
+      "publicationDate": "2026-09-11T12:45:04Z",
+      "sku": "C7CFQXQ8RQ9TCR2K",
+      "attributes": {
+        "servicecode": "AmazonRekognition",
+        "location": "US East (N. Virginia)",
+        "locationType": "AWS Region",
+        "group": "Rekognition Video API Requests - Archived Content",
+        "groupDescription": "Number of minutes of Archived Video processed for shot detection",
+        "usagetype": "USE1-MinsOfArchVideoProcessed:Shot",
+        "operation": "",
+        "regionCode": "us-east-1",
+        "servicename": "Amazon Rekognition"
+      },
+      "terms": {
+        "C7CFQXQ8RQ9TCR2K.JRTCKXETXF": {
+          "offerTermCode": "JRTCKXETXF",
+          "sku": "C7CFQXQ8RQ9TCR2K",
+          "effectiveDate": "2026-06-01T00:00:00Z",
+          "priceDimensions": {
+            "C7CFQXQ8RQ9TCR2K.JRTCKXETXF.6YS6EN2CT7": {
+              "rateCode": "C7CFQXQ8RQ9TCR2K.JRTCKXETXF.6YS6EN2CT7",
+              "description": "$0.05 per Minutes Processed for MinsOfArchVideoProcessed:Shot in US East (N. Virginia)",
+              "beginRange": "0",
+              "endRange": "Inf",
+              "unit": "Minutes Processed",
+              "pricePerUnit": {
+                "USD": "0.0500000000"
+              },
+              "appliesTo": []
+            }
+          },
+          "termAttributes": {}
+        }
+      }
+    },
+    {
+      "url": "https://pricing.us-east-1.amazonaws.com/offers/v1.0/aws/transcribe/current/us-east-1/index.json",
+      "publicationDate": "2026-09-11T12:46:46Z",
+      "sku": "XG5JYDUXJ2JRGBD9",
+      "attributes": {
+        "servicecode": "transcribe",
+        "location": "US East (N. Virginia)",
+        "locationType": "AWS Region",
+        "usagetype": "USE1-TranscribeAudio",
+        "operation": "TranscribeAudio",
+        "regionCode": "us-east-1",
+        "servicename": "Amazon Transcribe",
+        "supportedModes": "Audio to Text"
+      },
+      "terms": {
+        "XG5JYDUXJ2JRGBD9.JRTCKXETXF": {
+          "offerTermCode": "JRTCKXETXF",
+          "sku": "XG5JYDUXJ2JRGBD9",
+          "effectiveDate": "2026-06-01T00:00:00Z",
+          "priceDimensions": {
+            "XG5JYDUXJ2JRGBD9.JRTCKXETXF.6YS6EN2CT7": {
+              "rateCode": "XG5JYDUXJ2JRGBD9.JRTCKXETXF.6YS6EN2CT7",
+              "description": "$0.0001 per second for TranscribeAudio in US East (N. Virginia)",
+              "beginRange": "0",
+              "endRange": "Inf",
+              "unit": "second",
+              "pricePerUnit": {
+                "USD": "0.0001000000"
+              },
+              "appliesTo": []
+            }
+          },
+          "termAttributes": {}
+        }
+      }
+    }
+  ],
+  "google": {
+    "url": "https://cloud.google.com/video-intelligence/pricing",
+    "shot_excerpt": "Shot detection 0 minute to 1,001 minute $0.00 (Free) 1,001 minute and above $0.05 0 minute to 1,001 minute $0.00 (Free) 1,001 minute and above $0.045 0 minute to 1,001 minute $0.00 (Free) 1,001 minute and above $0.04 Explicit content detection 0 minute to 1,001 minute $0.00 (Free) 1,001 minute and above $0.10 0 minute ",
+    "speech_excerpt": "Speech transcription 0 minute to 1,001 minute $0.00 (Free) 1,001 minute and above $0.048 0 minute to 1,001 minute $0.00 (Free) 1,001 minute and above $0.0432 0 minute to 1,001 minute $0.00 (Free) 1,001 minute and above $0.0384 Object tracking 0 minute to 1,001 minute $0.00 (Free) 1,001 minute and above $0.15 0 minute to 1,001 minute $0.00",
+    "html_sha256": "9f68e6555dc2a69bff0f1c9e43ce723b31ac9eb0bea196e7e54c7f4f12334f11",
+    "shot_usd_per_minute": 0.05,
+    "speech_usd_per_minute": 0.048
+  }
+}

@@ -1,0 +1,50 @@
+{
+  "wall_seconds": 761.3091840050001,
+  "cpu_seconds": 1648.409884,
+  "sources": [
+    {
+      "path": "/workspace/curatevid/data/MoviePowderPresentsHisGirlFriday_512kb.mp4",
+      "sha256": "78d45753dac2771e765e608d9894219a3532f24cac3ab1438aa8b06dcf0f0f27",
+      "seconds": 5291.84,
+      "input_bytes": 384258272,
+      "candidates": 244,
+      "analysis_seconds": 61.45604964400002,
+      "transcription_seconds": 185.44044982700007,
+      "export_seconds": 135.81116203600004
+    },
+    {
+      "path": "/workspace/curatevid/data/NightOfTheLivingDead_512kb.mp4",
+      "sha256": "3a118fccece772aa2471403ee195809747e5bc853bacc105a68e75327b44e22f",
+      "seconds": 5744.978312,
+      "input_bytes": 417489001,
+      "candidates": 2781,
+      "analysis_seconds": 67.92979377300003,
+      "transcription_seconds": 62.13201077999997,
+      "export_seconds": 248.05552674800003
+    }
+  ],
+  "peak_tree_rss_bytes": 4652265472,
+  "rss_sampling_seconds": 0.2,
+  "input_seconds": 11036.818312,
+  "kept_seconds": 10249.59,
+  "candidate_count": 3025,
+  "kept_count": 1504,
+  "rejection_seconds": {
+    "too_short": 742.75,
+    "no_frames": 0,
+    "black": 2.75,
+    "blurry": 21.0,
+    "duplicate": 28.103312000000187
+  },
+  "output_clip_bytes": 441483013,
+  "platform": "Linux-6.18.57-x86_64-with-glibc2.41",
+  "logical_cpus": 5,
+  "versions": {
+    "scenedetect": "0.7.3",
+    "faster-whisper": "1.2.1",
+    "pyarrow": "26.0.1",
+    "numpy": "2.5.4",
+    "ctranslate2": "4.8.5"
+  },
+  "ffmpeg": "ffmpeg version 7.1.5-0+deb13u1 Copyright (c) 2000-2026 the FFmpeg developers"
+}
