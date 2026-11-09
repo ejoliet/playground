@@ -1,0 +1,11 @@
+test_all_buckets_equals_exact_and_bytes (test_staticvec.StaticvecTest.test_all_buckets_equals_exact_and_bytes) ... ok
+test_corrupt_directory_is_rejected (test_staticvec.StaticvecTest.test_corrupt_directory_is_rejected) ... ok
+test_duplicate_embeddings_have_tie_aware_recall (test_staticvec.StaticvecTest.test_duplicate_embeddings_have_tie_aware_recall) ... ok
+test_partial_fetch_and_invalid_query (test_staticvec.StaticvecTest.test_partial_fetch_and_invalid_query) ... ok
+test_ranges_and_bad_header (test_staticvec.StaticvecTest.test_ranges_and_bad_header) ... ok
+test_server_ignoring_range_is_rejected (test_staticvec.StaticvecTest.test_server_ignoring_range_is_rejected) ... ok
+
+----------------------------------------------------------------------
+Ran 6 tests in 1.046s
+
+OK

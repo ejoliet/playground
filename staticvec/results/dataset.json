@@ -1,0 +1,18 @@
+[
+  {
+    "url": "https://storage.yandexcloud.net/yandex-research/ann-datasets/DEEP/base.1B.fbin",
+    "source_count": 1000000000,
+    "count": 3000000,
+    "dimensions": 96,
+    "sha256": "2550264e1386d79c509646da2cf3d354bc2ab936998f54f985b891590d666b2c",
+    "file": "/workspace/playground/staticvec/data/base.1B.fbin"
+  },
+  {
+    "url": "https://storage.yandexcloud.net/yandex-research/ann-datasets/DEEP/query.public.10K.fbin",
+    "source_count": 10000,
+    "count": 1000,
+    "dimensions": 96,
+    "sha256": "5d91604ceb7a6cc5db70a273d26b8e71c2b624646d11f7af03121d0788ad64b4",
+    "file": "/workspace/playground/staticvec/data/query.public.10K.fbin"
+  }
+]

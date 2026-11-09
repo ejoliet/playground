@@ -1,0 +1,62 @@
+[
+  {
+    "n": 100000,
+    "dim": 96,
+    "buckets": 1024,
+    "seconds": 3.4478481789999478,
+    "bytes": 39201480,
+    "metadata_bytes": 401480,
+    "bucket_min": 7,
+    "bucket_p50": 90.0,
+    "bucket_p95": 179.8499999999999,
+    "bucket_max": 299,
+    "hnsw_build_seconds": 4.148321442999986,
+    "hnsw_array_bytes": 52833032,
+    "exact_seconds": 0.05697729400003482
+  },
+  {
+    "n": 1000000,
+    "dim": 96,
+    "buckets": 1024,
+    "seconds": 5.662531521000005,
+    "bytes": 388401480,
+    "metadata_bytes": 401480,
+    "bucket_min": 76,
+    "bucket_p50": 890.5,
+    "bucket_p95": 1819.6999999999998,
+    "bucket_max": 3187,
+    "hnsw_build_seconds": 70.35569281999994,
+    "hnsw_array_bytes": 528258120,
+    "exact_seconds": 0.3597851829999854
+  },
+  {
+    "n": 3000000,
+    "dim": 96,
+    "buckets": 1024,
+    "seconds": 13.324238136000076,
+    "bytes": 1164401480,
+    "metadata_bytes": 401480,
+    "bucket_min": 6,
+    "bucket_p50": 2696.0,
+    "bucket_p95": 5308.799999999999,
+    "bucket_max": 10706,
+    "hnsw_build_seconds": 256.650521218,
+    "hnsw_array_bytes": 1584807368,
+    "exact_seconds": 1.170291280000015
+  },
+  {
+    "n": 3000000,
+    "dim": 96,
+    "buckets": 4096,
+    "seconds": 54.04712356599998,
+    "bytes": 1165605704,
+    "metadata_bytes": 1605704,
+    "bucket_min": 1,
+    "bucket_p50": 675.5,
+    "bucket_p95": 1495.5,
+    "bucket_max": 3729,
+    "hnsw_build_seconds": 256.650521218,
+    "hnsw_array_bytes": 1584807368,
+    "exact_seconds": 1.170291280000015
+  }
+]

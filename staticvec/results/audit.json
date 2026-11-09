@@ -1,0 +1,165 @@
+{
+  "checked_queries": 2900,
+  "tie_differences": [
+    {
+      "kind": "static",
+      "n": 1000000,
+      "query": 449,
+      "recall": 0.8,
+      "tie_recall": 1.0,
+      "probes": 1,
+      "buckets": 1024
+    },
+    {
+      "kind": "static",
+      "n": 1000000,
+      "query": 449,
+      "recall": 0.8,
+      "tie_recall": 1.0,
+      "probes": 4,
+      "buckets": 1024
+    },
+    {
+      "kind": "static",
+      "n": 1000000,
+      "query": 449,
+      "recall": 0.8,
+      "tie_recall": 1.0,
+      "probes": 16,
+      "buckets": 1024
+    },
+    {
+      "kind": "static",
+      "n": 1000000,
+      "query": 449,
+      "recall": 0.8,
+      "tie_recall": 1.0,
+      "probes": 64,
+      "buckets": 1024
+    },
+    {
+      "kind": "static",
+      "n": 1000000,
+      "query": 449,
+      "recall": 0.8,
+      "tie_recall": 1.0,
+      "probes": 256,
+      "buckets": 1024
+    },
+    {
+      "kind": "hnsw",
+      "n": 3000000,
+      "query": 449,
+      "recall": 0.2,
+      "tie_recall": 1.0,
+      "ef": 16
+    },
+    {
+      "kind": "hnsw",
+      "n": 3000000,
+      "query": 449,
+      "recall": 0.2,
+      "tie_recall": 1.0,
+      "ef": 64
+    },
+    {
+      "kind": "hnsw",
+      "n": 3000000,
+      "query": 449,
+      "recall": 0.2,
+      "tie_recall": 1.0,
+      "ef": 256
+    },
+    {
+      "kind": "static",
+      "n": 3000000,
+      "query": 449,
+      "recall": 0.2,
+      "tie_recall": 1.0,
+      "probes": 1,
+      "buckets": 1024
+    },
+    {
+      "kind": "static",
+      "n": 3000000,
+      "query": 449,
+      "recall": 0.2,
+      "tie_recall": 1.0,
+      "probes": 4,
+      "buckets": 1024
+    },
+    {
+      "kind": "static",
+      "n": 3000000,
+      "query": 449,
+      "recall": 0.2,
+      "tie_recall": 1.0,
+      "probes": 16,
+      "buckets": 1024
+    },
+    {
+      "kind": "static",
+      "n": 3000000,
+      "query": 449,
+      "recall": 0.2,
+      "tie_recall": 1.0,
+      "probes": 64,
+      "buckets": 1024
+    },
+    {
+      "kind": "static",
+      "n": 3000000,
+      "query": 449,
+      "recall": 0.0,
+      "tie_recall": 1.0,
+      "probes": 256,
+      "buckets": 1024
+    },
+    {
+      "kind": "static",
+      "n": 3000000,
+      "query": 449,
+      "recall": 0.4,
+      "tie_recall": 1.0,
+      "probes": 1,
+      "buckets": 4096
+    },
+    {
+      "kind": "static",
+      "n": 3000000,
+      "query": 449,
+      "recall": 0.4,
+      "tie_recall": 1.0,
+      "probes": 4,
+      "buckets": 4096
+    },
+    {
+      "kind": "static",
+      "n": 3000000,
+      "query": 449,
+      "recall": 0.4,
+      "tie_recall": 1.0,
+      "probes": 16,
+      "buckets": 4096
+    },
+    {
+      "kind": "static",
+      "n": 3000000,
+      "query": 449,
+      "recall": 0.4,
+      "tie_recall": 1.0,
+      "probes": 64,
+      "buckets": 4096
+    },
+    {
+      "kind": "static",
+      "n": 3000000,
+      "query": 449,
+      "recall": 0.4,
+      "tie_recall": 1.0,
+      "probes": 256,
+      "buckets": 4096
+    }
+  ],
+  "assertions": "10 unique in-range IDs; recalls recomputed; query bytes equal visited rows \u00d7 388; request bounds; exact metadata bytes"
+}

@@ -1,0 +1,27 @@
+[
+  {
+    "file": "indexes/deep-100000-k1024.svx",
+    "bytes": 39201480,
+    "sha256": "22289a6f4aa8299b4d64160641465f5a2f958771ebf00d584e1a4f78c1421397"
+  },
+  {
+    "file": "indexes/deep-1000000-k1024.svx",
+    "bytes": 388401480,
+    "sha256": "8bea0897e12835a283b1db29659ee49a637a7a1b8b6c453e32da1608f5e9c828"
+  },
+  {
+    "file": "indexes/deep-3000000-k1024.svx",
+    "bytes": 1164401480,
+    "sha256": "02512b4c025b9b3b1b25a942b5cb9e32ea37418934a4a194328d24e62bc169ce"
+  },
+  {
+    "file": "indexes/deep-3000000-k4096.svx",
+    "bytes": 1165605704,
+    "sha256": "fbeb7becd06960e23920fd2789bff28bac56ded87b9b6bc8a3b9675b0d479fbb"
+  },
+  {
+    "file": "indexes/hnsw-3000000.faiss",
+    "bytes": 1584807610,
+    "sha256": "89d3aba720914efac90749a9af03ae7bbce5e05506d63736847db02f4e8ee7b6"
+  }
+]

@@ -1,0 +1,9 @@
+.venv/
+data/
+indexes/
+__pycache__/
+.cache/
+*.log
+results/queries.jsonl
+results/diagnostics.json
+figures/*.png
