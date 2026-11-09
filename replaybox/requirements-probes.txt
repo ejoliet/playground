@@ -1,0 +1,4 @@
+# Optional comparison experiments only; the prototype has no pip dependencies.
+vcrpy==9.4.2
+freezegun==1.5.5
+pyfakefs==6.3.2

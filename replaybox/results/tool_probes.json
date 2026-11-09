@@ -1,0 +1,13 @@
+{
+  "versions": {
+    "vcrpy": "9.4.2",
+    "freezegun": "1.5.5",
+    "pyfakefs": "6.3.2"
+  },
+  "vcr_http_server_stopped": true,
+  "vcr_time_still_live": true,
+  "freezegun_datetime": "2020-01-01T00:00:00",
+  "freezegun_native_time_escapes": true,
+  "pyfakefs_python_cannot_see_real_file": true,
+  "pyfakefs_native_can_open_real_file": true
+}
