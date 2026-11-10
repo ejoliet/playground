@@ -1,0 +1,44 @@
+{
+    "IsTruncated": false,
+    "Name": "stpubdata",
+    "Prefix": "",
+    "Delimiter": "/",
+    "MaxKeys": 100,
+    "CommonPrefixes": [
+        {
+            "Prefix": "gaia/"
+        },
+        {
+            "Prefix": "galex/"
+        },
+        {
+            "Prefix": "hst/"
+        },
+        {
+            "Prefix": "jwst/"
+        },
+        {
+            "Prefix": "k2/"
+        },
+        {
+            "Prefix": "kepler/"
+        },
+        {
+            "Prefix": "mast/"
+        },
+        {
+            "Prefix": "panstarrs/"
+        },
+        {
+            "Prefix": "roman/"
+        },
+        {
+            "Prefix": "sdss/"
+        },
+        {
+            "Prefix": "tess/"
+        }
+    ],
+    "EncodingType": "url",
+    "KeyCount": 11
+}

@@ -1,0 +1,13 @@
+gaia objects= 1000 bytes= 422431409183 truncated= True listing_json_bytes= 419651
+galex objects= 1000 bytes= 1640353087 truncated= True listing_json_bytes= 341051
+hst objects= 1000 bytes= 127413629 truncated= True listing_json_bytes= 277371
+jwst objects= 1000 bytes= 7391013348 truncated= True listing_json_bytes= 307531
+k2 objects= 1000 bytes= 66166904850 truncated= True listing_json_bytes= 293535
+kepler objects= 1000 bytes= 107208431739 truncated= True listing_json_bytes= 299785
+mast objects= 1000 bytes= 1468845314 truncated= True listing_json_bytes= 487635
+panstarrs objects= 1000 bytes= 626018139554 truncated= True listing_json_bytes= 440838
+roman objects= 1000 bytes= 123008872040 truncated= True listing_json_bytes= 405440
+sdss objects= 475 bytes= 91616567239 truncated= False listing_json_bytes= 210226
+tess objects= 1000 bytes= 784508251138 truncated= True listing_json_bytes= 366891
+LOWER_BOUND objects= 10475 bytes= 2231586201121 decimal_TB= 2.231586201121
+First lexical page per prefix: NOT a random sample, NOT an estimate of the complete bucket.

@@ -1,0 +1,890 @@
+
+Running snippets/01-environment.sh
+uv 0.13.6 (329bf9448 2026-10-26 aarch64-apple-darwin)
+aws-cli/2.39.0 Python/3.15.2 Darwin/25.5.0 source/arm64
+Local environment: /Users/ejoliet/dev/ejoliet/bucketlore/stpubdata/.venv
+PASS snippets/01-environment.sh
+
+Running snippets/02-root.sh
+{
+    "IsTruncated": false,
+    "Name": "stpubdata",
+    "Prefix": "",
+    "Delimiter": "/",
+    "MaxKeys": 100,
+    "CommonPrefixes": [
+        {
+            "Prefix": "gaia/"
+        },
+        {
+            "Prefix": "galex/"
+        },
+        {
+            "Prefix": "hst/"
+        },
+        {
+            "Prefix": "jwst/"
+        },
+        {
+            "Prefix": "k2/"
+        },
+        {
+            "Prefix": "kepler/"
+        },
+        {
+            "Prefix": "mast/"
+        },
+        {
+            "Prefix": "panstarrs/"
+        },
+        {
+            "Prefix": "roman/"
+        },
+        {
+            "Prefix": "sdss/"
+        },
+        {
+            "Prefix": "tess/"
+        }
+    ],
+    "EncodingType": "url",
+    "KeyCount": 11
+}
+PASS snippets/02-root.sh
+
+Running snippets/03-network.sh
+DNS lookup: stpubdata.s3.amazonaws.com
+[(<AddressFamily.AF_INET: 2>, <SocketKind.SOCK_STREAM: 1>, 6, '', ('16.15.237.3', 443)), (<AddressFamily.AF_INET: 2>, <SocketKind.SOCK_STREAM: 1>, 6, '', ('16.15.229.72', 443)), (<AddressFamily.AF_INET: 2>, <SocketKind.SOCK_DGRAM: 2>, 17, '', ('16.15.228.232', 443)), (<AddressFamily.AF_INET: 2>, <SocketKind.SOCK_DGRAM: 2>, 17, '', ('16.15.246.236', 443)), (<AddressFamily.AF_INET: 2>, <SocketKind.SOCK_DGRAM: 2>, 17, '', ('16.15.237.3', 443)), (<AddressFamily.AF_INET: 2>, <SocketKind.SOCK_DGRAM: 2>, 17, '', ('16.15.229.72', 443)), (<AddressFamily.AF_INET: 2>, <SocketKind.SOCK_DGRAM: 2>, 17, '', ('16.182.18.242', 443)), (<AddressFamily.AF_INET: 2>, <SocketKind.SOCK_STREAM: 1>, 6, '', ('16.182.18.242', 443)), (<AddressFamily.AF_INET: 2>, <SocketKind.SOCK_DGRAM: 2>, 17, '', ('16.15.199.253', 443)), (<AddressFamily.AF_INET: 2>, <SocketKind.SOCK_DGRAM: 2>, 17, '', ('16.182.71.146', 443)), (<AddressFamily.AF_INET: 2>, <SocketKind.SOCK_DGRAM: 2>, 17, '', ('16.15.236.59', 443)), (<AddressFamily.AF_INET: 2>, <SocketKind.SOCK_STREAM: 1>, 6, '', ('16.15.236.59', 443)), (<AddressFamily.AF_INET: 2>, <SocketKind.SOCK_STREAM: 1>, 6, '', ('16.15.228.232', 443)), (<AddressFamily.AF_INET: 2>, <SocketKind.SOCK_STREAM: 1>, 6, '', ('16.182.71.146', 443)), (<AddressFamily.AF_INET: 2>, <SocketKind.SOCK_STREAM: 1>, 6, '', ('16.15.246.236', 443)), (<AddressFamily.AF_INET: 2>, <SocketKind.SOCK_STREAM: 1>, 6, '', ('16.15.199.253', 443))]
+HTTP status: 200
+<?xml version="1.0" encoding="UTF-8"?>
+<ListBucketResult xmlns="http://s3.amazonaws.com/doc/2006-03-01/"><Name>stpubdata</Name><Prefix></Prefix><NextContinuationToken>1zz81gF/zyRKL5fQXcCWA95iQ1fv2jBhRNZs0UR7AS7vBYYEzrJRn0wBw89MTSjx5DQU6pytG8HMZV1Z3Xj8lLWEP1KEFv/A3</NextContinuationToken><KeyCount>1</KeyCount><MaxKeys>1</MaxKeys><IsTruncated>true</IsTruncated><Contents><Key>gaia/</Key><LastModified>2025-07-16T12:28:52.000Z</LastModified><ETag>&quot;d41d8cd98f00b204e9800998ecf8427e&quot;</ETag><ChecksumAlgorithm>CRC64NVME</ChecksumAlgorithm><ChecksumType>FULL_OBJECT</ChecksumType><Size>0</Size><StorageClass>STANDARD</StorageClass></Contents></ListBucketResult>
+PASS snippets/03-network.sh
+
+Running snippets/04-install-duckdb.sh
+Checked 2 packages in 3ms
+duckdb 2.0.0
+PASS snippets/04-install-duckdb.sh
+
+Running snippets/05-layout.sh
+PREFIX gaia/
+{
+    "IsTruncated": false,
+    "Contents": [
+        {
+            "Key": "gaia/",
+            "LastModified": "2025-07-16T12:28:52+00:00",
+            "ETag": "\"d41d8cd98f00b204e9800998ecf8427e\"",
+            "ChecksumAlgorithm": [
+                "CRC64NVME"
+            ],
+            "ChecksumType": "FULL_OBJECT",
+            "Size": 0,
+            "StorageClass": "STANDARD"
+        }
+    ],
+    "Name": "stpubdata",
+    "Prefix": "gaia/",
+    "Delimiter": "/",
+    "MaxKeys": 30,
+    "CommonPrefixes": [
+        {
+            "Prefix": "gaia/gaia_dr3/"
+        }
+    ],
+    "EncodingType": "url",
+    "KeyCount": 2
+}
+SAMPLE OBJECTS gaia/
+{
+    "IsTruncated": true,
+    "Contents": [
+        {
+            "Key": "gaia/",
+            "LastModified": "2025-07-16T12:28:52+00:00",
+            "ETag": "\"d41d8cd98f00b204e9800998ecf8427e\"",
+            "ChecksumAlgorithm": [
+                "CRC64NVME"
+            ],
+            "ChecksumType": "FULL_OBJECT",
+            "Size": 0,
+            "StorageClass": "STANDARD"
+        },
+        {
+            "Key": "gaia/gaia_dr3/public/hats/collection.properties",
+            "LastModified": "2025-07-23T16:44:20+00:00",
+            "ETag": "\"430f3d4ec7ce228cdcea1b4d1507e689\"",
+            "ChecksumAlgorithm": [
+                "CRC32"
+            ],
+            "ChecksumType": "FULL_OBJECT",
+            "Size": 319,
+            "StorageClass": "STANDARD"
+        },
+        {
+            "Key": "gaia/gaia_dr3/public/hats/gaia/dataset/Norder=2/Dir=0/Npix=0.parquet",
+            "LastModified": "2025-07-23T16:44:20+00:00",
+            "ETag": "\"ae71001bfcd51633b024d9df5a8a9931-39\"",
+            "ChecksumAlgorithm": [
+                "CRC32"
+            ],
+            "ChecksumType": "COMPOSITE",
+            "Size": 326735363,
+            "StorageClass": "STANDARD"
+        }
+    ],
+    "Name": "stpubdata",
+    "Prefix": "gaia/",
+    "MaxKeys": 3,
+    "EncodingType": "url",
+    "KeyCount": 3,
+    "NextContinuationToken": "1ZpgffPkb5ZNFueKJFCcju0xCeZEms/QqfNLurQo9p7KoW1xrH94gwzIALeP5zc6wsS40yJHnoPlgG//2StlQqHZjLx2CfMImJri6BVk1q/ufMckYohch7g=="
+}
+PREFIX galex/
+{
+    "IsTruncated": false,
+    "Contents": [
+        {
+            "Key": "galex/",
+            "LastModified": "2022-01-27T22:26:04+00:00",
+            "ETag": "\"d41d8cd98f00b204e9800998ecf8427e\"",
+            "Size": 0,
+            "StorageClass": "STANDARD"
+        }
+    ],
+    "Name": "stpubdata",
+    "Prefix": "galex/",
+    "Delimiter": "/",
+    "MaxKeys": 30,
+    "CommonPrefixes": [
+        {
+            "Prefix": "galex/GR6/"
+        },
+        {
+            "Prefix": "galex/GR7/"
+        },
+        {
+            "Prefix": "galex/gap/"
+        },
+        {
+            "Prefix": "galex/public/"
+        }
+    ],
+    "EncodingType": "url",
+    "KeyCount": 5
+}
+SAMPLE OBJECTS galex/
+{
+    "IsTruncated": true,
+    "Contents": [
+        {
+            "Key": "galex/",
+            "LastModified": "2022-01-27T22:26:04+00:00",
+            "ETag": "\"d41d8cd98f00b204e9800998ecf8427e\"",
+            "Size": 0,
+            "StorageClass": "STANDARD"
+        },
+        {
+            "Key": "galex/GR6/pipe/01-vsn/03000-MISDR1_24278_0266/d/00-visits/0001-img/07-try/CmdLine.txt",
+            "LastModified": "2022-01-31T01:01:31+00:00",
+            "ETag": "\"0f2378e4ba9026b55a0736c521adc152\"",
+            "Size": 806,
+            "StorageClass": "STANDARD"
+        },
+        {
+            "Key": "galex/GR6/pipe/01-vsn/03000-MISDR1_24278_0266/d/00-visits/0001-img/07-try/MISDR1_24278_0266_0001-asp.fits.gz",
+            "LastModified": "2022-01-31T01:01:31+00:00",
+            "ETag": "\"09ca2eb9d9dada3a967c1aa7b525fa3c\"",
+            "Size": 119996,
+            "StorageClass": "STANDARD"
+        }
+    ],
+    "Name": "stpubdata",
+    "Prefix": "galex/",
+    "MaxKeys": 3,
+    "EncodingType": "url",
+    "KeyCount": 3,
+    "NextContinuationToken": "1d5eXhs6j5/jcMQE7XzBcl12+W744IdJuGFfV1voZrcLPvaOaBAT+q5ilqq66e9n2LX9i0RARLXkpG+JJEVH3RGzRBOJ1f2ZfKtTODVwvxgORr4gNvKvaWCs9iLWLmKUOrwZKsohHW6TbouA/xwU1SCK+RDl/iXnVblaO+jO+IbdGPpGu/2c1cg=="
+}
+PREFIX hst/
+{
+    "IsTruncated": false,
+    "Name": "stpubdata",
+    "Prefix": "hst/",
+    "Delimiter": "/",
+    "MaxKeys": 30,
+    "CommonPrefixes": [
+        {
+            "Prefix": "hst/grizli-v1/"
+        },
+        {
+            "Prefix": "hst/public/"
+        }
+    ],
+    "EncodingType": "url",
+    "KeyCount": 2
+}
+SAMPLE OBJECTS hst/
+{
+    "IsTruncated": true,
+    "Contents": [
+        {
+            "Key": "hst/grizli-v1/",
+            "LastModified": "2021-10-25T14:10:20+00:00",
+            "ETag": "\"d41d8cd98f00b204e9800998ecf8427e\"",
+            "Size": 0,
+            "StorageClass": "STANDARD"
+        },
+        {
+            "Key": "hst/grizli-v1/ALCS-v0.1/ACTCLJ0102-49151-003.irac.png",
+            "LastModified": "2021-10-25T16:36:43+00:00",
+            "ETag": "\"f0c38a3878044cf11fd140cd9954fdb2\"",
+            "Size": 83498,
+            "StorageClass": "STANDARD"
+        },
+        {
+            "Key": "hst/grizli-v1/ALCS-v0.1/ACTCLJ0102-49151-003.rgb.png",
+            "LastModified": "2021-10-25T16:36:43+00:00",
+            "ETag": "\"58d0e92f4a10aa92a89be8c0dbc916a7\"",
+            "Size": 10381,
+            "StorageClass": "STANDARD"
+        }
+    ],
+    "Name": "stpubdata",
+    "Prefix": "hst/",
+    "MaxKeys": 3,
+    "EncodingType": "url",
+    "KeyCount": 3,
+    "NextContinuationToken": "1hH/PEDTE8nPzTsfFwwGn1bqOHmWHxBCrgkxeBPbpe1xisjt7GCMMWHqWpAcgV4colMNxjAmo/eENa2OAvGqEPjwq8WyNH8e5Oc+HsimClgg="
+}
+PREFIX jwst/
+{
+    "IsTruncated": false,
+    "Name": "stpubdata",
+    "Prefix": "jwst/",
+    "Delimiter": "/",
+    "MaxKeys": 30,
+    "CommonPrefixes": [
+        {
+            "Prefix": "jwst/public/"
+        }
+    ],
+    "EncodingType": "url",
+    "KeyCount": 1
+}
+SAMPLE OBJECTS jwst/
+{
+    "IsTruncated": true,
+    "Contents": [
+        {
+            "Key": "jwst/public/O2022030903/O2022030903-NRCA3_FULL-1.fits",
+            "LastModified": "2024-09-16T14:22:43+00:00",
+            "ETag": "\"a76a551692fab0d205f5b4a6224b51f0-1\"",
+            "Size": 3576960,
+            "StorageClass": "STANDARD"
+        },
+        {
+            "Key": "jwst/public/O2022031301/O2022031301-NRCA3_FP1-1.fits",
+            "LastModified": "2024-09-16T16:49:15+00:00",
+            "ETag": "\"71b0cd79069f1cffa19e079d01c950f9-1\"",
+            "Size": 2033280,
+            "StorageClass": "STANDARD"
+        },
+        {
+            "Key": "jwst/public/O2022032401/O2022032401-NRCA3_FP1-1.fits",
+            "LastModified": "2024-09-12T15:34:13+00:00",
+            "ETag": "\"004a2a6c9f6684bcf84201e2ad69180c-1\"",
+            "Size": 2041920,
+            "StorageClass": "STANDARD"
+        }
+    ],
+    "Name": "stpubdata",
+    "Prefix": "jwst/",
+    "MaxKeys": 3,
+    "EncodingType": "url",
+    "KeyCount": 3,
+    "NextContinuationToken": "1/hcgYSsAGC3CrhoI6BD5fln6ChjaxskkWyL7dOkmjvVg4NasdPKXYd52yGvKU61WjEIEZqx3VySjPwrQEHtkQxjljY3ZiD2L"
+}
+PREFIX k2/
+{
+    "IsTruncated": false,
+    "Name": "stpubdata",
+    "Prefix": "k2/",
+    "Delimiter": "/",
+    "MaxKeys": 30,
+    "CommonPrefixes": [
+        {
+            "Prefix": "k2/public/"
+        }
+    ],
+    "EncodingType": "url",
+    "KeyCount": 1
+}
+SAMPLE OBJECTS k2/
+{
+    "IsTruncated": true,
+    "Contents": [
+        {
+            "Key": "k2/public/ffi/README.txt",
+            "LastModified": "2020-04-16T12:09:46+00:00",
+            "ETag": "\"f519b72b3d55747a1647634b100f825f\"",
+            "Size": 2849,
+            "StorageClass": "STANDARD"
+        },
+        {
+            "Key": "k2/public/ffi/driftscan-ffi/K2DFFI-README.txt",
+            "LastModified": "2020-04-16T12:09:46+00:00",
+            "ETag": "\"35ec5cf34b57d4e0aa559db62d1424ce\"",
+            "Size": 2161,
+            "StorageClass": "STANDARD"
+        },
+        {
+            "Key": "k2/public/ffi/driftscan-ffi/kplr2018131024020_ffi-orig.fits",
+            "LastModified": "2020-04-16T12:09:46+00:00",
+            "ETag": "\"821356ff45ce234634d72bb2312c3714-49\"",
+            "Size": 407894400,
+            "StorageClass": "STANDARD"
+        }
+    ],
+    "Name": "stpubdata",
+    "Prefix": "k2/",
+    "MaxKeys": 3,
+    "EncodingType": "url",
+    "KeyCount": 3,
+    "NextContinuationToken": "1j6HzDdUMgxNi6HEXUOUeJ68bW9N+CHSbaaEtTJGb70SQwp7phs0o5EID4y+fuHuL2kOWH+tCV3EBjXrkE7eWhlhLmz/6oJwrNZ116bthFPQ="
+}
+PREFIX kepler/
+{
+    "IsTruncated": false,
+    "Name": "stpubdata",
+    "Prefix": "kepler/",
+    "Delimiter": "/",
+    "MaxKeys": 30,
+    "CommonPrefixes": [
+        {
+            "Prefix": "kepler/public/"
+        }
+    ],
+    "EncodingType": "url",
+    "KeyCount": 1
+}
+SAMPLE OBJECTS kepler/
+{
+    "IsTruncated": true,
+    "Contents": [
+        {
+            "Key": "kepler/public/ffi/.htaccess",
+            "LastModified": "2019-08-23T17:23:41+00:00",
+            "ETag": "\"f1a45a0d7ea525d9ddc253c80f550e68\"",
+            "Size": 272,
+            "StorageClass": "STANDARD"
+        },
+        {
+            "Key": "kepler/public/ffi/README.txt",
+            "LastModified": "2019-08-23T17:23:41+00:00",
+            "ETag": "\"bb4bae006747768ed6981c77f8433b3f\"",
+            "Size": 2347,
+            "StorageClass": "STANDARD"
+        },
+        {
+            "Key": "kepler/public/ffi/kplr2009069022529_ffi-orig.fits",
+            "LastModified": "2019-08-23T17:23:41+00:00",
+            "ETag": "\"10d1a2e5ae29b1d74da3aca7b46f8981-49\"",
+            "Size": 407894400,
+            "StorageClass": "STANDARD"
+        }
+    ],
+    "Name": "stpubdata",
+    "Prefix": "kepler/",
+    "MaxKeys": 3,
+    "EncodingType": "url",
+    "KeyCount": 3,
+    "NextContinuationToken": "1wpQDrZqfrK7xwOSdj+2ltZkogRpAyUkPu8GjqmPrNhfKuxk9RjL5io4q4scf4kbnkegCI3R6KWSKHtR0AMnjfMtNM3RGfFOz"
+}
+PREFIX mast/
+{
+    "IsTruncated": false,
+    "Contents": [
+        {
+            "Key": "mast/",
+            "LastModified": "2024-07-23T18:24:14+00:00",
+            "ETag": "\"d41d8cd98f00b204e9800998ecf8427e\"",
+            "Size": 0,
+            "StorageClass": "STANDARD"
+        }
+    ],
+    "Name": "stpubdata",
+    "Prefix": "mast/",
+    "Delimiter": "/",
+    "MaxKeys": 30,
+    "CommonPrefixes": [
+        {
+            "Prefix": "mast/hlsp/"
+        },
+        {
+            "Prefix": "mast/public/"
+        },
+        {
+            "Prefix": "mast/skybackgrounds/"
+        }
+    ],
+    "EncodingType": "url",
+    "KeyCount": 4
+}
+SAMPLE OBJECTS mast/
+{
+    "IsTruncated": true,
+    "Contents": [
+        {
+            "Key": "mast/",
+            "LastModified": "2024-07-23T18:24:14+00:00",
+            "ETag": "\"d41d8cd98f00b204e9800998ecf8427e\"",
+            "Size": 0,
+            "StorageClass": "STANDARD"
+        },
+        {
+            "Key": "mast/hlsp/",
+            "LastModified": "2024-07-23T18:24:33+00:00",
+            "ETag": "\"d41d8cd98f00b204e9800998ecf8427e\"",
+            "Size": 0,
+            "StorageClass": "STANDARD"
+        },
+        {
+            "Key": "mast/hlsp/jades/dr1/goods-s/bundles/hlsp_jades_jwst_nirspec_goods-s-deephst_clear-prism_v1.0_bundle.zip",
+            "LastModified": "2025-12-12T17:40:27+00:00",
+            "ETag": "\"7df83ace22d69c3cdcb87e20d311e232\"",
+            "ChecksumAlgorithm": [
+                "CRC64NVME"
+            ],
+            "ChecksumType": "FULL_OBJECT",
+            "Size": 116892032,
+            "StorageClass": "STANDARD"
+        }
+    ],
+    "Name": "stpubdata",
+    "Prefix": "mast/",
+    "MaxKeys": 3,
+    "EncodingType": "url",
+    "KeyCount": 3,
+    "NextContinuationToken": "10uAnCTUGy6bLM8POOJZ19OOsaNAXW0Fnw7nWjJuRiT+78BS/ZMLJp25HAM9fZxZAn2IqMnxGpi1agjslnQ4qQvheDs5Hj+685SJ4Iatl7yCq6v2fQUztVp8JK+aYrA5cKPXF8Ok5yZvOw0ufkqfPmNVxsFS4Y+6CcLFB+qYYouw="
+}
+PREFIX panstarrs/
+{
+    "IsTruncated": false,
+    "Contents": [
+        {
+            "Key": "panstarrs/",
+            "LastModified": "2023-02-02T18:24:35+00:00",
+            "ETag": "\"d41d8cd98f00b204e9800998ecf8427e\"",
+            "Size": 0,
+            "StorageClass": "STANDARD"
+        }
+    ],
+    "Name": "stpubdata",
+    "Prefix": "panstarrs/",
+    "Delimiter": "/",
+    "MaxKeys": 30,
+    "CommonPrefixes": [
+        {
+            "Prefix": "panstarrs/ps1/"
+        }
+    ],
+    "EncodingType": "url",
+    "KeyCount": 2
+}
+SAMPLE OBJECTS panstarrs/
+{
+    "IsTruncated": true,
+    "Contents": [
+        {
+            "Key": "panstarrs/",
+            "LastModified": "2023-02-02T18:24:35+00:00",
+            "ETag": "\"d41d8cd98f00b204e9800998ecf8427e\"",
+            "Size": 0,
+            "StorageClass": "STANDARD"
+        },
+        {
+            "Key": "panstarrs/ps1/public/hats/detection/collection.properties",
+            "LastModified": "2026-06-10T12:05:39+00:00",
+            "ETag": "\"02e66fe9df1b01b157fd04ae0dd9f747\"",
+            "ChecksumAlgorithm": [
+                "CRC64NVME"
+            ],
+            "ChecksumType": "FULL_OBJECT",
+            "Size": 292,
+            "StorageClass": "STANDARD"
+        },
+        {
+            "Key": "panstarrs/ps1/public/hats/detection/detection/dataset/Norder=10/Dir=8760000/Npix=8765439.parquet",
+            "LastModified": "2026-05-27T03:07:55+00:00",
+            "ETag": "\"f4caecfe28e036b9aa3243eeb3c67574\"",
+            "ChecksumAlgorithm": [
+                "CRC64NVME"
+            ],
+            "ChecksumType": "FULL_OBJECT",
+            "Size": 17516,
+            "StorageClass": "STANDARD"
+        }
+    ],
+    "Name": "stpubdata",
+    "Prefix": "panstarrs/",
+    "MaxKeys": 3,
+    "EncodingType": "url",
+    "KeyCount": 3,
+    "NextContinuationToken": "1qOYz8QAejPGn4DFvf0s4WlsE0G/DAUacnde2DTK16HNBtaDjz5a4kNuVVVr0KenrHvKSQHYHWMsD9iRSjp1lYBszQhI7BYPVZuzFfTqKSBSBoUIGkfqa3nMUjVH/d3aFnvolCrqZuTZwGkblXkYbvg=="
+}
+PREFIX roman/
+{
+    "IsTruncated": false,
+    "Contents": [
+        {
+            "Key": "roman/",
+            "LastModified": "2025-01-30T13:44:51+00:00",
+            "ETag": "\"d41d8cd98f00b204e9800998ecf8427e\"",
+            "Size": 0,
+            "StorageClass": "STANDARD"
+        }
+    ],
+    "Name": "stpubdata",
+    "Prefix": "roman/",
+    "Delimiter": "/",
+    "MaxKeys": 30,
+    "CommonPrefixes": [
+        {
+            "Prefix": "roman/crds/"
+        },
+        {
+            "Prefix": "roman/nexus/"
+        }
+    ],
+    "EncodingType": "url",
+    "KeyCount": 3
+}
+SAMPLE OBJECTS roman/
+{
+    "IsTruncated": true,
+    "Contents": [
+        {
+            "Key": "roman/",
+            "LastModified": "2025-01-30T13:44:51+00:00",
+            "ETag": "\"d41d8cd98f00b204e9800998ecf8427e\"",
+            "Size": 0,
+            "StorageClass": "STANDARD"
+        },
+        {
+            "Key": "roman/crds/",
+            "LastModified": "2025-01-30T13:45:39+00:00",
+            "ETag": "\"d41d8cd98f00b204e9800998ecf8427e\"",
+            "Size": 0,
+            "StorageClass": "STANDARD"
+        },
+        {
+            "Key": "roman/crds/config/roman/ad_last_processed",
+            "LastModified": "2026-10-13T18:17:20+00:00",
+            "ETag": "\"0cd929641947b2a9e88be6030419eb89\"",
+            "ChecksumAlgorithm": [
+                "CRC64NVME"
+            ],
+            "ChecksumType": "FULL_OBJECT",
+            "Size": 332,
+            "StorageClass": "STANDARD"
+        }
+    ],
+    "Name": "stpubdata",
+    "Prefix": "roman/",
+    "MaxKeys": 3,
+    "EncodingType": "url",
+    "KeyCount": 3,
+    "NextContinuationToken": "1XB7rd5JCCkvXXm9cFQ8jpCt8/oxTZSe8EFeqnsea08GbL1tmIuWAHvRc+zXaA0J9P5qDZwd0LIlwqvEfa8JbQA=="
+}
+PREFIX sdss/
+{
+    "IsTruncated": false,
+    "Contents": [
+        {
+            "Key": "sdss/",
+            "LastModified": "2026-04-09T13:39:14+00:00",
+            "ETag": "\"d41d8cd98f00b204e9800998ecf8427e\"",
+            "ChecksumAlgorithm": [
+                "CRC64NVME"
+            ],
+            "ChecksumType": "FULL_OBJECT",
+            "Size": 0,
+            "StorageClass": "STANDARD"
+        }
+    ],
+    "Name": "stpubdata",
+    "Prefix": "sdss/",
+    "Delimiter": "/",
+    "MaxKeys": 30,
+    "CommonPrefixes": [
+        {
+            "Prefix": "sdss/public/"
+        }
+    ],
+    "EncodingType": "url",
+    "KeyCount": 2
+}
+SAMPLE OBJECTS sdss/
+{
+    "IsTruncated": true,
+    "Contents": [
+        {
+            "Key": "sdss/",
+            "LastModified": "2026-04-09T13:39:14+00:00",
+            "ETag": "\"d41d8cd98f00b204e9800998ecf8427e\"",
+            "ChecksumAlgorithm": [
+                "CRC64NVME"
+            ],
+            "ChecksumType": "FULL_OBJECT",
+            "Size": 0,
+            "StorageClass": "STANDARD"
+        },
+        {
+            "Key": "sdss/public/",
+            "LastModified": "2026-08-18T13:47:49+00:00",
+            "ETag": "\"d41d8cd98f00b204e9800998ecf8427e\"",
+            "ChecksumAlgorithm": [
+                "CRC64NVME"
+            ],
+            "ChecksumType": "FULL_OBJECT",
+            "Size": 0,
+            "StorageClass": "STANDARD"
+        },
+        {
+            "Key": "sdss/public/hats/sdss_dr7_spectra/collection.properties",
+            "LastModified": "2026-08-18T13:49:40+00:00",
+            "ETag": "\"a1d34dcec6bbebe06fbab035430ed612\"",
+            "ChecksumAlgorithm": [
+                "CRC64NVME"
+            ],
+            "ChecksumType": "FULL_OBJECT",
+            "Size": 318,
+            "StorageClass": "STANDARD"
+        }
+    ],
+    "Name": "stpubdata",
+    "Prefix": "sdss/",
+    "MaxKeys": 3,
+    "EncodingType": "url",
+    "KeyCount": 3,
+    "NextContinuationToken": "1bpcvvyA33GVCEeGUOY0dV+e9HJBKeYPuIkaIGJyFVlPWf7U6vI+9VemSKHcuGZ4gZoTIzoRuEuhThHkcsd0pocJBeCV94YxvpNTyzgAo2BMMMpVpZXuG/v0mmB+4LhjQOHF9Qj6b26ahqzbUosqoWQ=="
+}
+PREFIX tess/
+{
+    "IsTruncated": false,
+    "Name": "stpubdata",
+    "Prefix": "tess/",
+    "Delimiter": "/",
+    "MaxKeys": 30,
+    "CommonPrefixes": [
+        {
+            "Prefix": "tess/public/"
+        }
+    ],
+    "EncodingType": "url",
+    "KeyCount": 1
+}
+SAMPLE OBJECTS tess/
+{
+    "IsTruncated": true,
+    "Contents": [
+        {
+            "Key": "tess/public/engineering/tess2018227154000-41086_120-config.xml",
+            "LastModified": "2025-11-25T18:28:47+00:00",
+            "ETag": "\"c445953ffbd3e18f9139e64fe9489e27\"",
+            "ChecksumAlgorithm": [
+                "CRC64NVME"
+            ],
+            "ChecksumType": "FULL_OBJECT",
+            "Size": 1316,
+            "StorageClass": "STANDARD"
+        },
+        {
+            "Key": "tess/public/engineering/tess2018236151627-41102_111-pointing.xml",
+            "LastModified": "2025-11-25T18:43:13+00:00",
+            "ETag": "\"7f63696af430778b801ffbc6e1b427fc\"",
+            "ChecksumAlgorithm": [
+                "CRC64NVME"
+            ],
+            "ChecksumType": "FULL_OBJECT",
+            "Size": 1684,
+            "StorageClass": "STANDARD"
+        },
+        {
+            "Key": "tess/public/engineering/tess2018236164754-41096_sclk.tsc",
+            "LastModified": "2025-11-25T18:43:17+00:00",
+            "ETag": "\"07008bd6d706dd168bb900deae9cfbd1\"",
+            "ChecksumAlgorithm": [
+                "CRC64NVME"
+            ],
+            "ChecksumType": "FULL_OBJECT",
+            "Size": 7536,
+            "StorageClass": "STANDARD"
+        }
+    ],
+    "Name": "stpubdata",
+    "Prefix": "tess/",
+    "MaxKeys": 3,
+    "EncodingType": "url",
+    "KeyCount": 3,
+    "NextContinuationToken": "1A4tqWzQEz9TSmwgglncvLu6pfl24zb99vxXlk9aMcIKbAVrf/0Is2RhblWKpn9nbYoz949sIoUCHwrHhJdOSgDrswZ9QL1E5EOvK2EEEtZwJ3tDN6k0uHQ=="
+}
+PASS snippets/05-layout.sh
+
+Running snippets/06-size-sample.sh
+gaia objects= 1000 bytes= 422431409183 truncated= True listing_json_bytes= 419651
+galex objects= 1000 bytes= 1640353087 truncated= True listing_json_bytes= 341051
+hst objects= 1000 bytes= 127413629 truncated= True listing_json_bytes= 277371
+jwst objects= 1000 bytes= 7391013348 truncated= True listing_json_bytes= 307531
+k2 objects= 1000 bytes= 66166904850 truncated= True listing_json_bytes= 293535
+kepler objects= 1000 bytes= 107208431739 truncated= True listing_json_bytes= 299785
+mast objects= 1000 bytes= 1468845314 truncated= True listing_json_bytes= 487635
+panstarrs objects= 1000 bytes= 626018139554 truncated= True listing_json_bytes= 440838
+roman objects= 1000 bytes= 123008872040 truncated= True listing_json_bytes= 405440
+sdss objects= 475 bytes= 91616567239 truncated= False listing_json_bytes= 210226
+tess objects= 1000 bytes= 784508251138 truncated= True listing_json_bytes= 366891
+LOWER_BOUND objects= 10475 bytes= 2231586201121 decimal_TB= 2.231586201121
+First lexical page per prefix: NOT a random sample, NOT an estimate of the complete bucket.
+PASS snippets/06-size-sample.sh
+
+Running snippets/07-catalogs.sh
+METADATA gaia/gaia_dr3/public/hats/collection.properties {'AcceptRanges': 'bytes', 'LastModified': '2025-07-23T16:44:20+00:00', 'ContentLength': 319, 'ETag': '"430f3d4ec7ce228cdcea1b4d1507e689"', 'VersionId': 'CH1bZ6eygovyxSz6KYrGRvJ.SZ06aWba', 'ContentType': 'binary/octet-stream', 'ServerSideEncryption': 'AES256', 'Metadata': {}}
+#HATS Collection
+obs_collection=gaia_dr3
+hats_primary_table_url=gaia
+all_margins=gaia_10arcs gaia_300arcs
+default_margin=gaia_10arcs
+all_indexes=source_id gaia_source_id_index
+hats_builder=hats-import v0.6.0
+hats_creation_date=2025-06-13T20\:42UTC
+hats_estsize=1138037465
+hats_release_date=2024-09-18
+hats_version=v0.1
+
+METADATA panstarrs/ps1/public/hats/detection/collection.properties {'AcceptRanges': 'bytes', 'LastModified': '2026-06-10T12:05:39+00:00', 'ContentLength': 292, 'ETag': '"02e66fe9df1b01b157fd04ae0dd9f747"', 'VersionId': 'bz.MxHi0L8k5rNb8obrBbWSrbeljjSDQ', 'ContentType': 'binary/octet-stream', 'ServerSideEncryption': 'AES256', 'Metadata': {}}
+#HATS Collection
+obs_collection=detection
+hats_primary_table_url=detection
+all_margins=detection_10arcs
+default_margin=detection_10arcs
+hats_builder=hats-import v0.9.0, hats v0.9.0
+hats_creation_date=2026-03-25T02:06UTC
+hats_estsize=18026266780
+hats_release_date=2025-08-22
+hats_version=v1.0
+
+HEAD gaia/gaia_dr3/public/hats/gaia/dataset/Norder=2/Dir=0/Npix=0.parquet {'AcceptRanges': 'bytes', 'LastModified': '2025-07-23T16:44:20+00:00', 'ContentLength': 326735363, 'ETag': '"ae71001bfcd51633b024d9df5a8a9931-39"', 'VersionId': 'oiFio6JPZy68kSdiNbeKQu9GMNW0o827', 'ContentType': 'binary/octet-stream', 'ServerSideEncryption': 'AES256', 'Metadata': {}}
+FOOTER gaia object_bytes 326735363 footer_bytes 150021
+SCHEMA gaia
+[('schema', None, 'REQUIRED', None, None), ('_healpix_29', 'INT64', 'OPTIONAL', None, None), ('solution_id', 'INT64', 'OPTIONAL', None, None), ('designation', 'BYTE_ARRAY', 'OPTIONAL', 'UTF8', 'StringType()'), ('source_id', 'INT64', 'OPTIONAL', None, None), ('random_index', 'INT64', 'OPTIONAL', None, None), ('ref_epoch', 'DOUBLE', 'OPTIONAL', None, None), ('ra', 'DOUBLE', 'OPTIONAL', None, None), ('ra_error', 'FLOAT', 'OPTIONAL', None, None), ('dec', 'DOUBLE', 'OPTIONAL', None, None), ('dec_error', 'FLOAT', 'OPTIONAL', None, None), ('parallax', 'DOUBLE', 'OPTIONAL', None, None), ('parallax_error', 'FLOAT', 'OPTIONAL', None, None), ('parallax_over_error', 'FLOAT', 'OPTIONAL', None, None), ('pm', 'FLOAT', 'OPTIONAL', None, None), ('pmra', 'DOUBLE', 'OPTIONAL', None, None), ('pmra_error', 'FLOAT', 'OPTIONAL', None, None), ('pmdec', 'DOUBLE', 'OPTIONAL', None, None), ('pmdec_error', 'FLOAT', 'OPTIONAL', None, None), ('ra_dec_corr', 'FLOAT', 'OPTIONAL', None, None), ('ra_parallax_corr', 'FLOAT', 'OPTIONAL', None, None), ('ra_pmra_corr', 'FLOAT', 'OPTIONAL', None, None), ('ra_pmdec_corr', 'FLOAT', 'OPTIONAL', None, None), ('dec_parallax_corr', 'FLOAT', 'OPTIONAL', None, None), ('dec_pmra_corr', 'FLOAT', 'OPTIONAL', None, None), ('dec_pmdec_corr', 'FLOAT', 'OPTIONAL', None, None), ('parallax_pmra_corr', 'FLOAT', 'OPTIONAL', None, None), ('parallax_pmdec_corr', 'FLOAT', 'OPTIONAL', None, None), ('pmra_pmdec_corr', 'FLOAT', 'OPTIONAL', None, None), ('astrometric_n_obs_al', 'INT32', 'OPTIONAL', 'INT_16', 'IntType(bitWidth=\x10, isSigned=1)'), ('astrometric_n_obs_ac', 'INT32', 'OPTIONAL', 'INT_16', 'IntType(bitWidth=\x10, isSigned=1)'), ('astrometric_n_good_obs_al', 'INT32', 'OPTIONAL', 'INT_16', 'IntType(bitWidth=\x10, isSigned=1)'), ('astrometric_n_bad_obs_al', 'INT32', 'OPTIONAL', 'INT_16', 'IntType(bitWidth=\x10, isSigned=1)'), ('astrometric_gof_al', 'FLOAT', 'OPTIONAL', None, None), ('astrometric_chi2_al', 'FLOAT', 'OPTIONAL', None, None), ('astrometric_excess_noise', 'FLOAT', 'OPTIONAL', None, None), ('astrometric_excess_noise_sig', 'FLOAT', 'OPTIONAL', None, None), ('astrometric_params_solved', 'INT32', 'OPTIONAL', 'INT_8', 'IntType(bitWidth=\x08, isSigned=1)'), ('astrometric_primary_flag', 'BOOLEAN', 'OPTIONAL', None, None), ('nu_eff_used_in_astrometry', 'FLOAT', 'OPTIONAL', None, None), ('pseudocolour', 'FLOAT', 'OPTIONAL', None, None), ('pseudocolour_error', 'FLOAT', 'OPTIONAL', None, None), ('ra_pseudocolour_corr', 'FLOAT', 'OPTIONAL', None, None), ('dec_pseudocolour_corr', 'FLOAT', 'OPTIONAL', None, None), ('parallax_pseudocolour_corr', 'FLOAT', 'OPTIONAL', None, None), ('pmra_pseudocolour_corr', 'FLOAT', 'OPTIONAL', None, None), ('pmdec_pseudocolour_corr', 'FLOAT', 'OPTIONAL', None, None), ('astrometric_matched_transits', 'INT32', 'OPTIONAL', 'INT_16', 'IntType(bitWidth=\x10, isSigned=1)'), ('visibility_periods_used', 'INT32', 'OPTIONAL', 'INT_16', 'IntType(bitWidth=\x10, isSigned=1)'), ('astrometric_sigma5d_max', 'FLOAT', 'OPTIONAL', None, None), ('matched_transits', 'INT32', 'OPTIONAL', 'INT_16', 'IntType(bitWidth=\x10, isSigned=1)'), ('new_matched_transits', 'INT32', 'OPTIONAL', 'INT_16', 'IntType(bitWidth=\x10, isSigned=1)'), ('matched_transits_removed', 'INT32', 'OPTIONAL', 'INT_16', 'IntType(bitWidth=\x10, isSigned=1)'), ('ipd_gof_harmonic_amplitude', 'FLOAT', 'OPTIONAL', None, None), ('ipd_gof_harmonic_phase', 'FLOAT', 'OPTIONAL', None, None), ('ipd_frac_multi_peak', 'INT32', 'OPTIONAL', 'INT_8', 'IntType(bitWidth=\x08, isSigned=1)'), ('ipd_frac_odd_win', 'INT32', 'OPTIONAL', 'INT_8', 'IntType(bitWidth=\x08, isSigned=1)'), ('ruwe', 'FLOAT', 'OPTIONAL', None, None), ('scan_direction_strength_k1', 'FLOAT', 'OPTIONAL', None, None), ('scan_direction_strength_k2', 'FLOAT', 'OPTIONAL', None, None), ('scan_direction_strength_k3', 'FLOAT', 'OPTIONAL', None, None), ('scan_direction_strength_k4', 'FLOAT', 'OPTIONAL', None, None), ('scan_direction_mean_k1', 'FLOAT', 'OPTIONAL', None, None), ('scan_direction_mean_k2', 'FLOAT', 'OPTIONAL', None, None), ('scan_direction_mean_k3', 'FLOAT', 'OPTIONAL', None, None), ('scan_direction_mean_k4', 'FLOAT', 'OPTIONAL', None, None), ('duplicated_source', 'BOOLEAN', 'OPTIONAL', None, None), ('phot_g_n_obs', 'INT32', 'OPTIONAL', 'INT_16', 'IntType(bitWidth=\x10, isSigned=1)'), ('phot_g_mean_flux', 'DOUBLE', 'OPTIONAL', None, None), ('phot_g_mean_flux_error', 'FLOAT', 'OPTIONAL', None, None), ('phot_g_mean_flux_over_error', 'FLOAT', 'OPTIONAL', None, None), ('phot_g_mean_mag', 'FLOAT', 'OPTIONAL', None, None), ('phot_bp_n_obs', 'INT32', 'OPTIONAL', 'INT_16', 'IntType(bitWidth=\x10, isSigned=1)'), ('phot_bp_mean_flux', 'DOUBLE', 'OPTIONAL', None, None), ('phot_bp_mean_flux_error', 'FLOAT', 'OPTIONAL', None, None), ('phot_bp_mean_flux_over_error', 'FLOAT', 'OPTIONAL', None, None), ('phot_bp_mean_mag', 'FLOAT', 'OPTIONAL', None, None), ('phot_rp_n_obs', 'INT32', 'OPTIONAL', 'INT_16', 'IntType(bitWidth=\x10, isSigned=1)'), ('phot_rp_mean_flux', 'DOUBLE', 'OPTIONAL', None, None), ('phot_rp_mean_flux_error', 'FLOAT', 'OPTIONAL', None, None), ('phot_rp_mean_flux_over_error', 'FLOAT', 'OPTIONAL', None, None), ('phot_rp_mean_mag', 'FLOAT', 'OPTIONAL', None, None), ('phot_bp_rp_excess_factor', 'FLOAT', 'OPTIONAL', None, None), ('phot_bp_n_contaminated_transits', 'INT32', 'OPTIONAL', 'INT_16', 'IntType(bitWidth=\x10, isSigned=1)'), ('phot_bp_n_blended_transits', 'INT32', 'OPTIONAL', 'INT_16', 'IntType(bitWidth=\x10, isSigned=1)'), ('phot_rp_n_contaminated_transits', 'INT32', 'OPTIONAL', 'INT_16', 'IntType(bitWidth=\x10, isSigned=1)'), ('phot_rp_n_blended_transits', 'INT32', 'OPTIONAL', 'INT_16', 'IntType(bitWidth=\x10, isSigned=1)'), ('phot_proc_mode', 'INT32', 'OPTIONAL', 'INT_8', 'IntType(bitWidth=\x08, isSigned=1)'), ('bp_rp', 'FLOAT', 'OPTIONAL', None, None), ('bp_g', 'FLOAT', 'OPTIONAL', None, None), ('g_rp', 'FLOAT', 'OPTIONAL', None, None), ('radial_velocity', 'FLOAT', 'OPTIONAL', None, None), ('radial_velocity_error', 'FLOAT', 'OPTIONAL', None, None), ('rv_method_used', 'INT32', 'OPTIONAL', 'INT_8', 'IntType(bitWidth=\x08, isSigned=1)'), ('rv_nb_transits', 'INT32', 'OPTIONAL', 'INT_16', 'IntType(bitWidth=\x10, isSigned=1)'), ('rv_nb_deblended_transits', 'INT32', 'OPTIONAL', 'INT_16', 'IntType(bitWidth=\x10, isSigned=1)'), ('rv_visibility_periods_used', 'INT32', 'OPTIONAL', 'INT_16', 'IntType(bitWidth=\x10, isSigned=1)'), ('rv_expected_sig_to_noise', 'FLOAT', 'OPTIONAL', None, None), ('rv_renormalised_gof', 'FLOAT', 'OPTIONAL', None, None), ('rv_chisq_pvalue', 'FLOAT', 'OPTIONAL', None, None), ('rv_time_duration', 'FLOAT', 'OPTIONAL', None, None), ('rv_amplitude_robust', 'FLOAT', 'OPTIONAL', None, None), ('rv_template_teff', 'FLOAT', 'OPTIONAL', None, None), ('rv_template_logg', 'FLOAT', 'OPTIONAL', None, None), ('rv_template_fe_h', 'FLOAT', 'OPTIONAL', None, None), ('rv_atm_param_origin', 'INT32', 'OPTIONAL', 'INT_16', 'IntType(bitWidth=\x10, isSigned=1)'), ('vbroad', 'FLOAT', 'OPTIONAL', None, None), ('vbroad_error', 'FLOAT', 'OPTIONAL', None, None), ('vbroad_nb_transits', 'INT32', 'OPTIONAL', 'INT_16', 'IntType(bitWidth=\x10, isSigned=1)'), ('grvs_mag', 'FLOAT', 'OPTIONAL', None, None), ('grvs_mag_error', 'FLOAT', 'OPTIONAL', None, None), ('grvs_mag_nb_transits', 'INT32', 'OPTIONAL', 'INT_16', 'IntType(bitWidth=\x10, isSigned=1)'), ('rvs_spec_sig_to_noise', 'FLOAT', 'OPTIONAL', None, None), ('phot_variable_flag', 'BYTE_ARRAY', 'OPTIONAL', 'UTF8', 'StringType()'), ('l', 'DOUBLE', 'OPTIONAL', None, None), ('b', 'DOUBLE', 'OPTIONAL', None, None), ('ecl_lon', 'DOUBLE', 'OPTIONAL', None, None), ('ecl_lat', 'DOUBLE', 'OPTIONAL', None, None), ('in_qso_candidates', 'BOOLEAN', 'OPTIONAL', None, None), ('in_galaxy_candidates', 'BOOLEAN', 'OPTIONAL', None, None), ('non_single_star', 'INT32', 'OPTIONAL', 'INT_16', 'IntType(bitWidth=\x10, isSigned=1)'), ('has_xp_continuous', 'BOOLEAN', 'OPTIONAL', None, None), ('has_xp_sampled', 'BOOLEAN', 'OPTIONAL', None, None), ('has_rvs', 'BOOLEAN', 'OPTIONAL', None, None), ('has_epoch_photometry', 'BOOLEAN', 'OPTIONAL', None, None), ('has_epoch_rv', 'BOOLEAN', 'OPTIONAL', None, None), ('has_mcmc_gspphot', 'BOOLEAN', 'OPTIONAL', None, None), ('has_mcmc_msc', 'BOOLEAN', 'OPTIONAL', None, None), ('in_andromeda_survey', 'BOOLEAN', 'OPTIONAL', None, None), ('classprob_dsc_combmod_quasar', 'FLOAT', 'OPTIONAL', None, None), ('classprob_dsc_combmod_galaxy', 'FLOAT', 'OPTIONAL', None, None), ('classprob_dsc_combmod_star', 'FLOAT', 'OPTIONAL', None, None), ('teff_gspphot', 'FLOAT', 'OPTIONAL', None, None), ('teff_gspphot_lower', 'FLOAT', 'OPTIONAL', None, None), ('teff_gspphot_upper', 'FLOAT', 'OPTIONAL', None, None), ('logg_gspphot', 'FLOAT', 'OPTIONAL', None, None), ('logg_gspphot_lower', 'FLOAT', 'OPTIONAL', None, None), ('logg_gspphot_upper', 'FLOAT', 'OPTIONAL', None, None), ('mh_gspphot', 'FLOAT', 'OPTIONAL', None, None), ('mh_gspphot_lower', 'FLOAT', 'OPTIONAL', None, None), ('mh_gspphot_upper', 'FLOAT', 'OPTIONAL', None, None), ('distance_gspphot', 'FLOAT', 'OPTIONAL', None, None), ('distance_gspphot_lower', 'FLOAT', 'OPTIONAL', None, None), ('distance_gspphot_upper', 'FLOAT', 'OPTIONAL', None, None), ('azero_gspphot', 'FLOAT', 'OPTIONAL', None, None), ('azero_gspphot_lower', 'FLOAT', 'OPTIONAL', None, None), ('azero_gspphot_upper', 'FLOAT', 'OPTIONAL', None, None), ('ag_gspphot', 'FLOAT', 'OPTIONAL', None, None), ('ag_gspphot_lower', 'FLOAT', 'OPTIONAL', None, None), ('ag_gspphot_upper', 'FLOAT', 'OPTIONAL', None, None), ('ebpminrp_gspphot', 'FLOAT', 'OPTIONAL', None, None), ('ebpminrp_gspphot_lower', 'FLOAT', 'OPTIONAL', None, None), ('ebpminrp_gspphot_upper', 'FLOAT', 'OPTIONAL', None, None), ('libname_gspphot', 'BYTE_ARRAY', 'OPTIONAL', 'UTF8', 'StringType()')]
+ROW_GROUPS gaia [(0, 200000), (1, 200000), (2, 200000), (3, 126621)]
+HEAD panstarrs/ps1/public/hats/detection/detection/dataset/Norder=10/Dir=8760000/Npix=8765439.parquet {'AcceptRanges': 'bytes', 'LastModified': '2026-05-27T03:07:55+00:00', 'ContentLength': 17516, 'ETag': '"f4caecfe28e036b9aa3243eeb3c67574"', 'VersionId': '45An5ShyBHpXwBIIJYTiHA3Bn0gx_yz7', 'ContentType': 'binary/octet-stream', 'ServerSideEncryption': 'AES256', 'Metadata': {}}
+FOOTER ps1 object_bytes 17516 footer_bytes 11134
+SCHEMA ps1
+[('schema', None, 'REQUIRED', None, None), ('_healpix_29', 'INT64', 'OPTIONAL', None, None), ('objID', 'INT64', 'OPTIONAL', None, None), ('uniquePspsP2id', 'INT64', 'OPTIONAL', None, None), ('detectID', 'INT64', 'OPTIONAL', None, None), ('ippObjID', 'INT64', 'OPTIONAL', None, None), ('ippDetectID', 'INT64', 'OPTIONAL', None, None), ('filterID', 'INT32', 'OPTIONAL', 'INT_16', 'IntType(bitWidth=\x10, isSigned=1)'), ('surveyID', 'INT32', 'OPTIONAL', 'INT_16', 'IntType(bitWidth=\x10, isSigned=1)'), ('imageID', 'INT64', 'OPTIONAL', None, None), ('randomDetID', 'DOUBLE', 'OPTIONAL', None, None), ('dvoRegionID', 'INT32', 'OPTIONAL', None, None), ('obsTime', 'DOUBLE', 'OPTIONAL', None, None), ('xPos', 'DOUBLE', 'OPTIONAL', None, None), ('yPos', 'DOUBLE', 'OPTIONAL', None, None), ('xPosErr', 'DOUBLE', 'OPTIONAL', None, None), ('yPosErr', 'DOUBLE', 'OPTIONAL', None, None), ('pltScale', 'DOUBLE', 'OPTIONAL', None, None), ('posAngle', 'DOUBLE', 'OPTIONAL', None, None), ('ra', 'DOUBLE', 'OPTIONAL', None, None), ('dec', 'DOUBLE', 'OPTIONAL', None, None), ('raErr', 'DOUBLE', 'OPTIONAL', None, None), ('decErr', 'DOUBLE', 'OPTIONAL', None, None), ('extNSigma', 'DOUBLE', 'OPTIONAL', None, None), ('zp', 'DOUBLE', 'OPTIONAL', None, None), ('telluricExt', 'DOUBLE', 'OPTIONAL', None, None), ('expTime', 'DOUBLE', 'OPTIONAL', None, None), ('airMass', 'DOUBLE', 'OPTIONAL', None, None), ('psfFlux', 'DOUBLE', 'OPTIONAL', None, None), ('psfFluxErr', 'DOUBLE', 'OPTIONAL', None, None), ('psfMajorFWHM', 'DOUBLE', 'OPTIONAL', None, None), ('psfMinorFWHM', 'DOUBLE', 'OPTIONAL', None, None), ('psfTheta', 'DOUBLE', 'OPTIONAL', None, None), ('psfCore', 'DOUBLE', 'OPTIONAL', None, None), ('psfQf', 'DOUBLE', 'OPTIONAL', None, None), ('psfQfPerfect', 'DOUBLE', 'OPTIONAL', None, None), ('psfChiSq', 'DOUBLE', 'OPTIONAL', None, None), ('psfLikelihood', 'DOUBLE', 'OPTIONAL', None, None), ('momentXX', 'DOUBLE', 'OPTIONAL', None, None), ('momentXY', 'DOUBLE', 'OPTIONAL', None, None), ('momentYY', 'DOUBLE', 'OPTIONAL', None, None), ('momentR1', 'DOUBLE', 'OPTIONAL', None, None), ('momentRH', 'DOUBLE', 'OPTIONAL', None, None), ('momentM3C', 'DOUBLE', 'OPTIONAL', None, None), ('momentM3S', 'DOUBLE', 'OPTIONAL', None, None), ('momentM4C', 'DOUBLE', 'OPTIONAL', None, None), ('momentM4S', 'DOUBLE', 'OPTIONAL', None, None), ('apFlux', 'DOUBLE', 'OPTIONAL', None, None), ('apFluxErr', 'DOUBLE', 'OPTIONAL', None, None), ('apFillF', 'DOUBLE', 'OPTIONAL', None, None), ('apRadius', 'DOUBLE', 'OPTIONAL', None, None), ('kronFlux', 'DOUBLE', 'OPTIONAL', None, None), ('kronFluxErr', 'DOUBLE', 'OPTIONAL', None, None), ('kronRad', 'DOUBLE', 'OPTIONAL', None, None), ('sky', 'DOUBLE', 'OPTIONAL', None, None), ('skyErr', 'DOUBLE', 'OPTIONAL', None, None), ('infoFlag', 'INT64', 'OPTIONAL', None, None), ('infoFlag2', 'INT32', 'OPTIONAL', None, None), ('infoFlag3', 'INT32', 'OPTIONAL', None, None), ('processingVersion', 'INT32', 'OPTIONAL', 'INT_16', 'IntType(bitWidth=\x10, isSigned=1)')]
+ROW_GROUPS ps1 [(0, 1)]
+DETECTION_COLUMNS [('_healpix_29', 'BIGINT', 'YES', None, None, None), ('objID', 'BIGINT', 'YES', None, None, None), ('uniquePspsP2id', 'BIGINT', 'YES', None, None, None), ('detectID', 'BIGINT', 'YES', None, None, None), ('ippObjID', 'BIGINT', 'YES', None, None, None), ('ippDetectID', 'BIGINT', 'YES', None, None, None), ('filterID', 'SMALLINT', 'YES', None, None, None), ('surveyID', 'SMALLINT', 'YES', None, None, None), ('imageID', 'BIGINT', 'YES', None, None, None), ('randomDetID', 'DOUBLE', 'YES', None, None, None), ('dvoRegionID', 'INTEGER', 'YES', None, None, None), ('obsTime', 'DOUBLE', 'YES', None, None, None), ('xPos', 'DOUBLE', 'YES', None, None, None), ('yPos', 'DOUBLE', 'YES', None, None, None), ('xPosErr', 'DOUBLE', 'YES', None, None, None), ('yPosErr', 'DOUBLE', 'YES', None, None, None), ('pltScale', 'DOUBLE', 'YES', None, None, None), ('posAngle', 'DOUBLE', 'YES', None, None, None), ('ra', 'DOUBLE', 'YES', None, None, None), ('dec', 'DOUBLE', 'YES', None, None, None), ('raErr', 'DOUBLE', 'YES', None, None, None), ('decErr', 'DOUBLE', 'YES', None, None, None), ('extNSigma', 'DOUBLE', 'YES', None, None, None), ('zp', 'DOUBLE', 'YES', None, None, None), ('telluricExt', 'DOUBLE', 'YES', None, None, None), ('expTime', 'DOUBLE', 'YES', None, None, None), ('airMass', 'DOUBLE', 'YES', None, None, None), ('psfFlux', 'DOUBLE', 'YES', None, None, None), ('psfFluxErr', 'DOUBLE', 'YES', None, None, None), ('psfMajorFWHM', 'DOUBLE', 'YES', None, None, None), ('psfMinorFWHM', 'DOUBLE', 'YES', None, None, None), ('psfTheta', 'DOUBLE', 'YES', None, None, None), ('psfCore', 'DOUBLE', 'YES', None, None, None), ('psfQf', 'DOUBLE', 'YES', None, None, None), ('psfQfPerfect', 'DOUBLE', 'YES', None, None, None), ('psfChiSq', 'DOUBLE', 'YES', None, None, None), ('psfLikelihood', 'DOUBLE', 'YES', None, None, None), ('momentXX', 'DOUBLE', 'YES', None, None, None), ('momentXY', 'DOUBLE', 'YES', None, None, None), ('momentYY', 'DOUBLE', 'YES', None, None, None), ('momentR1', 'DOUBLE', 'YES', None, None, None), ('momentRH', 'DOUBLE', 'YES', None, None, None), ('momentM3C', 'DOUBLE', 'YES', None, None, None), ('momentM3S', 'DOUBLE', 'YES', None, None, None), ('momentM4C', 'DOUBLE', 'YES', None, None, None), ('momentM4S', 'DOUBLE', 'YES', None, None, None), ('apFlux', 'DOUBLE', 'YES', None, None, None), ('apFluxErr', 'DOUBLE', 'YES', None, None, None), ('apFillF', 'DOUBLE', 'YES', None, None, None), ('apRadius', 'DOUBLE', 'YES', None, None, None), ('kronFlux', 'DOUBLE', 'YES', None, None, None), ('kronFluxErr', 'DOUBLE', 'YES', None, None, None), ('kronRad', 'DOUBLE', 'YES', None, None, None), ('sky', 'DOUBLE', 'YES', None, None, None), ('skyErr', 'DOUBLE', 'YES', None, None, None), ('infoFlag', 'BIGINT', 'YES', None, None, None), ('infoFlag2', 'INTEGER', 'YES', None, None, None), ('infoFlag3', 'INTEGER', 'YES', None, None, None), ('processingVersion', 'SMALLINT', 'YES', None, None, None)]
+DETECTION_ROWS [(65140731493746935, 286947931050000865, 73.14948092, -35.71104505, 56970.4795852, 3, 1.37127e-05)]
+DETECTION_COUNT (1,)
+TOTAL_OBJECT_PAYLOAD_BYTES 179314
+PASS snippets/07-catalogs.sh
+
+Running snippets/08-fits-recipes.sh
+HEAD jwst/public/O2022030903/O2022030903-NRCA3_FULL-1.fits {'AcceptRanges': 'bytes', 'LastModified': '2024-09-16T14:22:43+00:00', 'ContentLength': 3576960, 'ETag': '"a76a551692fab0d205f5b4a6224b51f0-1"', 'VersionId': 'lMZJOLUu..9DILq7zTQi9wrmP48hB9Nn', 'ContentType': 'binary/octet-stream', 'ServerSideEncryption': 'AES256', 'Metadata': {}}
+MAGIC b'SIMPLE  =                    T'
+PRIMARY_HEADER SIMPLE  =                    T / Written by IDL:  Wed Mar  9 21:46:09 2022      BITPIX  =                    8 / Number of bits per data pixel                  NAXIS   =                    0 / Number of data axes                            EXTEND  =                    T / FITS data may contain extensions               DATE    = '2022-03-09'         / Creation UTC (CCCC-MM-DD) date of FITS header  COMMENT FITS (Flexible Image Transport System) format is defined in 'Astronomy  COMMENT and Astrophysics', volume 376, page 359; bibcode 2001A&A...376..359H    FILECONT= 'Analysis output products' /                                          TSTAMP  = '2022-03-09T21:46:09' /                                               DATE-OBS= '2022-03-09'         /                                                TIME-OBS= '19:10:51.529'       /                                                OBS_ID  = 'V01158001001P0000000002101' /                                        OP_TYPE = 'FINE_PHASING'       /                                                MODE    = 'MANUAL  '           /                                                OPER    = 'TRUE    '           /                                                CORR_ID = 'O2022030903'        /                                                GROUP_ID=                    1 /                                                GRP_CNT =                    4 /                                                INSTRUME= 'NIRCam-A'           /                                                DETECTOR= 'NRCA3   '           /                                                APERNAME= 'NRCA3_FULL'         /                                                FPX     =            -0.870663 /                                                FPY     =            -0.968496 /                                                END                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             
+Filename: tmpox2zhvck/O2022030903-NRCA3_FULL-1.fits
+No.    Name      Ver    Type      Cards   Dimensions   Format
+  0  PRIMARY       1 PrimaryHDU      23   ()      
+  1  RESULT_PHASE    1 ImageHDU       184   (128, 128)   float32   
+  2  RESULT_PSF    1 ImageHDU        11   (270, 270)   float32   
+  3  EXPECTED      1 ImageHDU        13   (128, 128)   float32   
+  4  PUPIL_MASK    1 ImageHDU        11   (128, 128)   int16   
+  5  RAW_PSF       1 ImageHDU        14   (256, 256)   float32   
+  6  CALC_PSF      1 ImageHDU        12   (270, 270)   float32   
+  7  CALC_AMP      1 ImageHDU        12   (128, 128)   float32   
+  8  HO_PHASE      1 ImageHDU        12   (128, 128)   float32   
+  9  LO_PHASE      1 ImageHDU        12   (128, 128)   float32   
+ 10  RAW_PSF       1 ImageHDU        14   (256, 256)   float32   
+ 11  CALC_PSF      1 ImageHDU        12   (270, 270)   float32   
+ 12  CALC_AMP      1 ImageHDU        12   (128, 128)   float32   
+ 13  HO_PHASE      1 ImageHDU        12   (128, 128)   float32   
+ 14  LO_PHASE      1 ImageHDU        12   (128, 128)   float32   
+ 15  RAW_PSF       1 ImageHDU        14   (256, 256)   float32   
+ 16  CALC_PSF      1 ImageHDU        12   (270, 270)   float32   
+ 17  CALC_AMP      1 ImageHDU        12   (128, 128)   float32   
+ 18  HO_PHASE      1 ImageHDU        12   (128, 128)   float32   
+ 19  LO_PHASE      1 ImageHDU        12   (128, 128)   float32   
+ 20  RAW_PSF       1 ImageHDU        14   (256, 256)   float32   
+ 21  CALC_PSF      1 ImageHDU        12   (270, 270)   float32   
+ 22  CALC_AMP      1 ImageHDU        12   (128, 128)   float32   
+ 23  HO_PHASE      1 ImageHDU        12   (128, 128)   float32   
+ 24  LO_PHASE      1 ImageHDU        12   (128, 128)   float32   
+HDU PRIMARY TELESCOP None INSTRUME NIRCam-A
+HDU RESULT_PHASE TELESCOP None INSTRUME None
+IMAGE (128, 128) >f4 finite 16384 min -4.416810035705566 max 4.591748237609863 mean -7.450580596923828e-09
+HDU RESULT_PSF TELESCOP None INSTRUME None
+IMAGE (270, 270) >f4 finite 72900 min 4.376828879117415e-15 max 0.00020272059191484004 mean 7.965257964315242e-08
+HDU EXPECTED TELESCOP None INSTRUME None
+IMAGE (128, 128) >f4 finite 16384 min -1.4668521881103516 max 1.5083013772964478 mean -0.0038368962705135345
+HDU PUPIL_MASK TELESCOP None INSTRUME None
+IMAGE (128, 128) >i2 finite 16384 min 0.0 max 18.0 mean 5.1351318359375
+HDU RAW_PSF TELESCOP None INSTRUME None
+IMAGE (256, 256) >f4 finite 65536 min -6.553187370300293 max 10987.1015625 mean 153.1981201171875
+HDU CALC_PSF TELESCOP None INSTRUME None
+IMAGE (270, 270) >f4 finite 72900 min 1.9287676111204993e-13 max 1.3884699910704512e-05 mean 1.6886345122202329e-07
+HDU CALC_AMP TELESCOP None INSTRUME None
+IMAGE (128, 128) >f4 finite 16384 min 15.6178617477417 max 21940.525390625 mean 10916.2890625
+HDU HO_PHASE TELESCOP None INSTRUME None
+IMAGE (128, 128) >f4 finite 16384 min -0.33317214250564575 max 0.35624951124191284 mean 2.1827872842550278e-11
+HDU LO_PHASE TELESCOP None INSTRUME None
+IMAGE (128, 128) >f4 finite 16384 min -4.1051788330078125 max 4.679624080657959 mean 0.23537833988666534
+HDU RAW_PSF TELESCOP None INSTRUME None
+IMAGE (256, 256) >f4 finite 65536 min -6.329576015472412 max 6004.67529296875 mean 152.6329345703125
+HDU CALC_PSF TELESCOP None INSTRUME None
+IMAGE (270, 270) >f4 finite 72900 min 2.7456410354922273e-14 max 8.252786756202113e-06 mean 1.6886345122202329e-07
+HDU CALC_AMP TELESCOP None INSTRUME None
+IMAGE (128, 128) >f4 finite 16384 min 10.218522071838379 max 22911.404296875 mean 10903.162109375
+HDU HO_PHASE TELESCOP None INSTRUME None
+IMAGE (128, 128) >f4 finite 16384 min -0.2990742623806 max 0.3079589307308197 mean -1.1641532182693481e-10
+HDU LO_PHASE TELESCOP None INSTRUME None
+IMAGE (128, 128) >f4 finite 16384 min -3.932080030441284 max 4.691231727600098 mean -0.019966408610343933
+HDU RAW_PSF TELESCOP None INSTRUME None
+IMAGE (256, 256) >f4 finite 65536 min -5.66229248046875 max 23614.6328125 mean 186.09083557128906
+HDU CALC_PSF TELESCOP None INSTRUME None
+IMAGE (270, 270) >f4 finite 72900 min 9.408142667699515e-14 max 2.521830720070284e-05 mean 1.6886343701116857e-07
+HDU CALC_AMP TELESCOP None INSTRUME None
+IMAGE (128, 128) >f4 finite 16384 min 4.045022487640381 max 25437.025390625 mean 12045.525390625
+HDU HO_PHASE TELESCOP None INSTRUME None
+IMAGE (128, 128) >f4 finite 16384 min -0.3609221875667572 max 0.3527463972568512 mean 7.275957614183426e-12
+HDU LO_PHASE TELESCOP None INSTRUME None
+IMAGE (128, 128) >f4 finite 16384 min -4.401663780212402 max 4.258922576904297 mean 0.14078976213932037
+HDU RAW_PSF TELESCOP None INSTRUME None
+IMAGE (256, 256) >f4 finite 65536 min -4.674442291259766 max 26798.232421875 mean 181.07058715820312
+HDU CALC_PSF TELESCOP None INSTRUME None
+IMAGE (270, 270) >f4 finite 72900 min 8.208052835502466e-14 max 3.156003003823571e-05 mean 1.6886343701116857e-07
+HDU CALC_AMP TELESCOP None INSTRUME None
+IMAGE (128, 128) >f4 finite 16384 min 5.4727582931518555 max 24371.44921875 mean 11862.5361328125
+HDU HO_PHASE TELESCOP None INSTRUME None
+IMAGE (128, 128) >f4 finite 16384 min -0.26081016659736633 max 0.3261454701423645 mean -7.275957614183426e-11
+HDU LO_PHASE TELESCOP None INSTRUME None
+IMAGE (128, 128) >f4 finite 16384 min -4.2769927978515625 max 4.22451114654541 mean 0.09804847091436386
+HEAD galex/GR6/pipe/01-vsn/03000-MISDR1_24278_0266/d/00-visits/0001-img/07-try/MISDR1_24278_0266_0001-asp.fits.gz {'AcceptRanges': 'bytes', 'LastModified': '2022-01-31T01:01:31+00:00', 'ContentLength': 119996, 'ETag': '"09ca2eb9d9dada3a967c1aa7b525fa3c"', 'VersionId': 'AC2OMgGFw9NrhvK6lMHg7UYN4iQcd3jz', 'ContentType': 'image/fits', 'Metadata': {}}
+MAGIC b'\x1f\x8b\x08\x08\n@\x92K\x04\x03MISDR1_24278_0266_00'
+Filename: tmpox2zhvck/MISDR1_24278_0266_0001-asp.fits.gz
+No.    Name      Ver    Type      Cards   Dimensions   Format
+  0  PRIMARY       1 PrimaryHDU      37   ()      
+  1  Aspect data    1 BinTableHDU     34   1689R x 12C   [1D, 1D, 1D, 1D, 1J, 1D, 1D, 1D, 1D, 1D, 1D, 1D]   
+HDU PRIMARY TELESCOP None INSTRUME None
+HDU Aspect data TELESCOP None INSTRUME None
+TABLE_SCHEMA [('t', '1D', None), ('ra', '1D', None), ('dec', '1D', None), ('roll', '1D', None), ('status_flag', '1J', None), ('roll_rad', '1D', None), ('X', '1D', None), ('Y', '1D', None), ('Z', '1D', None), ('xdot', '1D', None), ('ydot', '1D', None), ('zdot', '1D', None)]
+TABLE_ROWS 1689
+FIRST_ROW (np.float64(916122620.995), np.float64(146.03708228311297), np.float64(1.203110910686582), np.float64(20.978672704914878), np.int32(0), np.float64(0.36614691139902944), np.float64(-0.8292164676884), np.float64(0.5585330680928381), np.float64(0.0209967035787475), np.float64(-6.093104707360908e-06), np.float64(-2.1580863005965513e-06), np.float64(1.1393515819690947e-06))
+COLUMN_RANGE t min 916122620.995 max 916124308.995
+COLUMN_RANGE ra min 146.0302720964155 max 146.06494395592577
+COLUMN_RANGE dec min 1.1799107854371276 max 1.2045458781968057
+COLUMN_RANGE roll min 20.97567093395676 max 21.0020578667257
+COLUMN_RANGE status_flag min 0 max 0
+COLUMN_RANGE roll_rad min 0.36609452061241954 max 0.3665550594687399
+TOTAL_OBJECT_PAYLOAD_BYTES 3702716
+PASS snippets/08-fits-recipes.sh

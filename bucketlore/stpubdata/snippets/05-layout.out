@@ -1,0 +1,663 @@
+PREFIX gaia/
+{
+    "IsTruncated": false,
+    "Contents": [
+        {
+            "Key": "gaia/",
+            "LastModified": "2025-07-16T12:28:52+00:00",
+            "ETag": "\"d41d8cd98f00b204e9800998ecf8427e\"",
+            "ChecksumAlgorithm": [
+                "CRC64NVME"
+            ],
+            "ChecksumType": "FULL_OBJECT",
+            "Size": 0,
+            "StorageClass": "STANDARD"
+        }
+    ],
+    "Name": "stpubdata",
+    "Prefix": "gaia/",
+    "Delimiter": "/",
+    "MaxKeys": 30,
+    "CommonPrefixes": [
+        {
+            "Prefix": "gaia/gaia_dr3/"
+        }
+    ],
+    "EncodingType": "url",
+    "KeyCount": 2
+}
+SAMPLE OBJECTS gaia/
+{
+    "IsTruncated": true,
+    "Contents": [
+        {
+            "Key": "gaia/",
+            "LastModified": "2025-07-16T12:28:52+00:00",
+            "ETag": "\"d41d8cd98f00b204e9800998ecf8427e\"",
+            "ChecksumAlgorithm": [
+                "CRC64NVME"
+            ],
+            "ChecksumType": "FULL_OBJECT",
+            "Size": 0,
+            "StorageClass": "STANDARD"
+        },
+        {
+            "Key": "gaia/gaia_dr3/public/hats/collection.properties",
+            "LastModified": "2025-07-23T16:44:20+00:00",
+            "ETag": "\"430f3d4ec7ce228cdcea1b4d1507e689\"",
+            "ChecksumAlgorithm": [
+                "CRC32"
+            ],
+            "ChecksumType": "FULL_OBJECT",
+            "Size": 319,
+            "StorageClass": "STANDARD"
+        },
+        {
+            "Key": "gaia/gaia_dr3/public/hats/gaia/dataset/Norder=2/Dir=0/Npix=0.parquet",
+            "LastModified": "2025-07-23T16:44:20+00:00",
+            "ETag": "\"ae71001bfcd51633b024d9df5a8a9931-39\"",
+            "ChecksumAlgorithm": [
+                "CRC32"
+            ],
+            "ChecksumType": "COMPOSITE",
+            "Size": 326735363,
+            "StorageClass": "STANDARD"
+        }
+    ],
+    "Name": "stpubdata",
+    "Prefix": "gaia/",
+    "MaxKeys": 3,
+    "EncodingType": "url",
+    "KeyCount": 3,
+    "NextContinuationToken": "1ZpgffPkb5ZNFueKJFCcju0xCeZEms/QqfNLurQo9p7KoW1xrH94gwzIALeP5zc6wsS40yJHnoPlgG//2StlQqHZjLx2CfMImJri6BVk1q/ufMckYohch7g=="
+}
+PREFIX galex/
+{
+    "IsTruncated": false,
+    "Contents": [
+        {
+            "Key": "galex/",
+            "LastModified": "2022-01-27T22:26:04+00:00",
+            "ETag": "\"d41d8cd98f00b204e9800998ecf8427e\"",
+            "Size": 0,
+            "StorageClass": "STANDARD"
+        }
+    ],
+    "Name": "stpubdata",
+    "Prefix": "galex/",
+    "Delimiter": "/",
+    "MaxKeys": 30,
+    "CommonPrefixes": [
+        {
+            "Prefix": "galex/GR6/"
+        },
+        {
+            "Prefix": "galex/GR7/"
+        },
+        {
+            "Prefix": "galex/gap/"
+        },
+        {
+            "Prefix": "galex/public/"
+        }
+    ],
+    "EncodingType": "url",
+    "KeyCount": 5
+}
+SAMPLE OBJECTS galex/
+{
+    "IsTruncated": true,
+    "Contents": [
+        {
+            "Key": "galex/",
+            "LastModified": "2022-01-27T22:26:04+00:00",
+            "ETag": "\"d41d8cd98f00b204e9800998ecf8427e\"",
+            "Size": 0,
+            "StorageClass": "STANDARD"
+        },
+        {
+            "Key": "galex/GR6/pipe/01-vsn/03000-MISDR1_24278_0266/d/00-visits/0001-img/07-try/CmdLine.txt",
+            "LastModified": "2022-01-31T01:01:31+00:00",
+            "ETag": "\"0f2378e4ba9026b55a0736c521adc152\"",
+            "Size": 806,
+            "StorageClass": "STANDARD"
+        },
+        {
+            "Key": "galex/GR6/pipe/01-vsn/03000-MISDR1_24278_0266/d/00-visits/0001-img/07-try/MISDR1_24278_0266_0001-asp.fits.gz",
+            "LastModified": "2022-01-31T01:01:31+00:00",
+            "ETag": "\"09ca2eb9d9dada3a967c1aa7b525fa3c\"",
+            "Size": 119996,
+            "StorageClass": "STANDARD"
+        }
+    ],
+    "Name": "stpubdata",
+    "Prefix": "galex/",
+    "MaxKeys": 3,
+    "EncodingType": "url",
+    "KeyCount": 3,
+    "NextContinuationToken": "1d5eXhs6j5/jcMQE7XzBcl12+W744IdJuGFfV1voZrcLPvaOaBAT+q5ilqq66e9n2LX9i0RARLXkpG+JJEVH3RGzRBOJ1f2ZfKtTODVwvxgORr4gNvKvaWCs9iLWLmKUOrwZKsohHW6TbouA/xwU1SCK+RDl/iXnVblaO+jO+IbdGPpGu/2c1cg=="
+}
+PREFIX hst/
+{
+    "IsTruncated": false,
+    "Name": "stpubdata",
+    "Prefix": "hst/",
+    "Delimiter": "/",
+    "MaxKeys": 30,
+    "CommonPrefixes": [
+        {
+            "Prefix": "hst/grizli-v1/"
+        },
+        {
+            "Prefix": "hst/public/"
+        }
+    ],
+    "EncodingType": "url",
+    "KeyCount": 2
+}
+SAMPLE OBJECTS hst/
+{
+    "IsTruncated": true,
+    "Contents": [
+        {
+            "Key": "hst/grizli-v1/",
+            "LastModified": "2021-10-25T14:10:20+00:00",
+            "ETag": "\"d41d8cd98f00b204e9800998ecf8427e\"",
+            "Size": 0,
+            "StorageClass": "STANDARD"
+        },
+        {
+            "Key": "hst/grizli-v1/ALCS-v0.1/ACTCLJ0102-49151-003.irac.png",
+            "LastModified": "2021-10-25T16:36:43+00:00",
+            "ETag": "\"f0c38a3878044cf11fd140cd9954fdb2\"",
+            "Size": 83498,
+            "StorageClass": "STANDARD"
+        },
+        {
+            "Key": "hst/grizli-v1/ALCS-v0.1/ACTCLJ0102-49151-003.rgb.png",
+            "LastModified": "2021-10-25T16:36:43+00:00",
+            "ETag": "\"58d0e92f4a10aa92a89be8c0dbc916a7\"",
+            "Size": 10381,
+            "StorageClass": "STANDARD"
+        }
+    ],
+    "Name": "stpubdata",
+    "Prefix": "hst/",
+    "MaxKeys": 3,
+    "EncodingType": "url",
+    "KeyCount": 3,
+    "NextContinuationToken": "1hH/PEDTE8nPzTsfFwwGn1bqOHmWHxBCrgkxeBPbpe1xisjt7GCMMWHqWpAcgV4colMNxjAmo/eENa2OAvGqEPjwq8WyNH8e5Oc+HsimClgg="
+}
+PREFIX jwst/
+{
+    "IsTruncated": false,
+    "Name": "stpubdata",
+    "Prefix": "jwst/",
+    "Delimiter": "/",
+    "MaxKeys": 30,
+    "CommonPrefixes": [
+        {
+            "Prefix": "jwst/public/"
+        }
+    ],
+    "EncodingType": "url",
+    "KeyCount": 1
+}
+SAMPLE OBJECTS jwst/
+{
+    "IsTruncated": true,
+    "Contents": [
+        {
+            "Key": "jwst/public/O2022030903/O2022030903-NRCA3_FULL-1.fits",
+            "LastModified": "2024-09-16T14:22:43+00:00",
+            "ETag": "\"a76a551692fab0d205f5b4a6224b51f0-1\"",
+            "Size": 3576960,
+            "StorageClass": "STANDARD"
+        },
+        {
+            "Key": "jwst/public/O2022031301/O2022031301-NRCA3_FP1-1.fits",
+            "LastModified": "2024-09-16T16:49:15+00:00",
+            "ETag": "\"71b0cd79069f1cffa19e079d01c950f9-1\"",
+            "Size": 2033280,
+            "StorageClass": "STANDARD"
+        },
+        {
+            "Key": "jwst/public/O2022032401/O2022032401-NRCA3_FP1-1.fits",
+            "LastModified": "2024-09-12T15:34:13+00:00",
+            "ETag": "\"004a2a6c9f6684bcf84201e2ad69180c-1\"",
+            "Size": 2041920,
+            "StorageClass": "STANDARD"
+        }
+    ],
+    "Name": "stpubdata",
+    "Prefix": "jwst/",
+    "MaxKeys": 3,
+    "EncodingType": "url",
+    "KeyCount": 3,
+    "NextContinuationToken": "1/hcgYSsAGC3CrhoI6BD5fln6ChjaxskkWyL7dOkmjvVg4NasdPKXYd52yGvKU61WjEIEZqx3VySjPwrQEHtkQxjljY3ZiD2L"
+}
+PREFIX k2/
+{
+    "IsTruncated": false,
+    "Name": "stpubdata",
+    "Prefix": "k2/",
+    "Delimiter": "/",
+    "MaxKeys": 30,
+    "CommonPrefixes": [
+        {
+            "Prefix": "k2/public/"
+        }
+    ],
+    "EncodingType": "url",
+    "KeyCount": 1
+}
+SAMPLE OBJECTS k2/
+{
+    "IsTruncated": true,
+    "Contents": [
+        {
+            "Key": "k2/public/ffi/README.txt",
+            "LastModified": "2020-04-16T12:09:46+00:00",
+            "ETag": "\"f519b72b3d55747a1647634b100f825f\"",
+            "Size": 2849,
+            "StorageClass": "STANDARD"
+        },
+        {
+            "Key": "k2/public/ffi/driftscan-ffi/K2DFFI-README.txt",
+            "LastModified": "2020-04-16T12:09:46+00:00",
+            "ETag": "\"35ec5cf34b57d4e0aa559db62d1424ce\"",
+            "Size": 2161,
+            "StorageClass": "STANDARD"
+        },
+        {
+            "Key": "k2/public/ffi/driftscan-ffi/kplr2018131024020_ffi-orig.fits",
+            "LastModified": "2020-04-16T12:09:46+00:00",
+            "ETag": "\"821356ff45ce234634d72bb2312c3714-49\"",
+            "Size": 407894400,
+            "StorageClass": "STANDARD"
+        }
+    ],
+    "Name": "stpubdata",
+    "Prefix": "k2/",
+    "MaxKeys": 3,
+    "EncodingType": "url",
+    "KeyCount": 3,
+    "NextContinuationToken": "1j6HzDdUMgxNi6HEXUOUeJ68bW9N+CHSbaaEtTJGb70SQwp7phs0o5EID4y+fuHuL2kOWH+tCV3EBjXrkE7eWhlhLmz/6oJwrNZ116bthFPQ="
+}
+PREFIX kepler/
+{
+    "IsTruncated": false,
+    "Name": "stpubdata",
+    "Prefix": "kepler/",
+    "Delimiter": "/",
+    "MaxKeys": 30,
+    "CommonPrefixes": [
+        {
+            "Prefix": "kepler/public/"
+        }
+    ],
+    "EncodingType": "url",
+    "KeyCount": 1
+}
+SAMPLE OBJECTS kepler/
+{
+    "IsTruncated": true,
+    "Contents": [
+        {
+            "Key": "kepler/public/ffi/.htaccess",
+            "LastModified": "2019-08-23T17:23:41+00:00",
+            "ETag": "\"f1a45a0d7ea525d9ddc253c80f550e68\"",
+            "Size": 272,
+            "StorageClass": "STANDARD"
+        },
+        {
+            "Key": "kepler/public/ffi/README.txt",
+            "LastModified": "2019-08-23T17:23:41+00:00",
+            "ETag": "\"bb4bae006747768ed6981c77f8433b3f\"",
+            "Size": 2347,
+            "StorageClass": "STANDARD"
+        },
+        {
+            "Key": "kepler/public/ffi/kplr2009069022529_ffi-orig.fits",
+            "LastModified": "2019-08-23T17:23:41+00:00",
+            "ETag": "\"10d1a2e5ae29b1d74da3aca7b46f8981-49\"",
+            "Size": 407894400,
+            "StorageClass": "STANDARD"
+        }
+    ],
+    "Name": "stpubdata",
+    "Prefix": "kepler/",
+    "MaxKeys": 3,
+    "EncodingType": "url",
+    "KeyCount": 3,
+    "NextContinuationToken": "1wpQDrZqfrK7xwOSdj+2ltZkogRpAyUkPu8GjqmPrNhfKuxk9RjL5io4q4scf4kbnkegCI3R6KWSKHtR0AMnjfMtNM3RGfFOz"
+}
+PREFIX mast/
+{
+    "IsTruncated": false,
+    "Contents": [
+        {
+            "Key": "mast/",
+            "LastModified": "2024-07-23T18:24:14+00:00",
+            "ETag": "\"d41d8cd98f00b204e9800998ecf8427e\"",
+            "Size": 0,
+            "StorageClass": "STANDARD"
+        }
+    ],
+    "Name": "stpubdata",
+    "Prefix": "mast/",
+    "Delimiter": "/",
+    "MaxKeys": 30,
+    "CommonPrefixes": [
+        {
+            "Prefix": "mast/hlsp/"
+        },
+        {
+            "Prefix": "mast/public/"
+        },
+        {
+            "Prefix": "mast/skybackgrounds/"
+        }
+    ],
+    "EncodingType": "url",
+    "KeyCount": 4
+}
+SAMPLE OBJECTS mast/
+{
+    "IsTruncated": true,
+    "Contents": [
+        {
+            "Key": "mast/",
+            "LastModified": "2024-07-23T18:24:14+00:00",
+            "ETag": "\"d41d8cd98f00b204e9800998ecf8427e\"",
+            "Size": 0,
+            "StorageClass": "STANDARD"
+        },
+        {
+            "Key": "mast/hlsp/",
+            "LastModified": "2024-07-23T18:24:33+00:00",
+            "ETag": "\"d41d8cd98f00b204e9800998ecf8427e\"",
+            "Size": 0,
+            "StorageClass": "STANDARD"
+        },
+        {
+            "Key": "mast/hlsp/jades/dr1/goods-s/bundles/hlsp_jades_jwst_nirspec_goods-s-deephst_clear-prism_v1.0_bundle.zip",
+            "LastModified": "2025-12-12T17:40:27+00:00",
+            "ETag": "\"7df83ace22d69c3cdcb87e20d311e232\"",
+            "ChecksumAlgorithm": [
+                "CRC64NVME"
+            ],
+            "ChecksumType": "FULL_OBJECT",
+            "Size": 116892032,
+            "StorageClass": "STANDARD"
+        }
+    ],
+    "Name": "stpubdata",
+    "Prefix": "mast/",
+    "MaxKeys": 3,
+    "EncodingType": "url",
+    "KeyCount": 3,
+    "NextContinuationToken": "10uAnCTUGy6bLM8POOJZ19OOsaNAXW0Fnw7nWjJuRiT+78BS/ZMLJp25HAM9fZxZAn2IqMnxGpi1agjslnQ4qQvheDs5Hj+685SJ4Iatl7yCq6v2fQUztVp8JK+aYrA5cKPXF8Ok5yZvOw0ufkqfPmNVxsFS4Y+6CcLFB+qYYouw="
+}
+PREFIX panstarrs/
+{
+    "IsTruncated": false,
+    "Contents": [
+        {
+            "Key": "panstarrs/",
+            "LastModified": "2023-02-02T18:24:35+00:00",
+            "ETag": "\"d41d8cd98f00b204e9800998ecf8427e\"",
+            "Size": 0,
+            "StorageClass": "STANDARD"
+        }
+    ],
+    "Name": "stpubdata",
+    "Prefix": "panstarrs/",
+    "Delimiter": "/",
+    "MaxKeys": 30,
+    "CommonPrefixes": [
+        {
+            "Prefix": "panstarrs/ps1/"
+        }
+    ],
+    "EncodingType": "url",
+    "KeyCount": 2
+}
+SAMPLE OBJECTS panstarrs/
+{
+    "IsTruncated": true,
+    "Contents": [
+        {
+            "Key": "panstarrs/",
+            "LastModified": "2023-02-02T18:24:35+00:00",
+            "ETag": "\"d41d8cd98f00b204e9800998ecf8427e\"",
+            "Size": 0,
+            "StorageClass": "STANDARD"
+        },
+        {
+            "Key": "panstarrs/ps1/public/hats/detection/collection.properties",
+            "LastModified": "2026-06-10T12:05:39+00:00",
+            "ETag": "\"02e66fe9df1b01b157fd04ae0dd9f747\"",
+            "ChecksumAlgorithm": [
+                "CRC64NVME"
+            ],
+            "ChecksumType": "FULL_OBJECT",
+            "Size": 292,
+            "StorageClass": "STANDARD"
+        },
+        {
+            "Key": "panstarrs/ps1/public/hats/detection/detection/dataset/Norder=10/Dir=8760000/Npix=8765439.parquet",
+            "LastModified": "2026-05-27T03:07:55+00:00",
+            "ETag": "\"f4caecfe28e036b9aa3243eeb3c67574\"",
+            "ChecksumAlgorithm": [
+                "CRC64NVME"
+            ],
+            "ChecksumType": "FULL_OBJECT",
+            "Size": 17516,
+            "StorageClass": "STANDARD"
+        }
+    ],
+    "Name": "stpubdata",
+    "Prefix": "panstarrs/",
+    "MaxKeys": 3,
+    "EncodingType": "url",
+    "KeyCount": 3,
+    "NextContinuationToken": "1qOYz8QAejPGn4DFvf0s4WlsE0G/DAUacnde2DTK16HNBtaDjz5a4kNuVVVr0KenrHvKSQHYHWMsD9iRSjp1lYBszQhI7BYPVZuzFfTqKSBSBoUIGkfqa3nMUjVH/d3aFnvolCrqZuTZwGkblXkYbvg=="
+}
+PREFIX roman/
+{
+    "IsTruncated": false,
+    "Contents": [
+        {
+            "Key": "roman/",
+            "LastModified": "2025-01-30T13:44:51+00:00",
+            "ETag": "\"d41d8cd98f00b204e9800998ecf8427e\"",
+            "Size": 0,
+            "StorageClass": "STANDARD"
+        }
+    ],
+    "Name": "stpubdata",
+    "Prefix": "roman/",
+    "Delimiter": "/",
+    "MaxKeys": 30,
+    "CommonPrefixes": [
+        {
+            "Prefix": "roman/crds/"
+        },
+        {
+            "Prefix": "roman/nexus/"
+        }
+    ],
+    "EncodingType": "url",
+    "KeyCount": 3
+}
+SAMPLE OBJECTS roman/
+{
+    "IsTruncated": true,
+    "Contents": [
+        {
+            "Key": "roman/",
+            "LastModified": "2025-01-30T13:44:51+00:00",
+            "ETag": "\"d41d8cd98f00b204e9800998ecf8427e\"",
+            "Size": 0,
+            "StorageClass": "STANDARD"
+        },
+        {
+            "Key": "roman/crds/",
+            "LastModified": "2025-01-30T13:45:39+00:00",
+            "ETag": "\"d41d8cd98f00b204e9800998ecf8427e\"",
+            "Size": 0,
+            "StorageClass": "STANDARD"
+        },
+        {
+            "Key": "roman/crds/config/roman/ad_last_processed",
+            "LastModified": "2026-10-13T18:17:20+00:00",
+            "ETag": "\"0cd929641947b2a9e88be6030419eb89\"",
+            "ChecksumAlgorithm": [
+                "CRC64NVME"
+            ],
+            "ChecksumType": "FULL_OBJECT",
+            "Size": 332,
+            "StorageClass": "STANDARD"
+        }
+    ],
+    "Name": "stpubdata",
+    "Prefix": "roman/",
+    "MaxKeys": 3,
+    "EncodingType": "url",
+    "KeyCount": 3,
+    "NextContinuationToken": "1XB7rd5JCCkvXXm9cFQ8jpCt8/oxTZSe8EFeqnsea08GbL1tmIuWAHvRc+zXaA0J9P5qDZwd0LIlwqvEfa8JbQA=="
+}
+PREFIX sdss/
+{
+    "IsTruncated": false,
+    "Contents": [
+        {
+            "Key": "sdss/",
+            "LastModified": "2026-04-09T13:39:14+00:00",
+            "ETag": "\"d41d8cd98f00b204e9800998ecf8427e\"",
+            "ChecksumAlgorithm": [
+                "CRC64NVME"
+            ],
+            "ChecksumType": "FULL_OBJECT",
+            "Size": 0,
+            "StorageClass": "STANDARD"
+        }
+    ],
+    "Name": "stpubdata",
+    "Prefix": "sdss/",
+    "Delimiter": "/",
+    "MaxKeys": 30,
+    "CommonPrefixes": [
+        {
+            "Prefix": "sdss/public/"
+        }
+    ],
+    "EncodingType": "url",
+    "KeyCount": 2
+}
+SAMPLE OBJECTS sdss/
+{
+    "IsTruncated": true,
+    "Contents": [
+        {
+            "Key": "sdss/",
+            "LastModified": "2026-04-09T13:39:14+00:00",
+            "ETag": "\"d41d8cd98f00b204e9800998ecf8427e\"",
+            "ChecksumAlgorithm": [
+                "CRC64NVME"
+            ],
+            "ChecksumType": "FULL_OBJECT",
+            "Size": 0,
+            "StorageClass": "STANDARD"
+        },
+        {
+            "Key": "sdss/public/",
+            "LastModified": "2026-08-18T13:47:49+00:00",
+            "ETag": "\"d41d8cd98f00b204e9800998ecf8427e\"",
+            "ChecksumAlgorithm": [
+                "CRC64NVME"
+            ],
+            "ChecksumType": "FULL_OBJECT",
+            "Size": 0,
+            "StorageClass": "STANDARD"
+        },
+        {
+            "Key": "sdss/public/hats/sdss_dr7_spectra/collection.properties",
+            "LastModified": "2026-08-18T13:49:40+00:00",
+            "ETag": "\"a1d34dcec6bbebe06fbab035430ed612\"",
+            "ChecksumAlgorithm": [
+                "CRC64NVME"
+            ],
+            "ChecksumType": "FULL_OBJECT",
+            "Size": 318,
+            "StorageClass": "STANDARD"
+        }
+    ],
+    "Name": "stpubdata",
+    "Prefix": "sdss/",
+    "MaxKeys": 3,
+    "EncodingType": "url",
+    "KeyCount": 3,
+    "NextContinuationToken": "1bpcvvyA33GVCEeGUOY0dV+e9HJBKeYPuIkaIGJyFVlPWf7U6vI+9VemSKHcuGZ4gZoTIzoRuEuhThHkcsd0pocJBeCV94YxvpNTyzgAo2BMMMpVpZXuG/v0mmB+4LhjQOHF9Qj6b26ahqzbUosqoWQ=="
+}
+PREFIX tess/
+{
+    "IsTruncated": false,
+    "Name": "stpubdata",
+    "Prefix": "tess/",
+    "Delimiter": "/",
+    "MaxKeys": 30,
+    "CommonPrefixes": [
+        {
+            "Prefix": "tess/public/"
+        }
+    ],
+    "EncodingType": "url",
+    "KeyCount": 1
+}
+SAMPLE OBJECTS tess/
+{
+    "IsTruncated": true,
+    "Contents": [
+        {
+            "Key": "tess/public/engineering/tess2018227154000-41086_120-config.xml",
+            "LastModified": "2025-11-25T18:28:47+00:00",
+            "ETag": "\"c445953ffbd3e18f9139e64fe9489e27\"",
+            "ChecksumAlgorithm": [
+                "CRC64NVME"
+            ],
+            "ChecksumType": "FULL_OBJECT",
+            "Size": 1316,
+            "StorageClass": "STANDARD"
+        },
+        {
+            "Key": "tess/public/engineering/tess2018236151627-41102_111-pointing.xml",
+            "LastModified": "2025-11-25T18:43:13+00:00",
+            "ETag": "\"7f63696af430778b801ffbc6e1b427fc\"",
+            "ChecksumAlgorithm": [
+                "CRC64NVME"
+            ],
+            "ChecksumType": "FULL_OBJECT",
+            "Size": 1684,
+            "StorageClass": "STANDARD"
+        },
+        {
+            "Key": "tess/public/engineering/tess2018236164754-41096_sclk.tsc",
+            "LastModified": "2025-11-25T18:43:17+00:00",
+            "ETag": "\"07008bd6d706dd168bb900deae9cfbd1\"",
+            "ChecksumAlgorithm": [
+                "CRC64NVME"
+            ],
+            "ChecksumType": "FULL_OBJECT",
+            "Size": 7536,
+            "StorageClass": "STANDARD"
+        }
+    ],
+    "Name": "stpubdata",
+    "Prefix": "tess/",
+    "MaxKeys": 3,
+    "EncodingType": "url",
+    "KeyCount": 3,
+    "NextContinuationToken": "1A4tqWzQEz9TSmwgglncvLu6pfl24zb99vxXlk9aMcIKbAVrf/0Is2RhblWKpn9nbYoz949sIoUCHwrHhJdOSgDrswZ9QL1E5EOvK2EEEtZwJ3tDN6k0uHQ=="
+}

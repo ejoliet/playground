@@ -1,0 +1,97 @@
+HEAD jwst/public/O2022030903/O2022030903-NRCA3_FULL-1.fits {'AcceptRanges': 'bytes', 'LastModified': '2024-09-16T14:22:43+00:00', 'ContentLength': 3576960, 'ETag': '"a76a551692fab0d205f5b4a6224b51f0-1"', 'VersionId': 'lMZJOLUu..9DILq7zTQi9wrmP48hB9Nn', 'ContentType': 'binary/octet-stream', 'ServerSideEncryption': 'AES256', 'Metadata': {}}
+MAGIC b'SIMPLE  =                    T'
+PRIMARY_HEADER SIMPLE  =                    T / Written by IDL:  Wed Mar  9 21:46:09 2022      BITPIX  =                    8 / Number of bits per data pixel                  NAXIS   =                    0 / Number of data axes                            EXTEND  =                    T / FITS data may contain extensions               DATE    = '2022-03-09'         / Creation UTC (CCCC-MM-DD) date of FITS header  COMMENT FITS (Flexible Image Transport System) format is defined in 'Astronomy  COMMENT and Astrophysics', volume 376, page 359; bibcode 2001A&A...376..359H    FILECONT= 'Analysis output products' /                                          TSTAMP  = '2022-03-09T21:46:09' /                                               DATE-OBS= '2022-03-09'         /                                                TIME-OBS= '19:10:51.529'       /                                                OBS_ID  = 'V01158001001P0000000002101' /                                        OP_TYPE = 'FINE_PHASING'       /                                                MODE    = 'MANUAL  '           /                                                OPER    = 'TRUE    '           /                                                CORR_ID = 'O2022030903'        /                                                GROUP_ID=                    1 /                                                GRP_CNT =                    4 /                                                INSTRUME= 'NIRCam-A'           /                                                DETECTOR= 'NRCA3   '           /                                                APERNAME= 'NRCA3_FULL'         /                                                FPX     =            -0.870663 /                                                FPY     =            -0.968496 /                                                END                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             
+Filename: tmpox2zhvck/O2022030903-NRCA3_FULL-1.fits
+No.    Name      Ver    Type      Cards   Dimensions   Format
+  0  PRIMARY       1 PrimaryHDU      23   ()      
+  1  RESULT_PHASE    1 ImageHDU       184   (128, 128)   float32   
+  2  RESULT_PSF    1 ImageHDU        11   (270, 270)   float32   
+  3  EXPECTED      1 ImageHDU        13   (128, 128)   float32   
+  4  PUPIL_MASK    1 ImageHDU        11   (128, 128)   int16   
+  5  RAW_PSF       1 ImageHDU        14   (256, 256)   float32   
+  6  CALC_PSF      1 ImageHDU        12   (270, 270)   float32   
+  7  CALC_AMP      1 ImageHDU        12   (128, 128)   float32   
+  8  HO_PHASE      1 ImageHDU        12   (128, 128)   float32   
+  9  LO_PHASE      1 ImageHDU        12   (128, 128)   float32   
+ 10  RAW_PSF       1 ImageHDU        14   (256, 256)   float32   
+ 11  CALC_PSF      1 ImageHDU        12   (270, 270)   float32   
+ 12  CALC_AMP      1 ImageHDU        12   (128, 128)   float32   
+ 13  HO_PHASE      1 ImageHDU        12   (128, 128)   float32   
+ 14  LO_PHASE      1 ImageHDU        12   (128, 128)   float32   
+ 15  RAW_PSF       1 ImageHDU        14   (256, 256)   float32   
+ 16  CALC_PSF      1 ImageHDU        12   (270, 270)   float32   
+ 17  CALC_AMP      1 ImageHDU        12   (128, 128)   float32   
+ 18  HO_PHASE      1 ImageHDU        12   (128, 128)   float32   
+ 19  LO_PHASE      1 ImageHDU        12   (128, 128)   float32   
+ 20  RAW_PSF       1 ImageHDU        14   (256, 256)   float32   
+ 21  CALC_PSF      1 ImageHDU        12   (270, 270)   float32   
+ 22  CALC_AMP      1 ImageHDU        12   (128, 128)   float32   
+ 23  HO_PHASE      1 ImageHDU        12   (128, 128)   float32   
+ 24  LO_PHASE      1 ImageHDU        12   (128, 128)   float32   
+HDU PRIMARY TELESCOP None INSTRUME NIRCam-A
+HDU RESULT_PHASE TELESCOP None INSTRUME None
+IMAGE (128, 128) >f4 finite 16384 min -4.416810035705566 max 4.591748237609863 mean -7.450580596923828e-09
+HDU RESULT_PSF TELESCOP None INSTRUME None
+IMAGE (270, 270) >f4 finite 72900 min 4.376828879117415e-15 max 0.00020272059191484004 mean 7.965257964315242e-08
+HDU EXPECTED TELESCOP None INSTRUME None
+IMAGE (128, 128) >f4 finite 16384 min -1.4668521881103516 max 1.5083013772964478 mean -0.0038368962705135345
+HDU PUPIL_MASK TELESCOP None INSTRUME None
+IMAGE (128, 128) >i2 finite 16384 min 0.0 max 18.0 mean 5.1351318359375
+HDU RAW_PSF TELESCOP None INSTRUME None
+IMAGE (256, 256) >f4 finite 65536 min -6.553187370300293 max 10987.1015625 mean 153.1981201171875
+HDU CALC_PSF TELESCOP None INSTRUME None
+IMAGE (270, 270) >f4 finite 72900 min 1.9287676111204993e-13 max 1.3884699910704512e-05 mean 1.6886345122202329e-07
+HDU CALC_AMP TELESCOP None INSTRUME None
+IMAGE (128, 128) >f4 finite 16384 min 15.6178617477417 max 21940.525390625 mean 10916.2890625
+HDU HO_PHASE TELESCOP None INSTRUME None
+IMAGE (128, 128) >f4 finite 16384 min -0.33317214250564575 max 0.35624951124191284 mean 2.1827872842550278e-11
+HDU LO_PHASE TELESCOP None INSTRUME None
+IMAGE (128, 128) >f4 finite 16384 min -4.1051788330078125 max 4.679624080657959 mean 0.23537833988666534
+HDU RAW_PSF TELESCOP None INSTRUME None
+IMAGE (256, 256) >f4 finite 65536 min -6.329576015472412 max 6004.67529296875 mean 152.6329345703125
+HDU CALC_PSF TELESCOP None INSTRUME None
+IMAGE (270, 270) >f4 finite 72900 min 2.7456410354922273e-14 max 8.252786756202113e-06 mean 1.6886345122202329e-07
+HDU CALC_AMP TELESCOP None INSTRUME None
+IMAGE (128, 128) >f4 finite 16384 min 10.218522071838379 max 22911.404296875 mean 10903.162109375
+HDU HO_PHASE TELESCOP None INSTRUME None
+IMAGE (128, 128) >f4 finite 16384 min -0.2990742623806 max 0.3079589307308197 mean -1.1641532182693481e-10
+HDU LO_PHASE TELESCOP None INSTRUME None
+IMAGE (128, 128) >f4 finite 16384 min -3.932080030441284 max 4.691231727600098 mean -0.019966408610343933
+HDU RAW_PSF TELESCOP None INSTRUME None
+IMAGE (256, 256) >f4 finite 65536 min -5.66229248046875 max 23614.6328125 mean 186.09083557128906
+HDU CALC_PSF TELESCOP None INSTRUME None
+IMAGE (270, 270) >f4 finite 72900 min 9.408142667699515e-14 max 2.521830720070284e-05 mean 1.6886343701116857e-07
+HDU CALC_AMP TELESCOP None INSTRUME None
+IMAGE (128, 128) >f4 finite 16384 min 4.045022487640381 max 25437.025390625 mean 12045.525390625
+HDU HO_PHASE TELESCOP None INSTRUME None
+IMAGE (128, 128) >f4 finite 16384 min -0.3609221875667572 max 0.3527463972568512 mean 7.275957614183426e-12
+HDU LO_PHASE TELESCOP None INSTRUME None
+IMAGE (128, 128) >f4 finite 16384 min -4.401663780212402 max 4.258922576904297 mean 0.14078976213932037
+HDU RAW_PSF TELESCOP None INSTRUME None
+IMAGE (256, 256) >f4 finite 65536 min -4.674442291259766 max 26798.232421875 mean 181.07058715820312
+HDU CALC_PSF TELESCOP None INSTRUME None
+IMAGE (270, 270) >f4 finite 72900 min 8.208052835502466e-14 max 3.156003003823571e-05 mean 1.6886343701116857e-07
+HDU CALC_AMP TELESCOP None INSTRUME None
+IMAGE (128, 128) >f4 finite 16384 min 5.4727582931518555 max 24371.44921875 mean 11862.5361328125
+HDU HO_PHASE TELESCOP None INSTRUME None
+IMAGE (128, 128) >f4 finite 16384 min -0.26081016659736633 max 0.3261454701423645 mean -7.275957614183426e-11
+HDU LO_PHASE TELESCOP None INSTRUME None
+IMAGE (128, 128) >f4 finite 16384 min -4.2769927978515625 max 4.22451114654541 mean 0.09804847091436386
+HEAD galex/GR6/pipe/01-vsn/03000-MISDR1_24278_0266/d/00-visits/0001-img/07-try/MISDR1_24278_0266_0001-asp.fits.gz {'AcceptRanges': 'bytes', 'LastModified': '2022-01-31T01:01:31+00:00', 'ContentLength': 119996, 'ETag': '"09ca2eb9d9dada3a967c1aa7b525fa3c"', 'VersionId': 'AC2OMgGFw9NrhvK6lMHg7UYN4iQcd3jz', 'ContentType': 'image/fits', 'Metadata': {}}
+MAGIC b'\x1f\x8b\x08\x08\n@\x92K\x04\x03MISDR1_24278_0266_00'
+Filename: tmpox2zhvck/MISDR1_24278_0266_0001-asp.fits.gz
+No.    Name      Ver    Type      Cards   Dimensions   Format
+  0  PRIMARY       1 PrimaryHDU      37   ()      
+  1  Aspect data    1 BinTableHDU     34   1689R x 12C   [1D, 1D, 1D, 1D, 1J, 1D, 1D, 1D, 1D, 1D, 1D, 1D]   
+HDU PRIMARY TELESCOP None INSTRUME None
+HDU Aspect data TELESCOP None INSTRUME None
+TABLE_SCHEMA [('t', '1D', None), ('ra', '1D', None), ('dec', '1D', None), ('roll', '1D', None), ('status_flag', '1J', None), ('roll_rad', '1D', None), ('X', '1D', None), ('Y', '1D', None), ('Z', '1D', None), ('xdot', '1D', None), ('ydot', '1D', None), ('zdot', '1D', None)]
+TABLE_ROWS 1689
+FIRST_ROW (np.float64(916122620.995), np.float64(146.03708228311297), np.float64(1.203110910686582), np.float64(20.978672704914878), np.int32(0), np.float64(0.36614691139902944), np.float64(-0.8292164676884), np.float64(0.5585330680928381), np.float64(0.0209967035787475), np.float64(-6.093104707360908e-06), np.float64(-2.1580863005965513e-06), np.float64(1.1393515819690947e-06))
+COLUMN_RANGE t min 916122620.995 max 916124308.995
+COLUMN_RANGE ra min 146.0302720964155 max 146.06494395592577
+COLUMN_RANGE dec min 1.1799107854371276 max 1.2045458781968057
+COLUMN_RANGE roll min 20.97567093395676 max 21.0020578667257
+COLUMN_RANGE status_flag min 0 max 0
+COLUMN_RANGE roll_rad min 0.36609452061241954 max 0.3665550594687399
+TOTAL_OBJECT_PAYLOAD_BYTES 3702716
