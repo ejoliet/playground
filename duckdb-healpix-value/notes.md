@@ -66,3 +66,5 @@
 - Case 10: NO; measured result written. Limitations: Materialized pixel column only; no Iceberg or DuckLake service tested.
 
 - Case 11: NO; measured result written. Limitations: Scope conclusion, not a benchmark-derived speed verdict. No harmonics or distributed execution implemented by the v1 API.
+
+- Case 12: NO; measured result written. Limitations: Scope conclusion, not a benchmark-derived speed verdict. No harmonics or distributed execution implemented by the v1 API.

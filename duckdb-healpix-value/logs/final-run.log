@@ -309,3 +309,6 @@ Building task graph...
  create mode 100644 duckdb-healpix-value/logs/case-10-10000000-python-0.log
  create mode 100644 duckdb-healpix-value/logs/case-10-10000000-shim-0.log
  create mode 100644 duckdb-healpix-value/logs/case-10-10000000-sql-0.log
+[duckdb-healpix-value 2401283] duckdb-healpix-value: case 11 NO
+ 3 files changed, 346 insertions(+)
+ create mode 100644 duckdb-healpix-value/cases/11-map-analysis/result.json
