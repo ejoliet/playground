@@ -58,3 +58,5 @@
 - Case 06: UNPROVEN; measured result written. Limitations: No browser requested or used. Shipped ESM gzip size is not tree-shaken bundle cost; generated SQL uses MOCPy, not execution of JS library. WASM size/load time unverified.
 
 - Case 07: UNPROVEN; measured result written. Limitations: Raw coordinate ingest tested via Arrow Python and shim COPY; pure-SQL ang2pix included. Native speed and calibration unverified.
+
+- Case 08: NO; measured result written. Limitations: 

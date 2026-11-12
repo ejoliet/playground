@@ -233,3 +233,32 @@ Building task graph...
 7 10000000 shim 0 ok 36.64415515899964
 7 10000000 shim 1 ok 28.667294451999624
 7 10000000 shim 2 ok 28.048802521001562
+[duckdb-healpix-value a9dbd28] duckdb-healpix-value: case 07 UNPROVEN
+ 23 files changed, 1511 insertions(+)
+ create mode 100644 duckdb-healpix-value/cases/07-ingest/result.json
+ create mode 100644 duckdb-healpix-value/logs/case-07-1000000-oracle-0.log
+ create mode 100644 duckdb-healpix-value/logs/case-07-1000000-python-0.log
+ create mode 100644 duckdb-healpix-value/logs/case-07-1000000-python-1.log
+ create mode 100644 duckdb-healpix-value/logs/case-07-1000000-python-2.log
+ create mode 100644 duckdb-healpix-value/logs/case-07-1000000-shim-0.log
+ create mode 100644 duckdb-healpix-value/logs/case-07-1000000-shim-1.log
+ create mode 100644 duckdb-healpix-value/logs/case-07-1000000-shim-2.log
+ create mode 100644 duckdb-healpix-value/logs/case-07-1000000-sql-0.log
+ create mode 100644 duckdb-healpix-value/logs/case-07-1000000-sql-1.log
+ create mode 100644 duckdb-healpix-value/logs/case-07-1000000-sql-2.log
+ create mode 100644 duckdb-healpix-value/logs/case-07-10000000-oracle-0.log
+ create mode 100644 duckdb-healpix-value/logs/case-07-10000000-python-0.log
+ create mode 100644 duckdb-healpix-value/logs/case-07-10000000-python-1.log
+ create mode 100644 duckdb-healpix-value/logs/case-07-10000000-python-2.log
+ create mode 100644 duckdb-healpix-value/logs/case-07-10000000-shim-0.log
+ create mode 100644 duckdb-healpix-value/logs/case-07-10000000-shim-1.log
+ create mode 100644 duckdb-healpix-value/logs/case-07-10000000-shim-2.log
+ create mode 100644 duckdb-healpix-value/logs/case-07-10000000-sql-0.log
+ create mode 100644 duckdb-healpix-value/logs/case-07-10000000-sql-1.log
+ create mode 100644 duckdb-healpix-value/logs/case-07-10000000-sql-2.log
+8 1000000 oracle 0 ok 0.8223499809992063
+8 1000000 sql 0 ok 0.3576898949995666
+8 1000000 shim 0 ok 0.4412567729996226
+8 10000000 oracle 0 ok 4.064648546000171
+8 10000000 sql 0 ok 0.7178500310001255
+8 10000000 shim 0 ok 1.0131414490006136
