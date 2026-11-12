@@ -1,0 +1,4 @@
+/workspace/playground/duckdb-healpix-value/bench.py:42: DeprecationWarning: fetch_arrow_table() is deprecated, use to_arrow_table() instead.
+  def query(c,s):return c.execute(quote(s)).fetch_arrow_table()
+/workspace/playground/duckdb-healpix-value/bench.py:42: DeprecationWarning: fetch_arrow_table() is deprecated, use to_arrow_table() instead.
+  def query(c,s):return c.execute(quote(s)).fetch_arrow_table()

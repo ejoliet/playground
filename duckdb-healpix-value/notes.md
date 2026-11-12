@@ -62,3 +62,5 @@
 - Case 08: NO; measured result written. Limitations: 
 
 - Case 09: NO; measured result written. Limitations: Separate sorted Parquet photometry with three deterministic epochs per object; no production lake metadata or variable-length light curves.
+
+- Case 10: NO; measured result written. Limitations: Materialized pixel column only; no Iceberg or DuckLake service tested.

@@ -279,3 +279,22 @@ Building task graph...
 9 10000000 sql 0 ok 0.6321353310013365
 9 10000000 python 0 ok 2.532043163000708
 9 10000000 shim 0 ok 0.8987757039994904
+[duckdb-healpix-value b9cde64] duckdb-healpix-value: case 09 NO
+ 11 files changed, 463 insertions(+)
+ create mode 100644 duckdb-healpix-value/cases/09-lightcurves/result.json
+ create mode 100644 duckdb-healpix-value/logs/case-09-1000000-oracle-0.log
+ create mode 100644 duckdb-healpix-value/logs/case-09-1000000-python-0.log
+ create mode 100644 duckdb-healpix-value/logs/case-09-1000000-shim-0.log
+ create mode 100644 duckdb-healpix-value/logs/case-09-1000000-sql-0.log
+ create mode 100644 duckdb-healpix-value/logs/case-09-10000000-oracle-0.log
+ create mode 100644 duckdb-healpix-value/logs/case-09-10000000-python-0.log
+ create mode 100644 duckdb-healpix-value/logs/case-09-10000000-shim-0.log
+ create mode 100644 duckdb-healpix-value/logs/case-09-10000000-sql-0.log
+10 1000000 oracle 0 ok 1.2037415340000734
+10 1000000 sql 0 ok 1.0609002329983923
+10 1000000 python 0 ok 1.2333911049991002
+10 1000000 shim 0 ok 1.0855180170001404
+10 10000000 oracle 0 ok 3.9537363159997767
+10 10000000 sql 0 ok 6.382651375000933
+10 10000000 python 0 ok 8.0112698920002
+10 10000000 shim 0 ok 7.163980209999863

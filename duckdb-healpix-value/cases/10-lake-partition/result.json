@@ -1,0 +1,448 @@
+{
+  "case": 10,
+  "slug": "lake-partition",
+  "verdict": "NO",
+  "axis": "speed",
+  "number": 0.890936488921576,
+  "pure_sql_possible": "yes",
+  "sizes": {
+    "1000000": {
+      "oracle": {
+        "status": "ok",
+        "seconds": 1.2037415340000734,
+        "rows": 1000000,
+        "sha256": "b8fd63b542311ea24ef6a27cb0ce4227d71dcbd4a2eb1f61748912338f51ce87",
+        "edge_rows": [
+          [
+            0,
+            16777215
+          ],
+          [
+            1,
+            150994944
+          ],
+          [
+            2,
+            16777215
+          ],
+          [
+            3,
+            184549376
+          ],
+          [
+            4,
+            50331647
+          ],
+          [
+            5,
+            184549376
+          ],
+          [
+            6,
+            79691776
+          ],
+          [
+            7,
+            76895573
+          ]
+        ]
+      },
+      "arms": {
+        "sql": {
+          "trials": [
+            {
+              "status": "ok",
+              "seconds": 1.0609002329983923,
+              "rows": 1000000,
+              "sha256": "b8fd63b542311ea24ef6a27cb0ce4227d71dcbd4a2eb1f61748912338f51ce87",
+              "edge_rows": [
+                [
+                  0,
+                  16777215
+                ],
+                [
+                  1,
+                  150994944
+                ],
+                [
+                  2,
+                  16777215
+                ],
+                [
+                  3,
+                  184549376
+                ],
+                [
+                  4,
+                  50331647
+                ],
+                [
+                  5,
+                  184549376
+                ],
+                [
+                  6,
+                  79691776
+                ],
+                [
+                  7,
+                  76895573
+                ]
+              ],
+              "row_diff_count": 0,
+              "correct": true,
+              "edge_rows_differ": []
+            }
+          ],
+          "median_seconds": 1.0609002329983923,
+          "correct": true
+        },
+        "python": {
+          "trials": [
+            {
+              "status": "ok",
+              "seconds": 1.2333911049991002,
+              "rows": 1000000,
+              "sha256": "b8fd63b542311ea24ef6a27cb0ce4227d71dcbd4a2eb1f61748912338f51ce87",
+              "edge_rows": [
+                [
+                  0,
+                  16777215
+                ],
+                [
+                  1,
+                  150994944
+                ],
+                [
+                  2,
+                  16777215
+                ],
+                [
+                  3,
+                  184549376
+                ],
+                [
+                  4,
+                  50331647
+                ],
+                [
+                  5,
+                  184549376
+                ],
+                [
+                  6,
+                  79691776
+                ],
+                [
+                  7,
+                  76895573
+                ]
+              ],
+              "row_diff_count": 0,
+              "correct": true,
+              "edge_rows_differ": []
+            }
+          ],
+          "median_seconds": 1.2333911049991002,
+          "correct": true
+        },
+        "shim": {
+          "trials": [
+            {
+              "status": "ok",
+              "seconds": 1.0855180170001404,
+              "rows": 1000000,
+              "sha256": "b8fd63b542311ea24ef6a27cb0ce4227d71dcbd4a2eb1f61748912338f51ce87",
+              "edge_rows": [
+                [
+                  0,
+                  16777215
+                ],
+                [
+                  1,
+                  150994944
+                ],
+                [
+                  2,
+                  16777215
+                ],
+                [
+                  3,
+                  184549376
+                ],
+                [
+                  4,
+                  50331647
+                ],
+                [
+                  5,
+                  184549376
+                ],
+                [
+                  6,
+                  79691776
+                ],
+                [
+                  7,
+                  76895573
+                ]
+              ],
+              "row_diff_count": 0,
+              "correct": true,
+              "edge_rows_differ": []
+            }
+          ],
+          "median_seconds": 1.0855180170001404,
+          "correct": true
+        }
+      }
+    },
+    "10000000": {
+      "oracle": {
+        "status": "ok",
+        "seconds": 3.9537363159997767,
+        "rows": 10000000,
+        "sha256": "367a6759733eeb1d265f6529af9c9b2787cf21b180932c8115b68fee9a3c8a12",
+        "edge_rows": [
+          [
+            0,
+            16777215
+          ],
+          [
+            1,
+            150994944
+          ],
+          [
+            2,
+            16777215
+          ],
+          [
+            3,
+            184549376
+          ],
+          [
+            4,
+            50331647
+          ],
+          [
+            5,
+            184549376
+          ],
+          [
+            6,
+            79691776
+          ],
+          [
+            7,
+            76895573
+          ]
+        ]
+      },
+      "arms": {
+        "sql": {
+          "trials": [
+            {
+              "status": "ok",
+              "seconds": 6.382651375000933,
+              "rows": 10000000,
+              "sha256": "367a6759733eeb1d265f6529af9c9b2787cf21b180932c8115b68fee9a3c8a12",
+              "edge_rows": [
+                [
+                  0,
+                  16777215
+                ],
+                [
+                  1,
+                  150994944
+                ],
+                [
+                  2,
+                  16777215
+                ],
+                [
+                  3,
+                  184549376
+                ],
+                [
+                  4,
+                  50331647
+                ],
+                [
+                  5,
+                  184549376
+                ],
+                [
+                  6,
+                  79691776
+                ],
+                [
+                  7,
+                  76895573
+                ]
+              ],
+              "row_diff_count": 0,
+              "correct": true,
+              "edge_rows_differ": []
+            }
+          ],
+          "median_seconds": 6.382651375000933,
+          "correct": true
+        },
+        "python": {
+          "trials": [
+            {
+              "status": "ok",
+              "seconds": 8.0112698920002,
+              "rows": 10000000,
+              "sha256": "367a6759733eeb1d265f6529af9c9b2787cf21b180932c8115b68fee9a3c8a12",
+              "edge_rows": [
+                [
+                  0,
+                  16777215
+                ],
+                [
+                  1,
+                  150994944
+                ],
+                [
+                  2,
+                  16777215
+                ],
+                [
+                  3,
+                  184549376
+                ],
+                [
+                  4,
+                  50331647
+                ],
+                [
+                  5,
+                  184549376
+                ],
+                [
+                  6,
+                  79691776
+                ],
+                [
+                  7,
+                  76895573
+                ]
+              ],
+              "row_diff_count": 0,
+              "correct": true,
+              "edge_rows_differ": []
+            }
+          ],
+          "median_seconds": 8.0112698920002,
+          "correct": true
+        },
+        "shim": {
+          "trials": [
+            {
+              "status": "ok",
+              "seconds": 7.163980209999863,
+              "rows": 10000000,
+              "sha256": "367a6759733eeb1d265f6529af9c9b2787cf21b180932c8115b68fee9a3c8a12",
+              "edge_rows": [
+                [
+                  0,
+                  16777215
+                ],
+                [
+                  1,
+                  150994944
+                ],
+                [
+                  2,
+                  16777215
+                ],
+                [
+                  3,
+                  184549376
+                ],
+                [
+                  4,
+                  50331647
+                ],
+                [
+                  5,
+                  184549376
+                ],
+                [
+                  6,
+                  79691776
+                ],
+                [
+                  7,
+                  76895573
+                ]
+              ],
+              "row_diff_count": 0,
+              "correct": true,
+              "edge_rows_differ": []
+            }
+          ],
+          "median_seconds": 7.163980209999863,
+          "correct": true
+        }
+      }
+    }
+  },
+  "install": {
+    "without": [
+      "duckdb"
+    ],
+    "shim": [
+      "duckdb",
+      "pyarrow",
+      "cdshealpix",
+      "mocpy",
+      "astropy",
+      "numpy"
+    ],
+    "per_arm": {
+      "sql": [
+        "duckdb"
+      ],
+      "python": [
+        "duckdb",
+        "cdshealpix",
+        "astropy",
+        "numpy",
+        "pyarrow"
+      ],
+      "shim": [
+        "duckdb",
+        "pyarrow",
+        "cdshealpix",
+        "mocpy",
+        "astropy",
+        "numpy"
+      ]
+    },
+    "all_tested_arms": [
+      "duckdb",
+      "pyarrow",
+      "numpy",
+      "scipy",
+      "astropy",
+      "astropy-healpix",
+      "cdshealpix",
+      "mocpy"
+    ]
+  },
+  "timing_label": "shim",
+  "limitations": [
+    "Materialized pixel column only; no Iceberg or DuckLake service tested."
+  ],
+  "best_baseline": "sql",
+  "best_with": "shim",
+  "speed_ratio": 0.890936488921576,
+  "query_lines": {
+    "without": 1,
+    "with": 1
+  },
+  "query_line_reduction": 0.0,
+  "shared_sql_macro_lines": 1
+}
