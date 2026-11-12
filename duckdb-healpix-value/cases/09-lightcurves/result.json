@@ -1,0 +1,432 @@
+{
+  "case": 9,
+  "slug": "lightcurves",
+  "verdict": "NO",
+  "axis": "speed",
+  "number": 0.7033293492340498,
+  "pure_sql_possible": "yes",
+  "sizes": {
+    "1000000": {
+      "oracle": {
+        "status": "ok",
+        "seconds": 0.5548689349998313,
+        "rows": 3075,
+        "sha256": "70dc13d4ae64e4e4395ee3767bcc0ed3f340ad284585349e50cbf8e3ccee1aa3",
+        "edge_rows": [
+          [
+            6,
+            0,
+            18
+          ],
+          [
+            6,
+            1,
+            19
+          ],
+          [
+            6,
+            2,
+            20
+          ],
+          [
+            7,
+            0,
+            21
+          ],
+          [
+            7,
+            1,
+            22
+          ],
+          [
+            7,
+            2,
+            23
+          ]
+        ]
+      },
+      "arms": {
+        "sql": {
+          "trials": [
+            {
+              "status": "ok",
+              "seconds": 0.4975554500015278,
+              "rows": 3075,
+              "sha256": "70dc13d4ae64e4e4395ee3767bcc0ed3f340ad284585349e50cbf8e3ccee1aa3",
+              "edge_rows": [
+                [
+                  6,
+                  0,
+                  18
+                ],
+                [
+                  6,
+                  1,
+                  19
+                ],
+                [
+                  6,
+                  2,
+                  20
+                ],
+                [
+                  7,
+                  0,
+                  21
+                ],
+                [
+                  7,
+                  1,
+                  22
+                ],
+                [
+                  7,
+                  2,
+                  23
+                ]
+              ],
+              "row_diff_count": 0,
+              "correct": true,
+              "edge_rows_differ": []
+            }
+          ],
+          "median_seconds": 0.4975554500015278,
+          "correct": true
+        },
+        "python": {
+          "trials": [
+            {
+              "status": "ok",
+              "seconds": 1.034279105000678,
+              "rows": 3075,
+              "sha256": "70dc13d4ae64e4e4395ee3767bcc0ed3f340ad284585349e50cbf8e3ccee1aa3",
+              "edge_rows": [
+                [
+                  6,
+                  0,
+                  18
+                ],
+                [
+                  6,
+                  1,
+                  19
+                ],
+                [
+                  6,
+                  2,
+                  20
+                ],
+                [
+                  7,
+                  0,
+                  21
+                ],
+                [
+                  7,
+                  1,
+                  22
+                ],
+                [
+                  7,
+                  2,
+                  23
+                ]
+              ],
+              "row_diff_count": 0,
+              "correct": true,
+              "edge_rows_differ": []
+            }
+          ],
+          "median_seconds": 1.034279105000678,
+          "correct": true
+        },
+        "shim": {
+          "trials": [
+            {
+              "status": "ok",
+              "seconds": 0.7494691819993022,
+              "rows": 3075,
+              "sha256": "70dc13d4ae64e4e4395ee3767bcc0ed3f340ad284585349e50cbf8e3ccee1aa3",
+              "edge_rows": [
+                [
+                  6,
+                  0,
+                  18
+                ],
+                [
+                  6,
+                  1,
+                  19
+                ],
+                [
+                  6,
+                  2,
+                  20
+                ],
+                [
+                  7,
+                  0,
+                  21
+                ],
+                [
+                  7,
+                  1,
+                  22
+                ],
+                [
+                  7,
+                  2,
+                  23
+                ]
+              ],
+              "row_diff_count": 0,
+              "correct": true,
+              "edge_rows_differ": []
+            }
+          ],
+          "median_seconds": 0.7494691819993022,
+          "correct": true
+        }
+      }
+    },
+    "10000000": {
+      "oracle": {
+        "status": "ok",
+        "seconds": 3.0367590299993026,
+        "rows": 3642,
+        "sha256": "c3fb403b0a9cdc376438878d139f15af7a5b075322227e9c07e00a859f3cd645",
+        "edge_rows": [
+          [
+            6,
+            0,
+            18
+          ],
+          [
+            6,
+            1,
+            19
+          ],
+          [
+            6,
+            2,
+            20
+          ],
+          [
+            7,
+            0,
+            21
+          ],
+          [
+            7,
+            1,
+            22
+          ],
+          [
+            7,
+            2,
+            23
+          ]
+        ]
+      },
+      "arms": {
+        "sql": {
+          "trials": [
+            {
+              "status": "ok",
+              "seconds": 0.6321353310013365,
+              "rows": 3642,
+              "sha256": "c3fb403b0a9cdc376438878d139f15af7a5b075322227e9c07e00a859f3cd645",
+              "edge_rows": [
+                [
+                  6,
+                  0,
+                  18
+                ],
+                [
+                  6,
+                  1,
+                  19
+                ],
+                [
+                  6,
+                  2,
+                  20
+                ],
+                [
+                  7,
+                  0,
+                  21
+                ],
+                [
+                  7,
+                  1,
+                  22
+                ],
+                [
+                  7,
+                  2,
+                  23
+                ]
+              ],
+              "row_diff_count": 0,
+              "correct": true,
+              "edge_rows_differ": []
+            }
+          ],
+          "median_seconds": 0.6321353310013365,
+          "correct": true
+        },
+        "python": {
+          "trials": [
+            {
+              "status": "ok",
+              "seconds": 2.532043163000708,
+              "rows": 3642,
+              "sha256": "c3fb403b0a9cdc376438878d139f15af7a5b075322227e9c07e00a859f3cd645",
+              "edge_rows": [
+                [
+                  6,
+                  0,
+                  18
+                ],
+                [
+                  6,
+                  1,
+                  19
+                ],
+                [
+                  6,
+                  2,
+                  20
+                ],
+                [
+                  7,
+                  0,
+                  21
+                ],
+                [
+                  7,
+                  1,
+                  22
+                ],
+                [
+                  7,
+                  2,
+                  23
+                ]
+              ],
+              "row_diff_count": 0,
+              "correct": true,
+              "edge_rows_differ": []
+            }
+          ],
+          "median_seconds": 2.532043163000708,
+          "correct": true
+        },
+        "shim": {
+          "trials": [
+            {
+              "status": "ok",
+              "seconds": 0.8987757039994904,
+              "rows": 3642,
+              "sha256": "c3fb403b0a9cdc376438878d139f15af7a5b075322227e9c07e00a859f3cd645",
+              "edge_rows": [
+                [
+                  6,
+                  0,
+                  18
+                ],
+                [
+                  6,
+                  1,
+                  19
+                ],
+                [
+                  6,
+                  2,
+                  20
+                ],
+                [
+                  7,
+                  0,
+                  21
+                ],
+                [
+                  7,
+                  1,
+                  22
+                ],
+                [
+                  7,
+                  2,
+                  23
+                ]
+              ],
+              "row_diff_count": 0,
+              "correct": true,
+              "edge_rows_differ": []
+            }
+          ],
+          "median_seconds": 0.8987757039994904,
+          "correct": true
+        }
+      }
+    }
+  },
+  "install": {
+    "without": [
+      "duckdb"
+    ],
+    "shim": [
+      "duckdb",
+      "pyarrow",
+      "cdshealpix",
+      "mocpy",
+      "astropy",
+      "numpy"
+    ],
+    "per_arm": {
+      "sql": [
+        "duckdb"
+      ],
+      "python": [
+        "duckdb",
+        "cdshealpix",
+        "astropy",
+        "numpy",
+        "pyarrow"
+      ],
+      "shim": [
+        "duckdb",
+        "pyarrow",
+        "cdshealpix",
+        "mocpy",
+        "astropy",
+        "numpy"
+      ]
+    },
+    "all_tested_arms": [
+      "duckdb",
+      "pyarrow",
+      "numpy",
+      "scipy",
+      "astropy",
+      "astropy-healpix",
+      "cdshealpix",
+      "mocpy"
+    ]
+  },
+  "timing_label": "shim",
+  "limitations": [
+    "Separate sorted Parquet photometry with three deterministic epochs per object; no production lake metadata or variable-length light curves."
+  ],
+  "best_baseline": "sql",
+  "best_with": "shim",
+  "speed_ratio": 0.7033293492340498,
+  "query_lines": {
+    "without": 4,
+    "with": 4
+  },
+  "query_line_reduction": 0.0,
+  "shared_sql_macro_lines": 1
+}
