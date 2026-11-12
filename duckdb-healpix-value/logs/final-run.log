@@ -89,3 +89,52 @@ Building task graph...
 3 10000000 shim 0 ok 1.623010974000863
 3 10000000 shim 1 ok 1.6793098549987917
 3 10000000 shim 2 ok 1.330238091000865
+[duckdb-healpix-value b383b8d] duckdb-healpix-value: case 03 UNPROVEN
+ 24 files changed, 10868 insertions(+)
+ create mode 100644 duckdb-healpix-value/cases/03-per-row-cones/result.json
+ create mode 100644 duckdb-healpix-value/logs/case-03-1000000-python-2.log
+ create mode 100644 duckdb-healpix-value/logs/case-03-1000000-ranges-0.log
+ create mode 100644 duckdb-healpix-value/logs/case-03-1000000-ranges-1.log
+ create mode 100644 duckdb-healpix-value/logs/case-03-1000000-ranges-2.log
+ create mode 100644 duckdb-healpix-value/logs/case-03-1000000-shim-0.log
+ create mode 100644 duckdb-healpix-value/logs/case-03-1000000-shim-1.log
+ create mode 100644 duckdb-healpix-value/logs/case-03-1000000-shim-2.log
+ create mode 100644 duckdb-healpix-value/logs/case-03-10000000-oracle-0.log
+ create mode 100644 duckdb-healpix-value/logs/case-03-10000000-python-0.log
+ create mode 100644 duckdb-healpix-value/logs/case-03-10000000-python-1.log
+ create mode 100644 duckdb-healpix-value/logs/case-03-10000000-python-2.log
+ create mode 100644 duckdb-healpix-value/logs/case-03-10000000-ranges-0.log
+ create mode 100644 duckdb-healpix-value/logs/case-03-10000000-ranges-1.log
+ create mode 100644 duckdb-healpix-value/logs/case-03-10000000-ranges-2.log
+ create mode 100644 duckdb-healpix-value/logs/case-03-10000000-shim-0.log
+ create mode 100644 duckdb-healpix-value/logs/case-03-10000000-shim-1.log
+ create mode 100644 duckdb-healpix-value/logs/case-03-10000000-shim-2.log
+ create mode 100644 duckdb-healpix-value/logs/case-03-10000000-sql-0.log
+ create mode 100644 duckdb-healpix-value/logs/case-03-10000000-sql-1.log
+ create mode 100644 duckdb-healpix-value/logs/case-03-10000000-sql-2.log
+4 1000000 oracle 0 ok 0.9186809879993234
+4 1000000 sql 0 ok 0.6237391909999133
+4 1000000 sql 1 ok 0.4168758420000813
+4 1000000 sql 2 ok 0.9355287400012458
+4 1000000 python 0 ok 0.5457113970005594
+4 1000000 python 1 ok 0.9676002880005399
+4 1000000 python 2 ok 0.7582274779997533
+4 1000000 geography 0 ok 1.1626954970015504
+4 1000000 geography 1 ok 0.9401602399993862
+4 1000000 geography 2 ok 1.0029245799996716
+4 1000000 shim 0 ok 0.6580194239995762
+4 1000000 shim 1 ok 0.6796454579998681
+4 1000000 shim 2 ok 0.589247683999929
+4 10000000 oracle 0 ok 2.3269338379996043
+4 10000000 sql 0 ok 0.8051334800002223
+4 10000000 sql 1 ok 0.6643495240004995
+4 10000000 sql 2 ok 0.38891957700070634
+4 10000000 python 0 ok 2.330014797998956
+4 10000000 python 1 ok 2.3539371599999868
+4 10000000 python 2 ok 2.256326804999844
+4 10000000 geography 0 ok 0.902734989000237
+4 10000000 geography 1 ok 0.8554931120015681
+4 10000000 geography 2 ok 0.9244151860002603
+4 10000000 shim 0 ok 0.7949496429991996
+4 10000000 shim 1 ok 1.0755438119995233
+4 10000000 shim 2 ok 0.8820456960002048

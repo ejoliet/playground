@@ -1,0 +1,611 @@
+{
+  "case": 4,
+  "slug": "adql-literal",
+  "verdict": "NO",
+  "axis": "speed",
+  "number": 0.7531917303299729,
+  "pure_sql_possible": "yes",
+  "sizes": {
+    "1000000": {
+      "oracle": {
+        "status": "ok",
+        "seconds": 0.9186809879993234,
+        "rows": 1025,
+        "sha256": "82ef3e508609cd590486ff57b5b2d6bc29679353cafaaaccb4232cc7b98aa328",
+        "edge_rows": [
+          [
+            6
+          ],
+          [
+            7
+          ]
+        ]
+      },
+      "arms": {
+        "sql": {
+          "trials": [
+            {
+              "status": "ok",
+              "seconds": 0.6237391909999133,
+              "rows": 1025,
+              "sha256": "82ef3e508609cd590486ff57b5b2d6bc29679353cafaaaccb4232cc7b98aa328",
+              "edge_rows": [
+                [
+                  6
+                ],
+                [
+                  7
+                ]
+              ],
+              "row_diff_count": 0,
+              "correct": true,
+              "edge_rows_differ": []
+            },
+            {
+              "status": "ok",
+              "seconds": 0.4168758420000813,
+              "rows": 1025,
+              "sha256": "82ef3e508609cd590486ff57b5b2d6bc29679353cafaaaccb4232cc7b98aa328",
+              "edge_rows": [
+                [
+                  6
+                ],
+                [
+                  7
+                ]
+              ],
+              "row_diff_count": 0,
+              "correct": true,
+              "edge_rows_differ": []
+            },
+            {
+              "status": "ok",
+              "seconds": 0.9355287400012458,
+              "rows": 1025,
+              "sha256": "82ef3e508609cd590486ff57b5b2d6bc29679353cafaaaccb4232cc7b98aa328",
+              "edge_rows": [
+                [
+                  6
+                ],
+                [
+                  7
+                ]
+              ],
+              "row_diff_count": 0,
+              "correct": true,
+              "edge_rows_differ": []
+            }
+          ],
+          "median_seconds": 0.6237391909999133,
+          "correct": true
+        },
+        "python": {
+          "trials": [
+            {
+              "status": "ok",
+              "seconds": 0.5457113970005594,
+              "rows": 1025,
+              "sha256": "82ef3e508609cd590486ff57b5b2d6bc29679353cafaaaccb4232cc7b98aa328",
+              "edge_rows": [
+                [
+                  6
+                ],
+                [
+                  7
+                ]
+              ],
+              "row_diff_count": 0,
+              "correct": true,
+              "edge_rows_differ": []
+            },
+            {
+              "status": "ok",
+              "seconds": 0.9676002880005399,
+              "rows": 1025,
+              "sha256": "82ef3e508609cd590486ff57b5b2d6bc29679353cafaaaccb4232cc7b98aa328",
+              "edge_rows": [
+                [
+                  6
+                ],
+                [
+                  7
+                ]
+              ],
+              "row_diff_count": 0,
+              "correct": true,
+              "edge_rows_differ": []
+            },
+            {
+              "status": "ok",
+              "seconds": 0.7582274779997533,
+              "rows": 1025,
+              "sha256": "82ef3e508609cd590486ff57b5b2d6bc29679353cafaaaccb4232cc7b98aa328",
+              "edge_rows": [
+                [
+                  6
+                ],
+                [
+                  7
+                ]
+              ],
+              "row_diff_count": 0,
+              "correct": true,
+              "edge_rows_differ": []
+            }
+          ],
+          "median_seconds": 0.7582274779997533,
+          "correct": true
+        },
+        "geography": {
+          "trials": [
+            {
+              "status": "ok",
+              "seconds": 1.1626954970015504,
+              "rows": 1025,
+              "sha256": "82ef3e508609cd590486ff57b5b2d6bc29679353cafaaaccb4232cc7b98aa328",
+              "edge_rows": [
+                [
+                  6
+                ],
+                [
+                  7
+                ]
+              ],
+              "row_diff_count": 0,
+              "correct": true,
+              "edge_rows_differ": []
+            },
+            {
+              "status": "ok",
+              "seconds": 0.9401602399993862,
+              "rows": 1025,
+              "sha256": "82ef3e508609cd590486ff57b5b2d6bc29679353cafaaaccb4232cc7b98aa328",
+              "edge_rows": [
+                [
+                  6
+                ],
+                [
+                  7
+                ]
+              ],
+              "row_diff_count": 0,
+              "correct": true,
+              "edge_rows_differ": []
+            },
+            {
+              "status": "ok",
+              "seconds": 1.0029245799996716,
+              "rows": 1025,
+              "sha256": "82ef3e508609cd590486ff57b5b2d6bc29679353cafaaaccb4232cc7b98aa328",
+              "edge_rows": [
+                [
+                  6
+                ],
+                [
+                  7
+                ]
+              ],
+              "row_diff_count": 0,
+              "correct": true,
+              "edge_rows_differ": []
+            }
+          ],
+          "median_seconds": 1.0029245799996716,
+          "correct": true
+        },
+        "shim": {
+          "trials": [
+            {
+              "status": "ok",
+              "seconds": 0.6580194239995762,
+              "rows": 1025,
+              "sha256": "82ef3e508609cd590486ff57b5b2d6bc29679353cafaaaccb4232cc7b98aa328",
+              "edge_rows": [
+                [
+                  6
+                ],
+                [
+                  7
+                ]
+              ],
+              "row_diff_count": 0,
+              "correct": true,
+              "edge_rows_differ": []
+            },
+            {
+              "status": "ok",
+              "seconds": 0.6796454579998681,
+              "rows": 1025,
+              "sha256": "82ef3e508609cd590486ff57b5b2d6bc29679353cafaaaccb4232cc7b98aa328",
+              "edge_rows": [
+                [
+                  6
+                ],
+                [
+                  7
+                ]
+              ],
+              "row_diff_count": 0,
+              "correct": true,
+              "edge_rows_differ": []
+            },
+            {
+              "status": "ok",
+              "seconds": 0.589247683999929,
+              "rows": 1025,
+              "sha256": "82ef3e508609cd590486ff57b5b2d6bc29679353cafaaaccb4232cc7b98aa328",
+              "edge_rows": [
+                [
+                  6
+                ],
+                [
+                  7
+                ]
+              ],
+              "row_diff_count": 0,
+              "correct": true,
+              "edge_rows_differ": []
+            }
+          ],
+          "median_seconds": 0.6580194239995762,
+          "correct": true
+        }
+      }
+    },
+    "10000000": {
+      "oracle": {
+        "status": "ok",
+        "seconds": 2.3269338379996043,
+        "rows": 1214,
+        "sha256": "59b74c09fc7dcc1f2b15b20e75109f53921e1a56d9dc78f4ddd5d0d334fd36be",
+        "edge_rows": [
+          [
+            6
+          ],
+          [
+            7
+          ]
+        ]
+      },
+      "arms": {
+        "sql": {
+          "trials": [
+            {
+              "status": "ok",
+              "seconds": 0.8051334800002223,
+              "rows": 1214,
+              "sha256": "59b74c09fc7dcc1f2b15b20e75109f53921e1a56d9dc78f4ddd5d0d334fd36be",
+              "edge_rows": [
+                [
+                  6
+                ],
+                [
+                  7
+                ]
+              ],
+              "row_diff_count": 0,
+              "correct": true,
+              "edge_rows_differ": []
+            },
+            {
+              "status": "ok",
+              "seconds": 0.6643495240004995,
+              "rows": 1214,
+              "sha256": "59b74c09fc7dcc1f2b15b20e75109f53921e1a56d9dc78f4ddd5d0d334fd36be",
+              "edge_rows": [
+                [
+                  6
+                ],
+                [
+                  7
+                ]
+              ],
+              "row_diff_count": 0,
+              "correct": true,
+              "edge_rows_differ": []
+            },
+            {
+              "status": "ok",
+              "seconds": 0.38891957700070634,
+              "rows": 1214,
+              "sha256": "59b74c09fc7dcc1f2b15b20e75109f53921e1a56d9dc78f4ddd5d0d334fd36be",
+              "edge_rows": [
+                [
+                  6
+                ],
+                [
+                  7
+                ]
+              ],
+              "row_diff_count": 0,
+              "correct": true,
+              "edge_rows_differ": []
+            }
+          ],
+          "median_seconds": 0.6643495240004995,
+          "correct": true
+        },
+        "python": {
+          "trials": [
+            {
+              "status": "ok",
+              "seconds": 2.330014797998956,
+              "rows": 1214,
+              "sha256": "59b74c09fc7dcc1f2b15b20e75109f53921e1a56d9dc78f4ddd5d0d334fd36be",
+              "edge_rows": [
+                [
+                  6
+                ],
+                [
+                  7
+                ]
+              ],
+              "row_diff_count": 0,
+              "correct": true,
+              "edge_rows_differ": []
+            },
+            {
+              "status": "ok",
+              "seconds": 2.3539371599999868,
+              "rows": 1214,
+              "sha256": "59b74c09fc7dcc1f2b15b20e75109f53921e1a56d9dc78f4ddd5d0d334fd36be",
+              "edge_rows": [
+                [
+                  6
+                ],
+                [
+                  7
+                ]
+              ],
+              "row_diff_count": 0,
+              "correct": true,
+              "edge_rows_differ": []
+            },
+            {
+              "status": "ok",
+              "seconds": 2.256326804999844,
+              "rows": 1214,
+              "sha256": "59b74c09fc7dcc1f2b15b20e75109f53921e1a56d9dc78f4ddd5d0d334fd36be",
+              "edge_rows": [
+                [
+                  6
+                ],
+                [
+                  7
+                ]
+              ],
+              "row_diff_count": 0,
+              "correct": true,
+              "edge_rows_differ": []
+            }
+          ],
+          "median_seconds": 2.330014797998956,
+          "correct": true
+        },
+        "geography": {
+          "trials": [
+            {
+              "status": "ok",
+              "seconds": 0.902734989000237,
+              "rows": 1214,
+              "sha256": "59b74c09fc7dcc1f2b15b20e75109f53921e1a56d9dc78f4ddd5d0d334fd36be",
+              "edge_rows": [
+                [
+                  6
+                ],
+                [
+                  7
+                ]
+              ],
+              "row_diff_count": 0,
+              "correct": true,
+              "edge_rows_differ": []
+            },
+            {
+              "status": "ok",
+              "seconds": 0.8554931120015681,
+              "rows": 1214,
+              "sha256": "59b74c09fc7dcc1f2b15b20e75109f53921e1a56d9dc78f4ddd5d0d334fd36be",
+              "edge_rows": [
+                [
+                  6
+                ],
+                [
+                  7
+                ]
+              ],
+              "row_diff_count": 0,
+              "correct": true,
+              "edge_rows_differ": []
+            },
+            {
+              "status": "ok",
+              "seconds": 0.9244151860002603,
+              "rows": 1214,
+              "sha256": "59b74c09fc7dcc1f2b15b20e75109f53921e1a56d9dc78f4ddd5d0d334fd36be",
+              "edge_rows": [
+                [
+                  6
+                ],
+                [
+                  7
+                ]
+              ],
+              "row_diff_count": 0,
+              "correct": true,
+              "edge_rows_differ": []
+            }
+          ],
+          "median_seconds": 0.902734989000237,
+          "correct": true
+        },
+        "shim": {
+          "trials": [
+            {
+              "status": "ok",
+              "seconds": 0.7949496429991996,
+              "rows": 1214,
+              "sha256": "59b74c09fc7dcc1f2b15b20e75109f53921e1a56d9dc78f4ddd5d0d334fd36be",
+              "edge_rows": [
+                [
+                  6
+                ],
+                [
+                  7
+                ]
+              ],
+              "row_diff_count": 0,
+              "correct": true,
+              "edge_rows_differ": []
+            },
+            {
+              "status": "ok",
+              "seconds": 1.0755438119995233,
+              "rows": 1214,
+              "sha256": "59b74c09fc7dcc1f2b15b20e75109f53921e1a56d9dc78f4ddd5d0d334fd36be",
+              "edge_rows": [
+                [
+                  6
+                ],
+                [
+                  7
+                ]
+              ],
+              "row_diff_count": 0,
+              "correct": true,
+              "edge_rows_differ": []
+            },
+            {
+              "status": "ok",
+              "seconds": 0.8820456960002048,
+              "rows": 1214,
+              "sha256": "59b74c09fc7dcc1f2b15b20e75109f53921e1a56d9dc78f4ddd5d0d334fd36be",
+              "edge_rows": [
+                [
+                  6
+                ],
+                [
+                  7
+                ]
+              ],
+              "row_diff_count": 0,
+              "correct": true,
+              "edge_rows_differ": []
+            }
+          ],
+          "median_seconds": 0.8820456960002048,
+          "correct": true
+        }
+      }
+    }
+  },
+  "install": {
+    "without": [
+      "duckdb"
+    ],
+    "shim": [
+      "duckdb",
+      "pyarrow",
+      "cdshealpix",
+      "mocpy",
+      "astropy",
+      "numpy"
+    ],
+    "per_arm": {
+      "sql": [
+        "duckdb"
+      ],
+      "python": [
+        "duckdb",
+        "mocpy",
+        "astropy",
+        "pyarrow",
+        "numpy"
+      ],
+      "geography": [
+        "duckdb",
+        "geography community extension"
+      ],
+      "shim": [
+        "duckdb",
+        "pyarrow",
+        "cdshealpix",
+        "mocpy",
+        "astropy",
+        "numpy"
+      ]
+    },
+    "all_tested_arms": [
+      "duckdb",
+      "pyarrow",
+      "numpy",
+      "scipy",
+      "astropy",
+      "astropy-healpix",
+      "cdshealpix",
+      "mocpy"
+    ]
+  },
+  "timing_label": "shim",
+  "limitations": [],
+  "best_baseline": "sql",
+  "best_with": "shim",
+  "speed_ratio": 0.7531917303299729,
+  "real_check": {
+    "path": "https://data.lsdb.io/hats/gaia_dr3/gaia",
+    "attempts": [
+      {
+        "status": "error",
+        "error": "FileNotFoundError('Failed to read HATS at location https://data.lsdb.io/hats/gaia_dr3/gaia')"
+      },
+      {
+        "status": "error",
+        "error": "FileNotFoundError('Failed to read HATS at location https://data.lsdb.io/hats/gaia_dr3/gaia')"
+      }
+    ]
+  },
+  "fallback": {
+    "status": "ok",
+    "source": "synthetic local HATS via lsdb.from_dataframe/to_hats",
+    "input_rows": 10000,
+    "selected_rows": 1003,
+    "row_diff_count": 0,
+    "seconds": 2.174406927000746,
+    "partitions": 15,
+    "shim_hats": {
+      "selected_files": 4,
+      "partition_diff_vs_client": 0,
+      "partition_diff_vs_lsdb": 0,
+      "row_diff_count": 0,
+      "partitions": [
+        [
+          1,
+          16
+        ],
+        [
+          1,
+          17
+        ],
+        [
+          1,
+          18
+        ],
+        [
+          1,
+          19
+        ]
+      ]
+    },
+    "geography_hats": {
+      "input_files": 15,
+      "row_diff_count": 0,
+      "seconds": 0.02066243400076928
+    }
+  },
+  "query_lines": {
+    "without": 1,
+    "with": 4
+  },
+  "query_line_reduction": -3.0,
+  "shared_sql_macro_lines": 1
+}

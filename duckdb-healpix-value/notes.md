@@ -50,3 +50,5 @@
 - Case 02: UNPROVEN; measured result written. Limitations: Benchmark covers multi-order probability cells × catalog counts. Fixed 100k ObsCore construction, intersection and union are measured in the supplement. Pure-SQL polygon-to-MOC construction and a native MOC type remain unverified.
 
 - Case 03: UNPROVEN; measured result written. Limitations: 
+
+- Case 04: NO; measured result written. Limitations: 
