@@ -48,3 +48,5 @@
 - Case 01: NO; measured result written. Limitations: Both materialized declination/chord candidates and per-row HEALPix cone-range candidates are tested. Python MOC construction is not native performance; no native join or calibration exists. pyacid is installed; the Python comparator uses SciPy directly.
 
 - Case 02: UNPROVEN; measured result written. Limitations: Benchmark covers multi-order probability cells × catalog counts. Fixed 100k ObsCore construction, intersection and union are measured in the supplement. Pure-SQL polygon-to-MOC construction and a native MOC type remain unverified.
+
+- Case 03: UNPROVEN; measured result written. Limitations: 

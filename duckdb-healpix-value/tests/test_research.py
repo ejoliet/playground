@@ -96,6 +96,8 @@ def test_injected_polar_regions():
     for row,latitude in zip(rows,[90,-90,90]):
         coverage=MOC.from_polygon(np.array(row['lon'])*u.deg,np.array(row['lat'])*u.deg,max_depth=8)
         assert coverage.contains_lonlat(0*u.deg,latitude*u.deg)[0]
+        assert not coverage.contains_lonlat(0*u.deg,-latitude*u.deg)[0]
+        assert coverage.sky_fraction<1e-3
 
 RESULTS=[(p,json.loads(p.read_text())) for p in sorted((bench.ROOT/'cases').glob('*/result.json'))]
 @pytest.mark.parametrize('p,r',RESULTS)
