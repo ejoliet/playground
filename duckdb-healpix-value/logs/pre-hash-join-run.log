@@ -1,0 +1,28 @@
+generate 1000000
+generate 10000000
+Building task graph...
+Computing Catalog:   0%|          | 0/8 [00:00<?, ?it/s]Computing Catalog: 100%|██████████| 8/8 [00:00<00:00, 106.71it/s]
+{'status': 'ok', 'source': 'synthetic local HATS via lsdb.from_dataframe/to_hats', 'input_rows': 10000, 'selected_rows': 1003, 'row_diff_count': 0, 'seconds': 2.272472741999991, 'partitions': 15, 'shim_hats': {'selected_files': 4, 'partition_diff_vs_client': 0, 'partition_diff_vs_lsdb': 0, 'row_diff_count': 0, 'partitions': [(1, 16), (1, 17), (1, 18), (1, 19)]}, 'geography_hats': {'read_files': 15, 'row_diff_count': 0, 'seconds': 0.04166229199927329}}
+1 1000000 oracle 0 ok 5.495872923999741
+1 1000000 sql 0 ok 2.6538253770004303
+1 1000000 sql 1 ok 2.205617577999874
+1 1000000 sql 2 ok 1.91695148800045
+1 1000000 python 0 ok 5.9593391380003595
+1 1000000 python 1 ok 5.865170484999908
+1 1000000 python 2 ok 5.085796659000152
+1 1000000 shim 0 ok 7.627658940000401
+1 1000000 shim 1 ok 9.55445294600031
+1 1000000 shim 2 ok 11.633859358999871
+1 1000000 shim_healpix 0 timeout None
+1 1000000 shim_healpix 1 timeout None
+1 1000000 shim_healpix 2 timeout None
+1 10000000 oracle 0 ok 41.9580510629994
+1 10000000 sql 0 ok 25.0067768100007
+1 10000000 sql 1 ok 25.394030466000004
+1 10000000 sql 2 ok 24.354037006
+1 10000000 python 0 ok 73.84532613900046
+1 10000000 python 1 ok 84.5733957500006
+1 10000000 python 2 ok 75.24159566399976
+1 10000000 shim 0 timeout None
+1 10000000 shim 1 timeout None
+1 10000000 shim 2 timeout None

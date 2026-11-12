@@ -1,0 +1,1 @@
+-- No v1 spherical harmonic API.

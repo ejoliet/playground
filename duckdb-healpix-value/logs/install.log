@@ -1,0 +1,56 @@
+Using CPython 3.12.14 interpreter at: /opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3
+Creating virtual environment at: .venv
+Resolved 30 packages in 3.39s
+Downloading numpy (16.0MiB)
+Downloading pyarrow (52.5MiB)
+Downloading astropy (9.9MiB)
+Downloading pillow (6.8MiB)
+Downloading fonttools (5.2MiB)
+Downloading scipy (33.7MiB)
+Downloading cdshealpix (1.2MiB)
+Downloading matplotlib (9.4MiB)
+Downloading astropy-iers-data (1.9MiB)
+Downloading kiwisolver (1.4MiB)
+Downloading duckdb (23.2MiB)
+Downloading mocpy (1.2MiB)
+Downloading pygments (1.2MiB)
+ Downloaded cdshealpix
+ Downloaded astropy
+ Downloaded pillow
+ Downloaded kiwisolver
+ Downloaded numpy
+ Downloaded fonttools
+ Downloaded astropy-iers-data
+ Downloaded pygments
+ Downloaded matplotlib
+ Downloaded mocpy
+ Downloaded scipy
+ Downloaded duckdb
+ Downloaded pyarrow
+Prepared 25 packages in 9.38s
+Installed 25 packages in 59ms
+ + astropy==8.0.2
+ + astropy-healpix==2.0.1
+ + astropy-iers-data==0.2026.11.9.0.35.9
+ + cdshealpix==0.9.0
+ + contourpy==1.4.0
+ + cycler==0.12.1
+ + duckdb==2.0.0
+ + fonttools==4.68.0
+ + iniconfig==2.3.1
+ + kiwisolver==1.5.1
+ + matplotlib==3.11.2
+ + mocpy==0.21.0
+ + numpy==2.5.4
+ + packaging==26.3
+ + pillow==13.0.0
+ + pluggy==1.7.0
+ + pyarrow==26.0.1
+ + pyerfa==2.0.1.5
+ + pygments==2.21.0
+ + pyparsing==3.3.3
+ + pytest==9.2.0
+ + python-dateutil==4.0.0
+ + pyyaml==6.0.3
+ + scipy==1.18.1
+ + tzdata==2026.6

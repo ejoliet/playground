@@ -1,0 +1,12 @@
+Resolved 91 packages in 3.93s
+Downloading polars-runtime-32 (51.4MiB)
+ Downloaded polars-runtime-32
+Prepared 7 packages in 10.67s
+Installed 7 packages in 8ms
+ + markdown-it-py==4.3.0
+ + mdurl==0.1.2
+ + polars==2.1.0
+ + polars-runtime-32==2.1.0
+ + pyacid==0.6.1
+ + rich==15.0.0
+ + sqlglot==30.31.0

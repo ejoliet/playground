@@ -1,0 +1,92 @@
+{
+  "rows": 100000,
+  "order": 8,
+  "sql": "WITH m AS MATERIALIZED (SELECT id,moc_from_polygon(lon,lat,8) AS region FROM obs)\nSELECT id,moc_area_sr(moc_intersect(region,survey.m)),moc_area_sr(moc_union(region,survey.m)) FROM m,survey ORDER BY id",
+  "arms": {
+    "python_scalar": {
+      "trials": [
+        {
+          "status": "ok",
+          "seconds": 11.839051435999863,
+          "rows": 100000,
+          "row_diff_count": 0,
+          "edge_rows_differ": []
+        },
+        {
+          "status": "ok",
+          "seconds": 11.375663905000692,
+          "rows": 100000,
+          "row_diff_count": 0,
+          "edge_rows_differ": []
+        },
+        {
+          "status": "ok",
+          "seconds": 10.647847866999655,
+          "rows": 100000,
+          "row_diff_count": 0,
+          "edge_rows_differ": []
+        }
+      ],
+      "median_seconds": 11.375663905000692
+    },
+    "python_batch": {
+      "trials": [
+        {
+          "status": "ok",
+          "seconds": -88082.849713057,
+          "rows": 100000,
+          "row_diff_count": 0,
+          "edge_rows_differ": []
+        },
+        {
+          "status": "ok",
+          "seconds": -88077.53840392901,
+          "rows": 100000,
+          "row_diff_count": 0,
+          "edge_rows_differ": []
+        },
+        {
+          "status": "ok",
+          "seconds": -88070.301352713,
+          "rows": 100000,
+          "row_diff_count": 0,
+          "edge_rows_differ": []
+        }
+      ],
+      "median_seconds": -88077.53840392901
+    },
+    "shim": {
+      "trials": [
+        {
+          "status": "ok",
+          "seconds": 9.618234690000463,
+          "rows": 100000,
+          "row_diff_count": 0,
+          "edge_rows_differ": []
+        },
+        {
+          "status": "ok",
+          "seconds": 8.719060231000185,
+          "rows": 100000,
+          "row_diff_count": 0,
+          "edge_rows_differ": []
+        },
+        {
+          "status": "ok",
+          "seconds": 8.859333650998451,
+          "rows": 100000,
+          "row_diff_count": 0,
+          "edge_rows_differ": []
+        }
+      ],
+      "median_seconds": 8.859333650998451
+    }
+  },
+  "note": "Fixed footprint workload, separate from catalog scales. MOC areas, not exact polygon areas. Each query is independently bounded at 300 seconds. Four-thread DuckDB and batch baseline. Timers exclude input loading and connection setup for this supplement.",
+  "oracle": {
+    "status": "ok",
+    "seconds": 10.089399643999059,
+    "rows": 100000
+  },
+  "complete": true
+}

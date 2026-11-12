@@ -1,0 +1,4 @@
+make: Entering directory '/workspace/playground/duckdb-healpix-value/vendor/healpix-duckdb'
+Makefile:18: extension-ci-tools/makefiles/c_api_extensions/base.Makefile: No such file or directory
+make: *** No rule to make target 'extension-ci-tools/makefiles/c_api_extensions/base.Makefile'.  Stop.
+make: Leaving directory '/workspace/playground/duckdb-healpix-value/vendor/healpix-duckdb'

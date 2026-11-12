@@ -1,0 +1,27 @@
+{
+  "gaia": {
+    "path": "https://data.lsdb.io/hats/gaia_dr3/gaia",
+    "attempts": [
+      {
+        "status": "error",
+        "error": "FileNotFoundError('Failed to read HATS at location https://data.lsdb.io/hats/gaia_dr3/gaia')"
+      },
+      {
+        "status": "error",
+        "error": "FileNotFoundError('Failed to read HATS at location https://data.lsdb.io/hats/gaia_dr3/gaia')"
+      }
+    ]
+  },
+  "js": {
+    "package": "healpix-ts",
+    "version": "1.1.0",
+    "tarball": "https://registry.npmjs.org/healpix-ts/-/healpix-ts-1.1.0.tgz",
+    "js_files": [
+      "package/dist/index.js",
+      "package/dist/index.mjs"
+    ],
+    "gzip_all_js_bytes": 38170,
+    "status": "ok",
+    "note": "All shipped JS concatenated; not a tree-shaken application bundle."
+  }
+}

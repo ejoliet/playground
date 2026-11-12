@@ -1,0 +1,17 @@
+generate 1000000
+generate 10000000
+Building task graph...
+Computing Catalog:   0%|          | 0/8 [00:00<?, ?it/s]Computing Catalog: 100%|██████████| 8/8 [00:00<00:00, 120.71it/s]
+{'status': 'ok', 'source': 'synthetic local HATS via lsdb.from_dataframe/to_hats', 'input_rows': 10000, 'selected_rows': 1003, 'row_diff_count': 0, 'seconds': 2.7149151400003575, 'partitions': 15}
+1 1000000 oracle 0 ok 4.53338094100036
+1 1000000 sql 0 ok 1.7965336090001074
+1 1000000 sql 1 ok 1.348669469000015
+1 1000000 sql 2 ok 1.7284520739999607
+1 1000000 python 0 ok 5.752748312999756
+1 1000000 python 1 ok 5.258463321000363
+1 1000000 python 2 ok 5.124757546000183
+1 1000000 shim 0 ok 6.303896251999959
+1 1000000 shim 1 ok 6.090778344999762
+1 1000000 shim 2 ok 6.150431915000354
+1 1000000 shim_healpix 0 timeout None
+1 1000000 shim_healpix 1 timeout None

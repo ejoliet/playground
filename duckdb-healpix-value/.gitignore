@@ -1,0 +1,8 @@
+.venv/
+.cache/
+tmp/
+vendor/
+data/
+__pycache__/
+.pytest_cache/
+*.duckdb*

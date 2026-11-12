@@ -1,0 +1,5 @@
+/workspace/playground/duckdb-healpix-value/hats_check.py:15: DeprecationWarning: Call to deprecated method to_hats. (`to_hats` will be removed in the future, use `write_catalog` instead.) -- Deprecated since version 0.7.3.
+  cat.to_hats(dest,as_collection=False,overwrite=True,progress_bar=False)
+Building task graph...
+Computing Catalog:   0%|          | 0/8 [00:00<?, ?it/s]Computing Catalog: 100%|██████████| 8/8 [00:00<00:00, 144.90it/s]
+{'status': 'ok', 'source': 'synthetic local HATS via lsdb.from_dataframe/to_hats', 'input_rows': 10000, 'selected_rows': 1003, 'row_diff_count': 0, 'seconds': 2.2968846239998584, 'partitions': 15}

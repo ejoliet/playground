@@ -1,0 +1,8 @@
+Binder Error: Could not choose a best candidate function for the function call "-(STRING_LITERAL, INTEGER_LITERAL)". In order to select one, please add explicit type casts.
+	Candidate functions:
+	-(DATE, INTEGER) -> DATE
+	-(INTEGER, INTEGER) -> INTEGER
+
+
+LINE 3: ...,12)), x -> format('_healpix_29 BETWEEN {} AND {}', x.lo, x.hi-1)), ' OR ') ||
+                                                                         ^

@@ -1,0 +1,38 @@
+{
+  "status": "ok",
+  "source": "synthetic local HATS via lsdb.from_dataframe/to_hats",
+  "input_rows": 10000,
+  "selected_rows": 1003,
+  "row_diff_count": 0,
+  "seconds": 2.0205919569998514,
+  "partitions": 15,
+  "shim_hats": {
+    "selected_files": 4,
+    "partition_diff_vs_client": 0,
+    "partition_diff_vs_lsdb": 0,
+    "row_diff_count": 0,
+    "partitions": [
+      [
+        1,
+        16
+      ],
+      [
+        1,
+        17
+      ],
+      [
+        1,
+        18
+      ],
+      [
+        1,
+        19
+      ]
+    ]
+  },
+  "geography_hats": {
+    "input_files": 15,
+    "row_diff_count": 0,
+    "seconds": 0.00966842399975576
+  }
+}

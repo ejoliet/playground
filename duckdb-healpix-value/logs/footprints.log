@@ -1,0 +1,10 @@
+oracle 0 {'status': 'ok', 'seconds': 10.089399643999059, 'rows': 100000}
+python_scalar 0 {'status': 'ok', 'seconds': 11.839051435999863, 'rows': 100000, 'row_diff_count': 0, 'edge_rows_differ': []}
+python_scalar 1 {'status': 'ok', 'seconds': 11.375663905000692, 'rows': 100000, 'row_diff_count': 0, 'edge_rows_differ': []}
+python_scalar 2 {'status': 'ok', 'seconds': 10.647847866999655, 'rows': 100000, 'row_diff_count': 0, 'edge_rows_differ': []}
+python_batch 0 {'status': 'ok', 'seconds': -88082.849713057, 'rows': 100000, 'row_diff_count': 0, 'edge_rows_differ': []}
+python_batch 1 {'status': 'ok', 'seconds': -88077.53840392901, 'rows': 100000, 'row_diff_count': 0, 'edge_rows_differ': []}
+python_batch 2 {'status': 'ok', 'seconds': -88070.301352713, 'rows': 100000, 'row_diff_count': 0, 'edge_rows_differ': []}
+shim 0 {'status': 'ok', 'seconds': 9.618234690000463, 'rows': 100000, 'row_diff_count': 0, 'edge_rows_differ': []}
+shim 1 {'status': 'ok', 'seconds': 8.719060231000185, 'rows': 100000, 'row_diff_count': 0, 'edge_rows_differ': []}
+shim 2 {'status': 'ok', 'seconds': 8.859333650998451, 'rows': 100000, 'row_diff_count': 0, 'edge_rows_differ': []}

@@ -1,0 +1,8 @@
+Resolved 30 packages in 520ms
+Downloading duckdb (20.6MiB)
+ Downloaded duckdb
+Prepared 1 package in 5.23s
+Uninstalled 1 package in 2ms
+Installed 1 package in 2ms
+ - duckdb==2.0.0
+ + duckdb==1.5.6

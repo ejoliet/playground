@@ -1,0 +1,8 @@
+...........................................s                             [100%]
+=============================== warnings summary ===============================
+tests/test_research.py: 25 warnings
+  /workspace/playground/duckdb-healpix-value/bench.py:39: DeprecationWarning: fetch_arrow_table() is deprecated, use to_arrow_table() instead.
+    def query(c,s):return c.execute(quote(s)).fetch_arrow_table()
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+43 passed, 1 skipped, 25 warnings in 5.34s

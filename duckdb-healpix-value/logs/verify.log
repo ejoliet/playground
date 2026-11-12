@@ -1,0 +1,12 @@
+Building task graph...
+Computing Catalog:   0%|          | 0/8 [00:00<?, ?it/s]Computing Catalog: 100%|██████████| 8/8 [00:00<00:00, 114.22it/s]
+oracle 0 {'status': 'ok', 'seconds': 12.725083732000712, 'rows': 100000}
+python_scalar 0 {'status': 'ok', 'seconds': 10.632576725000035, 'rows': 100000, 'row_diff_count': 0, 'edge_rows_differ': []}
+python_scalar 1 {'status': 'ok', 'seconds': 7.786279396001191, 'rows': 100000, 'row_diff_count': 0, 'edge_rows_differ': []}
+python_scalar 2 {'status': 'ok', 'seconds': 8.330633981999199, 'rows': 100000, 'row_diff_count': 0, 'edge_rows_differ': []}
+python_batch 0 {'status': 'ok', 'seconds': 85.844274355999, 'rows': 100000, 'row_diff_count': 0, 'edge_rows_differ': []}
+python_batch 1 {'status': 'ok', 'seconds': 90.6386685610014, 'rows': 100000, 'row_diff_count': 0, 'edge_rows_differ': []}
+python_batch 2 {'status': 'ok', 'seconds': 87.66462713299916, 'rows': 100000, 'row_diff_count': 0, 'edge_rows_differ': []}
+shim 0 {'status': 'ok', 'seconds': 10.328180636999605, 'rows': 100000, 'row_diff_count': 0, 'edge_rows_differ': []}
+shim 1 {'status': 'ok', 'seconds': 10.631827636001617, 'rows': 100000, 'row_diff_count': 0, 'edge_rows_differ': []}
+shim 2 {'status': 'ok', 'seconds': 13.425234121999893, 'rows': 100000, 'row_diff_count': 0, 'edge_rows_differ': []}

@@ -1,0 +1,1 @@
+-- No SQL spherical harmonic transform benchmark requested.
