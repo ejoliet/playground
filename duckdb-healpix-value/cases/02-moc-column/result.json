@@ -1,0 +1,780 @@
+{
+  "case": 2,
+  "slug": "moc-column",
+  "verdict": "UNPROVEN",
+  "axis": null,
+  "number": 1.1692039852014788,
+  "pure_sql_possible": "yes",
+  "sizes": {
+    "1000000": {
+      "oracle": {
+        "status": "ok",
+        "seconds": 0.636903644000995,
+        "rows": 15,
+        "sha256": "59171b57a1304f68418bf4e54be74de0207baf192f2176af7773147f5c002068",
+        "edge_rows": [
+          [
+            0,
+            83549
+          ],
+          [
+            1,
+            83432
+          ],
+          [
+            2,
+            82691
+          ],
+          [
+            3,
+            84443
+          ],
+          [
+            4,
+            83001
+          ],
+          [
+            5,
+            83248
+          ],
+          [
+            6,
+            83447
+          ],
+          [
+            7,
+            82987
+          ]
+        ]
+      },
+      "arms": {
+        "sql": {
+          "trials": [
+            {
+              "status": "ok",
+              "seconds": 0.9775986549993831,
+              "rows": 15,
+              "sha256": "59171b57a1304f68418bf4e54be74de0207baf192f2176af7773147f5c002068",
+              "edge_rows": [
+                [
+                  0,
+                  83549
+                ],
+                [
+                  1,
+                  83432
+                ],
+                [
+                  2,
+                  82691
+                ],
+                [
+                  3,
+                  84443
+                ],
+                [
+                  4,
+                  83001
+                ],
+                [
+                  5,
+                  83248
+                ],
+                [
+                  6,
+                  83447
+                ],
+                [
+                  7,
+                  82987
+                ]
+              ],
+              "row_diff_count": 0,
+              "correct": true,
+              "edge_rows_differ": []
+            },
+            {
+              "status": "ok",
+              "seconds": 0.40031282900054066,
+              "rows": 15,
+              "sha256": "59171b57a1304f68418bf4e54be74de0207baf192f2176af7773147f5c002068",
+              "edge_rows": [
+                [
+                  0,
+                  83549
+                ],
+                [
+                  1,
+                  83432
+                ],
+                [
+                  2,
+                  82691
+                ],
+                [
+                  3,
+                  84443
+                ],
+                [
+                  4,
+                  83001
+                ],
+                [
+                  5,
+                  83248
+                ],
+                [
+                  6,
+                  83447
+                ],
+                [
+                  7,
+                  82987
+                ]
+              ],
+              "row_diff_count": 0,
+              "correct": true,
+              "edge_rows_differ": []
+            },
+            {
+              "status": "ok",
+              "seconds": 0.984604595001656,
+              "rows": 15,
+              "sha256": "59171b57a1304f68418bf4e54be74de0207baf192f2176af7773147f5c002068",
+              "edge_rows": [
+                [
+                  0,
+                  83549
+                ],
+                [
+                  1,
+                  83432
+                ],
+                [
+                  2,
+                  82691
+                ],
+                [
+                  3,
+                  84443
+                ],
+                [
+                  4,
+                  83001
+                ],
+                [
+                  5,
+                  83248
+                ],
+                [
+                  6,
+                  83447
+                ],
+                [
+                  7,
+                  82987
+                ]
+              ],
+              "row_diff_count": 0,
+              "correct": true,
+              "edge_rows_differ": []
+            }
+          ],
+          "median_seconds": 0.9775986549993831,
+          "correct": true
+        },
+        "shim": {
+          "trials": [
+            {
+              "status": "ok",
+              "seconds": 0.37225954000132333,
+              "rows": 15,
+              "sha256": "59171b57a1304f68418bf4e54be74de0207baf192f2176af7773147f5c002068",
+              "edge_rows": [
+                [
+                  0,
+                  83549
+                ],
+                [
+                  1,
+                  83432
+                ],
+                [
+                  2,
+                  82691
+                ],
+                [
+                  3,
+                  84443
+                ],
+                [
+                  4,
+                  83001
+                ],
+                [
+                  5,
+                  83248
+                ],
+                [
+                  6,
+                  83447
+                ],
+                [
+                  7,
+                  82987
+                ]
+              ],
+              "row_diff_count": 0,
+              "correct": true,
+              "edge_rows_differ": []
+            },
+            {
+              "status": "ok",
+              "seconds": 0.43110572499972477,
+              "rows": 15,
+              "sha256": "59171b57a1304f68418bf4e54be74de0207baf192f2176af7773147f5c002068",
+              "edge_rows": [
+                [
+                  0,
+                  83549
+                ],
+                [
+                  1,
+                  83432
+                ],
+                [
+                  2,
+                  82691
+                ],
+                [
+                  3,
+                  84443
+                ],
+                [
+                  4,
+                  83001
+                ],
+                [
+                  5,
+                  83248
+                ],
+                [
+                  6,
+                  83447
+                ],
+                [
+                  7,
+                  82987
+                ]
+              ],
+              "row_diff_count": 0,
+              "correct": true,
+              "edge_rows_differ": []
+            },
+            {
+              "status": "ok",
+              "seconds": 0.4500279469993984,
+              "rows": 15,
+              "sha256": "59171b57a1304f68418bf4e54be74de0207baf192f2176af7773147f5c002068",
+              "edge_rows": [
+                [
+                  0,
+                  83549
+                ],
+                [
+                  1,
+                  83432
+                ],
+                [
+                  2,
+                  82691
+                ],
+                [
+                  3,
+                  84443
+                ],
+                [
+                  4,
+                  83001
+                ],
+                [
+                  5,
+                  83248
+                ],
+                [
+                  6,
+                  83447
+                ],
+                [
+                  7,
+                  82987
+                ]
+              ],
+              "row_diff_count": 0,
+              "correct": true,
+              "edge_rows_differ": []
+            }
+          ],
+          "median_seconds": 0.43110572499972477,
+          "correct": true
+        }
+      }
+    },
+    "10000000": {
+      "oracle": {
+        "status": "ok",
+        "seconds": 3.362894674999552,
+        "rows": 15,
+        "sha256": "e52d81bc9cc2e1a82465582794b0bbb6b0ece55d8a4cd9329670d5298bc1c37a",
+        "edge_rows": [
+          [
+            0,
+            832344
+          ],
+          [
+            1,
+            832917
+          ],
+          [
+            2,
+            832568
+          ],
+          [
+            3,
+            834416
+          ],
+          [
+            4,
+            832340
+          ],
+          [
+            5,
+            832850
+          ],
+          [
+            6,
+            835141
+          ],
+          [
+            7,
+            833711
+          ]
+        ]
+      },
+      "arms": {
+        "sql": {
+          "trials": [
+            {
+              "status": "ok",
+              "seconds": 0.8751887710004667,
+              "rows": 15,
+              "sha256": "e52d81bc9cc2e1a82465582794b0bbb6b0ece55d8a4cd9329670d5298bc1c37a",
+              "edge_rows": [
+                [
+                  0,
+                  832344
+                ],
+                [
+                  1,
+                  832917
+                ],
+                [
+                  2,
+                  832568
+                ],
+                [
+                  3,
+                  834416
+                ],
+                [
+                  4,
+                  832340
+                ],
+                [
+                  5,
+                  832850
+                ],
+                [
+                  6,
+                  835141
+                ],
+                [
+                  7,
+                  833711
+                ]
+              ],
+              "row_diff_count": 0,
+              "correct": true,
+              "edge_rows_differ": []
+            },
+            {
+              "status": "ok",
+              "seconds": 1.0282457569992403,
+              "rows": 15,
+              "sha256": "e52d81bc9cc2e1a82465582794b0bbb6b0ece55d8a4cd9329670d5298bc1c37a",
+              "edge_rows": [
+                [
+                  0,
+                  832344
+                ],
+                [
+                  1,
+                  832917
+                ],
+                [
+                  2,
+                  832568
+                ],
+                [
+                  3,
+                  834416
+                ],
+                [
+                  4,
+                  832340
+                ],
+                [
+                  5,
+                  832850
+                ],
+                [
+                  6,
+                  835141
+                ],
+                [
+                  7,
+                  833711
+                ]
+              ],
+              "row_diff_count": 0,
+              "correct": true,
+              "edge_rows_differ": []
+            },
+            {
+              "status": "ok",
+              "seconds": 0.6537728330004029,
+              "rows": 15,
+              "sha256": "e52d81bc9cc2e1a82465582794b0bbb6b0ece55d8a4cd9329670d5298bc1c37a",
+              "edge_rows": [
+                [
+                  0,
+                  832344
+                ],
+                [
+                  1,
+                  832917
+                ],
+                [
+                  2,
+                  832568
+                ],
+                [
+                  3,
+                  834416
+                ],
+                [
+                  4,
+                  832340
+                ],
+                [
+                  5,
+                  832850
+                ],
+                [
+                  6,
+                  835141
+                ],
+                [
+                  7,
+                  833711
+                ]
+              ],
+              "row_diff_count": 0,
+              "correct": true,
+              "edge_rows_differ": []
+            }
+          ],
+          "median_seconds": 0.8751887710004667,
+          "correct": true
+        },
+        "shim": {
+          "trials": [
+            {
+              "status": "ok",
+              "seconds": 0.7083961589996761,
+              "rows": 15,
+              "sha256": "e52d81bc9cc2e1a82465582794b0bbb6b0ece55d8a4cd9329670d5298bc1c37a",
+              "edge_rows": [
+                [
+                  0,
+                  832344
+                ],
+                [
+                  1,
+                  832917
+                ],
+                [
+                  2,
+                  832568
+                ],
+                [
+                  3,
+                  834416
+                ],
+                [
+                  4,
+                  832340
+                ],
+                [
+                  5,
+                  832850
+                ],
+                [
+                  6,
+                  835141
+                ],
+                [
+                  7,
+                  833711
+                ]
+              ],
+              "row_diff_count": 0,
+              "correct": true,
+              "edge_rows_differ": []
+            },
+            {
+              "status": "ok",
+              "seconds": 0.7485338589995081,
+              "rows": 15,
+              "sha256": "e52d81bc9cc2e1a82465582794b0bbb6b0ece55d8a4cd9329670d5298bc1c37a",
+              "edge_rows": [
+                [
+                  0,
+                  832344
+                ],
+                [
+                  1,
+                  832917
+                ],
+                [
+                  2,
+                  832568
+                ],
+                [
+                  3,
+                  834416
+                ],
+                [
+                  4,
+                  832340
+                ],
+                [
+                  5,
+                  832850
+                ],
+                [
+                  6,
+                  835141
+                ],
+                [
+                  7,
+                  833711
+                ]
+              ],
+              "row_diff_count": 0,
+              "correct": true,
+              "edge_rows_differ": []
+            },
+            {
+              "status": "ok",
+              "seconds": 0.7734825520001323,
+              "rows": 15,
+              "sha256": "e52d81bc9cc2e1a82465582794b0bbb6b0ece55d8a4cd9329670d5298bc1c37a",
+              "edge_rows": [
+                [
+                  0,
+                  832344
+                ],
+                [
+                  1,
+                  832917
+                ],
+                [
+                  2,
+                  832568
+                ],
+                [
+                  3,
+                  834416
+                ],
+                [
+                  4,
+                  832340
+                ],
+                [
+                  5,
+                  832850
+                ],
+                [
+                  6,
+                  835141
+                ],
+                [
+                  7,
+                  833711
+                ]
+              ],
+              "row_diff_count": 0,
+              "correct": true,
+              "edge_rows_differ": []
+            }
+          ],
+          "median_seconds": 0.7485338589995081,
+          "correct": true
+        }
+      }
+    }
+  },
+  "install": {
+    "without": [
+      "duckdb"
+    ],
+    "shim": [
+      "duckdb",
+      "pyarrow",
+      "cdshealpix",
+      "mocpy",
+      "astropy",
+      "numpy"
+    ],
+    "per_arm": {
+      "sql": [
+        "duckdb"
+      ],
+      "shim": [
+        "duckdb",
+        "pyarrow",
+        "cdshealpix",
+        "mocpy",
+        "astropy",
+        "numpy"
+      ]
+    },
+    "all_tested_arms": [
+      "duckdb",
+      "pyarrow",
+      "numpy",
+      "scipy",
+      "astropy",
+      "astropy-healpix",
+      "cdshealpix",
+      "mocpy"
+    ]
+  },
+  "timing_label": "shim",
+  "limitations": [
+    "Benchmark covers multi-order probability cells \u00d7 catalog counts. Fixed 100k ObsCore construction, intersection and union are measured in the supplement. Pure-SQL polygon-to-MOC construction and a native MOC type remain unverified."
+  ],
+  "best_baseline": "sql",
+  "best_with": "shim",
+  "speed_ratio": 1.1692039852014788,
+  "measured_subcase_verdict": "NO",
+  "footprints": {
+    "rows": 100000,
+    "order": 8,
+    "sql": "WITH m AS MATERIALIZED (SELECT id,moc_from_polygon(lon,lat,8) AS region FROM obs)\nSELECT id,moc_area_sr(moc_intersect(region,survey.m)),moc_area_sr(moc_union(region,survey.m)) FROM m,survey ORDER BY id",
+    "arms": {
+      "python_scalar": {
+        "trials": [
+          {
+            "status": "ok",
+            "seconds": 11.839051435999863,
+            "rows": 100000,
+            "row_diff_count": 0,
+            "edge_rows_differ": []
+          },
+          {
+            "status": "ok",
+            "seconds": 11.375663905000692,
+            "rows": 100000,
+            "row_diff_count": 0,
+            "edge_rows_differ": []
+          },
+          {
+            "status": "ok",
+            "seconds": 10.647847866999655,
+            "rows": 100000,
+            "row_diff_count": 0,
+            "edge_rows_differ": []
+          }
+        ],
+        "median_seconds": 11.375663905000692
+      },
+      "python_batch": {
+        "trials": [
+          {
+            "status": "ok",
+            "seconds": -88082.849713057,
+            "rows": 100000,
+            "row_diff_count": 0,
+            "edge_rows_differ": []
+          },
+          {
+            "status": "ok",
+            "seconds": -88077.53840392901,
+            "rows": 100000,
+            "row_diff_count": 0,
+            "edge_rows_differ": []
+          },
+          {
+            "status": "ok",
+            "seconds": -88070.301352713,
+            "rows": 100000,
+            "row_diff_count": 0,
+            "edge_rows_differ": []
+          }
+        ],
+        "median_seconds": -88077.53840392901
+      },
+      "shim": {
+        "trials": [
+          {
+            "status": "ok",
+            "seconds": 9.618234690000463,
+            "rows": 100000,
+            "row_diff_count": 0,
+            "edge_rows_differ": []
+          },
+          {
+            "status": "ok",
+            "seconds": 8.719060231000185,
+            "rows": 100000,
+            "row_diff_count": 0,
+            "edge_rows_differ": []
+          },
+          {
+            "status": "ok",
+            "seconds": 8.859333650998451,
+            "rows": 100000,
+            "row_diff_count": 0,
+            "edge_rows_differ": []
+          }
+        ],
+        "median_seconds": 8.859333650998451
+      }
+    },
+    "note": "Fixed footprint workload, separate from catalog scales. MOC areas, not exact polygon areas. Each query is independently bounded at 300 seconds. Four-thread DuckDB and batch baseline. Timers exclude input loading and connection setup for this supplement.",
+    "oracle": {
+      "status": "ok",
+      "seconds": 10.089399643999059,
+      "rows": 100000
+    },
+    "complete": true
+  },
+  "query_lines": {
+    "without": 1,
+    "with": 2
+  },
+  "query_line_reduction": -1.0,
+  "shared_sql_macro_lines": 1
+}

@@ -40,3 +40,5 @@
 - Before small-case measurements, API audit identified the stronger indexed-input with arm: published hpx_parent(29,key,order), implemented as a SQL macro with the same integer hierarchy operation as the baseline. Cases 8 and 10 now use it rather than recomputing pixels from coordinates. Raw-coordinate conversion remains measured in cases 5 and 7. Added direct CDS ancestry tests at orders 0,6,12,29. This strengthens the extension arm without altering any baseline or verdict threshold.
 
 - Case 01: NO; measured result written. Limitations: Both materialized declination/chord candidates and per-row HEALPix cone-range candidates are tested. Python MOC construction is not native performance; no native join or calibration exists. pyacid is installed; the Python comparator uses SciPy directly.
+
+- Case 02: UNPROVEN; measured result written. Limitations: Benchmark covers multi-order probability cells × catalog counts. Fixed 100k ObsCore construction, intersection and union are measured in the supplement. Pure-SQL polygon-to-MOC construction and a native MOC type remain unverified.
