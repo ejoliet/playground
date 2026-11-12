@@ -3,13 +3,13 @@
   "slug": "moc-column",
   "verdict": "UNPROVEN",
   "axis": null,
-  "number": 1.1692039852014788,
+  "number": 0.9664883507104208,
   "pure_sql_possible": "yes",
   "sizes": {
     "1000000": {
       "oracle": {
         "status": "ok",
-        "seconds": 0.636903644000995,
+        "seconds": 0.6587320150010783,
         "rows": 15,
         "sha256": "59171b57a1304f68418bf4e54be74de0207baf192f2176af7773147f5c002068",
         "edge_rows": [
@@ -52,7 +52,7 @@
           "trials": [
             {
               "status": "ok",
-              "seconds": 0.9775986549993831,
+              "seconds": 0.6222496749996935,
               "rows": 15,
               "sha256": "59171b57a1304f68418bf4e54be74de0207baf192f2176af7773147f5c002068",
               "edge_rows": [
@@ -95,7 +95,7 @@
             },
             {
               "status": "ok",
-              "seconds": 0.40031282900054066,
+              "seconds": 0.3941075050006475,
               "rows": 15,
               "sha256": "59171b57a1304f68418bf4e54be74de0207baf192f2176af7773147f5c002068",
               "edge_rows": [
@@ -138,7 +138,7 @@
             },
             {
               "status": "ok",
-              "seconds": 0.984604595001656,
+              "seconds": 0.7976188729990099,
               "rows": 15,
               "sha256": "59171b57a1304f68418bf4e54be74de0207baf192f2176af7773147f5c002068",
               "edge_rows": [
@@ -180,14 +180,14 @@
               "edge_rows_differ": []
             }
           ],
-          "median_seconds": 0.9775986549993831,
+          "median_seconds": 0.6222496749996935,
           "correct": true
         },
         "shim": {
           "trials": [
             {
               "status": "ok",
-              "seconds": 0.37225954000132333,
+              "seconds": 1.148965494998265,
               "rows": 15,
               "sha256": "59171b57a1304f68418bf4e54be74de0207baf192f2176af7773147f5c002068",
               "edge_rows": [
@@ -230,7 +230,7 @@
             },
             {
               "status": "ok",
-              "seconds": 0.43110572499972477,
+              "seconds": 0.3709925100010878,
               "rows": 15,
               "sha256": "59171b57a1304f68418bf4e54be74de0207baf192f2176af7773147f5c002068",
               "edge_rows": [
@@ -273,7 +273,7 @@
             },
             {
               "status": "ok",
-              "seconds": 0.4500279469993984,
+              "seconds": 0.5836614170002576,
               "rows": 15,
               "sha256": "59171b57a1304f68418bf4e54be74de0207baf192f2176af7773147f5c002068",
               "edge_rows": [
@@ -315,7 +315,7 @@
               "edge_rows_differ": []
             }
           ],
-          "median_seconds": 0.43110572499972477,
+          "median_seconds": 0.5836614170002576,
           "correct": true
         }
       }
@@ -323,7 +323,7 @@
     "10000000": {
       "oracle": {
         "status": "ok",
-        "seconds": 3.362894674999552,
+        "seconds": 2.946739229999366,
         "rows": 15,
         "sha256": "e52d81bc9cc2e1a82465582794b0bbb6b0ece55d8a4cd9329670d5298bc1c37a",
         "edge_rows": [
@@ -366,7 +366,7 @@
           "trials": [
             {
               "status": "ok",
-              "seconds": 0.8751887710004667,
+              "seconds": 0.9200002350007708,
               "rows": 15,
               "sha256": "e52d81bc9cc2e1a82465582794b0bbb6b0ece55d8a4cd9329670d5298bc1c37a",
               "edge_rows": [
@@ -409,7 +409,7 @@
             },
             {
               "status": "ok",
-              "seconds": 1.0282457569992403,
+              "seconds": 0.7678049309997732,
               "rows": 15,
               "sha256": "e52d81bc9cc2e1a82465582794b0bbb6b0ece55d8a4cd9329670d5298bc1c37a",
               "edge_rows": [
@@ -452,7 +452,7 @@
             },
             {
               "status": "ok",
-              "seconds": 0.6537728330004029,
+              "seconds": 0.7545841170012864,
               "rows": 15,
               "sha256": "e52d81bc9cc2e1a82465582794b0bbb6b0ece55d8a4cd9329670d5298bc1c37a",
               "edge_rows": [
@@ -494,14 +494,14 @@
               "edge_rows_differ": []
             }
           ],
-          "median_seconds": 0.8751887710004667,
+          "median_seconds": 0.7678049309997732,
           "correct": true
         },
         "shim": {
           "trials": [
             {
               "status": "ok",
-              "seconds": 0.7083961589996761,
+              "seconds": 0.7944275070003641,
               "rows": 15,
               "sha256": "e52d81bc9cc2e1a82465582794b0bbb6b0ece55d8a4cd9329670d5298bc1c37a",
               "edge_rows": [
@@ -544,7 +544,7 @@
             },
             {
               "status": "ok",
-              "seconds": 0.7485338589995081,
+              "seconds": 1.0686493730008806,
               "rows": 15,
               "sha256": "e52d81bc9cc2e1a82465582794b0bbb6b0ece55d8a4cd9329670d5298bc1c37a",
               "edge_rows": [
@@ -587,7 +587,7 @@
             },
             {
               "status": "ok",
-              "seconds": 0.7734825520001323,
+              "seconds": 0.7614271330003248,
               "rows": 15,
               "sha256": "e52d81bc9cc2e1a82465582794b0bbb6b0ece55d8a4cd9329670d5298bc1c37a",
               "edge_rows": [
@@ -629,7 +629,7 @@
               "edge_rows_differ": []
             }
           ],
-          "median_seconds": 0.7485338589995081,
+          "median_seconds": 0.7944275070003641,
           "correct": true
         }
       }
@@ -677,96 +677,102 @@
   ],
   "best_baseline": "sql",
   "best_with": "shim",
-  "speed_ratio": 1.1692039852014788,
+  "speed_ratio": 0.9664883507104208,
   "measured_subcase_verdict": "NO",
   "footprints": {
     "rows": 100000,
     "order": 8,
+    "edge_ids": [
+      0,
+      1,
+      2,
+      3
+    ],
     "sql": "WITH m AS MATERIALIZED (SELECT id,moc_from_polygon(lon,lat,8) AS region FROM obs)\nSELECT id,moc_area_sr(moc_intersect(region,survey.m)),moc_area_sr(moc_union(region,survey.m)) FROM m,survey ORDER BY id",
     "arms": {
       "python_scalar": {
         "trials": [
           {
             "status": "ok",
-            "seconds": 11.839051435999863,
+            "seconds": 13.17744277499878,
             "rows": 100000,
             "row_diff_count": 0,
             "edge_rows_differ": []
           },
           {
             "status": "ok",
-            "seconds": 11.375663905000692,
+            "seconds": 14.039485305998824,
             "rows": 100000,
             "row_diff_count": 0,
             "edge_rows_differ": []
           },
           {
             "status": "ok",
-            "seconds": 10.647847866999655,
+            "seconds": 11.123362897998959,
             "rows": 100000,
             "row_diff_count": 0,
             "edge_rows_differ": []
           }
         ],
-        "median_seconds": 11.375663905000692
+        "median_seconds": 13.17744277499878
       },
       "python_batch": {
         "trials": [
           {
             "status": "ok",
-            "seconds": -88082.849713057,
+            "seconds": 3.7406352990001324,
             "rows": 100000,
             "row_diff_count": 0,
             "edge_rows_differ": []
           },
           {
             "status": "ok",
-            "seconds": -88077.53840392901,
+            "seconds": 3.46333448400037,
             "rows": 100000,
             "row_diff_count": 0,
             "edge_rows_differ": []
           },
           {
             "status": "ok",
-            "seconds": -88070.301352713,
+            "seconds": 4.157687324001017,
             "rows": 100000,
             "row_diff_count": 0,
             "edge_rows_differ": []
           }
         ],
-        "median_seconds": -88077.53840392901
+        "median_seconds": 3.7406352990001324
       },
       "shim": {
         "trials": [
           {
             "status": "ok",
-            "seconds": 9.618234690000463,
+            "seconds": 12.033840504000182,
             "rows": 100000,
             "row_diff_count": 0,
             "edge_rows_differ": []
           },
           {
             "status": "ok",
-            "seconds": 8.719060231000185,
+            "seconds": 10.438841208000667,
             "rows": 100000,
             "row_diff_count": 0,
             "edge_rows_differ": []
           },
           {
             "status": "ok",
-            "seconds": 8.859333650998451,
+            "seconds": 9.978135193001435,
             "rows": 100000,
             "row_diff_count": 0,
             "edge_rows_differ": []
           }
         ],
-        "median_seconds": 8.859333650998451
+        "median_seconds": 10.438841208000667
       }
     },
     "note": "Fixed footprint workload, separate from catalog scales. MOC areas, not exact polygon areas. Each query is independently bounded at 300 seconds. Four-thread DuckDB and batch baseline. Timers exclude input loading and connection setup for this supplement.",
     "oracle": {
       "status": "ok",
-      "seconds": 10.089399643999059,
+      "seconds": 11.71555090199945,
       "rows": 100000
     },
     "complete": true

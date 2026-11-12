@@ -35,3 +35,29 @@ Building task graph...
 1 10000000 shim_healpix 0 ok 190.5885368729996
 1 10000000 shim_healpix 1 ok 239.1440403150009
 1 10000000 shim_healpix 2 ok 191.52274358199975
+[duckdb-healpix-value 85f048f] duckdb-healpix-value: case 01 NO
+ 21 files changed, 506 insertions(+), 318 deletions(-)
+ create mode 100644 duckdb-healpix-value/logs/before-watchlist-bucket-run.log
+ create mode 100644 duckdb-healpix-value/logs/case-03-1000000-oracle-0.log
+ create mode 100644 duckdb-healpix-value/logs/case-03-1000000-python-0.log
+ create mode 100644 duckdb-healpix-value/logs/case-03-1000000-python-1.log
+ create mode 100644 duckdb-healpix-value/logs/case-03-1000000-sql-0.log
+ create mode 100644 duckdb-healpix-value/logs/case-03-1000000-sql-1.log
+ create mode 100644 duckdb-healpix-value/logs/case-03-1000000-sql-2.log
+ create mode 100644 duckdb-healpix-value/logs/preflight-complete.log
+ create mode 100644 duckdb-healpix-value/logs/watchlist-bucket-tests.log
+ create mode 100644 duckdb-healpix-value/logs/watchlist-sql-plan.txt
+2 1000000 oracle 0 ok 0.6587320150010783
+2 1000000 sql 0 ok 0.6222496749996935
+2 1000000 sql 1 ok 0.3941075050006475
+2 1000000 sql 2 ok 0.7976188729990099
+2 1000000 shim 0 ok 1.148965494998265
+2 1000000 shim 1 ok 0.3709925100010878
+2 1000000 shim 2 ok 0.5836614170002576
+2 10000000 oracle 0 ok 2.946739229999366
+2 10000000 sql 0 ok 0.9200002350007708
+2 10000000 sql 1 ok 0.7678049309997732
+2 10000000 sql 2 ok 0.7545841170012864
+2 10000000 shim 0 ok 0.7944275070003641
+2 10000000 shim 1 ok 1.0686493730008806
+2 10000000 shim 2 ok 0.7614271330003248

@@ -46,3 +46,5 @@
 - Timing audit: SQL-returning arms include their helper's canonical result sort; direct KD-tree paths in cases 1 and 3 defer ordering to fingerprint validation outside the timer. This favors the KD-tree baselines. The report records the distinction rather than claiming uniform ordering costs. Selected SQL/streamed-neighbour/client-range comparisons use the same materialization/sorting path; check final winners before interpreting any speed claim.
 
 - Case 01: NO; measured result written. Limitations: Both materialized declination/chord candidates and per-row HEALPix cone-range candidates are tested. Python MOC construction is not native performance; no native join or calibration exists. pyacid is installed; the Python comparator uses SciPy directly.
+
+- Case 02: UNPROVEN; measured result written. Limitations: Benchmark covers multi-order probability cells × catalog counts. Fixed 100k ObsCore construction, intersection and union are measured in the supplement. Pure-SQL polygon-to-MOC construction and a native MOC type remain unverified.
