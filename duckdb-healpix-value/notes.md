@@ -54,3 +54,5 @@
 - Case 04: NO; measured result written. Limitations: 
 
 - Case 05: UNPROVEN; measured result written. Limitations: 
+
+- Case 06: UNPROVEN; measured result written. Limitations: No browser requested or used. Shipped ESM gzip size is not tree-shaken bundle cost; generated SQL uses MOCPy, not execution of JS library. WASM size/load time unverified.

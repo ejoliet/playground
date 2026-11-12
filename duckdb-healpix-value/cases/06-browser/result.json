@@ -1,0 +1,58 @@
+{
+  "case": 6,
+  "slug": "browser",
+  "verdict": "UNPROVEN",
+  "axis": null,
+  "number": 7902,
+  "pure_sql_possible": "unproven",
+  "sizes": {},
+  "install": {
+    "without": [
+      "duckdb"
+    ],
+    "shim": [
+      "duckdb",
+      "pyarrow",
+      "cdshealpix",
+      "mocpy",
+      "astropy",
+      "numpy"
+    ],
+    "per_arm": {},
+    "all_tested_arms": [
+      "duckdb",
+      "pyarrow",
+      "numpy",
+      "scipy",
+      "astropy",
+      "astropy-healpix",
+      "cdshealpix",
+      "mocpy"
+    ]
+  },
+  "timing_label": "shim",
+  "limitations": [
+    "No browser requested or used. Shipped ESM gzip size is not tree-shaken bundle cost; generated SQL uses MOCPy, not execution of JS library. WASM size/load time unverified."
+  ],
+  "external": {
+    "package": "healpix-ts",
+    "version": "1.1.0",
+    "tarball": "https://registry.npmjs.org/healpix-ts/-/healpix-ts-1.1.0.tgz",
+    "js_files": [
+      "package/dist/index.js",
+      "package/dist/index.mjs"
+    ],
+    "gzip_all_js_bytes": 38170,
+    "status": "ok",
+    "note": "All shipped JS concatenated; not a tree-shaken application bundle.",
+    "esm_gzip_bytes": 19274
+  },
+  "js_module_gzip_bytes": 19274,
+  "range_sql_bytes": 7902,
+  "query_lines": {
+    "without": 0,
+    "with": 1
+  },
+  "query_line_reduction": null,
+  "shared_sql_macro_lines": 1
+}

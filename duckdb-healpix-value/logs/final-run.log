@@ -187,3 +187,26 @@ Building task graph...
 5 10000000 shim 0 ok 19.231474919999528
 5 10000000 shim 1 ok 30.281788891999895
 5 10000000 shim 2 ok 20.717034510000303
+[duckdb-healpix-value 1f3ac9a] duckdb-healpix-value: case 05 UNPROVEN
+ 24 files changed, 1578 insertions(+)
+ create mode 100644 duckdb-healpix-value/cases/05-sql-only/result.json
+ create mode 100644 duckdb-healpix-value/logs/case-05-1000000-oracle-0.log
+ create mode 100644 duckdb-healpix-value/logs/case-05-1000000-python-0.log
+ create mode 100644 duckdb-healpix-value/logs/case-05-1000000-python-1.log
+ create mode 100644 duckdb-healpix-value/logs/case-05-1000000-python-2.log
+ create mode 100644 duckdb-healpix-value/logs/case-05-1000000-shim-0.log
+ create mode 100644 duckdb-healpix-value/logs/case-05-1000000-shim-1.log
+ create mode 100644 duckdb-healpix-value/logs/case-05-1000000-shim-2.log
+ create mode 100644 duckdb-healpix-value/logs/case-05-1000000-sql-0.log
+ create mode 100644 duckdb-healpix-value/logs/case-05-1000000-sql-1.log
+ create mode 100644 duckdb-healpix-value/logs/case-05-1000000-sql-2.log
+ create mode 100644 duckdb-healpix-value/logs/case-05-10000000-oracle-0.log
+ create mode 100644 duckdb-healpix-value/logs/case-05-10000000-python-0.log
+ create mode 100644 duckdb-healpix-value/logs/case-05-10000000-python-1.log
+ create mode 100644 duckdb-healpix-value/logs/case-05-10000000-python-2.log
+ create mode 100644 duckdb-healpix-value/logs/case-05-10000000-shim-0.log
+ create mode 100644 duckdb-healpix-value/logs/case-05-10000000-shim-1.log
+ create mode 100644 duckdb-healpix-value/logs/case-05-10000000-shim-2.log
+ create mode 100644 duckdb-healpix-value/logs/case-05-10000000-sql-0.log
+ create mode 100644 duckdb-healpix-value/logs/case-05-10000000-sql-1.log
+ create mode 100644 duckdb-healpix-value/logs/case-05-10000000-sql-2.log
