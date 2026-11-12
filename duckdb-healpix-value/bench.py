@@ -161,8 +161,9 @@ def execute(case,n,arm):
         else:
             exact='s2_dwithin(point(c.ra,c.dec),point(w.ra,w.dec),radians(w.radius)*6371010)' if arm=='geography' else 'sep(c.ra,c.dec,w.ra,w.dec)<=w.radius'
             sql=f'''WITH c AS MATERIALIZED (SELECT *,cos(radians(dec))*cos(radians(ra)) AS x,cos(radians(dec))*sin(radians(ra)) AS y FROM cat),
-            w AS MATERIALIZED (SELECT *,cos(radians(dec))*cos(radians(ra)) AS x,cos(radians(dec))*sin(radians(ra)) AS y,2*sin(radians(radius)/2)+1e-14 AS chord FROM watch)
-            SELECT wid,id FROM c JOIN w ON c.dec BETWEEN w.dec-w.radius AND w.dec+w.radius
+            w0 AS MATERIALIZED (SELECT *,cos(radians(dec))*cos(radians(ra)) AS x,cos(radians(dec))*sin(radians(ra)) AS y,2*sin(radians(radius)/2)+1e-14 AS chord FROM watch),
+            w AS (SELECT *,unnest(range(floor((dec-radius)*1000)::BIGINT,floor((dec+radius)*1000)::BIGINT+1)) AS bucket FROM w0)
+            SELECT wid,id FROM c JOIN w ON floor(c.dec*1000)::BIGINT=w.bucket AND c.dec BETWEEN w.dec-w.radius AND w.dec+w.radius
             AND abs(c.x-w.x)<=w.chord AND abs(c.y-w.y)<=w.chord WHERE {exact}'''
             prefix,tail=sql.rsplit('SELECT wid,id FROM c JOIN w',1)
             bounds=tail.split(' WHERE ',1)[0]

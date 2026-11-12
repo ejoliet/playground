@@ -4,7 +4,7 @@
   "input_rows": 10000,
   "selected_rows": 1003,
   "row_diff_count": 0,
-  "seconds": 2.0205919569998514,
+  "seconds": 2.174406927000746,
   "partitions": 15,
   "shim_hats": {
     "selected_files": 4,
@@ -33,6 +33,6 @@
   "geography_hats": {
     "input_files": 15,
     "row_diff_count": 0,
-    "seconds": 0.00966842399975576
+    "seconds": 0.02066243400076928
   }
 }

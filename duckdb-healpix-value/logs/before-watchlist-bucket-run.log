@@ -1,0 +1,264 @@
+generate 1000000
+generate 10000000
+Building task graph...
+Computing Catalog:   0%|          | 0/8 [00:00<?, ?it/s]Computing Catalog: 100%|██████████| 8/8 [00:00<00:00, 122.13it/s]
+{'status': 'ok', 'source': 'synthetic local HATS via lsdb.from_dataframe/to_hats', 'input_rows': 10000, 'selected_rows': 1003, 'row_diff_count': 0, 'seconds': 2.0205919569998514, 'partitions': 15, 'shim_hats': {'selected_files': 4, 'partition_diff_vs_client': 0, 'partition_diff_vs_lsdb': 0, 'row_diff_count': 0, 'partitions': [(1, 16), (1, 17), (1, 18), (1, 19)]}, 'geography_hats': {'input_files': 15, 'row_diff_count': 0, 'seconds': 0.00966842399975576}}
+1 1000000 oracle 0 ok 4.640914145998977
+1 1000000 sql 0 ok 2.1065367869996408
+1 1000000 sql 1 ok 1.767352225999275
+1 1000000 sql 2 ok 1.602868246000071
+1 1000000 python 0 ok 6.627892948001318
+1 1000000 python 1 ok 7.771598602999802
+1 1000000 python 2 ok 7.1690844429995195
+1 1000000 neighbours 0 ok 3.176032801000474
+1 1000000 neighbours 1 ok 2.0361085460008326
+1 1000000 neighbours 2 ok 1.846020826998938
+1 1000000 shim 0 ok 2.067297341000085
+1 1000000 shim 1 ok 2.135787500999868
+1 1000000 shim 2 ok 1.5779690839990508
+1 1000000 shim_healpix 0 ok 16.689207264998913
+1 1000000 shim_healpix 1 ok 20.22412274099952
+1 1000000 shim_healpix 2 ok 20.390380781000204
+1 10000000 oracle 0 ok 43.57627577099993
+1 10000000 sql 0 ok 27.05982023499928
+1 10000000 sql 1 ok 27.029181844998675
+1 10000000 sql 2 ok 22.283607441999266
+1 10000000 python 0 ok 74.44576212600077
+1 10000000 python 1 ok 78.74710883400076
+1 10000000 python 2 ok 81.98657659799937
+1 10000000 neighbours 0 ok 18.837470517999463
+1 10000000 neighbours 1 ok 26.359589152998524
+1 10000000 neighbours 2 ok 30.059692758999518
+1 10000000 shim 0 ok 37.82327422599883
+1 10000000 shim 1 ok 32.77098179099994
+1 10000000 shim 2 ok 32.423338631999286
+1 10000000 shim_healpix 0 ok 191.51083473299877
+1 10000000 shim_healpix 1 ok 198.20642472299915
+1 10000000 shim_healpix 2 ok 224.73188690999996
+[duckdb-healpix-value 7f0c3a3] duckdb-healpix-value: case 01 NO
+ 189 files changed, 9615 insertions(+)
+ create mode 100644 duckdb-healpix-value/.gitignore
+ create mode 100644 duckdb-healpix-value/.python-version
+ create mode 100644 duckdb-healpix-value/bench.py
+ create mode 100644 duckdb-healpix-value/calibrate.py
+ create mode 100644 duckdb-healpix-value/cases/01-xmatch/oracle.py
+ create mode 100644 duckdb-healpix-value/cases/01-xmatch/result.json
+ create mode 100644 duckdb-healpix-value/cases/01-xmatch/run.py
+ create mode 100644 duckdb-healpix-value/cases/01-xmatch/with-chord.sql
+ create mode 100644 duckdb-healpix-value/cases/01-xmatch/with-interval-attempt.sql
+ create mode 100644 duckdb-healpix-value/cases/01-xmatch/with.sql
+ create mode 100644 duckdb-healpix-value/cases/01-xmatch/without-neighbours.sql
+ create mode 100644 duckdb-healpix-value/cases/01-xmatch/without.py
+ create mode 100644 duckdb-healpix-value/cases/01-xmatch/without.sql
+ create mode 100644 duckdb-healpix-value/cases/02-moc-column/oracle.py
+ create mode 100644 duckdb-healpix-value/cases/02-moc-column/run.py
+ create mode 100644 duckdb-healpix-value/cases/02-moc-column/with.sql
+ create mode 100644 duckdb-healpix-value/cases/02-moc-column/without.py
+ create mode 100644 duckdb-healpix-value/cases/02-moc-column/without.sql
+ create mode 100644 duckdb-healpix-value/cases/03-per-row-cones/oracle.py
+ create mode 100644 duckdb-healpix-value/cases/03-per-row-cones/run.py
+ create mode 100644 duckdb-healpix-value/cases/03-per-row-cones/with.sql
+ create mode 100644 duckdb-healpix-value/cases/03-per-row-cones/without.py
+ create mode 100644 duckdb-healpix-value/cases/03-per-row-cones/without.sql
+ create mode 100644 duckdb-healpix-value/cases/04-adql-literal/oracle.py
+ create mode 100644 duckdb-healpix-value/cases/04-adql-literal/run.py
+ create mode 100644 duckdb-healpix-value/cases/04-adql-literal/with.sql
+ create mode 100644 duckdb-healpix-value/cases/04-adql-literal/without.py
+ create mode 100644 duckdb-healpix-value/cases/04-adql-literal/without.sql
+ create mode 100644 duckdb-healpix-value/cases/05-sql-only/blocker.md
+ create mode 100644 duckdb-healpix-value/cases/05-sql-only/oracle.py
+ create mode 100644 duckdb-healpix-value/cases/05-sql-only/run.py
+ create mode 100644 duckdb-healpix-value/cases/05-sql-only/with.sql
+ create mode 100644 duckdb-healpix-value/cases/05-sql-only/without.py
+ create mode 100644 duckdb-healpix-value/cases/05-sql-only/without.sql
+ create mode 100644 duckdb-healpix-value/cases/06-browser/blocker.md
+ create mode 100644 duckdb-healpix-value/cases/06-browser/oracle.py
+ create mode 100644 duckdb-healpix-value/cases/06-browser/run.py
+ create mode 100644 duckdb-healpix-value/cases/06-browser/with.sql
+ create mode 100644 duckdb-healpix-value/cases/06-browser/without.py
+ create mode 100644 duckdb-healpix-value/cases/06-browser/without.sql
+ create mode 100644 duckdb-healpix-value/cases/07-ingest/oracle.py
+ create mode 100644 duckdb-healpix-value/cases/07-ingest/run.py
+ create mode 100644 duckdb-healpix-value/cases/07-ingest/with.sql
+ create mode 100644 duckdb-healpix-value/cases/07-ingest/without.py
+ create mode 100644 duckdb-healpix-value/cases/07-ingest/without.sql
+ create mode 100644 duckdb-healpix-value/cases/08-density/oracle.py
+ create mode 100644 duckdb-healpix-value/cases/08-density/run.py
+ create mode 100644 duckdb-healpix-value/cases/08-density/shortcut.sql
+ create mode 100644 duckdb-healpix-value/cases/08-density/with.sql
+ create mode 100644 duckdb-healpix-value/cases/08-density/without.py
+ create mode 100644 duckdb-healpix-value/cases/08-density/without.sql
+ create mode 100644 duckdb-healpix-value/cases/09-lightcurves/oracle.py
+ create mode 100644 duckdb-healpix-value/cases/09-lightcurves/run.py
+ create mode 100644 duckdb-healpix-value/cases/09-lightcurves/shortcut.sql
+ create mode 100644 duckdb-healpix-value/cases/09-lightcurves/with.sql
+ create mode 100644 duckdb-healpix-value/cases/09-lightcurves/without.py
+ create mode 100644 duckdb-healpix-value/cases/09-lightcurves/without.sql
+ create mode 100644 duckdb-healpix-value/cases/10-lake-partition/oracle.py
+ create mode 100644 duckdb-healpix-value/cases/10-lake-partition/run.py
+ create mode 100644 duckdb-healpix-value/cases/10-lake-partition/shortcut.sql
+ create mode 100644 duckdb-healpix-value/cases/10-lake-partition/with.sql
+ create mode 100644 duckdb-healpix-value/cases/10-lake-partition/without.py
+ create mode 100644 duckdb-healpix-value/cases/10-lake-partition/without.sql
+ create mode 100644 duckdb-healpix-value/cases/11-map-analysis/blocker.md
+ create mode 100644 duckdb-healpix-value/cases/11-map-analysis/oracle.py
+ create mode 100644 duckdb-healpix-value/cases/11-map-analysis/run.py
+ create mode 100644 duckdb-healpix-value/cases/11-map-analysis/with.sql
+ create mode 100644 duckdb-healpix-value/cases/11-map-analysis/without.py
+ create mode 100644 duckdb-healpix-value/cases/11-map-analysis/without.sql
+ create mode 100644 duckdb-healpix-value/cases/12-distributed/blocker.md
+ create mode 100644 duckdb-healpix-value/cases/12-distributed/oracle.py
+ create mode 100644 duckdb-healpix-value/cases/12-distributed/run.py
+ create mode 100644 duckdb-healpix-value/cases/12-distributed/with.sql
+ create mode 100644 duckdb-healpix-value/cases/12-distributed/without.py
+ create mode 100644 duckdb-healpix-value/cases/12-distributed/without.sql
+ create mode 100644 duckdb-healpix-value/cases/13-s2-h3/oracle.py
+ create mode 100644 duckdb-healpix-value/cases/13-s2-h3/run.py
+ create mode 100644 duckdb-healpix-value/cases/13-s2-h3/with.sql
+ create mode 100644 duckdb-healpix-value/cases/13-s2-h3/without.py
+ create mode 100644 duckdb-healpix-value/cases/13-s2-h3/without.sql
+ create mode 100644 duckdb-healpix-value/external_checks.py
+ create mode 100644 duckdb-healpix-value/footprint_check.py
+ create mode 100644 duckdb-healpix-value/hats_check.py
+ create mode 100644 duckdb-healpix-value/logs/case-01-1000000-neighbours-0.log
+ create mode 100644 duckdb-healpix-value/logs/case-01-1000000-neighbours-1.log
+ create mode 100644 duckdb-healpix-value/logs/case-01-1000000-neighbours-2.log
+ create mode 100644 duckdb-healpix-value/logs/case-01-1000000-oracle-0.log
+ create mode 100644 duckdb-healpix-value/logs/case-01-1000000-python-0.log
+ create mode 100644 duckdb-healpix-value/logs/case-01-1000000-python-1.log
+ create mode 100644 duckdb-healpix-value/logs/case-01-1000000-python-2.log
+ create mode 100644 duckdb-healpix-value/logs/case-01-1000000-shim-0.log
+ create mode 100644 duckdb-healpix-value/logs/case-01-1000000-shim-1.log
+ create mode 100644 duckdb-healpix-value/logs/case-01-1000000-shim-2.log
+ create mode 100644 duckdb-healpix-value/logs/case-01-1000000-shim_healpix-0.log
+ create mode 100644 duckdb-healpix-value/logs/case-01-1000000-shim_healpix-1.log
+ create mode 100644 duckdb-healpix-value/logs/case-01-1000000-shim_healpix-2.log
+ create mode 100644 duckdb-healpix-value/logs/case-01-1000000-sql-0.log
+ create mode 100644 duckdb-healpix-value/logs/case-01-1000000-sql-1.log
+ create mode 100644 duckdb-healpix-value/logs/case-01-1000000-sql-2.log
+ create mode 100644 duckdb-healpix-value/logs/case-01-10000000-neighbours-0.log
+ create mode 100644 duckdb-healpix-value/logs/case-01-10000000-neighbours-1.log
+ create mode 100644 duckdb-healpix-value/logs/case-01-10000000-neighbours-2.log
+ create mode 100644 duckdb-healpix-value/logs/case-01-10000000-oracle-0.log
+ create mode 100644 duckdb-healpix-value/logs/case-01-10000000-python-0.log
+ create mode 100644 duckdb-healpix-value/logs/case-01-10000000-python-1.log
+ create mode 100644 duckdb-healpix-value/logs/case-01-10000000-python-2.log
+ create mode 100644 duckdb-healpix-value/logs/case-01-10000000-shim-0.log
+ create mode 100644 duckdb-healpix-value/logs/case-01-10000000-shim-1.log
+ create mode 100644 duckdb-healpix-value/logs/case-01-10000000-shim-2.log
+ create mode 100644 duckdb-healpix-value/logs/case-01-10000000-shim_healpix-0.log
+ create mode 100644 duckdb-healpix-value/logs/case-01-10000000-shim_healpix-1.log
+ create mode 100644 duckdb-healpix-value/logs/case-01-10000000-shim_healpix-2.log
+ create mode 100644 duckdb-healpix-value/logs/case-01-10000000-sql-0.log
+ create mode 100644 duckdb-healpix-value/logs/case-01-10000000-sql-1.log
+ create mode 100644 duckdb-healpix-value/logs/case-01-10000000-sql-2.log
+ create mode 100644 duckdb-healpix-value/logs/clone.log
+ create mode 100644 duckdb-healpix-value/logs/data.log
+ create mode 100644 duckdb-healpix-value/logs/duckdb-pin.log
+ create mode 100644 duckdb-healpix-value/logs/external.json
+ create mode 100644 duckdb-healpix-value/logs/external.log
+ create mode 100644 duckdb-healpix-value/logs/final-run.log
+ create mode 100644 duckdb-healpix-value/logs/first-run.log
+ create mode 100644 duckdb-healpix-value/logs/footprint-oracle-0.log
+ create mode 100644 duckdb-healpix-value/logs/footprint-python_batch-0.log
+ create mode 100644 duckdb-healpix-value/logs/footprint-python_batch-1.log
+ create mode 100644 duckdb-healpix-value/logs/footprint-python_batch-2.log
+ create mode 100644 duckdb-healpix-value/logs/footprint-python_scalar-0.log
+ create mode 100644 duckdb-healpix-value/logs/footprint-python_scalar-1.log
+ create mode 100644 duckdb-healpix-value/logs/footprint-python_scalar-2.log
+ create mode 100644 duckdb-healpix-value/logs/footprint-shim-0.log
+ create mode 100644 duckdb-healpix-value/logs/footprint-shim-1.log
+ create mode 100644 duckdb-healpix-value/logs/footprint-shim-2.log
+ create mode 100644 duckdb-healpix-value/logs/footprints.json
+ create mode 100644 duckdb-healpix-value/logs/footprints.log
+ create mode 100644 duckdb-healpix-value/logs/hash-smoke-neighbours.json
+ create mode 100644 duckdb-healpix-value/logs/hash-smoke-shim.json
+ create mode 100644 duckdb-healpix-value/logs/hash-smoke-shim_healpix.json
+ create mode 100644 duckdb-healpix-value/logs/hats-enhanced.log
+ create mode 100644 duckdb-healpix-value/logs/hats.json
+ create mode 100644 duckdb-healpix-value/logs/hats.log
+ create mode 100644 duckdb-healpix-value/logs/install.log
+ create mode 100644 duckdb-healpix-value/logs/literal-query-construction-error.txt
+ create mode 100644 duckdb-healpix-value/logs/lock.log
+ create mode 100644 duckdb-healpix-value/logs/lsdb-install.log
+ create mode 100644 duckdb-healpix-value/logs/native-build.log
+ create mode 100644 duckdb-healpix-value/logs/pre-hash-join-run.log
+ create mode 100644 duckdb-healpix-value/logs/pre-materialization-run.log
+ create mode 100644 duckdb-healpix-value/logs/pre-vectorization-run.log
+ create mode 100644 duckdb-healpix-value/logs/probe.log
+ create mode 100644 duckdb-healpix-value/logs/pyacid-install.log
+ create mode 100644 duckdb-healpix-value/logs/pytest-final-preflight.log
+ create mode 100644 duckdb-healpix-value/logs/pytest-final.log
+ create mode 100644 duckdb-healpix-value/logs/pytest-hash.log
+ create mode 100644 duckdb-healpix-value/logs/pytest-initial.log
+ create mode 100644 duckdb-healpix-value/logs/pytest-materialized.log
+ create mode 100644 duckdb-healpix-value/logs/pytest-preflight.log
+ create mode 100644 duckdb-healpix-value/logs/pytest-vectorized.log
+ create mode 100644 duckdb-healpix-value/logs/pytest.xml
+ create mode 100644 duckdb-healpix-value/logs/setup.json
+ create mode 100644 duckdb-healpix-value/logs/smoke.log
+ create mode 100644 duckdb-healpix-value/logs/upstream-README.md
+ create mode 100644 duckdb-healpix-value/logs/validation.json
+ create mode 100644 duckdb-healpix-value/logs/verify.log
+ create mode 100644 duckdb-healpix-value/logs/xmatch-final-shim-plan.txt
+ create mode 100644 duckdb-healpix-value/logs/xmatch-final-shim_healpix-plan.txt
+ create mode 100644 duckdb-healpix-value/logs/xmatch-final-sql-plan.txt
+ create mode 100644 duckdb-healpix-value/logs/xmatch-hash-neighbours-plan.txt
+ create mode 100644 duckdb-healpix-value/logs/xmatch-hash-shim-plan.txt
+ create mode 100644 duckdb-healpix-value/logs/xmatch-hash-shim_healpix-plan.txt
+ create mode 100644 duckdb-healpix-value/logs/xmatch-hash-sql-plan.txt
+ create mode 100644 duckdb-healpix-value/logs/xmatch-range-preference-shim-plan.txt
+ create mode 100644 duckdb-healpix-value/logs/xmatch-range-preference-shim_healpix-plan.txt
+ create mode 100644 duckdb-healpix-value/logs/xmatch-shim-plan.txt
+ create mode 100644 duckdb-healpix-value/make_data.py
+ create mode 100644 duckdb-healpix-value/notes.md
+ create mode 100644 duckdb-healpix-value/plain_healpix.sql
+ create mode 100644 duckdb-healpix-value/problem.md
+ create mode 100644 duckdb-healpix-value/pyproject.toml
+ create mode 100644 duckdb-healpix-value/report.py
+ create mode 100644 duckdb-healpix-value/run_all.py
+ create mode 100644 duckdb-healpix-value/setup.sql
+ create mode 100644 duckdb-healpix-value/setup_probe.py
+ create mode 100644 duckdb-healpix-value/shim.py
+ create mode 100644 duckdb-healpix-value/sitecustomize.py
+ create mode 100644 duckdb-healpix-value/smoke.py
+ create mode 100644 duckdb-healpix-value/tests/conftest.py
+ create mode 100644 duckdb-healpix-value/tests/test_research.py
+ create mode 100644 duckdb-healpix-value/uv.lock
+ create mode 100644 duckdb-healpix-value/verify.py
+2 1000000 oracle 0 ok 0.636903644000995
+2 1000000 sql 0 ok 0.9775986549993831
+2 1000000 sql 1 ok 0.40031282900054066
+2 1000000 sql 2 ok 0.984604595001656
+2 1000000 shim 0 ok 0.37225954000132333
+2 1000000 shim 1 ok 0.43110572499972477
+2 1000000 shim 2 ok 0.4500279469993984
+2 10000000 oracle 0 ok 3.362894674999552
+2 10000000 sql 0 ok 0.8751887710004667
+2 10000000 sql 1 ok 1.0282457569992403
+2 10000000 sql 2 ok 0.6537728330004029
+2 10000000 shim 0 ok 0.7083961589996761
+2 10000000 shim 1 ok 0.7485338589995081
+2 10000000 shim 2 ok 0.7734825520001323
+[duckdb-healpix-value 5cf662a] duckdb-healpix-value: case 02 UNPROVEN
+ 17 files changed, 1011 insertions(+)
+ create mode 100644 duckdb-healpix-value/cases/02-moc-column/result.json
+ create mode 100644 duckdb-healpix-value/logs/case-02-1000000-oracle-0.log
+ create mode 100644 duckdb-healpix-value/logs/case-02-1000000-shim-0.log
+ create mode 100644 duckdb-healpix-value/logs/case-02-1000000-shim-1.log
+ create mode 100644 duckdb-healpix-value/logs/case-02-1000000-shim-2.log
+ create mode 100644 duckdb-healpix-value/logs/case-02-1000000-sql-0.log
+ create mode 100644 duckdb-healpix-value/logs/case-02-1000000-sql-1.log
+ create mode 100644 duckdb-healpix-value/logs/case-02-1000000-sql-2.log
+ create mode 100644 duckdb-healpix-value/logs/case-02-10000000-oracle-0.log
+ create mode 100644 duckdb-healpix-value/logs/case-02-10000000-shim-0.log
+ create mode 100644 duckdb-healpix-value/logs/case-02-10000000-shim-1.log
+ create mode 100644 duckdb-healpix-value/logs/case-02-10000000-shim-2.log
+ create mode 100644 duckdb-healpix-value/logs/case-02-10000000-sql-0.log
+ create mode 100644 duckdb-healpix-value/logs/case-02-10000000-sql-1.log
+ create mode 100644 duckdb-healpix-value/logs/case-02-10000000-sql-2.log
+3 1000000 oracle 0 ok 6.585212480998962
+3 1000000 sql 0 ok 55.489208426000914
+3 1000000 sql 1 ok 62.63918121200004
+3 1000000 sql 2 ok 52.682403669999985
+3 1000000 python 0 ok 1.1265267109993147
