@@ -68,3 +68,5 @@
 - Case 11: NO; measured result written. Limitations: Scope conclusion, not a benchmark-derived speed verdict. No harmonics or distributed execution implemented by the v1 API.
 
 - Case 12: NO; measured result written. Limitations: Scope conclusion, not a benchmark-derived speed verdict. No harmonics or distributed execution implemented by the v1 API.
+
+- Case 13: NO; measured result written. Limitations: S2-only spherical predicates rerun with SQL declination pruning; S2 covering-index join not benchmarked. Missing HEALPix/MOC API is not proof no SQL implementation can be written.

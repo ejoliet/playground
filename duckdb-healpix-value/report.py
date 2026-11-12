@@ -118,7 +118,7 @@ def main():
     text += [f"- {n}: "+', '.join(arm+' '+fmt(v['median_seconds'])+' seconds' for arm,v in b['arms'].items())]
    text+=['',evidence['scope']]
   if 'footprints' in r:
-   fp=r['footprints'];text+=['','Fixed ObsCore polygon supplement:','', '| Arm | Median seconds | Trial row differences |','|---|---|---|']
+   fp=r['footprints'];text+=['',f"Fixed {fp.get('rows','unverified')} ObsCore polygon supplement at order {fp.get('order','unverified')}:",'', '| Arm | Median seconds | Trial row differences |','|---|---|---|']
    for arm,v in fp.get('arms',{}).items():text.append('| '+arm+' | '+fmt(v.get('median_seconds'))+' | '+', '.join(str(t.get('row_diff_count',t.get('status'))) for t in v['trials'])+' |')
    if not fp.get('arms'):text.append('| Bundle | — | '+fp.get('status','unverified')+' |')
    text+=['',fp.get('note','No per-query result preserved; do not interpret a bundle timeout as a query timing.')]
