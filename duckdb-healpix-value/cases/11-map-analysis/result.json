@@ -1,0 +1,333 @@
+{
+  "case": 11,
+  "slug": "map-analysis",
+  "verdict": "NO",
+  "axis": null,
+  "number": null,
+  "pure_sql_possible": "unproven",
+  "sizes": {},
+  "install": {
+    "without": [
+      "duckdb"
+    ],
+    "shim": [
+      "duckdb",
+      "pyarrow",
+      "cdshealpix",
+      "mocpy",
+      "astropy",
+      "numpy"
+    ],
+    "per_arm": {},
+    "all_tested_arms": [
+      "duckdb",
+      "pyarrow",
+      "numpy",
+      "scipy",
+      "astropy",
+      "astropy-healpix",
+      "cdshealpix",
+      "mocpy"
+    ]
+  },
+  "timing_label": "shim",
+  "limitations": [
+    "Scope conclusion, not a benchmark-derived speed verdict. No harmonics or distributed execution implemented by the v1 API."
+  ],
+  "derived_evidence": {
+    "source_case": 8,
+    "sizes": {
+      "1000000": {
+        "oracle": {
+          "status": "ok",
+          "seconds": 0.8223499809992063,
+          "rows": 49152,
+          "sha256": "f541e7692ca922fd31833f0a6718bcae3f03c62c06723a206df4cb5251b268a7",
+          "edge_rows": [
+            [
+              0,
+              23
+            ],
+            [
+              1,
+              23
+            ],
+            [
+              2,
+              19
+            ],
+            [
+              3,
+              27
+            ],
+            [
+              4,
+              25
+            ],
+            [
+              5,
+              18
+            ],
+            [
+              6,
+              12
+            ],
+            [
+              7,
+              13
+            ]
+          ]
+        },
+        "arms": {
+          "sql": {
+            "trials": [
+              {
+                "status": "ok",
+                "seconds": 0.3576898949995666,
+                "rows": 49152,
+                "sha256": "f541e7692ca922fd31833f0a6718bcae3f03c62c06723a206df4cb5251b268a7",
+                "edge_rows": [
+                  [
+                    0,
+                    23
+                  ],
+                  [
+                    1,
+                    23
+                  ],
+                  [
+                    2,
+                    19
+                  ],
+                  [
+                    3,
+                    27
+                  ],
+                  [
+                    4,
+                    25
+                  ],
+                  [
+                    5,
+                    18
+                  ],
+                  [
+                    6,
+                    12
+                  ],
+                  [
+                    7,
+                    13
+                  ]
+                ],
+                "row_diff_count": 0,
+                "correct": true,
+                "edge_rows_differ": []
+              }
+            ],
+            "median_seconds": 0.3576898949995666,
+            "correct": true
+          },
+          "shim": {
+            "trials": [
+              {
+                "status": "ok",
+                "seconds": 0.4412567729996226,
+                "rows": 49152,
+                "sha256": "f541e7692ca922fd31833f0a6718bcae3f03c62c06723a206df4cb5251b268a7",
+                "edge_rows": [
+                  [
+                    0,
+                    23
+                  ],
+                  [
+                    1,
+                    23
+                  ],
+                  [
+                    2,
+                    19
+                  ],
+                  [
+                    3,
+                    27
+                  ],
+                  [
+                    4,
+                    25
+                  ],
+                  [
+                    5,
+                    18
+                  ],
+                  [
+                    6,
+                    12
+                  ],
+                  [
+                    7,
+                    13
+                  ]
+                ],
+                "row_diff_count": 0,
+                "correct": true,
+                "edge_rows_differ": []
+              }
+            ],
+            "median_seconds": 0.4412567729996226,
+            "correct": true
+          }
+        }
+      },
+      "10000000": {
+        "oracle": {
+          "status": "ok",
+          "seconds": 4.064648546000171,
+          "rows": 49152,
+          "sha256": "351c29eaec324278dc47a20181fefe823bd4b5b07a0c26c3c43ac6ff58dfd2f3",
+          "edge_rows": [
+            [
+              0,
+              196
+            ],
+            [
+              1,
+              195
+            ],
+            [
+              2,
+              204
+            ],
+            [
+              3,
+              176
+            ],
+            [
+              4,
+              193
+            ],
+            [
+              5,
+              176
+            ],
+            [
+              6,
+              213
+            ],
+            [
+              7,
+              194
+            ]
+          ]
+        },
+        "arms": {
+          "sql": {
+            "trials": [
+              {
+                "status": "ok",
+                "seconds": 0.7178500310001255,
+                "rows": 49152,
+                "sha256": "351c29eaec324278dc47a20181fefe823bd4b5b07a0c26c3c43ac6ff58dfd2f3",
+                "edge_rows": [
+                  [
+                    0,
+                    196
+                  ],
+                  [
+                    1,
+                    195
+                  ],
+                  [
+                    2,
+                    204
+                  ],
+                  [
+                    3,
+                    176
+                  ],
+                  [
+                    4,
+                    193
+                  ],
+                  [
+                    5,
+                    176
+                  ],
+                  [
+                    6,
+                    213
+                  ],
+                  [
+                    7,
+                    194
+                  ]
+                ],
+                "row_diff_count": 0,
+                "correct": true,
+                "edge_rows_differ": []
+              }
+            ],
+            "median_seconds": 0.7178500310001255,
+            "correct": true
+          },
+          "shim": {
+            "trials": [
+              {
+                "status": "ok",
+                "seconds": 1.0131414490006136,
+                "rows": 49152,
+                "sha256": "351c29eaec324278dc47a20181fefe823bd4b5b07a0c26c3c43ac6ff58dfd2f3",
+                "edge_rows": [
+                  [
+                    0,
+                    196
+                  ],
+                  [
+                    1,
+                    195
+                  ],
+                  [
+                    2,
+                    204
+                  ],
+                  [
+                    3,
+                    176
+                  ],
+                  [
+                    4,
+                    193
+                  ],
+                  [
+                    5,
+                    176
+                  ],
+                  [
+                    6,
+                    213
+                  ],
+                  [
+                    7,
+                    194
+                  ]
+                ],
+                "row_diff_count": 0,
+                "correct": true,
+                "edge_rows_differ": []
+              }
+            ],
+            "median_seconds": 1.0131414490006136,
+            "correct": true
+          }
+        }
+      }
+    },
+    "scope": "Local aggregation/join timings do not establish transforms or distributed execution."
+  },
+  "query_lines": {
+    "without": 0,
+    "with": 0
+  },
+  "query_line_reduction": null,
+  "shared_sql_macro_lines": 1
+}

@@ -298,3 +298,14 @@ Building task graph...
 10 10000000 sql 0 ok 6.382651375000933
 10 10000000 python 0 ok 8.0112698920002
 10 10000000 shim 0 ok 7.163980209999863
+[duckdb-healpix-value 23289fa] duckdb-healpix-value: case 10 NO
+ 11 files changed, 485 insertions(+)
+ create mode 100644 duckdb-healpix-value/cases/10-lake-partition/result.json
+ create mode 100644 duckdb-healpix-value/logs/case-10-1000000-oracle-0.log
+ create mode 100644 duckdb-healpix-value/logs/case-10-1000000-python-0.log
+ create mode 100644 duckdb-healpix-value/logs/case-10-1000000-shim-0.log
+ create mode 100644 duckdb-healpix-value/logs/case-10-1000000-sql-0.log
+ create mode 100644 duckdb-healpix-value/logs/case-10-10000000-oracle-0.log
+ create mode 100644 duckdb-healpix-value/logs/case-10-10000000-python-0.log
+ create mode 100644 duckdb-healpix-value/logs/case-10-10000000-shim-0.log
+ create mode 100644 duckdb-healpix-value/logs/case-10-10000000-sql-0.log
