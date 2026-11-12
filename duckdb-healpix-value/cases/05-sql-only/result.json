@@ -4,7 +4,7 @@
   "verdict": "UNPROVEN",
   "axis": null,
   "number": 0.38875991161337514,
-  "pure_sql_possible": "yes",
+  "pure_sql_possible": "no",
   "sizes": {
     "1000000": {
       "oracle": {
@@ -1459,7 +1459,9 @@
     ]
   },
   "timing_label": "shim",
-  "limitations": [],
+  "limitations": [
+    "Python execution does not validate native CLI, dbt, R or Java delivery; the measured SQL macro has a boundary mismatch."
+  ],
   "best_baseline": "python",
   "best_with": "shim",
   "speed_ratio": 0.38875991161337514,
@@ -1468,5 +1470,19 @@
     "with": 1
   },
   "query_line_reduction": 0.0,
-  "shared_sql_macro_lines": 22
+  "shared_sql_macro_lines": 22,
+  "pure_sql_note": "No oracle-correct pure-SQL route was established for the full stated use case; this is not a proof of mathematical impossibility.",
+  "timing_scope": {
+    "sql_returning_arms": "connection, registration, reads, computation, materialization, canonical sort",
+    "direct_kdtree_cases_1_3": "connection, reads, tree build, query, result collection; validation ordering excluded",
+    "excluded": "process/module startup and final fingerprinting"
+  },
+  "baseline_outcomes": {
+    "sql": "oracle mismatch, error or timeout; see trials",
+    "python": "selected fastest correct baseline"
+  },
+  "displayed_queries": {
+    "without": "-- Register the reusable macros in ../../plain_healpix.sql first.\nSELECT * FROM plain_pixels('cat',12);\n",
+    "with": "SELECT id,hpx_ang2pix(12,ra,\"dec\") AS pix FROM cat;\n"
+  }
 }

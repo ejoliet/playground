@@ -1554,6 +1554,298 @@
           ],
           "median_seconds": 25.36596713600011,
           "correct": true
+        },
+        "geography": {
+          "trials": [
+            {
+              "status": "ok",
+              "seconds": 7.723613829000897,
+              "rows": 946635,
+              "sha256": "eedde8727b311cb9fe932d71d3f1b5d932a4f42a07865bf8f7107f43b8c80168",
+              "edge_rows": [
+                [
+                  0,
+                  0
+                ],
+                [
+                  0,
+                  2
+                ],
+                [
+                  0,
+                  4
+                ],
+                [
+                  1,
+                  1
+                ],
+                [
+                  1,
+                  3
+                ],
+                [
+                  1,
+                  5
+                ],
+                [
+                  2,
+                  0
+                ],
+                [
+                  2,
+                  2
+                ],
+                [
+                  3,
+                  1
+                ],
+                [
+                  3,
+                  3
+                ],
+                [
+                  3,
+                  5
+                ],
+                [
+                  4,
+                  0
+                ],
+                [
+                  4,
+                  2
+                ],
+                [
+                  4,
+                  4
+                ],
+                [
+                  5,
+                  1
+                ],
+                [
+                  5,
+                  3
+                ],
+                [
+                  5,
+                  5
+                ],
+                [
+                  6,
+                  6
+                ],
+                [
+                  6,
+                  7
+                ],
+                [
+                  7,
+                  6
+                ],
+                [
+                  7,
+                  7
+                ]
+              ],
+              "row_diff_count": 0,
+              "correct": true,
+              "edge_rows_differ": []
+            },
+            {
+              "status": "ok",
+              "seconds": 8.334268959000838,
+              "rows": 946635,
+              "sha256": "eedde8727b311cb9fe932d71d3f1b5d932a4f42a07865bf8f7107f43b8c80168",
+              "edge_rows": [
+                [
+                  0,
+                  0
+                ],
+                [
+                  0,
+                  2
+                ],
+                [
+                  0,
+                  4
+                ],
+                [
+                  1,
+                  1
+                ],
+                [
+                  1,
+                  3
+                ],
+                [
+                  1,
+                  5
+                ],
+                [
+                  2,
+                  0
+                ],
+                [
+                  2,
+                  2
+                ],
+                [
+                  3,
+                  1
+                ],
+                [
+                  3,
+                  3
+                ],
+                [
+                  3,
+                  5
+                ],
+                [
+                  4,
+                  0
+                ],
+                [
+                  4,
+                  2
+                ],
+                [
+                  4,
+                  4
+                ],
+                [
+                  5,
+                  1
+                ],
+                [
+                  5,
+                  3
+                ],
+                [
+                  5,
+                  5
+                ],
+                [
+                  6,
+                  6
+                ],
+                [
+                  6,
+                  7
+                ],
+                [
+                  7,
+                  6
+                ],
+                [
+                  7,
+                  7
+                ]
+              ],
+              "row_diff_count": 0,
+              "correct": true,
+              "edge_rows_differ": []
+            },
+            {
+              "status": "ok",
+              "seconds": 8.129235287000483,
+              "rows": 946635,
+              "sha256": "eedde8727b311cb9fe932d71d3f1b5d932a4f42a07865bf8f7107f43b8c80168",
+              "edge_rows": [
+                [
+                  0,
+                  0
+                ],
+                [
+                  0,
+                  2
+                ],
+                [
+                  0,
+                  4
+                ],
+                [
+                  1,
+                  1
+                ],
+                [
+                  1,
+                  3
+                ],
+                [
+                  1,
+                  5
+                ],
+                [
+                  2,
+                  0
+                ],
+                [
+                  2,
+                  2
+                ],
+                [
+                  3,
+                  1
+                ],
+                [
+                  3,
+                  3
+                ],
+                [
+                  3,
+                  5
+                ],
+                [
+                  4,
+                  0
+                ],
+                [
+                  4,
+                  2
+                ],
+                [
+                  4,
+                  4
+                ],
+                [
+                  5,
+                  1
+                ],
+                [
+                  5,
+                  3
+                ],
+                [
+                  5,
+                  5
+                ],
+                [
+                  6,
+                  6
+                ],
+                [
+                  6,
+                  7
+                ],
+                [
+                  7,
+                  6
+                ],
+                [
+                  7,
+                  7
+                ]
+              ],
+              "row_diff_count": 0,
+              "correct": true,
+              "edge_rows_differ": []
+            }
+          ],
+          "median_seconds": 8.129235287000483,
+          "correct": true,
+          "source_case": 13
         }
       }
     },
@@ -3105,6 +3397,298 @@
           ],
           "median_seconds": 191.52274358199975,
           "correct": true
+        },
+        "geography": {
+          "trials": [
+            {
+              "status": "ok",
+              "seconds": 90.36408897100046,
+              "rows": 9463734,
+              "sha256": "01c302f0066736a9b3593661846addeec319934c87e5021f6eec1ce0d2c8f29e",
+              "edge_rows": [
+                [
+                  0,
+                  0
+                ],
+                [
+                  0,
+                  2
+                ],
+                [
+                  0,
+                  4
+                ],
+                [
+                  1,
+                  1
+                ],
+                [
+                  1,
+                  3
+                ],
+                [
+                  1,
+                  5
+                ],
+                [
+                  2,
+                  0
+                ],
+                [
+                  2,
+                  2
+                ],
+                [
+                  3,
+                  1
+                ],
+                [
+                  3,
+                  3
+                ],
+                [
+                  3,
+                  5
+                ],
+                [
+                  4,
+                  0
+                ],
+                [
+                  4,
+                  2
+                ],
+                [
+                  4,
+                  4
+                ],
+                [
+                  5,
+                  1
+                ],
+                [
+                  5,
+                  3
+                ],
+                [
+                  5,
+                  5
+                ],
+                [
+                  6,
+                  6
+                ],
+                [
+                  6,
+                  7
+                ],
+                [
+                  7,
+                  6
+                ],
+                [
+                  7,
+                  7
+                ]
+              ],
+              "row_diff_count": 0,
+              "correct": true,
+              "edge_rows_differ": []
+            },
+            {
+              "status": "ok",
+              "seconds": 86.73580380299973,
+              "rows": 9463734,
+              "sha256": "01c302f0066736a9b3593661846addeec319934c87e5021f6eec1ce0d2c8f29e",
+              "edge_rows": [
+                [
+                  0,
+                  0
+                ],
+                [
+                  0,
+                  2
+                ],
+                [
+                  0,
+                  4
+                ],
+                [
+                  1,
+                  1
+                ],
+                [
+                  1,
+                  3
+                ],
+                [
+                  1,
+                  5
+                ],
+                [
+                  2,
+                  0
+                ],
+                [
+                  2,
+                  2
+                ],
+                [
+                  3,
+                  1
+                ],
+                [
+                  3,
+                  3
+                ],
+                [
+                  3,
+                  5
+                ],
+                [
+                  4,
+                  0
+                ],
+                [
+                  4,
+                  2
+                ],
+                [
+                  4,
+                  4
+                ],
+                [
+                  5,
+                  1
+                ],
+                [
+                  5,
+                  3
+                ],
+                [
+                  5,
+                  5
+                ],
+                [
+                  6,
+                  6
+                ],
+                [
+                  6,
+                  7
+                ],
+                [
+                  7,
+                  6
+                ],
+                [
+                  7,
+                  7
+                ]
+              ],
+              "row_diff_count": 0,
+              "correct": true,
+              "edge_rows_differ": []
+            },
+            {
+              "status": "ok",
+              "seconds": 96.90761792100056,
+              "rows": 9463734,
+              "sha256": "01c302f0066736a9b3593661846addeec319934c87e5021f6eec1ce0d2c8f29e",
+              "edge_rows": [
+                [
+                  0,
+                  0
+                ],
+                [
+                  0,
+                  2
+                ],
+                [
+                  0,
+                  4
+                ],
+                [
+                  1,
+                  1
+                ],
+                [
+                  1,
+                  3
+                ],
+                [
+                  1,
+                  5
+                ],
+                [
+                  2,
+                  0
+                ],
+                [
+                  2,
+                  2
+                ],
+                [
+                  3,
+                  1
+                ],
+                [
+                  3,
+                  3
+                ],
+                [
+                  3,
+                  5
+                ],
+                [
+                  4,
+                  0
+                ],
+                [
+                  4,
+                  2
+                ],
+                [
+                  4,
+                  4
+                ],
+                [
+                  5,
+                  1
+                ],
+                [
+                  5,
+                  3
+                ],
+                [
+                  5,
+                  5
+                ],
+                [
+                  6,
+                  6
+                ],
+                [
+                  6,
+                  7
+                ],
+                [
+                  7,
+                  6
+                ],
+                [
+                  7,
+                  7
+                ]
+              ],
+              "row_diff_count": 0,
+              "correct": true,
+              "edge_rows_differ": []
+            }
+          ],
+          "median_seconds": 90.36408897100046,
+          "correct": true,
+          "source_case": 13
         }
       }
     }
@@ -3152,6 +3736,10 @@
         "mocpy",
         "astropy",
         "numpy"
+      ],
+      "geography": [
+        "duckdb",
+        "geography community extension"
       ]
     },
     "all_tested_arms": [
@@ -3177,5 +3765,20 @@
     "with": 7
   },
   "query_line_reduction": 0.0,
-  "shared_sql_macro_lines": 1
+  "shared_sql_macro_lines": 1,
+  "timing_scope": {
+    "sql_returning_arms": "connection, registration, reads, computation, materialization, canonical sort",
+    "direct_kdtree_cases_1_3": "connection, reads, tree build, query, result collection; validation ordering excluded",
+    "excluded": "process/module startup and final fingerprinting"
+  },
+  "baseline_outcomes": {
+    "sql": "slower than selected baseline",
+    "python": "slower than selected baseline",
+    "neighbours": "selected fastest correct baseline",
+    "geography": "slower than selected baseline"
+  },
+  "displayed_queries": {
+    "without": "WITH a AS MATERIALIZED (SELECT *,cos(radians(\"dec\"))*cos(radians(ra)) AS x,cos(radians(\"dec\"))*sin(radians(ra)) AS y,sin(radians(\"dec\")) AS z FROM cat),\n        b0 AS MATERIALIZED (SELECT *,cos(radians(\"dec\"))*cos(radians(ra)) AS x,cos(radians(\"dec\"))*sin(radians(ra)) AS y,sin(radians(\"dec\")) AS z FROM other),\n        b AS (SELECT *,unnest([floor(\"dec\"*3600)::BIGINT-1,floor(\"dec\"*3600)::BIGINT,floor(\"dec\"*3600)::BIGINT+1]) AS bucket FROM b0)\n        , candidates AS MATERIALIZED (SELECT a.id,b.id AS other_id,a.ra AS ara,a.\"dec\" AS adec,b.ra AS bra,b.\"dec\" AS bdec FROM a JOIN b ON floor(a.\"dec\"*3600)::BIGINT=b.bucket\n        AND abs(a.x-b.x)<=2*sin(radians(1./3600)/2)+1e-14\n        AND abs(a.y-b.y)<=2*sin(radians(1./3600)/2)+1e-14\n        AND abs(a.z-b.z)<=2*sin(radians(1./3600)/2)+1e-14) SELECT id,other_id FROM candidates WHERE sep(ara,adec,bra,bdec)<=1./3600;\n",
+    "with": "WITH a AS MATERIALIZED (SELECT *,cos(radians(\"dec\"))*cos(radians(ra)) AS x,cos(radians(\"dec\"))*sin(radians(ra)) AS y,sin(radians(\"dec\")) AS z FROM cat),\n        b0 AS MATERIALIZED (SELECT *,cos(radians(\"dec\"))*cos(radians(ra)) AS x,cos(radians(\"dec\"))*sin(radians(ra)) AS y,sin(radians(\"dec\")) AS z FROM other),\n        b AS (SELECT *,unnest([floor(\"dec\"*3600)::BIGINT-1,floor(\"dec\"*3600)::BIGINT,floor(\"dec\"*3600)::BIGINT+1]) AS bucket FROM b0)\n        , candidates AS MATERIALIZED (SELECT a.id,b.id AS other_id,a.ra AS ara,a.\"dec\" AS adec,b.ra AS bra,b.\"dec\" AS bdec FROM a JOIN b ON floor(a.\"dec\"*3600)::BIGINT=b.bucket\n        AND abs(a.x-b.x)<=2*sin(radians(1./3600)/2)+1e-14\n        AND abs(a.y-b.y)<=2*sin(radians(1./3600)/2)+1e-14\n        AND abs(a.z-b.z)<=2*sin(radians(1./3600)/2)+1e-14) SELECT id,other_id FROM candidates WHERE sky_in_cone(ara,adec,bra,bdec,1./3600);\n"
+  }
 }

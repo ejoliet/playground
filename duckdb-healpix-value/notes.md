@@ -70,3 +70,7 @@
 - Case 12: NO; measured result written. Limitations: Scope conclusion, not a benchmark-derived speed verdict. No harmonics or distributed execution implemented by the v1 API.
 
 - Case 13: NO; measured result written. Limitations: S2-only spherical predicates rerun with SQL declination pruning; S2 covering-index join not benchmarked. Missing HEALPix/MOC API is not proof no SQL implementation can be written.
+
+- Final clean end-to-end run completed all 13 cases, followed by the full suite: 137 passed, 6 expected failures, no skips or failures. The six xfails preserve the SQL HEALPix boundary mismatch in fixture and full-scale conversion/ingest checks. All final timed trials completed; no timeout is hidden.
+- Final report reconciliation includes geography reruns in cases 1 and 3. Scoreboard: 8 NO, 5 UNPROVEN; zero capability/correctness MATTERS, so the project pass line is not met. Checked all 66 arm/scale evidence rows and displayed queries against result.json, and verified 11 PNG artifacts. Observed allocated folder bytes: 1902567424 (below 2 GB). No Git changes outside this folder. Final audit is logs/final-audit.json.
+- Reproduction-command audit corrected the native artifact path to build/release, as the pinned upstream README specifies. This was documentation review only; no second build was attempted. Copied the upstream license beside its README snapshot. Native load/calibration and the public Gaia query remain unverified; the two failed Gaia attempts and validated local HATS fallback are retained. No push or PR was made.

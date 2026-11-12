@@ -3,8 +3,8 @@
   "slug": "distributed",
   "verdict": "NO",
   "axis": null,
-  "number": null,
-  "pure_sql_possible": "unproven",
+  "number": "case 1: 22.8749s (neighbours; scope evidence)",
+  "pure_sql_possible": "no",
   "sizes": {},
   "install": {
     "without": [
@@ -1585,6 +1585,298 @@
             ],
             "median_seconds": 25.36596713600011,
             "correct": true
+          },
+          "geography": {
+            "trials": [
+              {
+                "status": "ok",
+                "seconds": 7.723613829000897,
+                "rows": 946635,
+                "sha256": "eedde8727b311cb9fe932d71d3f1b5d932a4f42a07865bf8f7107f43b8c80168",
+                "edge_rows": [
+                  [
+                    0,
+                    0
+                  ],
+                  [
+                    0,
+                    2
+                  ],
+                  [
+                    0,
+                    4
+                  ],
+                  [
+                    1,
+                    1
+                  ],
+                  [
+                    1,
+                    3
+                  ],
+                  [
+                    1,
+                    5
+                  ],
+                  [
+                    2,
+                    0
+                  ],
+                  [
+                    2,
+                    2
+                  ],
+                  [
+                    3,
+                    1
+                  ],
+                  [
+                    3,
+                    3
+                  ],
+                  [
+                    3,
+                    5
+                  ],
+                  [
+                    4,
+                    0
+                  ],
+                  [
+                    4,
+                    2
+                  ],
+                  [
+                    4,
+                    4
+                  ],
+                  [
+                    5,
+                    1
+                  ],
+                  [
+                    5,
+                    3
+                  ],
+                  [
+                    5,
+                    5
+                  ],
+                  [
+                    6,
+                    6
+                  ],
+                  [
+                    6,
+                    7
+                  ],
+                  [
+                    7,
+                    6
+                  ],
+                  [
+                    7,
+                    7
+                  ]
+                ],
+                "row_diff_count": 0,
+                "correct": true,
+                "edge_rows_differ": []
+              },
+              {
+                "status": "ok",
+                "seconds": 8.334268959000838,
+                "rows": 946635,
+                "sha256": "eedde8727b311cb9fe932d71d3f1b5d932a4f42a07865bf8f7107f43b8c80168",
+                "edge_rows": [
+                  [
+                    0,
+                    0
+                  ],
+                  [
+                    0,
+                    2
+                  ],
+                  [
+                    0,
+                    4
+                  ],
+                  [
+                    1,
+                    1
+                  ],
+                  [
+                    1,
+                    3
+                  ],
+                  [
+                    1,
+                    5
+                  ],
+                  [
+                    2,
+                    0
+                  ],
+                  [
+                    2,
+                    2
+                  ],
+                  [
+                    3,
+                    1
+                  ],
+                  [
+                    3,
+                    3
+                  ],
+                  [
+                    3,
+                    5
+                  ],
+                  [
+                    4,
+                    0
+                  ],
+                  [
+                    4,
+                    2
+                  ],
+                  [
+                    4,
+                    4
+                  ],
+                  [
+                    5,
+                    1
+                  ],
+                  [
+                    5,
+                    3
+                  ],
+                  [
+                    5,
+                    5
+                  ],
+                  [
+                    6,
+                    6
+                  ],
+                  [
+                    6,
+                    7
+                  ],
+                  [
+                    7,
+                    6
+                  ],
+                  [
+                    7,
+                    7
+                  ]
+                ],
+                "row_diff_count": 0,
+                "correct": true,
+                "edge_rows_differ": []
+              },
+              {
+                "status": "ok",
+                "seconds": 8.129235287000483,
+                "rows": 946635,
+                "sha256": "eedde8727b311cb9fe932d71d3f1b5d932a4f42a07865bf8f7107f43b8c80168",
+                "edge_rows": [
+                  [
+                    0,
+                    0
+                  ],
+                  [
+                    0,
+                    2
+                  ],
+                  [
+                    0,
+                    4
+                  ],
+                  [
+                    1,
+                    1
+                  ],
+                  [
+                    1,
+                    3
+                  ],
+                  [
+                    1,
+                    5
+                  ],
+                  [
+                    2,
+                    0
+                  ],
+                  [
+                    2,
+                    2
+                  ],
+                  [
+                    3,
+                    1
+                  ],
+                  [
+                    3,
+                    3
+                  ],
+                  [
+                    3,
+                    5
+                  ],
+                  [
+                    4,
+                    0
+                  ],
+                  [
+                    4,
+                    2
+                  ],
+                  [
+                    4,
+                    4
+                  ],
+                  [
+                    5,
+                    1
+                  ],
+                  [
+                    5,
+                    3
+                  ],
+                  [
+                    5,
+                    5
+                  ],
+                  [
+                    6,
+                    6
+                  ],
+                  [
+                    6,
+                    7
+                  ],
+                  [
+                    7,
+                    6
+                  ],
+                  [
+                    7,
+                    7
+                  ]
+                ],
+                "row_diff_count": 0,
+                "correct": true,
+                "edge_rows_differ": []
+              }
+            ],
+            "median_seconds": 8.129235287000483,
+            "correct": true,
+            "source_case": 13
           }
         }
       },
@@ -3136,6 +3428,298 @@
             ],
             "median_seconds": 191.52274358199975,
             "correct": true
+          },
+          "geography": {
+            "trials": [
+              {
+                "status": "ok",
+                "seconds": 90.36408897100046,
+                "rows": 9463734,
+                "sha256": "01c302f0066736a9b3593661846addeec319934c87e5021f6eec1ce0d2c8f29e",
+                "edge_rows": [
+                  [
+                    0,
+                    0
+                  ],
+                  [
+                    0,
+                    2
+                  ],
+                  [
+                    0,
+                    4
+                  ],
+                  [
+                    1,
+                    1
+                  ],
+                  [
+                    1,
+                    3
+                  ],
+                  [
+                    1,
+                    5
+                  ],
+                  [
+                    2,
+                    0
+                  ],
+                  [
+                    2,
+                    2
+                  ],
+                  [
+                    3,
+                    1
+                  ],
+                  [
+                    3,
+                    3
+                  ],
+                  [
+                    3,
+                    5
+                  ],
+                  [
+                    4,
+                    0
+                  ],
+                  [
+                    4,
+                    2
+                  ],
+                  [
+                    4,
+                    4
+                  ],
+                  [
+                    5,
+                    1
+                  ],
+                  [
+                    5,
+                    3
+                  ],
+                  [
+                    5,
+                    5
+                  ],
+                  [
+                    6,
+                    6
+                  ],
+                  [
+                    6,
+                    7
+                  ],
+                  [
+                    7,
+                    6
+                  ],
+                  [
+                    7,
+                    7
+                  ]
+                ],
+                "row_diff_count": 0,
+                "correct": true,
+                "edge_rows_differ": []
+              },
+              {
+                "status": "ok",
+                "seconds": 86.73580380299973,
+                "rows": 9463734,
+                "sha256": "01c302f0066736a9b3593661846addeec319934c87e5021f6eec1ce0d2c8f29e",
+                "edge_rows": [
+                  [
+                    0,
+                    0
+                  ],
+                  [
+                    0,
+                    2
+                  ],
+                  [
+                    0,
+                    4
+                  ],
+                  [
+                    1,
+                    1
+                  ],
+                  [
+                    1,
+                    3
+                  ],
+                  [
+                    1,
+                    5
+                  ],
+                  [
+                    2,
+                    0
+                  ],
+                  [
+                    2,
+                    2
+                  ],
+                  [
+                    3,
+                    1
+                  ],
+                  [
+                    3,
+                    3
+                  ],
+                  [
+                    3,
+                    5
+                  ],
+                  [
+                    4,
+                    0
+                  ],
+                  [
+                    4,
+                    2
+                  ],
+                  [
+                    4,
+                    4
+                  ],
+                  [
+                    5,
+                    1
+                  ],
+                  [
+                    5,
+                    3
+                  ],
+                  [
+                    5,
+                    5
+                  ],
+                  [
+                    6,
+                    6
+                  ],
+                  [
+                    6,
+                    7
+                  ],
+                  [
+                    7,
+                    6
+                  ],
+                  [
+                    7,
+                    7
+                  ]
+                ],
+                "row_diff_count": 0,
+                "correct": true,
+                "edge_rows_differ": []
+              },
+              {
+                "status": "ok",
+                "seconds": 96.90761792100056,
+                "rows": 9463734,
+                "sha256": "01c302f0066736a9b3593661846addeec319934c87e5021f6eec1ce0d2c8f29e",
+                "edge_rows": [
+                  [
+                    0,
+                    0
+                  ],
+                  [
+                    0,
+                    2
+                  ],
+                  [
+                    0,
+                    4
+                  ],
+                  [
+                    1,
+                    1
+                  ],
+                  [
+                    1,
+                    3
+                  ],
+                  [
+                    1,
+                    5
+                  ],
+                  [
+                    2,
+                    0
+                  ],
+                  [
+                    2,
+                    2
+                  ],
+                  [
+                    3,
+                    1
+                  ],
+                  [
+                    3,
+                    3
+                  ],
+                  [
+                    3,
+                    5
+                  ],
+                  [
+                    4,
+                    0
+                  ],
+                  [
+                    4,
+                    2
+                  ],
+                  [
+                    4,
+                    4
+                  ],
+                  [
+                    5,
+                    1
+                  ],
+                  [
+                    5,
+                    3
+                  ],
+                  [
+                    5,
+                    5
+                  ],
+                  [
+                    6,
+                    6
+                  ],
+                  [
+                    6,
+                    7
+                  ],
+                  [
+                    7,
+                    6
+                  ],
+                  [
+                    7,
+                    7
+                  ]
+                ],
+                "row_diff_count": 0,
+                "correct": true,
+                "edge_rows_differ": []
+              }
+            ],
+            "median_seconds": 90.36408897100046,
+            "correct": true,
+            "source_case": 13
           }
         }
       }
@@ -3147,5 +3731,16 @@
     "with": 0
   },
   "query_line_reduction": null,
-  "shared_sql_macro_lines": 1
+  "shared_sql_macro_lines": 1,
+  "pure_sql_note": "No oracle-correct pure-SQL route was established for the full stated use case; this is not a proof of mathematical impossibility.",
+  "timing_scope": {
+    "sql_returning_arms": "connection, registration, reads, computation, materialization, canonical sort",
+    "direct_kdtree_cases_1_3": "connection, reads, tree build, query, result collection; validation ordering excluded",
+    "excluded": "process/module startup and final fingerprinting"
+  },
+  "baseline_outcomes": {},
+  "displayed_queries": {
+    "without": "-- Use LSDB/Dask for distributed execution.\n",
+    "with": "-- No v1 distributed executor.\n"
+  }
 }

@@ -1,0 +1,22 @@
+{
+  "cases": 13,
+  "arm_scale_evidence_rows": 66,
+  "charts": 11,
+  "verdict_counts": {
+    "MATTERS": 0,
+    "MARGINAL": 0,
+    "NO": 8,
+    "UNPROVEN": 5
+  },
+  "project_pass_met": false,
+  "tests": {
+    "total": 143,
+    "passed": 137,
+    "xfailed": 6,
+    "skipped": 0,
+    "failed": 0,
+    "exit_code": 0
+  },
+  "observed_allocated_folder_bytes": 1902567424,
+  "outside_folder_git_changes": []
+}

@@ -4,7 +4,7 @@
   "verdict": "UNPROVEN",
   "axis": null,
   "number": 0.311344506261079,
-  "pure_sql_possible": "yes",
+  "pure_sql_possible": "no",
   "sizes": {
     "1000000": {
       "oracle": {
@@ -1470,5 +1470,19 @@
     "with": 2
   },
   "query_line_reduction": -1.0,
-  "shared_sql_macro_lines": 22
+  "shared_sql_macro_lines": 22,
+  "pure_sql_note": "No oracle-correct pure-SQL route was established for the full stated use case; this is not a proof of mathematical impossibility.",
+  "timing_scope": {
+    "sql_returning_arms": "connection, registration, reads, computation, materialization, canonical sort",
+    "direct_kdtree_cases_1_3": "connection, reads, tree build, query, result collection; validation ordering excluded",
+    "excluded": "process/module startup and final fingerprinting"
+  },
+  "baseline_outcomes": {
+    "sql": "oracle mismatch, error or timeout; see trials",
+    "python": "selected fastest correct baseline"
+  },
+  "displayed_queries": {
+    "without": "-- Python registers Arrow table indexed(id,pix,ra,dec); see without.py.\nCOPY (SELECT * FROM indexed ORDER BY pix) TO 'tmp/index.parquet' (FORMAT PARQUET, COMPRESSION ZSTD);\n",
+    "with": "COPY (SELECT id,ra,\"dec\",hpx_ang2pix(12,ra,\"dec\") AS pix FROM cat ORDER BY pix)\nTO 'tmp/index.parquet' (FORMAT PARQUET, COMPRESSION ZSTD);\n"
+  }
 }

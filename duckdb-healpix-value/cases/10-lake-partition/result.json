@@ -444,5 +444,18 @@
     "with": 1
   },
   "query_line_reduction": 0.0,
-  "shared_sql_macro_lines": 1
+  "shared_sql_macro_lines": 1,
+  "timing_scope": {
+    "sql_returning_arms": "connection, registration, reads, computation, materialization, canonical sort",
+    "direct_kdtree_cases_1_3": "connection, reads, tree build, query, result collection; validation ordering excluded",
+    "excluded": "process/module startup and final fingerprinting"
+  },
+  "baseline_outcomes": {
+    "sql": "selected fastest correct baseline",
+    "python": "slower than selected baseline"
+  },
+  "displayed_queries": {
+    "without": "SELECT id,_healpix_29 >> 34 AS pix FROM cat;\n",
+    "with": "SELECT id,hpx_parent(29,_healpix_29,12) AS pix FROM cat;\n"
+  }
 }

@@ -607,5 +607,19 @@
     "with": 4
   },
   "query_line_reduction": -3.0,
-  "shared_sql_macro_lines": 1
+  "shared_sql_macro_lines": 1,
+  "timing_scope": {
+    "sql_returning_arms": "connection, registration, reads, computation, materialization, canonical sort",
+    "direct_kdtree_cases_1_3": "connection, reads, tree build, query, result collection; validation ordering excluded",
+    "excluded": "process/module startup and final fingerprinting"
+  },
+  "baseline_outcomes": {
+    "sql": "selected fastest correct baseline",
+    "python": "slower than selected baseline",
+    "geography": "slower than selected baseline"
+  },
+  "displayed_queries": {
+    "without": "SELECT id FROM cat WHERE \"dec\" BETWEEN -.5 AND .5 AND sep(ra,\"dec\",0,0)<=.5;\n",
+    "with": "WITH intervals AS (SELECT unnest(moc_ranges(moc_from_cone(0.,0.,.5,12))) AS x),\n        pixels AS (SELECT unnest(range(x.lo >> 34,x.hi >> 34)) AS bucket FROM intervals),\n        candidates AS MATERIALIZED (SELECT cat.* FROM cat SEMI JOIN pixels ON (_healpix_29 >> 34)=bucket)\n        SELECT id FROM candidates WHERE sky_in_cone(ra,\"dec\",0.,0.,.5);\n"
+  }
 }

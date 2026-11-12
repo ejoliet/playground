@@ -1,21 +1,9 @@
-..............x..x..............................ssF..                    [100%]
-=================================== FAILURES ===================================
-____________________________ test_all_cases_present ____________________________
-
-    def test_all_cases_present():
->       assert sorted(r['case'] for _,r in RESULTS)==list(range(1,14))
-E       assert [] == [1, 2, 3, 4, 5, 6, ...]
-E         
-E         Right contains 13 more items, first extra item: 1
-E         Use -v to get more diff
-
-tests/test_research.py:104: AssertionError
+...............x..x..................................................... [ 50%]
+.............................x..x..x..x................................  [100%]
 =============================== warnings summary ===============================
-tests/test_research.py: 30 warnings
-  /workspace/playground/duckdb-healpix-value/bench.py:39: DeprecationWarning: fetch_arrow_table() is deprecated, use to_arrow_table() instead.
+tests/test_research.py: 31 warnings
+  /workspace/playground/duckdb-healpix-value/bench.py:42: DeprecationWarning: fetch_arrow_table() is deprecated, use to_arrow_table() instead.
     def query(c,s):return c.execute(quote(s)).fetch_arrow_table()
 
 -- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
-=========================== short test summary info ============================
-FAILED tests/test_research.py::test_all_cases_present - assert [] == [1, 2, 3...
-1 failed, 48 passed, 2 skipped, 2 xfailed, 30 warnings in 5.66s
+137 passed, 6 xfailed, 31 warnings in 9.50s

@@ -4,7 +4,7 @@
   "verdict": "UNPROVEN",
   "axis": null,
   "number": 7902,
-  "pure_sql_possible": "unproven",
+  "pure_sql_possible": "no",
   "sizes": {},
   "install": {
     "without": [
@@ -54,5 +54,16 @@
     "with": 1
   },
   "query_line_reduction": null,
-  "shared_sql_macro_lines": 1
+  "shared_sql_macro_lines": 1,
+  "pure_sql_note": "No oracle-correct pure-SQL route was established for the full stated use case; this is not a proof of mathematical impossibility.",
+  "timing_scope": {
+    "sql_returning_arms": "connection, registration, reads, computation, materialization, canonical sort",
+    "direct_kdtree_cases_1_3": "connection, reads, tree build, query, result collection; validation ordering excluded",
+    "excluded": "process/module startup and final fingerprinting"
+  },
+  "baseline_outcomes": {},
+  "displayed_queries": {
+    "without": "-- Generate literal BETWEEN filters in the client. See without.py.\n",
+    "with": "SELECT moc_ranges(moc_from_cone(0.,0.,0.5,12));\n"
+  }
 }

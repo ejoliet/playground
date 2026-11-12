@@ -782,5 +782,17 @@
     "with": 2
   },
   "query_line_reduction": -1.0,
-  "shared_sql_macro_lines": 1
+  "shared_sql_macro_lines": 1,
+  "timing_scope": {
+    "sql_returning_arms": "connection, registration, reads, computation, materialization, canonical sort",
+    "direct_kdtree_cases_1_3": "connection, reads, tree build, query, result collection; validation ordering excluded",
+    "excluded": "process/module startup and final fingerprinting"
+  },
+  "baseline_outcomes": {
+    "sql": "selected fastest correct baseline"
+  },
+  "displayed_queries": {
+    "without": "SELECT rid,count(*) FROM cat JOIN regions ON _healpix_29>=lo AND _healpix_29<hi GROUP BY rid;\n",
+    "with": "WITH r AS (SELECT rid,unnest(moc_ranges(moc)) AS x FROM regions)\nSELECT rid,count(*) FROM cat JOIN r ON _healpix_29>=x.lo AND _healpix_29<x.hi GROUP BY rid;\n"
+  }
 }
