@@ -52,3 +52,5 @@
 - Case 03: UNPROVEN; measured result written. Limitations: 
 
 - Case 04: NO; measured result written. Limitations: 
+
+- Case 05: UNPROVEN; measured result written. Limitations: 

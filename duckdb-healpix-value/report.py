@@ -74,6 +74,13 @@ def main():
   if r['pure_sql_possible']=='unproven' or (r['case'] in [5,7] and not r.get('sizes',{}).get('10000000',{}).get('arms',{}).get('sql',{}).get('correct',False)):
    r['pure_sql_possible']='no'
    r['pure_sql_note']='No oracle-correct pure-SQL route was established for the full stated use case; this is not a proof of mathematical impossibility.'
+  if r['verdict']=='UNPROVEN' and r['case'] not in [2,5,7] and 'speed_ratio' in r:
+   arms=r['sizes']['10000000']['arms'];with_seconds=arms[r['best_with']]['median_seconds']
+   sql_ratios=[v['median_seconds']/with_seconds for a,v in arms.items() if a in ['sql','geography'] and v['correct']]
+   if sql_ratios:
+    r['closest_sql_to_shim_ratio']=min(sql_ratios)
+    reason=f"Rubric gap: the best correct baseline is faster than the shim, but the closest correct SQL/S2 arm is {min(sql_ratios):.6g} times the shim time, outside the 1.5 band. No speed/code threshold is met. UNPROVEN is not a demonstrated extension win; native performance remains unmeasured."
+    r['limitations']=[x for x in r['limitations'] if not x.startswith('Rubric gap:')]+[reason]
   r['timing_scope']={'sql_returning_arms':'connection, registration, reads, computation, materialization, canonical sort','direct_kdtree_cases_1_3':'connection, reads, tree build, query, result collection; validation ordering excluded','excluded':'process/module startup and final fingerprinting'}
   r['baseline_outcomes']={}
   for arm,v in r.get('sizes',{}).get('10000000',{}).get('arms',{}).items():
