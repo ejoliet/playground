@@ -1,0 +1,13 @@
+id,target,kind,site,minutes
+001,M31,Galaxy,Palomar,24
+002,M42,Nebula,Paranal,18
+003,M13,Cluster,Palomar,12
+004,M51,Galaxy,Maunakea,36
+005,M57,Nebula,Palomar,15
+006,M45,Cluster,Paranal,8
+007,M81,Galaxy,Maunakea,28
+008,M8,Nebula,Paranal,20
+009,M92,Cluster,Palomar,16
+010,M101,Galaxy,Maunakea,32
+011,M27,Nebula,Palomar,22
+012,M3,Cluster,Paranal,14
