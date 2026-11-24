@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Discover and open the HTTP services running on your machine.">
+  <title>Local Services</title>
+  <link rel="stylesheet" href="/style.css">
+  <script src="/app.js" defer></script>
+</head>
+<body>
+  <header class="top">
+    <div class="shell top-inner">
+      <div class="brand"><span class="brand-mark" aria-hidden="true">&gt;_</span> Local Services</div>
+      <span class="local"><span class="dot"></span> This machine</span>
+    </div>
+  </header>
+  <main class="shell">
+    <section class="hero" aria-labelledby="page-title">
+      <div class="hero-copy">
+        <h1 id="page-title">Local service<br class="wide-break"> directory<span>.</span></h1>
+        <p>Find and open the web services running on this machine.</p>
+      </div>
+      <dl class="metrics" aria-label="Scan summary">
+        <div class="metric"><dt>Web services</dt><dd id="total">–</dd></div>
+        <div class="metric"><dt>HTTP</dt><dd id="http-count">–</dd></div>
+        <div class="metric"><dt>HTTPS</dt><dd id="https-count">–</dd></div>
+      </dl>
+    </section>
+
+    <section class="directory" aria-labelledby="directory-title">
+      <div class="section-header">
+        <div>
+          <h2 id="directory-title">Discovered services</h2>
+          <p id="scan-status" role="status">Checking local listeners…</p>
+        </div>
+        <button id="rescan" class="rescan" type="button"><span aria-hidden="true">⟳</span> Rescan</button>
+      </div>
+      <div class="toolbar">
+        <label class="search">
+          <span class="magnifier" aria-hidden="true"></span>
+          <span class="sr-only">Search services</span>
+          <input id="search" type="search" placeholder="Search by service, port, or address" autocomplete="off" spellcheck="false">
+        </label>
+        <div class="filters" role="group" aria-label="Filter by protocol">
+          <button type="button" data-filter="all" aria-pressed="true">All</button>
+          <button type="button" data-filter="http" aria-pressed="false">HTTP</button>
+          <button type="button" data-filter="https" aria-pressed="false">HTTPS</button>
+        </div>
+      </div>
+      <div id="results" class="results" aria-busy="true">
+        <table id="services" hidden>
+          <thead><tr><th scope="col">Service</th><th scope="col">Port</th><th scope="col">Protocol</th><th scope="col">Address</th><th scope="col"><span class="sr-only">Open service</span></th></tr></thead>
+          <tbody id="rows"></tbody>
+        </table>
+        <p id="empty" class="empty">Scanning for HTTP and HTTPS services…</p>
+      </div>
+    </section>
+    <footer><span class="dot"></span> Scans run locally</footer>
+  </main>
+</body>
+</html>
