@@ -57,7 +57,10 @@ function render() {
 
     const link = document.createElement("a");
     link.className = "open";
-    link.href = service.url;
+    // A wildcard-bound service is reachable at whatever name reached this dashboard.
+    const url = new URL(service.url);
+    if (service.binds.some((bind) => bind === "0.0.0.0" || bind === "::")) url.hostname = location.hostname;
+    link.href = url.href;
     link.target = "_blank";
     link.rel = "noopener noreferrer";
     link.textContent = "Open";
