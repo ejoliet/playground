@@ -1,0 +1,22 @@
+#!/bin/bash
+
+setup_dir="$(CDPATH= cd -- "$(dirname -- "$0")/../Resources" && pwd -P)" || exit 1
+choice="$(/usr/bin/osascript <<'APPLESCRIPT'
+button returned of (display dialog "Install or remove the helper for Local Services in Google Chrome. It runs on demand for this Mac user." with title "Local Services Helper" buttons {"Cancel", "Remove", "Install"} default button "Install" cancel button "Cancel")
+APPLESCRIPT
+)" || exit 0
+
+if [[ "$choice" == Install ]]; then
+  command="--install-macos"
+  success="Helper installed. Return to Local Services in Chrome and choose Check connection."
+else
+  command="--remove-macos"
+  success="Helper removed."
+fi
+
+if report="$("$setup_dir/local-services-helper" "$command" 2>&1)"; then
+  /usr/bin/osascript -e 'on run argv' -e 'display dialog (item 1 of argv) with title "Local Services Helper" buttons {"OK"} default button "OK"' -e 'end run' "$success"
+else
+  /usr/bin/osascript -e 'on run argv' -e 'display alert "Setup could not finish" message (item 1 of argv) as critical' -e 'end run' "$report"
+  exit 1
+fi

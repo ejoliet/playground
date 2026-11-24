@@ -1,0 +1,23 @@
+{
+  "manifest_version": 3,
+  "name": "Local Services",
+  "version": "0.1.0",
+  "description": "Discover and open HTTP and HTTPS services on your own machine.",
+  "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAwwJGY5reRjgzqY8nQijf5chCxbvpvZnKXseWVbwYzxcIle76Z2cfg3gjUgUzrZut99GBk75/Zlm1nSQQCFed9gxmv6pn1uGfi0Z2Xasu4PRnAlmVjIAFiEz9TkXbs7X3wvkSoeJ3zlQFvQ2tiB2KB5zr7tyi/AdIFAeInZgarCAc+7FPRgdhQR+h9gbJAd6GBHZvWkK4lNCWrnliG0wkRyYw7PY+Idy+UHxsKFAdl7x4oSJbbjbP6s+OpfXAyrdHkmDyB99r+ymbF2o7VI+R8ZqwCK2AvYjcOMr3yCs82hVUEVISH9d30HatzQTZi35z72tKmoKp/Xv+8E4G0llG7QIDAQAB",
+  "permissions": [
+    "nativeMessaging",
+    "storage"
+  ],
+  "action": {
+    "default_title": "Open Local Services"
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "icons": {
+    "16": "icons/16.png",
+    "32": "icons/32.png",
+    "48": "icons/48.png",
+    "128": "icons/128.png"
+  }
+}

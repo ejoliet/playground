@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="referrer" content="no-referrer">
+  <title>Local Services</title>
+  <link rel="icon" href="icons/32.png">
+  <link rel="stylesheet" href="style.css">
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <header class="bar"><div class="shell bar-inner">
+    <div class="brand"><img src="icons/32.png" width="32" height="32" alt=""> Local Services</div>
+    <span class="connection" id="connection" data-state="checking"><span aria-hidden="true"></span><span id="connection-text">Checking helper</span></span>
+  </div></header>
+  <main class="shell">
+    <section class="hero" aria-labelledby="title">
+      <div>
+        <h1 id="title">Local service<br>directory<span>.</span></h1>
+        <p>Discover and open the web services running on this machine.</p>
+      </div>
+      <dl class="metrics" aria-label="Last discovery summary">
+        <div><dt>Services</dt><dd id="total">–</dd></div>
+        <div><dt>HTTP</dt><dd id="http">–</dd></div>
+        <div><dt>HTTPS</dt><dd id="https">–</dd></div>
+      </dl>
+    </section>
+
+    <details class="panel setup" id="setup" open>
+      <summary>Helper setup</summary>
+      <div class="setup-body">
+        <p>Install the helper once. Chrome starts it when you select <strong>Discover</strong>. Your service list stays in this Chrome profile.</p>
+        <ol class="steps">
+          <li>
+            <strong>Download the helper</strong>
+            <div class="download-row">
+              <label class="sr-only" for="platform">Operating system and processor</label>
+              <select id="platform">
+                <option value="windows-amd64">Windows · 64-bit PC</option>
+                <option value="windows-arm64">Windows · ARM64</option>
+                <option value="macos-arm64">macOS · Apple silicon</option>
+                <option value="macos-amd64">macOS · Intel</option>
+                <option value="linux-amd64">Debian / Ubuntu · 64-bit PC</option>
+                <option value="linux-arm64">Debian / Ubuntu · ARM64</option>
+              </select>
+              <a class="button primary" id="download" href="https://github.com/ejoliet/playground/releases/tag/local-services-v0.1.0" target="_blank" rel="noopener noreferrer">Download helper</a>
+            </div>
+          </li>
+          <li><strong>Open the download and install it</strong><p id="install-instructions"></p><p id="security-instructions" class="secondary"></p></li>
+          <li><strong>Return here and check the connection</strong><p>Once the helper connects, select <strong>Discover</strong>.</p><button type="button" id="verify">Check connection</button></li>
+        </ol>
+        <p id="setup-status" class="status" role="status"></p>
+      </div>
+    </details>
+
+    <section class="panel directory" aria-labelledby="directory-title">
+      <div class="section-header">
+        <div><h2 id="directory-title">Discovered services</h2><p id="status" class="status" role="status">Checking the helper connection…</p></div>
+        <div class="actions"><button type="button" class="primary" id="scan" disabled>Discover</button><button type="button" id="cancel" hidden>Cancel</button></div>
+      </div>
+      <div class="toolbar">
+        <label class="search"><span class="sr-only">Search discovered services</span><input type="search" id="search" placeholder="Search by name, address, or port" autocomplete="off"></label>
+        <div class="filters" role="group" aria-label="Filter by protocol">
+          <button type="button" data-filter="all" aria-pressed="true">All</button>
+          <button type="button" data-filter="http" aria-pressed="false">HTTP</button>
+          <button type="button" data-filter="https" aria-pressed="false">HTTPS</button>
+        </div>
+      </div>
+      <div class="results" id="results">
+        <table id="directory" hidden>
+          <thead><tr><th scope="col">Service</th><th scope="col">Port</th><th scope="col">Protocol</th><th scope="col"><span class="sr-only">Open service</span></th></tr></thead>
+          <tbody id="rows"></tbody>
+        </table>
+        <p id="empty" class="empty">Discovered services will appear here.</p>
+      </div>
+      <div class="footer-actions"><button type="button" id="export" disabled>Export JSON</button><button type="button" id="clear" disabled>Clear results</button></div>
+    </section>
+    <footer>Scans run on demand. Exports can be imported into the <a href="https://ejoliet.github.io/local-services/" target="_blank" rel="noopener noreferrer">static directory</a>.</footer>
+  </main>
+</body>
+</html>
