@@ -3,7 +3,7 @@
 const host = "io.github.ejoliet.local_services";
 const protocolVersion = 1;
 const extensionVersion = chrome.runtime.getManifest().version;
-const release = `https://github.com/ejoliet/playground/releases/download/local-services-v${extensionVersion}/`;
+const downloads = `https://raw.githubusercontent.com/ejoliet/playground/local-services-downloads/v${extensionVersion}/`;
 const installers = {
   "windows-amd64": "local-services-helper-windows-amd64.exe",
   "windows-arm64": "local-services-helper-windows-arm64.exe",
@@ -237,13 +237,13 @@ async function discover() {
 
 function updateInstaller() {
   const selection = platform.value;
-  $("download").href = release + installers[selection];
+  $("download").href = downloads + installers[selection];
   if (selection.startsWith("windows")) {
     $("install-instructions").textContent = "Open the downloaded installer and choose Install. You can remove the helper later from Windows Settings → Installed apps.";
-    $("security-instructions").textContent = "This preview installer is unsigned. Windows may show a SmartScreen prompt. If you trust this GitHub release, choose More info → Run anyway.";
+    $("security-instructions").textContent = "This preview installer is unsigned. Windows may show a SmartScreen prompt. If you trust the download, choose More info → Run anyway.";
   } else if (selection.startsWith("macos")) {
     $("install-instructions").textContent = "Open the ZIP, then double-click Install Local Services Helper and choose Install. Keep the installer if you want to remove the helper later.";
-    $("security-instructions").textContent = "This preview app is unsigned. If macOS blocks it and you trust this GitHub release, use System Settings → Privacy & Security → Open Anyway.";
+    $("security-instructions").textContent = "This preview app is unsigned. If macOS blocks it and you trust the download, use System Settings → Privacy & Security → Open Anyway.";
   } else {
     $("install-instructions").textContent = "Open the .deb in your graphical package installer and choose Install. Your system may ask for your password.";
     $("security-instructions").textContent = "This package is for Debian and Ubuntu with Google Chrome or Chromium. A graphical installer that supports local .deb files is required.";
