@@ -30,3 +30,7 @@ Open http://localhost:8000 in desktop Chrome. Alternatively serve these static f
 No speech synthesis or Pyodide bundle was added because it would not resolve the hardware gate. This is a diagnostic, not a working trackpad synthesizer.
 
 Sources: [upstream Swift](https://github.com/os6/nospeaker/blob/main/nospeaker.swift), [Pyodide constraints](https://pyodide.org/en/stable/usage/wasm-constraints.html), [Chrome HID security](https://developer.chrome.com/docs/capabilities/hid).
+
+## Runtime follow-up
+
+Linux Node.js v22 instantiated an empty WASM module successfully (no imports or exports). This is a runtime smoke test only, not a test of native hardware access. Headless Chromium localhost probe timed out; Playwright file navigation returned ERR_BLOCKED_BY_ADMINISTRATOR. No browser device evidence or Pyodide runtime result was obtained. No security policy bypass attempted. Hardware gate remains unresolved.
