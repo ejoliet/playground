@@ -176,7 +176,8 @@ class Dashboard(BaseHTTPRequestHandler):
     def serve(self, head_only):
         port = self.server.server_port
         hosts = {"127.0.0.1", "localhost", f"127.0.0.1:{port}", f"localhost:{port}"}
-        if self.headers.get("Host", "").lower() not in hosts:
+        # The Host check blocks DNS rebinding; it cannot apply when remote clients use arbitrary names.
+        if self.server.local_only and self.headers.get("Host", "").lower() not in hosts:
             self.send_error(HTTPStatus.FORBIDDEN)
             return
         path = self.path.partition("?")[0]
@@ -217,16 +218,19 @@ class Dashboard(BaseHTTPRequestHandler):
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--port", type=int, default=8787, help="dashboard port (default: 8787)")
+    parser.add_argument("--host", default="127.0.0.1",
+                        help="address to bind; 0.0.0.0 accepts other machines (default: 127.0.0.1)")
     options = parser.parse_args()
     if not 0 <= options.port <= 65535:
         parser.error("--port must be between 0 and 65535")
     try:
-        server = ThreadingHTTPServer(("127.0.0.1", options.port), Dashboard)
+        server = ThreadingHTTPServer((options.host, options.port), Dashboard)
     except OSError as error:
         parser.exit(1, f"Could not start the dashboard. {error}\n")
     with server:
         server.scan_lock = threading.Lock()
-        print(f"Local Services is running at http://127.0.0.1:{server.server_port}/", flush=True)
+        server.local_only = options.host in ("127.0.0.1", "localhost")
+        print(f"Local Services is running at http://{options.host}:{server.server_port}/", flush=True)
         try:
             server.serve_forever()
         except KeyboardInterrupt:

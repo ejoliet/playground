@@ -1,0 +1,2 @@
+2026-11-24 local-services/dashboard.py: DEVIATION: added opt-in --host flag (default stays 127.0.0.1) instead of binding 0.0.0.0 by default; rejected default-0.0.0.0 because the API is unauthenticated. Host-header (DNS rebinding) check skipped when bound to a non-loopback host.
+2026-11-24 local-services/web/app.js: service links swap hostname to location.hostname only for wildcard-bound (0.0.0.0/::) services; loopback-only and specific-IP binds keep server URL. Rejected rewriting all links: loopback-only services are unreachable remotely anyway.
