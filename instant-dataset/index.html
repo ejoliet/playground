@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="color-scheme" content="light" />
+    <meta name="referrer" content="no-referrer" />
+    <title>Instant Dataset</title>
+    <link rel="icon" href="data:," />
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <header>
+      <div class="wrap mast">
+        <span class="brand"><span class="mark" aria-hidden="true">▦</span> Instant Dataset</span
+        ><span class="local">Browser workspace</span>
+      </div>
+    </header>
+    <main class="wrap">
+      <h1>Dataset explorer</h1>
+      <div class="drop" id="drop">
+        <div>
+          <strong>Drop a dataset here</strong
+          ><span>CSV, JSON or SQLite · Files stay in this tab</span>
+        </div>
+        <label class="button primary picker"
+          >Choose file<input id="file" type="file" accept=".csv,.json,.sqlite,.sqlite3,.db"
+        /></label>
+        <button id="example">Open example</button>
+      </div>
+      <p id="status" role="status">Choose a file to start, or explore the sample observing log.</p>
+      <progress id="progress" hidden></progress>
+      <div id="workspace" hidden>
+        <div class="dataset">
+          <div>
+            <span class="eyebrow">OPEN DATASET</span>
+            <h2 id="filename"></h2>
+          </div>
+          <span id="stats"></span>
+        </div>
+        <div class="layout">
+          <aside>
+            <label for="tables">Table or view</label
+            ><select id="tables"></select>
+            <div id="browseControls">
+              <label for="search">Search all columns</label>
+              <form id="searchForm">
+                <input id="search" type="search" placeholder="Find a value…" /><button>
+                  Search
+                </button>
+              </form>
+              <label for="facet">Browse by facet</label
+              ><select id="facet"></select>
+              <div id="buckets"></div>
+              <a id="facetApi" hidden target="_blank" rel="noopener">Facet JSON ↗</a>
+              <div id="filters"></div>
+            </div>
+          </aside>
+          <section class="panel">
+            <nav aria-label="Result mode">
+              <button id="browse" aria-pressed="true">Table</button
+              ><button id="sqlTab" aria-pressed="false">SQL console</button>
+            </nav>
+            <form id="sqlForm" hidden>
+              <label for="sql">SQL query</label
+              ><textarea id="sql" rows="4" spellcheck="false"></textarea
+              ><button class="primary">Run query</button>
+            </form>
+            <div class="resultbar">
+              <strong id="range">Results</strong
+              ><a id="api" hidden target="_blank" rel="noopener">View JSON ↗</a>
+            </div>
+            <div class="scroll" tabindex="0" aria-label="Query results">
+              <table id="grid"></table>
+            </div>
+            <footer><button id="prev">Previous</button><button id="next">Next</button></footer>
+          </section>
+        </div>
+      </div>
+    </main>
+    <script type="module" src="./app.mjs"></script>
+  </body>
+</html>
